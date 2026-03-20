@@ -228,17 +228,11 @@ include("../header.php");
     <p>Total Commanders: <?php echo (count(scandir("../commanders")) - 3); ?></p>
     <p>Total Missions: <?php echo (count(scandir("../missions")) - 3); ?></p>
     <p>Total Mutators: <?php echo ($mutatorCount); ?></p>
-    <?php
-    include("../ad1.php");
-    ?>
     <a id="site"></a><h2>Site-Specific</h2>
     <p>These statistics provide you with a bit of a behind-the-scenes look at starcraft2coop.com. There is a lot of data that is stored in the site's databases that allow users to pull useful information when they wish, such as mutator interactions. A lot of this data is automatically pulled and presented to readers in an easy-to-find manner, such as on the <a href="/resources/weeklymutations">Weekly Mutations</a> page.</p>
     <p>Total Mutator Interactions: <?php echo ($mutatorInteractionCount); ?></p>
     <p>Commander Tips for Mutators: <?php echo ($mutatorCommanderTips); ?></p>
     <p>Patches Recognized by Analyzer: <?php echo ($patchCount); ?></p>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="weeklyMutations"></a><h2>Weekly Mutations</h2>
     <p>These are some interesting statistics from all <a href="/resources/weeklymutations">Weekly Mutations</a> that have been released to date including the current Weekly Mutation. Statistics include the most and least frequent mutators. Occasionally, Weekly Mutations are repeated, which can offset counts. Hence, statistics will be analyzed with and without these repeats.</p>
     <p>Total Weekly Mutations: <?php echo ($weeklyMutationCount); ?></p>
@@ -339,9 +333,6 @@ include("../header.php");
             }?>
         </tbody>
     </table>
-    <?php
-    include("../ad2.php");
-    ?>
     <a id="community"></a><h2>Community Stats</h2>
     <?php
         $data = unserialize(file_get_contents("../scripts/replaycache.txt"));
@@ -999,9 +990,6 @@ include("../header.php");
             ?>
         </tbody>
     </table>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="rc"></a><h2>Rockslapping Champions</h2>
     <p>The flagship series of the site, these statistics gather information for some commonly-asked questions about the series. This also serves as a page that frequent submitters can use to try and one-up each other!</p>
     <p>Note: Score is calculated as +1.0 for a full episode feature and +0.5 for a compilation feature. If a submitter gets multiple features in a single compilation, they will receive multiple +0.5 points to reflect each of their submissions.</p>
@@ -1079,9 +1067,6 @@ include("../header.php");
             
         });
     </script>
-    <?php
-    include("../ad3.php");
-    ?>
 </div>
 <?php include("../footer.php"); ?>
 </body>

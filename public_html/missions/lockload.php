@@ -30,9 +30,6 @@ include("../header.php");
     </div>
     <a id="misSum"></a><h2>Mission Summary</h2>
     <p>Amon seeks to destroy Ulnar before it can be used to open a gate to the Void. You and your ally must take control of the celestial locks before their energies overload.</p>
-    <?php
-    include("../ad1.php");
-    ?>
     <a id="objectives"></a><h2>Objectives</h2>
     <h3>Primary Objective</h3>
         <ul>
@@ -43,9 +40,6 @@ include("../header.php");
         <ul>
             <li>Destroy the Xel'Naga Construct (1)</li>
         </ul>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="baseAnalysis"></a><h2>Enemy Base Analysis</h2>
     <div id="globalRaceSelect">
         <p>Change all base analysis pictures to race:</p>
@@ -127,9 +121,6 @@ include("../header.php");
     <?php $info = "lock_n_rampguard"; include("../scripts/switchergenerator.php");?>
     <p>If you choose to go up the Eastern ramp, you can bypass the above force entirely.</p>
     <?php $info = "lock_n"; include("../scripts/switchergenerator.php");?>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="bonus"></a><h2>Completing the Bonus Objective</h2>
     <div id="objectiveImages">
         <img src="/images/missiondata/lockload/xelnagaconstruct.jpg" alt="Xel'Naga Construct">
@@ -137,9 +128,6 @@ include("../header.php");
     <p>The bonus objective requires you to kill the Xel'Naga Construct. The Construct is guarded by a small force of enemy units as shown below.</p>
     <?php $info = "xelnagaconstruct"; include("../scripts/switchergenerator.php");?>
     <p>The Xel'Naga Construct can be quite difficult to kill in the early game. Usually, it is much easier to kill it on the way to Northern Lock if that is the last Lock to be captured.</p>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="timings"></a><h2>Timings</h2>
     <p>Note: Information on Tech and Strength levels can be found on the <a href="/guides/enemycomps">Enemy Compositions</a> page.</p>
     <p>Enemy attack waves will target certain Locks first. The first player-captured Lock on their list will be their target. If all the Locks on their list are overloaded (ie. enemy-controlled), they will target your base.</p>
@@ -241,25 +229,16 @@ include("../header.php");
         </tbody>
     </table>
     <p>The pattern above will repeat every 2 minutes indefinitely.</p>
-    <?php
-    include("../ad2.php");
-    ?>
     <a id="spawnPoints"></a><h2>Spawn Points</h2>
     <p>Attack waves have two gather points each on the left and on the right side of the map. The gather point selected will be the closest to the target. In most cases, the Northern gather point will be selected. The Southern gather point is only selected if the attack wave ends up targeting a player's base.</p>
     <p>The gather points on the left side of the map are shown below:</p>
     <img src="/images/missiondata/lockload/leftgatherpoints.jpg" alt="Left Gather Points">
     <p>The gather points on the right side of the map are shown below:</p>
     <img src="/images/missiondata/lockload/rightgatherpoints.jpg" alt="Right Gather Points">
-    <?php
-    include("../ad.php");
-    ?>
     <a id="misTips"></a><h2>Mission Tips</h2>
     <ul>
         <li>Place static defenses on each captured Lock to grant you vision so you can defend against attack waves.</li>
     </ul>
-    <?php
-    include("../ad3.php");
-    ?>
     <a id="comTips"></a><h2>Commander-specific Tips</h2>
     <ul>
         <li><a href="/commanders/abathur">Abathur</a>: Place Toxic Nests on the ramps and entrances to captured Locks to defend and get Biomass.</li>

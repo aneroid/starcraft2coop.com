@@ -49,9 +49,6 @@ include("../header.php");
     </div>
     <a id="comSum"></a><h2>Commander Summary</h2>
     <p>Han uses her relatively weak mercenaries with Horner's more powerful air units to create a powerful army that complements each other.</p>
-    <?php
-    include("../ad1.php");
-    ?>
     <a id="levelUnlocks"></a><h2>Level Unlocks</h2>
     <table class="progressionTable">
         <thead>
@@ -194,9 +191,6 @@ include("../header.php");
         </tbody>
     </table>
     <p id="powerSpikeInfo">Highlighted rows denote large power spikes for the commander.</p>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="achievements"></a><h2>Achievements</h2>
     <p>The commander-specific achievements for Han & Horner are:</p>
     <table>
@@ -230,9 +224,6 @@ include("../header.php");
             </tr>
         </tbody>
     </table>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="calldowns"></a><h2>Calldowns</h2>
     <p>The calldowns for Han & Horner, at level 15, with no mastery points added are:</p>
     <table class="calldownTable">
@@ -329,16 +320,10 @@ include("../header.php");
             </tr>
         </tbody>
     </table>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="leveling"></a><h2>Sub-Ascension Leveling</h2>
     <p>Difficulty: Moderate</p>
     <p>During early stages of leveling, Han's units are very fragile. However, rushing up to Horner's units will leave you extremely vulnerable in the early game. Therefore, start off with some of Han's units (with Death Effect upgrades researched) and transition into Horner's units as quickly as reasonably possible. To increase effectiveness in the early levels, use Mag-Mines aggressively, by placing them behind your army, just before you push in. You can lure enemy units into the mines to deal damage.</p>
     <p>While leveling through Mastery levels, allocate points into Power Set 3 in a 2:1 split for the Air Fleet to Mag Mine masteries.</p>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="masteries"></a><h2>Masteries</h2>
     <p>Below are the three Power Sets for Han & Horner with the recommended point allocations for each. Note that these are meant to serve a general, all-purpose build that is effective across all maps with no Prestiges selected. You are highly encourged to change these masteries to suit your playstyle and particular challenges you face (e.g. <a href="/resources/weeklymutations">Weekly Mutations</a>).</p>
     <p>Power Set 1:</p>
@@ -416,9 +401,6 @@ include("../header.php");
         </tbody>
     </table>
     <p class="masterySummary">It is useful to have a higher Mag Mine Charge cap than is provided. Your playstyle will determine how many more you'd like to add.</p>
-    <?php
-    include("../ad2.php");
-    ?>
     <a id="prestiges"></a><h2>Prestiges</h2>
     <p>Below are the prestiges for Han & Horner. Note that "Effective Level" is the level at which the prestige achieves it full effect.</p>
     <table class="prestigeTable">
@@ -540,9 +522,6 @@ include("../header.php");
         </tbody>
     </table>
     <p>For general play, Chaotic Power Couple offers a good tradeoff between its advantages and disadvantages by allowing the player to use Mag-mines a lot more aggressively and also improving the death effects of Han's units, while still keeping Horner's units viable.</p>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="army"></a><h2>Recommended Army Composition</h2>
     <p>The recommended army composition for Han/Horner is below. Note that this assumes no Prestige talent selected and recommended Mastery Allocations. This is a basic recommendation for your army framework. It is recommended to gain an understanding for each of the units in the <a href="#units">Units</a> section and further add tech units so that you are able to better handle the situations you face.</p>
     <img class="army" src="/images/commanderdata/units/horner/reaper.jpg" alt="Reaper"><img class="army" src="/images/commanderdata/units/horner/hellion.jpg" alt="Hellion"><img class="army" src="/images/commanderdata/units/horner/asteriawraith.jpg" alt="Asteria Wraith"><img class="army" src="/images/commanderdata/units/horner/theiaraven.jpg" alt="Theia Raven">
@@ -580,9 +559,6 @@ include("../header.php");
             
         });
     </script>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="units"></a><h2>Combat Units</h2>
     <p>For more information on Han & Horner's unit stats, comparison between units and upgrade calculations, visit the <a href="/tools/unitstats">Data Tables</a> page.</p>
     <p>Han & Horner's combat units are listed below:</p>
@@ -1153,9 +1129,6 @@ include("../header.php");
             </table>
         </div>
     </div>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="buildOrder"></a><h2>Build Order</h2>
     <p>Below is the standard economic build order for Han & Horner. For more information on how to read and construct your own build orders, please check the <a href="/guides/buildordertheory">Build Order Theory</a> page.</p>
     <p class="buildOrder">
@@ -1166,9 +1139,6 @@ include("../header.php");
         20 Refinery<br>
         20 2x Hellions -> Rocks<br>
     </p>
-    <?php
-    include("../ad3.php");
-    ?>
     <a id="guide"></a><h2>Gameplay Guide</h2>
     <h3>Playstyle Traps</h3>
     <p>A common trap for Han & Horner players is completely skip on Han's units in favor of Horner's more powerful air units. This can be quite an expensive mistake, as Horner's units, while strong, cannot take prolonged lengths of damage. This is particular true for the Asteria Wraiths, which naturally draw a lot of aggro. Given their high price, the best way to keep them safe is to add some of Han's units into the mix.</p>
@@ -1182,9 +1152,6 @@ include("../header.php");
         <li>Contrary to the description, Space Station Reallocation does not instantly destroy every non-heroic unit/structure. It deals a total of 5,000 damage to everything it hits.</li>
         <li>Space Station Reallocation does reduced damage to some non-heroic structures. For example, Zenith Stones on <a href="/missions/templeofthepast">Temple of the Past</a> do not get instantly destroyed by the calldown, despite having no Heroic tag.</li>
     </ul>
-    <?php
-    include("../ad.php");
-    ?>
 </div>
 <?php include("../footer.php"); ?>
 </body>

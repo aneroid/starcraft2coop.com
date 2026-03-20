@@ -49,9 +49,6 @@ include("../header.php");
     </div>
     <a id="misSum"></a><h2>Mission Summary</h2>
     <p>Nerazim scout Lyrak has made a startling discovery: Amon’s forces have invaded a xel’naga temple and are using its energies to awaken one of the Dark God’s most powerful creations. Put a stop to their plans by destroying the void slivers while there’s still time.</p>
-    <?php
-    include("../ad1.php");
-    ?>
     <a id="objectives"></a><h2>Objectives</h2>
     <h3>Primary Objective</h3>
         <ul>
@@ -62,9 +59,6 @@ include("../header.php");
         <ul>
             <li>Escort Evacuation Ships (3)</li>
         </ul>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="idRace"></a><h2>Identifying the Enemy Race</h2>
     <p>An important part in Starcraft II co-op is identifying the enemy race, and then the enemy composition. This allows you to effectively counter the attack waves on missions. In other missions, the presence of creep would point towards a Zerg race, while the absence of creep would point towards either Protoss or Terran. Scythe of Amon is the only mission in the game where you can uniquely identify the enemy race by checking creep spread. Press Alt + T to view the creep spread pattern. You'll get one of the following three patterns.</p>
     <p>Protoss Creep Spread:</p>
@@ -75,9 +69,6 @@ include("../header.php");
     <img src="/images/missiondata/scytheofamon/creepspread_zerg.jpg" alt="Zerg Creep Spread">
     <p>A video is below:</p>
     <iframe width="475" height="268" src="https://www.youtube.com/embed/9g-vLQou8-w" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="sliverGrowth"></a><h2>Void Sliver Growth</h2>
     <?php $mission = "scytheofamon"; ?>
     <p>Every time a Void Sliver is destroyed, further reinforcements are added to the remaining Void Slivers. Additionally, all other remaining Void Slivers gain 2000 max shields, and their shields refreshed to full. This makes the other slivers more difficult to destroy. The reinforcement growth of each Sliver is shown below.</p>
@@ -231,9 +222,6 @@ include("../header.php");
             newImg.attr('id', 'sliver5Pic');
         })
     </script>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="sliverAbilities"></a><h2>Void Sliver Abilities</h2>
     <p>The Void Slivers will cast various abilities as they are attacked. The first Void Sliver will have no abilities. Subsequent Void Slivers will each have a random ability added from the list below. Therefore, Slivers #4 and #5 will have all abilities.</p>
     <p>The list of abilities are below:</p>
@@ -264,9 +252,6 @@ include("../header.php");
         </tbody>
     </table>
     <p>* The Death Grip Crystal target selection code picks a unit and adds its vitality to a pool for counting. If the total vitality in the pool is less than 800, the Death Grip Crystal will pick another target, repeating until the pool goes above 800 vitality. Therefore, it is possible for Death Grip Crystals to capture units that are greater than 800 HP.</p>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="bonus"></a><h2>Completing the Bonus Objective</h2>
     <div id="objectiveImages">
         <img src="/images/missiondata/scytheofamon/warpprism.jpg" alt="Warp Prism">
@@ -331,9 +316,6 @@ include("../header.php");
         </tbody>
     </table>
     <p>The first Stopping Point will always be the same area. However, Stopping Points 2 and 3 will be switched, if you destroy Sliver 3 (above) before the objective leaves the first stopping point.</p>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="timings"></a><h2>Timings</h2>
     <p>Note: Information on Tech and Strength levels can be found on the <a href="/guides/enemycomps">Enemy Compositions</a> page.</p>
     <p>The Attack Wave Timings for this mission are:</p>
@@ -493,18 +475,12 @@ include("../header.php");
         <li>13:00</li>
         <li>16:00</li>
     </ul>
-    <?php
-    include("../ad2.php");
-    ?>
     <a id="spawnPoints"></a><h2>Spawn Points</h2>
     <p>Attack Waves spawn from two different sides of the map, each with their own spawn point. Unfortunately, these points are not pathable, and hence, cannot be spawn-camped. However, all attack waves will rally to a Hybrid spawn point. This point <i>can</i> be spawn camped. These spawn points are shown below.</p>
     <p>Northern Attack Wave:</p>
     <img src="/images/missiondata/scytheofamon/northernspawnpoint.jpg" alt="Northern Spawn Point">
     <p>Southern Attack Wave:</p>
     <img src="/images/missiondata/scytheofamon/southernspawnpoint.jpg" alt="Southern Spawn Point">
-    <?php
-    include("../ad.php");
-    ?>
     <a id="misTips"></a><h2>Mission Tips</h2>
     <ul>
         <li>Ensure you have adequate troops for later Slivers. Death Grip Crystals can destroy a tiny army instantly.</li>
@@ -513,9 +489,6 @@ include("../header.php");
         <li>More skilled players can reverse-clear the mission, starting with the farthest Slivers from the base. This removes those difficult Slivers from play early while they are still weak.</li>
         <li>It is usually better to clear Sliver 2 and to get access to your expansion early. This is especially useful for commanders that require a strong economy.</li>
     </ul>
-    <?php
-    include("../ad3.php");
-    ?>
     <a id="comTips"></a><h2>Commander-specific Tips</h2>
     <ul>
         <li><a href="/commanders/abathur">Abathur</a>: Place Toxic Nests on hybrid spawn locations to weaken the attack waves.</li>

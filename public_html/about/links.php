@@ -26,9 +26,6 @@ include("../header.php");
         <li><a href="https://docs.google.com/spreadsheets/d/19e94QlfZvXaCcsMLGMXaN5fILDkshbppDb6yIfEwl0s/edit#gid=0" rel="nofollow">Co-op Speedrun Records</a></li>
         <li><a href="https://drive.google.com/drive/u/0/folders/0B0kAPEv3WqAeZlhmbzN5NWlDc1E" rel="nofollow">Co-op Speedrun Replays</a></li>
     </ul>
-    <?php
-    include("../ad4.php");
-    ?>
 </div>
 <?php include("../footer.php"); ?>
 </body>

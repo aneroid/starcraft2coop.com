@@ -35,9 +35,6 @@ include("../header.php");
     </div>
     <a id="misSum"></a><h2>Mission Summary</h2>
     <p>Void thrashers are surfacing on Char. Work together and destroy them before Sgt. Hammer's fortress falls to their ruthless assault.</p>
-    <?php
-    include("../ad1.php");
-    ?>
     <a id="objectives"></a><h2>Objectives</h2>
     <h3>Primary Objective</h3>
         <ul>
@@ -48,9 +45,6 @@ include("../header.php");
         <ul>
             <li>Destroy the Archangel (1)</li>
         </ul>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="baseAnalysis"></a><h2>Enemy Base Analysis</h2>
     <div id="globalRaceSelect">
         <p>Change all base analysis pictures to race:</p>
@@ -84,9 +78,6 @@ include("../header.php");
     <?php $info = "thrasher3"; include("../scripts/switchergenerator.php");?>
     <p>The Final Set of Void Thrashers are in a heavily fortified enemy base. This is shown below:</p>
     <?php $info = "thrasher4long"; include("../scripts/switchergenerator.php");?>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="bonus"></a><h2>Completing the Bonus Objective</h2>
     <div id="objectiveImages">
         <img src="/images/missiondata/voidthrashing/archangel.jpg" alt="Archangel">
@@ -96,9 +87,6 @@ include("../header.php");
     <p>When the Archangel gets to below 50% HP, it will switch to Fighter mode and fly to another area of the map. With high burst damage, it is very possible to destroy the Archangel before it flies away. The below minimap shows where it ends up after flying away.</p>
     <?php $info = "archangelescape"; include("../scripts/switchergenerator.php");?>
     <p>Note that this can happen several times. The escape location will alternate between the two places until the Archangel is destroyed.</p>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="timings"></a><h2>Timings</h2>
     <p>Note: Information on Tech and Strength levels can be found on the <a href="/guides/enemycomps">Enemy Compositions</a> page.</p>
     <p>Void Thrashers will spawn if the total HP and Shields (vitality) of all units and buildings around the Void Thrashers reaches 50% relative to when the game started.</p>
@@ -263,25 +251,16 @@ include("../header.php");
         </tbody>
     </table>
     <p>If players have not gotten vision of the Archangel after 13:30, the bonus objective will start.</p>
-    <?php
-    include("../ad2.php");
-    ?>
     <a id="spawnPoints"></a><h2>Spawn Points</h2>
     <p>There are two spawn points for attack waves on this map.</p>
     <p>Left Spawn Point (near second set of Void Thrashers):</p>
     <img src="/images/missiondata/voidthrashing/leftspawnpoint.jpg" alt="Left Spawn Point">
     <p>Right Spawn Point (near bonus area):</p>
     <img src="/images/missiondata/voidthrashing/rightspawnpoint.jpg" alt="Right Spawn Point">
-    <?php
-    include("../ad.php");
-    ?>
     <a id="misTips"></a><h2>Mission Tips</h2>
     <ul>
         <li>This mission is very short, and rewards aggressive play because of weak enemy defenses.</li>
     </ul>
-    <?php
-    include("../ad3.php");
-    ?>
     <a id="comTips"></a><h2>Commander-specific Tips</h2>
     <ul>
         <li><a href="/commanders/abathur">Abathur</a>: Place Toxic Nests on attack wave spawn locations to weaken them.</li>

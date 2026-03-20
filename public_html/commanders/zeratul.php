@@ -77,9 +77,6 @@ include("../header.php");
     </div>
     <a id="comSum"></a><h2>Commander Summary</h2>
     <p>Zeratul uses a very small force of powerful units that he strengthens as he finds Xel'Naga Artifacts.</p>
-    <?php
-    include("../ad1.php");
-    ?>
     <a id="levelUnlocks"></a><h2>Level Unlocks</h2>
     <table class="progressionTable">
         <thead>
@@ -239,9 +236,6 @@ include("../header.php");
         </tbody>
     </table>
     <p id="powerSpikeInfo">Highlighted rows denote large power spikes for the commander.</p>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="achievements"></a><h2>Achievements</h2>
     <p>The commander-specific achievements for Zeratul are:</p>
     <table>
@@ -275,9 +269,6 @@ include("../header.php");
             </tr>
         </tbody>
     </table>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="calldowns"></a><h2>Artifact Abilities</h2>
     <p>The artifact abilities for Zeratul, at level 15, with no mastery points added are shown below. Only one ability from each set can be selected.</p>
     <p>Legion Calldowns (costs 800 minerals to deploy):</p>
@@ -877,15 +868,9 @@ include("../header.php");
             </tr>
         </tbody>
     </table>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="leveling"></a><h2>Sub-Ascension Leveling</h2>
     <p>Difficulty: Easy</p>
     <p>Use Ambushers and Enforcers during the early stages of leveling as part of your core army composition. Once you get to level 3, Ambushers damage output increases a lot due to their powerful Blink damage upgrade. Be wary of your use of the Stasis Beam, which is a bad calldown. It should not be used to Stasis an entire attack wave, but cut the wave into more manageable parts. Rely on your Legion calldowns more aggressively, even if it means cutting unit production.</p>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="masteries"></a><h2>Masteries</h2>
     <p>Below are the three Power Sets for Zeratul with the recommended point allocations for each. Note that these are meant to serve a general, all-purpose build that is effective across all maps with no Prestiges selected. You are highly encourged to change these masteries to suit your playstyle and particular challenges you face (e.g. <a href="/resources/weeklymutations">Weekly Mutations</a>).</p>
     <p>Power Set 1:</p>
@@ -963,9 +948,6 @@ include("../header.php");
         </tbody>
     </table>
     <p class="masterySummary">While the Legion calldown mastery allows players to expand quicker, the cost reduction is not significant enough to justify its use. The Avatar mastery is recommended for more general play.</p>
-    <?php
-    include("../ad2.php");
-    ?>
     <a id="prestiges"></a><h2>Prestiges</h2>
     <p>Below are the prestiges for Zeratul. Note that "Effective Level" is the level at which the prestige achieves it full effect.</p>
     <table class="prestigeTable">
@@ -1094,9 +1076,6 @@ include("../header.php");
         </tbody>
     </table>
     <p>All of Zeratul's prestiges are solid and a player can get by general play using any (or none of them). The optimal prestige selection is highly dependant on the map that is being played. For example, Knowledge Seeker works best on long maps, whereas Herald of the Void works best on short maps.</p>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="hero"></a><h2>Hero Unit</h2>
     <img id="heroPic" src="/images/commanderdata/hero/zeratul/zeratul.jpg" alt="Zeratul">
     <p>Spawn time: 4:00</p>
@@ -1156,9 +1135,6 @@ include("../header.php");
             </tr>
         </tbody>
     </table>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="army"></a><h2>Recommended Army Composition</h2>
     <p>The recommended army composition for Zeratul is below. Note that this assumes no Prestige talent selected and recommended Mastery Allocations. This is a basic recommendation for your army framework. It is recommended to gain an understanding for each of the units in the <a href="#units">Units</a> section and further add tech units so that you are able to better handle the situations you face.</p>
     <img class="army" src="/images/commanderdata/units/zeratul/xelnagaambusher.jpg" alt="Xel'Naga Ambusher"><img class="army" src="/images/commanderdata/units/zeratul/xelnagashieldguard.jpg" alt="Xel'Naga Shieldguard"><img class="army" src="/images/commanderdata/units/zeratul/xelnagavoidarray.jpg" alt="Xel'Naga Void Array">
@@ -1195,9 +1171,6 @@ include("../header.php");
             
         });
     </script>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="units"></a><h2>Combat Units</h2>
     <p>For more information on Zeratul's unit stats, comparison between units and upgrade calculations, visit the <a href="/tools/unitstats">Data Tables</a> page.</p>
     <p>Zeratul's combat units are listed below:</p>
@@ -1564,9 +1537,6 @@ include("../header.php");
             </table>
         </div>
     </div>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="buildOrder"></a><h2>Build Order</h2>
     <p>Below is the standard economic build order for Zeratul (assumes max points in Legion Cost Reduction). For more information on how to read and construct your own build orders, please check the <a href="/guides/buildordertheory">Build Order Theory</a> page.</p>
     <p class="buildOrder">
@@ -1574,15 +1544,9 @@ include("../header.php");
         19 Zoraya Legion<br>
         21 Nexus
     </p>
-    <?php
-    include("../ad3.php");
-    ?>
     <a id="guide"></a><h2>Gameplay Guide</h2>
     <h3>Playstyle Traps</h3>
     <p>None.</p>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="fastexpand"></a><h3>Legion Expands</h3>
     <p>One of the advantages of Zeratul is his access to powerful Legion calldowns which can be used to not only clear expansion rocks, but also clear contested expansions and sometimes even clear their ally's expansion too. The table below explains how to maximize utilization of your first Legion calldown.. Note that for some missions (like <a href="/missions/oblivionexpress">Oblivion Express</a>), the Legion expand is simple because clearing both expansions is easy and therefore, no details will be provided.</p>
     <table id="fastExpand">
@@ -1720,9 +1684,6 @@ include("../header.php");
             </tr>
         </tbody>
     </table>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="artifact"></a><h3>Artifact Spawn Locations</h3>
     <p>A key part of Zeratul gameplay is finding Artifact Fragments. These fragments directly correspond to the power level of your units and therefore, it is critical to get them as fast as possible. Assuming Artifact fragments are found as quickly as possible, Prophetic Vision incurs a 3-minute cooldown (assuming no masteries are added).</p>
     <p>If an artifact is not found within a certain amount of time, the minimap will be pinged and a circle displaying the rough area to look shown to the player. Each hint makes the search radius smaller, making it easier for the player to find the artifact fragment. The hint timings are shown below and are also affected by the Zeratul Artifact Spawn mastery:</p>
@@ -2093,15 +2054,9 @@ include("../header.php");
         <li>Loading units into Void Arrays will prevent them from taking DoT (damage over time) damage.</li>
     </ul>
     <iframe width="475" height="268" src="https://www.youtube.com/embed/h0OZG494TCY" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="videos"></a><h2>Video Guides</h2>
     <p>The below videos demonstrate the various Legion expands explained earlier. Note that as of patch 4.11.3, Zeratul's Legion costs have been increased significantly. The expand will still take place in the same way, but at a later point in the game (~2 mins).</p>
     <iframe width="950" height="535" src="https://www.youtube.com/embed/videoseries?list=PL-U97hco2Fu53ZsL8KSqVBysp4tPpg5CT" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    <?php
-    include("../ad.php");
-    ?>
 </div>
 <?php include("../footer.php"); ?>
 </body>

@@ -40,9 +40,6 @@ include("../header.php");
     <br>Mind-controlled/Dominated workers can build structures of their races
     <br>Doubled Edged prevents Mutalisks from triggering their regen
     <br>Diffusion prevents Mutalisks from triggering their regen
-    <?php
-    include("../ad.php");
-    ?>
     <br><br><br><a href='https://www.youtube.com/watch?v=rEcb3LSOxSo' rel='nofollow'>Episode 6</a><br>Earthsplitters are affected by Energizers
     <br>Swann's Laser Drill is affected by Energizers
     <br>Stetmann's Speed Zones do not give ally MULEs an extra trip
@@ -68,9 +65,6 @@ include("../header.php");
     <br>Stetellite Overcharge and Defensive Drone Barriers stack
     <br>Defensive Matrix and Defensive Drone Barriers stack
     <br>Units in stasis do not get Avenger stacks
-    <?php
-    include("../ad.php");
-    ?>
     <br><br><br><a href='https://www.youtube.com/watch?v=H73SqMNmKcA' rel='nofollow'>Episode 11</a><br>Withering Siphon Vorazun can take damage through Double Edged
     <br>Alarak's Overcharge benefits from Architect of War Chrono
     <br>Supercloak triggers Vorazun's Regeneration + Attack passives
@@ -96,9 +90,6 @@ include("../header.php");
     <br>Mengsk Ghost's EMP can stun static defense
     <br>Shieldguards can reflect Mag-mines
     <br>Time Warp extends the lifespan of timed units
-    <?php
-    include("../ad.php");
-    ?>
     <br><br><br><a href='https://www.youtube.com/watch?v=PJsJSocNiXM' rel='nofollow'>Episode 16</a><br>Havocs increase the range of Alarak's Photon Overload
     <br>Mind-controlled Immortals get Zeratul's Enforcers' Eternity Barrier
     <br>Phasing Armor works while units are warping in
@@ -124,9 +115,6 @@ include("../header.php");
     <br>Symbiotes remain outside Nydus worms when worms are killed
     <br>Confused hybrids deal nuke damage to Amon's units if M.A.D is enabled
     <br>Nydus/Omega worms die if the base network is destroyed
-    <?php
-    include("../ad.php");
-    ?>
     <br><br><br><a href='https://www.youtube.com/watch?v=d5ZipEgzRec' rel='nofollow'>Episode 21</a><br>Shock Divisions deal damage to Intercessors with Double-Edged
     <br>Sentry Guardian Shield reduces Heavy Weapons Specialist Drill splash damage
     <br>Minesweeper Widow Mines can attack while unburrowed
@@ -152,9 +140,6 @@ include("../header.php");
     <br>Virulent Spores deals its splash damage to the primary target
     <br>Stanks can attack and kill fully-completed Toxic Nests
     <br>Immortal’s Barrier prevents Fear from triggering
-    <?php
-    include("../ad.php");
-    ?>
     <br><br><br><a href='https://www.youtube.com/watch?v=D8Di1uVl4l8' rel='nofollow'>Episode 26</a><br>Battlecruisers can avoid damage from Double-Edged by Tactical Jumps
     <br>The Xel’Naga Construct can damage units inside transports
     <br>Fatal Attraction and Mutually Assured Destruction can stack
@@ -180,9 +165,6 @@ include("../header.php");
     <br>Assault Galleons in construction can get the Thorns from Devouring One
     <br>Ji’nara provides allied units with a passive Shield Regeneration buff
     <br>Void Stasis gets auto-casted on snared Observers
-    <?php
-    include("../ad.php");
-    ?>
     <br><br><br><a href='https://www.youtube.com/watch?v=UmYc5RkLQe4' rel='nofollow'>Episode 31</a><br>Dehaka Pack Leaders get Super Cloak from Anakh Su'n Zeratul
     <br>Burning structures cause Diffusion damage
     <br>Splitter Banes killed by Propagators do not spawn Baneling Spawns
@@ -213,9 +195,6 @@ include("../header.php");
     <br>Desolate Queen Kerrigan’s Kinetic Blast can trigger Mag-Mines
     <br>Missiles from Missile Command are immune to Mind-Control
     <br>Swann can convert Tech Labs and Reactors to Tech Reactors
-    <?php
-    include("../ad4.php");
-    ?>
 </div>
 <?php include("../footer.php"); ?>
 </body>

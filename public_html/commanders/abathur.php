@@ -50,9 +50,6 @@ include("../header.php");
     </div>
     <a id="comSum"></a><h2>Commander Summary</h2>
     <p>Abathur uses biomass collected from the enemy's fallen units to enhance his own units. Some units can evolve into Ultimate Evolutions - massive units that can lead the charge against Amon.</p>
-    <?php
-    include("../ad1.php");
-    ?>
     <a id="levelUnlocks"></a><h2>Level Unlocks</h2>
     <table class="progressionTable">
         <thead>
@@ -192,9 +189,6 @@ include("../header.php");
         </tbody>
     </table>
     <p id="powerSpikeInfo">Highlighted rows denote large power spikes for the commander.</p>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="achievements"></a><h2>Achievements</h2>
     <p>The commander-specific achievements for Abathur are:</p>
     <table>
@@ -228,9 +222,6 @@ include("../header.php");
             </tr>
         </tbody>
     </table>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="calldowns"></a><h2>Calldowns</h2>
     <p>The calldowns for Abathur, at level 15, with no mastery points added are:</p>
     <table class="calldownTable">
@@ -293,16 +284,10 @@ include("../header.php");
         </tbody>
     </table>
     <p>Note: Biomass drops at a rate of 2.5 biomass per supply of unit killed.</p>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="leveling"></a><h2>Sub-Ascension Leveling</h2>
     <p>Difficulty: Easy</p>
     <p>The hardest part of leveling Abathur is level 1, where he doesn't have access to his Ultimate Evolutions, which grant a massive power spike to the commander. At this level, build a Roach/Ravager/Queen composition to start. Mutalisks are not too great, because they don't have the life leech from biomass gathering, which makes them very fragile.</p>
     <p>While leveling through Mastery levels, allocate points with an equal split on Power Set 3.</p>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="masteries"></a><h2>Masteries</h2>
     <p>Below are the three Power Sets for Abathur with the recommended point allocations for each. Note that these are meant to serve a general, all-purpose build that is effective across all maps with no Prestiges selected. You are highly encourged to change these masteries to suit your playstyle and particular challenges you face (e.g. <a href="/resources/weeklymutations">Weekly Mutations</a>).</p>
     <p>Power Set 1:</p>
@@ -380,9 +365,6 @@ include("../header.php");
         </tbody>
     </table>
     <p class="masterySummary">Having more Toxic Nests available to you is good, which is why points are added in the first mastery. However, at max level, the Toxic Nest charges you get are way too high to be used efficiently, and so, the other mastery is used to spend the remainder of points.</p>
-    <?php
-    include("../ad2.php");
-    ?>
     <a id="prestiges"></a><h2>Prestiges</h2>
     <p>Below are the prestiges for Abathur. Note that "Effective Level" is the level at which the prestige achieves it full effect.</p>
     <table class="prestigeTable">
@@ -511,9 +493,6 @@ include("../header.php");
         </tbody>
     </table>
     <p>While leveling Sub-mastery, Essence Hoarder will allow Abathur to recover all the Biomass his army drops after level 7, making it a great choice for general play. Post-mastery, a player can either choose no Prestige talent or Tunneling Horror, depending on their intended playstyle to help them carry them to victory.</p>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="army"></a><h2>Recommended Army Composition</h2>
     <p>The recommended army composition for Abathur is below. Note that this assumes no Prestige talent selected and recommended Mastery Allocations. This is a basic recommendation for your army framework. It is recommended to gain an understanding for each of the units in the <a href="#units">Units</a> section and further add tech units so that you are able to better handle the situations you face.</p>
     <img class="army" src="/images/commanderdata/units/abathur/brutalisk.jpg" alt="Brutalisk"><img class="army" src="/images/commanderdata/units/abathur/leviathan.jpg" alt="Leviathan"><img class="army" src="/images/commanderdata/units/abathur/mutalisk.jpg" alt="Mutalisk">
@@ -553,9 +532,6 @@ include("../header.php");
             
         });
     </script>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="units"></a><h2>Combat Units</h2>
     <p>For more information on Abathur's unit stats, comparison between units and upgrade calculations, visit the <a href="/tools/unitstats">Data Tables</a> page.</p>
     <p>Abathur's combat units are listed below:</p>
@@ -1115,9 +1091,6 @@ include("../header.php");
             <p>Upgrades: None</p>
         </div>
     </div>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="buildOrder"></a><h2>Build Order</h2>
     <p>Below is the standard economic build order for Abathur. For more information on how to read and construct your own build orders, please check the <a href="/guides/buildordertheory">Build Order Theory</a> page.</p>
     <p class="buildOrder">
@@ -1133,9 +1106,6 @@ include("../header.php");
         22 Extractor<br>
         22 Extractor
     </p>
-    <?php
-    include("../ad3.php");
-    ?>
     <a id="guide"></a><h2>Gameplay Guide</h2>
     <h3>Playstyle Traps</h3>
     <p>A common trap for Abathur players is to go for a mass Roach build. While Roaches can potentially reach 15 armor, they do not deal a lot of damage and can have a lot of trouble dealing with attack waves and objectives.</p>
@@ -1227,9 +1197,6 @@ include("../header.php");
     <p>When placing several nests, it is recommended to use a checkerboard pattern for nests to maximize nest damage cover and minimize unnecessary overlap of the nest damage area.</p>
     <p>A video is below:</p>
     <iframe width="475" height="268" src="https://www.youtube.com/embed/jxEJVn_s5FE" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="biomass"></a><h3>Biomass Farming</h3>
     <p>This section provides the recommended location to farm Biomass on all the maps currently present in Co-op. The most efficient farming technique is to place your Toxic Nests down, disable the automatic detonation on the nests, and use a Spore Crawler to lure units into the nests. Usually, the first attack wave will spawn near where you are farming, allowing you to clear it too. Once you have your first Brutalisk, you can use it to lure to farm additional Biomass.</p>
     <p>In general, Zerg provides the easiest Biomass farming, due to the large presence of weak units. Terran is most difficult, due to the fact that units are normally hiding inside Bunkers.</p>
@@ -1353,9 +1320,6 @@ include("../header.php");
         <li>More skilled players can add two to four Vipers to their composition and make use of Disabling Cloud and Abduct.</li>
         <li>Loading units into Nydus Worms will prevent them from taking DoT (damage over time) damage.</li>
     </ul>
-    <?php
-    include("../ad.php");
-    ?>
 </div>
 <?php include("../footer.php"); ?>
 </body>

@@ -84,9 +84,6 @@ include("../header.php");
     </div>
     <a id="comSum"></a><h2>Commander Summary</h2>
     <p>Karax uses powerful static defenses backed up by robotic units and the Spear of Adun to control the battlefield.</p>
-    <?php
-    include("../ad1.php");
-    ?>
     <a id="levelUnlocks"></a><h2>Level Unlocks</h2>
     <table class="progressionTable">
         <thead>
@@ -231,9 +228,6 @@ include("../header.php");
         </tbody>
     </table>
     <p id="powerSpikeInfo">Highlighted rows denote large power spikes for the commander.</p>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="achievements"></a><h2>Achievements</h2>
     <p>The commander-specific achievements for Karax are:</p>
     <table>
@@ -267,9 +261,6 @@ include("../header.php");
             </tr>
         </tbody>
     </table>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="calldowns"></a><h2>Calldowns</h2>
     <p>The calldowns for Karax, at level 15, with no mastery points added are:</p>
     <table class="calldownTable">
@@ -354,15 +345,9 @@ include("../header.php");
             </tr>
         </tbody>
     </table>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="leveling"></a><h2>Sub-Ascension Leveling</h2>
     <p>Difficulty: Hard</p>
     <p>Karax is difficult to level due to the fact that he cannot instantly warp in cannons and static defense, as it standard in his gameplay, while having extremely expensive units. Rely on Sentinels, Immortals and Energizers as part of your army composition. Take the mission slow to reduce unnecessary losses. Rely on your Spear of Adun abilities as much as possible to weaken enemy bases and attack waves.</p>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="masteries"></a><h2>Masteries</h2>
     <p>Below are the three Power Sets for Karax with the recommended point allocations for each. Note that these are meant to serve a general, all-purpose build that is effective across all maps with no Prestiges selected. You are highly encourged to change these masteries to suit your playstyle and particular challenges you face (e.g. <a href="/resources/weeklymutations">Weekly Mutations</a>).</p>
     <p>Power Set 1:</p>
@@ -440,9 +425,6 @@ include("../header.php");
         </tbody>
     </table>
     <p class="masterySummary">The Initial energy here is the best choice because it allows Karax to fast-expand on almost all maps with minimal issues.</p>
-    <?php
-    include("../ad2.php");
-    ?>
     <a id="prestiges"></a><h2>Prestiges</h2>
     <p>Below are the prestiges for Karax. Note that "Effective Level" is the level at which the prestige achieves it full effect.</p>
     <table class="prestigeTable">
@@ -565,9 +547,6 @@ include("../header.php");
         </tbody>
     </table>
     <p>Templar Apparent puts Karax in the perfect position to be a reasonably powerful commander by reducing the cost of his once-expensive units. This allows for Karax to develop an early-game presence, and opens up a variety of playstyles that were prohibitive due to high unit costs. This prestige is the recommended prestige for general Karax play.</p>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="army"></a><h2>Recommended Army Composition</h2>
     <p>The recommended army composition for Karax is below. Note that this assumes no Prestige talent selected and recommended Mastery Allocations. This is a basic recommendation for your army framework. It is recommended to gain an understanding for each of the units in the <a href="#units">Units</a> section and further add tech units so that you are able to better handle the situations you face.</p>
     <img class="army" src="/images/commanderdata/units/karax/sentinel.jpg" alt="Sentinel"><img class="army" src="/images/commanderdata/units/karax/energizer.jpg" alt="Energizer"><img class="army" src="/images/commanderdata/units/karax/immortal.jpg" alt="Immortal">
@@ -605,9 +584,6 @@ include("../header.php");
             
         });
     </script>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="units"></a><h2>Combat Units</h2>
     <p>For more information on Karax's unit stats, comparison between units and upgrade calculations, visit the <a href="/tools/unitstats">Data Tables</a> page.</p>
     <p>Karax's combat units are listed below:</p>
@@ -964,9 +940,6 @@ include("../header.php");
             </table>
         </div>
     </div>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="buildOrder"></a><h2>Build Order</h2>
     <p>Below is the standard economic build order for Karax. For more information on how to read and construct your own build orders, please check the <a href="/guides/buildordertheory">Build Order Theory</a> page.</p>
     <p class="buildOrder">
@@ -979,9 +952,6 @@ include("../header.php");
         26 Cannon -> Gas Rock<br>
         32 Cannon -> Gas Rock
     </p>
-    <?php
-    include("../ad3.php");
-    ?>
     <a id="guide"></a><h2>Gameplay Guide</h2>
     <h3>Playstyle Traps</h3>
     <p>A common trap for Karax players is to rush to a Mass Carrier build. While Carriers are highly effective on most missions, rushing Carriers without assisting your ally can lose you the game, especially when early-game objectives are slightly more challenging.</p>
@@ -1152,9 +1122,6 @@ include("../header.php");
             </tbody>
         </table>
     </div>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="fastexpand"></a><h3>Fast Expanding</h3>
     <p>On certain maps with a small number of enemies and structures blocking expansions, Karax can fast expand. These fast expand techniques are difficult as most of the time, Solar Lance will be shot into the dark and therefore will require a lot of practice.</p>
     <p>Below are pictures that show how to fast-expand on maps. These require a lot of practice to pull off, but can put you ahead economically.</p>
@@ -1348,15 +1315,9 @@ include("../header.php");
         <li>Solar Efficiency 1 is a must-get upgrade. Solar Efficiency 2 should be obtained if you require some support from the Spear of Adun. Solar Efficiency 3 should be obtained in very niche circumstances.</li>
         <li>Hold Shift when Orbital Strike is selected and press any key <a href="/guides/generaltips">bound to Rapidfire</a> to fire Orbital Strikes without delay in between shots.</li>
     </ul>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="videos"></a><h2>Video Guides</h2>
     <p>The below videos demonstrate the various fast expands explained earlier. These fast expands are much more difficult to pull off, because you will be shooting your Solar Lances into the fog of war and will require a lot of practice.</p>
     <iframe width="950" height="535" src="https://www.youtube.com/embed/videoseries?list=PL-U97hco2Fu6-eOs3pg4Bvvn27uuvClBW" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    <?php
-    include("../ad.php");
-    ?>
 </div>
 <?php include("../footer.php"); ?>
 </body>

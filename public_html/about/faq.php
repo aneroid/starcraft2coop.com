@@ -30,9 +30,6 @@ include("../header.php");
     
     <h3>What is the biggest mistake you see people make in Co-op?</h3>
     <p>Focusing on Bonus Objectives. Bonus objectives offer a tiny amount of experience compared to a mission victory. However, many players seem to focus on completing bonus objectives and end up losing the entire mission. Missions like <a href="/missions/cradleofdeath">Cradle of Death</a> are traps for these inexperienced players.</p>
-    <?php
-    include("../ad1.php");
-    ?>
     <h2>About the Site</h2>
     
     <h3>How can I contribute?</h3>
@@ -68,9 +65,6 @@ include("../header.php");
     <h3>How can I support the site?</h3>
     <p>Thank you very much for your willingness to support the site. You can support the site by disabling Ad-block, or use Starcraft2Coop.com's <a href="http://paypal.me/sc2coop" rel="nofollow">Paypal.me</a> to send donations. Alternatively, you may create an account on the site and purchase credits for an ad-free experience. Thank you!</p>
     <p>A big thanks to <a href="https://www.youtube.com/user/ctg0526/">CtG0526</a>, who has supported the site since its inception and helped promote it!</p>
-    <?php
-    include("../ad2.php");
-    ?>
     <h2>Miscellaneous</h2>
     
     <h3>Who are you?</h3>
@@ -78,9 +72,6 @@ include("../header.php");
     
     <h3>What is your ladder rank?</h3>
     <p>I am exclusively a co-op player. In fact, I have never played a single ladder game before. Ever.</p>
-    <?php
-    include("../ad3.php");
-    ?>
 </div>
 <?php include("../footer.php"); ?>
 </body>

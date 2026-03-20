@@ -38,9 +38,6 @@ include("../header.php");
         <p><a href="#updates2">Updates</a></p>
         <p><a href="#other2">Other Notes</a></p>
     </div>
-    <?php
-    include("../ad1.php");
-    ?>
     <a id="coopassistant"></a><h2>Co-op Overlay</h2>
     <p><a href="https://github.com/FluffyMaguro/SC2_Coop_overlay" rel="nofollow">Maguro's Coop Overlay</a> is recommended for viewing game statistics and automatically uploading replay files to the site.</p>
     <!--
@@ -212,9 +209,6 @@ include("../header.php");
         })
     </script>
     -->
-    <?php
-    include("../ad2.php");
-    ?>
     <a id="replaySummarizer"></a><h2>Co-op Replay Data Summarizer</h2>
     <p>This is a Python script which takes a Replays folder and generates a delimited text file summarizing the replay data for co-op games, which can be imported for further data analysis. Below is an example of the output:</p>
     <div id="output">
@@ -280,9 +274,6 @@ include("../header.php");
     <ul>
         <li>Map names will be affected by language localization. That is, the map names will be displayed in the language the game was played in when the replay was created.</li>
     </ul>
-    <?php
-    include("../ad3.php");
-    ?>
 </div>
 <?php include("../footer.php"); ?>
 </body>

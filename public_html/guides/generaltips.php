@@ -59,9 +59,6 @@ include("../header.php");
     <p>Certain commanders (such as <a href="/commanders/kerrigan">Kerrigan</a>) spawn a Hero unit. These Hero units are extremely powerful and should be used as much as possible, especially during the early game. They provide the player with early-game power to allow them to push and complete objectives, while macro'ing up at the back to tech up and gain access to high-tier units.</p>
     <a id="usetopbar"></a><h3>Use Your Topbar Abilities</h3>
     <p>Topbar Abilities provide players with a large amount of power throughout the course of the game. Use these Topbars to help you push and take engagements. They should be used as soon as they are off cooldown, as frequently as possible. You can time your pushes to line up with when powerful Topbar abilities come off cooldown.</p>
-    <?php
-    include("../ad1.php");
-    ?>
     <a id="tips2"></a><h2>Tips for Intermediate Players</h2>
     <a id="adapt"></a><h3>Adapt to the Enemy Composition and Map</h3>
     <p>It is important to learn the units that make up various Attack Waves that will attack players. Check the <a href="/guides/enemycomps">Enemy Compositions</a> page to learn about the various enemy compositions in the game. Use that knowledge to build an army that directly counters that composition while allowing you to push and complete the objectives in the game.</p>
@@ -86,9 +83,6 @@ include("../header.php");
     <iframe width="475" height="268" src="https://www.youtube.com/embed/SxXmfRhY6m8" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     <a id="expand"></a><h3>Expand As Fast As Possible</h3>
     <p>Some missions in co-op have uncontested expansions, while others might be guarded. Regardless, you should always aim to take your expansion as quickly as possible. Certain commanders (like <a href="/commanders/mengsk">Mengsk</a>) have ways of capturing expansions unusually early in the game (these are called "Fast-Expand Techniques"). Learn them to strengthen your early-game economy. If you are playing Terran, pre-build your Expansion Commander Center and float it over once you clear the defenders/rocks.</p>
-    <?php
-    include("../ad2.php");
-    ?>
     <a id="tips3"></a><h2>Tips for Veterans</h2>
     <a id="armor"></a><h3>Armor Upgrades</h3>
     <p>In Versus games, armor is a critical part of a player's macro, as without it, they end up taking much less efficient trades in battle. However, due to the unique nature of Co-op, armor upgrades are not that important because:</p>
@@ -128,9 +122,6 @@ include("../header.php");
     <a id="workercounts"></a><h3>Worker Counts</h3>
     <p>In Versus games, the worker count displayed at the top of the Primary Structure denotes the worker count that corresponds to the Optimal mining rate. However, in Co-op, the value denotes the Maximum mining rate. More information on these mining rates can be found in the <a href="/guides/buildordertheory">Build Order Theory</a> Guide.</p>
     <img src="/images/newplayer/workercounts.jpg" alt="Worker Counts">
-    <?php
-    include("../ad3.php");
-    ?>
 </div>
 <?php include("../footer.php"); ?>
 </body>

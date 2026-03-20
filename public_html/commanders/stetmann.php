@@ -50,9 +50,6 @@ include("../header.php");
     </div>
     <a id="comSum"></a><h2>Commander Summary</h2>
     <p>Stetmann uses his army of mecha zerg units powered by Egonergy while providing additional buffs through Stetzones to defeat enemy forces.</p>
-    <?php
-    include("../ad1.php");
-    ?>
     <a id="levelUnlocks"></a><h2>Level Unlocks</h2>
     <table class="progressionTable">
         <thead>
@@ -193,9 +190,6 @@ include("../header.php");
         </tbody>
     </table>
     <p id="powerSpikeInfo">Highlighted rows denote large power spikes for the commander.</p>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="achievements"></a><h2>Achievements</h2>
     <p>The commander-specific achievements for Stetmann are:</p>
     <table>
@@ -229,9 +223,6 @@ include("../header.php");
             </tr>
         </tbody>
     </table>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="stetzones"></a><h2>Stetzones</h2>
     <p>Stetzones provide bonuses for any of Stetmann or his ally's units that stand in them. Each Stetellite will spread a Stetzone within 8 range from itself. A Stetellite can only be deployed within a Stetzone. The Deploy Stetellite Ability is shown below:</p>
     <table class="calldownTable">
@@ -327,15 +318,9 @@ include("../header.php");
             </tr>
         </tbody>
     </table>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="leveling"></a><h2>Sub-Ascension Leveling</h2>
     <p>Difficulty: Moderate</p>
     <p>Once Stetmann unlocks Super Gary, it is best to rely on that Hero unit to clear enemy encampments and bases before sending your army in to clear the objectives. Before Super Gary, it is best to use a Hydralisk/Zergling composition as the main backbone of your army, using the Zerglings to tank for the more fragile Hydralisks.</p>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="masteries"></a><h2>Masteries</h2>
     <p>Below are the three Power Sets for Stetmann with the recommended point allocations for each. Note that these are meant to serve a general, all-purpose build that is effective across all maps with no Prestiges selected. You are highly encourged to change these masteries to suit your playstyle and particular challenges you face (e.g. <a href="/resources/weeklymutations">Weekly Mutations</a>).</p>
     <p>Power Set 1:</p>
@@ -413,9 +398,6 @@ include("../header.php");
         </tbody>
     </table>
     <p class="masterySummary">Stetmann naturally floats many minerals which can be used to place Hatcheries around the map to spread Stetellites from, reducing the need for allocating points into the Stetellite mastery. Therefore, the Structure Morph mastery is the better choice here.</p>
-    <?php
-    include("../ad2.php");
-    ?>
     <a id="prestiges"></a><h2>Prestiges</h2>
     <p>Below are the prestiges for Stetmann. Note that "Effective Level" is the level at which the prestige achieves it full effect.</p>
     <table class="prestigeTable">
@@ -541,9 +523,6 @@ include("../header.php");
         </tbody>
     </table>
     <p>Best Buddy is the prestige that outshines the rest here, by providing a huge power level increase to Super Gary, with very minimal downsides. Pre-level 5, Stetmann should be using Signal Savant, as it offers no downsides. However, past level 5, Best Buddy should be used if it is unlocked, with a big focus on the hero unit, to reap the power of the prestige.</p>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="hero"></a><h2>Hero Unit</h2>
     <img id="heroPic" src="/images/commanderdata/hero/stetmann/gary.jpg" alt="Gary">
     <p>Spawn time: 4:00</p>
@@ -617,9 +596,6 @@ include("../header.php");
             </tr>
         </tbody>
     </table>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="army"></a><h2>Recommended Army Composition</h2>
     <p>The recommended army composition for Stetmann is below. Note that this assumes no Prestige talent selected and recommended Mastery Allocations. This is a basic recommendation for your army framework. It is recommended to gain an understanding for each of the units in the <a href="#units">Units</a> section and further add tech units so that you are able to better handle the situations you face.</p>
     <img class="army" src="/images/commanderdata/units/stetmann/mechazergling.jpg" alt="Mecha Zergling"><img class="army" src="/images/commanderdata/units/stetmann/mechahydralisk.jpg" alt="Mecha Hydralisk">
@@ -656,9 +632,6 @@ include("../header.php");
             
         });
     </script>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="units"></a><h2>Combat Units</h2>
     <p>For more information on Stetmann's unit stats, comparison between units and upgrade calculations, visit the <a href="/tools/unitstats">Data Tables</a> page.</p>
     <p>Stetmann's combat units are listed below:</p>
@@ -1207,9 +1180,6 @@ include("../header.php");
             </table>
         </div>
     </div>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="buildOrder"></a><h2>Build Order</h2>
     <p>Below is a order for Stetmann that rushes Super Gary out. This one assumes max mastery points into the Structure Morph mastery to ensure adequate resources to upgrade Gary as soon as he spawns. For more information on how to read and construct your own build orders, please check the <a href="/guides/buildordertheory">Build Order Theory</a> page.</p>
     <p class="buildOrder">
@@ -1228,9 +1198,6 @@ include("../header.php");
         Saturate mineral line<br>
     </p>
     <p>Note that on some maps that are more defensive (for example <a href="/missions/mistopportunities">Mist Opportunities</a>), it may be better to delay getting the Super Gary upgrade and focusing on a more economic-centric build by take your expansion faster. As such, the build order will need to be modified accordingly. To learn more about how to construct your own build orders, please check the <a href="/guides/buildordertheory">Build Order Theory</a> page.</p>
-    <?php
-    include("../ad3.php");
-    ?>
     <a id="guide"></a><h2>Gameplay Guide</h2>
     <h3>Mecha Remnants</h3>
     <p>Whenever any of Stetmann's Mech units are killed under a Stetzone or within 15 range of Gary/Super Gary, a certain number of Mecha Remnants for a unit will be recycled to Stetmann. When a certain number of Remnants are recycled, a Mecha unit will be rebuilt at no cost at their respective unlock structures. Additionally, when Super Gary absorbs a Mecha Remnant, he gains 10% increased attack speed and regenerates an additional 1 life per second for 30 seconds. This can stack up to 20 times. The table below summarizes which Remnants are dropped from each unit.</p>
@@ -1337,9 +1304,6 @@ include("../header.php");
         <li>Build Macro Hatcheries to allow you to spend your resources more effectively.</li>
         <li>Super Gary gains a temporary attack speed buff when he picks up Mecha Remnants. Make sure Super Gary is near your army in combat to take advantage of this buff.</li>
     </ul>
-    <?php
-    include("../ad.php");
-    ?>
 </div>
 <?php include("../footer.php"); ?>
 </body>

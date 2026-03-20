@@ -16,9 +16,6 @@ include("../../../header.php");
 <div id="menu"><?php include("../../../menu.php"); ?></div>
 <div id="content">
     <h1>Co-op Tournament Summary - October 2019</h1>
-    <?php
-    include("../../../ad.php");
-    ?>
     <p>Below is the round summary for the Starcraft 2 Co-op Tournament of October 2019. Each round has been hidden by a spoiler block which can be removed by clicking the block. You may remove all spoilers and highlight the winning team by using the spoiler toggle located on the page.</p>
     <div id="abilities">
         <h2>Team Abilities</h2>
@@ -160,9 +157,6 @@ include("../../../header.php");
             <?php $start=3; include("../fakerows.php"); ?>
         </tbody>
 </table>
-<?php
-include("../../../ad.php");
-?>
 </div>
 <script>
     $(".tooltip").on('mouseover',function(e){

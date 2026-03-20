@@ -350,9 +350,6 @@ $_SESSION["known"] = true;
         <p><a href="#cycle">Weekly Mutations Cycle</a></p>
         <p><a href="#past">Casted Weekly Mutations</a></p>
     </div>
-    <?php
-    include("../ad1.php");
-    ?>
     <h2>Weekly Mutation Beginner's Guide</h2>
     <a id="guide"></a><p>Weekly Mutations are, as the name suggests, mutations that appear as weekly challenges. Completing the weekly challenge offers an experience bounty, depending on the difficulty level completed. These bounties are shown below:</p>
     <table class="centered">
@@ -383,9 +380,6 @@ $_SESSION["known"] = true;
     </table>
     <p>Completing a Weekly Mutation on a difficulty level will unlock the bounties for all difficulties below. For example, completing a Weekly Mutation on Brutal difficulty (commonly known as a "Brutation"), will give you 185,000. You can only earn each weekly bounty once.</p>
     <p>For a brief description of each mutator, hover over its icon. For details, please go to the <a href="/resources/mutators">Mutators</a> page.</p>
-    <?php
-    include("../ad.php");
-    ?>
     <ul>
         <?php
             
@@ -511,9 +505,6 @@ $_SESSION["known"] = true;
         ?>
         
     </ul>
-    <?php
-    include("../ad.php");
-    ?>
 
     <script>
         $(".commanderIcon").click(function(){
@@ -890,9 +881,6 @@ $_SESSION["known"] = true;
             </tbody>
         </table>
     </div>
-    <?php
-    include("../ad.php");
-    ?>
     <script>
         $(".mutatorIcon").on('mouseover',function(e){
             var mutator = $(this).attr("alt").split(":");

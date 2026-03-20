@@ -36,9 +36,6 @@ include("../header.php");
     </div>
     <a id="misSum"></a><h2>Mission Summary</h2>
     <p>A rapid infestation has been discovered on one of the Dominion's fringe worlds. Burn down all of the infested structures before it has a chance to spread. At the Dead of Night, they will start to attack you.</p>
-    <?php
-    include("../ad1.php");
-    ?>
     <a id="objectives"></a><h2>Objectives</h2>
     <h3>Primary Objective</h3>
         <ul>
@@ -48,9 +45,6 @@ include("../header.php");
         <ul>
             <li>Destroy the Virophage</li>
         </ul>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="baseAnalysis"></a><h2>Enemy Base Analysis</h2>
     <div id="globalRaceSelect">
         <p>Change all base analysis pictures to race:</p>
@@ -88,9 +82,6 @@ include("../header.php");
     <p>The South West area is covered by very lightly defended camps and is a great spot to push into after the first night.</p>
     <?php $info = "slong"; include("../scripts/switchergenerator.php");?>
     <?php $info = "swlong"; include("../scripts/switchergenerator.php");?>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="dayNight"></a><h2>Day and Night Cycle Information</h2>
     <p>Days are always 3:30 long, whereas nights are 4:00 long. The first few day/night cycles are shown below:</p>
     <table>
@@ -431,9 +422,6 @@ include("../header.php");
             </tr>
         </tbody>
     </table>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="bonus"></a><h2>Completing the Bonus Objective</h2>
     <div id="objectiveImages">
         <img src="/images/missiondata/deadofnight/virophage.jpg" alt="Virophage">
@@ -442,9 +430,6 @@ include("../header.php");
     <p>The Virophage can spawn in one of the locations shown below.</p>
     <img src="/images/missiondata/deadofnight/virophagespawnlocations.jpg" alt="Virophage Spawn Locations">
     <p>The position the Virophage will spawn is based on the number of infested structures in that particular area. The Virophage will spawn in the area with the least infested structures. The game checks the areas from the top left, clockwise, prioritizing later areas. So, if you have cleared the South position of the map, the Virophage will always spawn there.</p>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="timings"></a><h2>Timings</h2>
         <p>Note: Information on Tech and Strength levels can be found on the <a href="/guides/enemycomps">Enemy Compositions</a> page.</p>
         <p>Attack waves always spawn when there is 1:00 left on the night clock. Additionally, they will always come in transports. The side they come from is randomized. The attack wave Tech Levels and Strength Levels for each night are shown below.</p>
@@ -484,15 +469,9 @@ include("../header.php");
                 </tr>
             </tbody>
         </table>
-    <?php
-    include("../ad2.php");
-    ?>
     <a id="spawnPoints"></a><h2>Spawn Points</h2>
     <p>The Noise infested spawn randomly from any infested structure on the map. So, if you have cleared out a portion of the map, you will need less defenses on that side to deal with infested. Remember that there are still infested attack waves to deal with.</p>
     <p>Attack waves spawn near the four corners of the map and rally to a point on the map.</p>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="misTips"></a><h2>Mission Tips</h2>
     <ul>
         <li>It is often possible to clear the mission before Night #3, completely avoiding the need to defend more than two entrances, and dealing with Nydus Worms or Stanks.</li>
@@ -502,9 +481,6 @@ include("../header.php");
         <li>If playing a Protoss commander that has Pylons, power buildings with multiple Pylons to prevent Spotters from disabling an Artosis pylon and therefore your entire production.</li>
         <li>If playing a Protoss commander that has Pylons, place Pylons in front of ally static defense to bait Spotter stasis casts.</li>
     </ul>
-    <?php
-    include("../ad3.php");
-    ?>
     <a id="comTips"></a><h2>Commander-specific Tips</h2>
     <ul>
         <li><a href="/commanders/abathur">Abathur</a>: Infested Terrans do not drop biomass. If you can defend well, place your Toxic Nests behind your defensive force and only lure Aberrations and Special Infested units towards them.</li>

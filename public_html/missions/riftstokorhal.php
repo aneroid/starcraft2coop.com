@@ -30,9 +30,6 @@ include("../header.php");
     </div>
     <a id="misSum"></a><h2>Mission Summary</h2>
     <p>Void rifts have opened across the Imperial sector of Augustgrad. Together, you must destroy the rifts before the hybrid overwhelm your forces.</p>
-    <?php
-    include("../ad1.php");
-    ?>
     <a id="objectives"></a><h2>Objectives</h2>
     <h3>Primary Objective</h3>
         <ul>
@@ -43,9 +40,6 @@ include("../header.php");
         <ul>
             <li>Destroy the Pirate Ship (2)</li>
         </ul>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="baseAnalysis"></a><h2>Enemy Base Analysis</h2>
     <div id="globalRaceSelect">
         <p>Change all base analysis pictures to race:</p>
@@ -78,9 +72,6 @@ include("../header.php");
     <?php $info = "shard3long"; include("../scripts/switchergenerator.php");?>
     <p>The last set of Void Shards is located within a much larger enemy base. The base also has a small forward comp. All of this is shown below:</p>
     <?php $info = "shard4long"; include("../scripts/switchergenerator.php");?>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="bonus"></a><h2>Completing the Bonus Objective</h2>
     <div id="objectiveImages">
         <img src="/images/missiondata/riftstokorhal/pirateship.jpg" alt="Pirate Ship">
@@ -95,9 +86,6 @@ include("../header.php");
     </ul>
     <p>While the first Pirate Ship spawns unguarded, the second spawns behind an enemy base. The base is shown below:</p>
     <?php $info = "piratebase"; include("../scripts/switchergenerator.php");?>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="timings"></a><h2>Timings</h2>
     <p>Note: Information on Tech and Strength levels can be found on the <a href="/guides/enemycomps">Enemy Compositions</a> page.</p>
     <p>The Attack Wave Timings for this mission are:</p>
@@ -206,18 +194,12 @@ include("../header.php");
     <ul>
         <li>More than 25% of enemies in the pirate base are dead.</li>
     </ul>
-    <?php
-    include("../ad2.php");
-    ?>
     <a id="spawnPoints"></a><h2>Spawn Points</h2>
     <p>You can uniquely identify the enemy race at the start of the mission by looking at the creep (for Zerg), or by checking for a Protoss crate present (for Protoss) at Player 1's expansion. This is demonstrated in the video below:</p>
     <iframe width="475" height="268" src="https://www.youtube.com/embed/UXv5i-Ttz1A" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     <p>All attack waves have a single spawn point. This spawn point is located on the top of the ramp, just off the base containing the final set of Void Shards. This spawn point is shown below:</p>
     <img src="/images/missiondata/riftstokorhal/attackwavespawnpoint.jpg" alt="Spawn point of the Attack Waves">
     <p>While spawn-camping this point is quite difficult, most attack waves will follow the same path: They will turn left as soon as they get to the bottom of the ramp and will make their way down the narrow funnel leading to the middle of the map. Since the base is outside the path required to be cleared by players, it is usually not done. Note that if you do choose to clear this base, it may force the attack wave  to spawn nearer to the back of the base (the edge of the map).</p>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="misTips"></a><h2>Mission Tips</h2>
     <ul>
         <li>Attack waves all spawn from the same location, so defending against them is really easy.</li>
@@ -246,9 +228,6 @@ include("../header.php");
         <li>Stetmann: Build a Hatchery at the corner of the ramp and place two Spine Crawlers behind</li>
         <li>Mengsk: Supply Bunker drop</li>
     </ul>
-    <?php
-    include("../ad3.php");
-    ?>
     <a id="comTips"></a><h2>Commander-specific Tips</h2>
     <ul>
         <li><a href="/commanders/abathur">Abathur</a>: Place Toxic Nests on your main's ramp to deal with the early attack wave.</li>

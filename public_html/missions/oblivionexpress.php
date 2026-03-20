@@ -30,9 +30,6 @@ include("../header.php");
     </div>
     <a id="misSum"></a><h2>Mission Summary</h2>
     <p>Moebius Corps is moving trains of unrevealed cargo across the surface of Tarsonis. Join forces with your ally and intercept the trains before they can escape.</p>
-    <?php
-    include("../ad1.php");
-    ?>
     <a id="objectives"></a><h2>Objectives</h2>
     <h3>Primary Objective</h3>
         <ul>
@@ -43,9 +40,6 @@ include("../header.php");
         <ul>
             <li>Destroy Fast Train on the Bottom Line</li>
         </ul>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="baseAnalysis"></a><h2>Enemy Base Analysis</h2>
     <div id="globalRaceSelect">
         <p>Change all base analysis pictures to race:</p>
@@ -74,15 +68,9 @@ include("../header.php");
     <?php $info = "topbaselong"; include("../scripts/switchergenerator.php");?>
     <p>The bottom base is shown below.</p>
     <?php $info = "bottombaselong"; include("../scripts/switchergenerator.php");?>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="bonus"></a><h2>Completing the Bonus Objective</h2>
     <p>The bonus objective requires you to kill two fast trains that will spawn on the bottom rail. The path these bonus objectives will take is shown below.</p>
     <img src="/images/missiondata/oblivionexpress/bonusobjectivepath.jpg" alt="Path Taken by the Bonus Objectives">
-    <?php
-    include("../ad.php");
-    ?>
     <a id="timings"></a><h2>Timings</h2>
     <p>Note: Information on Tech and Strength levels can be found on the <a href="/guides/enemycomps">Enemy Compositions</a> page.</p>
     <p>There are two timings of interest in this mission:</p>
@@ -238,9 +226,6 @@ include("../header.php");
         </tbody>
     </table>
     <p>The bonus objectives will spawn at 12:00 and 21:00 respectively.</p>
-    <?php
-    include("../ad2.php");
-    ?>
     <a id="spawnPoints"></a><h2>Spawn Points</h2>
     <p>The spawn points for attack waves and escort waves are different.</p>
     <p>The attack wave gather points are dependent on which side the attack wave comes from. The Northern gather point is shown below. This is, in essence, the start of the top rail.</p>
@@ -252,16 +237,10 @@ include("../header.php");
     <img src="/images/missiondata/oblivionexpress/topescortspawnpoint.jpg" alt="Spawn Points of the Top Escort">
     <p>For the middle rail, the spawn points for the escorts are shown below.</p>
     <img src="/images/missiondata/oblivionexpress/midescortspawnpoint.jpg" alt="Spawn Points of the Middle Escort">
-    <?php
-    include("../ad.php");
-    ?>
     <a id="misTips"></a><h2>Mission Tips</h2>
     <ul>
         <li>If you choose to build static defense, build it in the area west of your main, where both rails move towards each other.</li>
     </ul>
-    <?php
-    include("../ad3.php");
-    ?>
     <a id="comTips"></a><h2>Commander-specific Tips</h2>
     <ul>
         <li><a href="/commanders/abathur">Abathur</a>: Place Toxic Nests outside the north ramp and lure the first attack wave into it to get biomass.</li>

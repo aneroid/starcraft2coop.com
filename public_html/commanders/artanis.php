@@ -49,9 +49,6 @@ include("../header.php");
     </div>
     <a id="comSum"></a><h2>Commander Summary</h2>
     <p>Artanis' army features the basic staples of any Protoss army, including Zealots and Immortals. However, combined with the Spear of Adun, his army can be resilient and powerful.</p>
-    <?php
-    include("../ad1.php");
-    ?>
     <a id="levelUnlocks"></a><h2>Level Unlocks</h2>
     <table class="progressionTable">
         <thead>
@@ -186,9 +183,6 @@ include("../header.php");
         </tbody>
     </table>
     <p id="powerSpikeInfo">Highlighted rows denote large power spikes for the commander.</p>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="achievements"></a><h2>Achievements</h2>
     <p>The commander-specific achievements for Artanis are:</p>
     <table>
@@ -222,9 +216,6 @@ include("../header.php");
             </tr>
         </tbody>
     </table>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="calldowns"></a><h2>Calldowns</h2>
     <p>The calldowns for Artanis, at level 15, with no mastery points added are:</p>
     <table class="calldownTable">
@@ -308,15 +299,9 @@ include("../header.php");
             </tr>
         </tbody>
     </table>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="leveling"></a><h2>Sub-Ascension Leveling</h2>
     <p>Difficulty: Easy</p>
     <p>A Dragoon/Zealot build works best while leveling. Focus on mostly Dragoons, and warp in Zealots (with Charge) on the frontline before you take an engagement. This will cause the Zealots to soak up damage away from Dragoons.</p>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="masteries"></a><h2>Masteries</h2>
     <p>Below are the three Power Sets for Artanis with the recommended point allocations for each. Note that these are meant to serve a general, all-purpose build that is effective across all maps with no Prestiges selected. You are highly encourged to change these masteries to suit your playstyle and particular challenges you face (e.g. <a href="/resources/weeklymutations">Weekly Mutations</a>).</p>
     <p>Power Set 1:</p>
@@ -394,9 +379,6 @@ include("../header.php");
         </tbody>
     </table>
     <p class="masterySummary">In general circumstances, the Spear of Adun Energy mastery isn't beneficial if you play efficiently because you won't be able to use the energy in the early game.</p>
-    <?php
-    include("../ad2.php");
-    ?>
     <a id="prestiges"></a><h2>Prestiges</h2>
     <p>Below are the prestiges for Artanis. Note that "Effective Level" is the level at which the prestige achieves it full effect.</p>
     <table class="prestigeTable">
@@ -540,9 +522,6 @@ include("../header.php");
         </tbody>
     </table>
     <p>For general play, Valorous Inspirator is a solid Prestige that improves the utility of almost all of Artanis' units with a minimal cost increase. It increases the viability of his High Templars and his Phoenixes.</p>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="army"></a><h2>Recommended Army Composition</h2>
     <p>The recommended army composition for Artanis is below. Note that this assumes no Prestige talent selected and recommended Mastery Allocations. This is a basic recommendation for your army framework. It is recommended to gain an understanding for each of the units in the <a href="#units">Units</a> section and further add tech units so that you are able to better handle the situations you face.</p>
     <img class="army" src="/images/commanderdata/units/artanis/zealot.jpg" alt="Zealot"><img class="army" src="/images/commanderdata/units/artanis/dragoon.jpg" alt="Dragoon">
@@ -580,9 +559,6 @@ include("../header.php");
             
         });
     </script>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="units"></a><h2>Combat Units</h2>
     <p>For more information on Artanis' unit stats, comparison between units and upgrade calculations, visit the <a href="/tools/unitstats">Data Tables</a> page.</p>
     <p>Artanis's combat units are listed below:</p>
@@ -1085,9 +1061,6 @@ include("../header.php");
             </table>  
         </div>
     </div>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="buildOrder"></a><h2>Build Order</h2>
     <p>Below is the standard economic build order for Artanis. For more information on how to read and construct your own build orders, please check the <a href="/guides/buildordertheory">Build Order Theory</a> page.</p>
     <p class="buildOrder">
@@ -1103,9 +1076,6 @@ include("../header.php");
         33 Cybernetics Core<br>
         34 Pylon
     </p>
-    <?php
-    include("../ad3.php");
-    ?>
     <a id="guide"></a><h2>Gameplay Guide</h2>
     <h3>Playstyle Traps</h3>
     <p>A common trap for Artanis players is to go for a mass Tempest build. Granted, Tempests are powerful units that can deal a lot of damage. However, it leaves players vulnerable to the early game. A mass Tempest build only works if the other ally is aware of that build, and is able to compensate with a strong early game. Additionally, enemy compositions also come into play. Compositions with a large number of low-HP units make Mass Tempests a difficult build to pull off.</p>
@@ -1130,9 +1100,6 @@ include("../header.php");
         <li>Use Observers when playing with Tempests to provide vision. Tempests' Disintegration has a higher attack range than their vision range.</li>
         <li>Hold Shift when Orbital Strike is selected and press any key <a href="/guides/generaltips">bound to Rapidfire</a> to fire Orbital Strikes without delay in between shots.</li>
     </ul>
-    <?php
-    include("../ad.php");
-    ?>
 </div>
 <?php include("../footer.php"); ?>
 </body>

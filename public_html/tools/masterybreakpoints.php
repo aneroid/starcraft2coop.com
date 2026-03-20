@@ -74,9 +74,6 @@ $_SESSION["known"] = true;
     <h1>Mastery Breakpoints Calculator</h1>
     <?php include("../scripts/reporterror.php");?>
     <p>You may use the calculator below to determine what mastery allocation you require to kill various units in Amon's forces. Note that objectives, Infested units and Mutator units are not taken into consideration. Move the slider left and right to allocate mastery points, and the units above the slider will move to show you which can be killed and which can't.</p>
-    <?php
-    include("../ad1.php");
-    ?>
     <div id="input">
         <h2>Select the Ability/Damage Type</h2>
         <div id="abilityContainer">
@@ -220,9 +217,6 @@ $_SESSION["known"] = true;
             </tbody>
         </table>
     </div>
-    <?php
-        include("../ad2.php");
-        ?>
     <script>
         $( document ).ready(function() {
             $("#unitContainerSingle").hide();

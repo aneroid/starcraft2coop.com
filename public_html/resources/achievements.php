@@ -29,9 +29,6 @@ include("../header.php");
         <li><b>Commander-specific Achievements:</b> These are specific to various gameplay elements of Co-op Commanders. Please check the individual commander pages for a list of their specific achievements.</li>
         <li><b>Co-Op Achievements:</b> These are general achievements earned through standard Co-op gameplay. These are listed below.</li>
     </ul>
-    <?php
-    include("../ad.php");
-    ?>
     <h2>Commander Levels</h2>
     <p>These achievements are earned for every 5 levels gained on each of the Co-op Commanders.</p>
     <div class="tableContainer">
@@ -142,9 +139,6 @@ include("../header.php");
             </tbody>
         </table>
     </div>
-    <?php
-    include("../ad.php");
-    ?>
     <h2>Commander Achievement Completions</h2>
     <p>You get achievements for completing all commander-specific achievements. For more information on what these achievements are, visit the respective commander pages. These are shown below:</p>
     <div class="tableContainer">
@@ -195,9 +189,6 @@ include("../header.php");
             </tr>
         </table>
     </div>
-    <?php
-    include("../ad.php");
-    ?>
     <h2>Mastery Levels</h2>
     <p>You get achievements for every 10 <a href="/resources/levels">mastery levels</a>. These are shown below:</p>
     <div class="tableContainer">
@@ -230,9 +221,6 @@ include("../header.php");
             </tbody>
         </table>
     </div>
-    <?php
-    include("../ad.php");
-    ?>
     <h2>Mission Difficulty</h2>
     <p>You get achievements for completing a certain number of missions on certain difficulty levels. Note that completing a mission on a difficulty level counts as a completion for lower difficulty levels. For example, completing a mission on Brutal difficulty will also add a point for Hard, Normal and Casual difficulties. The game wins required for each achievement are shown below:</p>
     <div class="tableContainer">
@@ -298,9 +286,6 @@ include("../header.php");
             </tbody>
         </table>
     </div>
-    <?php
-    include("../ad.php");
-    ?>
     <h2>Bonus Objective Experience</h2>
     <p>You get achievements for get bonus objective experience on certain difficulty levels. Note that completing a bonus objective on a difficulty level counts as a completion for lower difficulty levels. For example, completing a mission on Brutal difficulty will also add that experience for Hard, Normal and Casual difficulties. The experience required for each achievement are shown below:</p>
     <div class="tableContainer">
@@ -341,9 +326,6 @@ include("../header.php");
             </tbody>
         </table>
     </div>
-    <?php
-    include("../ad.php");
-    ?>
     <h2>Ascension</h2>
     <p>You get achievements as you climb through <a href="/resources/levels">Ascension Levels</a>. These achievements, and the levels you get them at are shown below:</p>
     <div class="tableContainer">
@@ -416,9 +398,6 @@ include("../header.php");
             </tr>
         </table>
     </div>
-    <?php
-    include("../ad.php");
-    ?>
     <h2>Mutations</h2>
     <p>You get achievements for completing a certain number of <a href="/resources/weeklymutations">Weeky Mutations</a> on certain difficulty levels. Note that completing a mission on a difficulty level counts as a completion for lower difficulty levels. For example, completing a mission on Brutal difficulty will also add a point for Hard, Normal and Casual difficulties. The game wins required for each achievement are shown below:</p>
     <div class="tableContainer">
@@ -474,9 +453,6 @@ include("../header.php");
             </tbody>
         </table>
     </div>
-    <?php
-    include("../ad.php");
-    ?>
     <h2>Bounties</h2>
     <p>You get achievements when you complete a certain number of bounties from <a href="/resources/weeklymutations">Weeky Mutations</a>. Each mutation offers four bounties - one for each difficulty level. Note that completing a mission on a difficulty level counts as a completion for lower difficulty levels. So, completing a Weekly Mutation on Brutal difficulty will earn you all four bounties for that week. These achievements, and the number of bounties required to unlock them are shown below:</p>
     <div class="tableContainer">

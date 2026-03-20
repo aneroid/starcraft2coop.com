@@ -30,9 +30,6 @@ include("../header.php");
     </div>
     <a id="misSum"></a><h2>Mission Summary</h2>
     <p>Egon Stetmann, stranded on Bel’shir since before the fall of Arcturus, is now under assault from Amon’s forces. Protect his harvesters as they collect the planet’s terrazine to prevent it from falling into the wrong hands.</p>
-    <?php
-    include("../ad1.php");
-    ?>
     <a id="objectives"></a><h2>Objectives</h2>
     <h3>Primary Objective</h3>
         <ul>
@@ -43,9 +40,6 @@ include("../header.php");
         <ul>
             <li>Destroy the Extraction Device (2)</li>
         </ul>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="botOrder"></a><h2>Bot Harvesting Order</h2>
     <div id="globalRaceSelect">
         <p>Change all base analysis pictures to race:</p>
@@ -70,9 +64,6 @@ include("../header.php");
     <p>There are a total of five bot waves that will leave the base area to go to harvest Terrazine. The goal of the mission is to protect those bots from enemy attack forces. The number of the bots in the wave increases as the mission progresses. The harvesting locations for each of the waves is shown below.</p>
     <img src="/images/missiondata/mistopportunities/botwaves.jpg" alt="Harvesting Wave Locations">
     <p>Each bot takes 60 seconds to harvest the Terrazine. However, do note that there is a travel time to and from the Terrazine Geyser, where the bots can also be attacked by stray forces and attack waves.</p>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="bonus"></a><h2>Completing the Bonus Objective</h2>
     <div id="objectiveImages">
         <img src="/images/missiondata/mistopportunities/extractiondevice.jpg" alt="Terrazine Extraction Device">
@@ -83,9 +74,6 @@ include("../header.php");
     <?php $info = "extractiondevice1"; include("../scripts/switchergenerator.php");?>
     <p>The location and guards of the second extraction device is shown below. These forces are a lot stronger, but are much more clumped up together.</p>
     <?php $info = "extractiondevice2"; include("../scripts/switchergenerator.php");?>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="timings"></a><h2>Timings</h2>
     <p>Note: Information on Tech and Strength levels can be found on the <a href="/guides/enemycomps">Enemy Compositions</a> page.</p>
     <p>There are three timings that play a role in Mist Opportunities. These are:</p>
@@ -436,9 +424,6 @@ include("../header.php");
             </tr>
         </tbody>
     </table>
-    <?php
-    include("../ad2.php");
-    ?>
     <a id="spawnPoints"></a><h2>Spawn Points</h2>
     <p>Attack Waves have two spawn points on the map. These are shown below.</p>
     <img src="/images/missiondata/mistopportunities/attackwavespawns.jpg" alt="Attack Wave Spawn Positions">
@@ -453,17 +438,11 @@ include("../header.php");
     <img src="/images/missiondata/mistopportunities/wave4harassspawns.jpg" alt="Harass Wave Spawn Positions for Bot Wave 4">
     <p>Bot Wave 5:</p>
     <img src="/images/missiondata/mistopportunities/wave5harassspawns.jpg" alt="Harass Wave Spawn Positions for Bot Wave 5">
-    <?php
-    include("../ad.php");
-    ?>
     <a id="misTips"></a><h2>Mission Tips</h2>
     <ul>
         <li>Clear harvest locations ahead of time to ensure bots do not take damage.</li>
         <li>The bonus objective countdown will stop as long as the bonus objective is being hit. This means a single photon canon or army unit can stop the countdown. Use that to take out the bonus objective after you have cleared the area.</li>
     </ul>
-    <?php
-    include("../ad3.php");
-    ?>
     <a id="comTips"></a><h2>Commander-specific Tips</h2>
     <ul>
         <li><a href="/commanders/abathur">Abathur</a>: Place Toxic Nests on key choke points to weaken attack and harass waves.</li>

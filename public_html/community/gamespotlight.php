@@ -99,9 +99,6 @@ include("../header.php");
     <a href="https://policies.google.com/terms">Terms of Service</a> apply.</p>
     </form>-->
     <p>Submissions are now closed. Thank you.</p>
-    <?php
-    include("../ad4.php");
-    ?>
 </div>
 <?php include("../footer.php"); ?>
 </body>

@@ -21,9 +21,6 @@ include("../header.php");
     <h1>Easter Eggs and Other Hidden Content in Co-op</h1>
     <?php include("../scripts/reporterror.php");?>
     <p>A number of Easter Eggs are hidden throughout the Co-op mode content. These are listed below.</p>
-    <?php
-    include("../ad1.php");
-    ?>
     <h2>Commander-Specific</h2>
     <h3>Alarak's Crystal</h3>
     <p>Clicking the crystal in the middle of the calldowns bar (shown below) for Alarak will cause him to say a few things after the 7th click as follows:</p>
@@ -44,9 +41,6 @@ include("../header.php");
     <h3>Fenix's Probius</h3>
     <p>When you have researched all the Champion A.I. Personalities for the Purifier Conclave and have each of the Champion A.I.'s on the field, the next probe you create from your Nexus will be Probius. He is shown below:</p>
     <img src="/images/eastereggs/fenixprobius.jpg" alt="Probius">
-    <?php
-    include("../ad2.php");
-    ?>
     <h2>Map-Specific</h2>
     <h3><a href="/missions/cradleofdeath">Cradle of Death</a></h3>
     <p>There is a teleporter near the south-west bonus area. Moving a unit into the square will spawn one of objects in the teleporter.</p>
@@ -75,9 +69,6 @@ include("../header.php");
         <li>"Sometimes, this really feels like a dead-end job"<br>"Oh, I know what you mean. Deader than those Death Shards".</li>
         <li>"Have you ever wondered what happened to Reigel?"<br>"Not really. It always seemed like he knew more than he let on, though".</li>
     </ul>
-    <?php
-    include("../ad3.php");
-    ?>
 </div>
 <?php include("../footer.php"); ?>
 </body>

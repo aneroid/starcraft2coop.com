@@ -18,9 +18,6 @@ include("../../header.php");
     <h1>The Co-Op Tournament</h1>
     <p>The Co-Op tournament is designed to test the limits of players' skill, knowledge and map awareness in Starcraft II Co-op mode. Currently, there is a $100 prize given to the winning team ($50 each player).</p>
     <p>You may visit the <a href="archive">Archive</a> to see how the past tournaments played out, download replays of all the games, and view the casted VODs for each game of the event.</p>
-    <?php
-    include("../../ad.php");
-    ?>
     <h2>Rules</h2>
     <h3>Gameplay Rules</h3>
     <ul>
@@ -81,9 +78,6 @@ include("../../header.php");
         <li>To prevent stalemates, if a mission lasts longer than 45:00 in-game time, it will be considered a loss and mission progress will be measured from that time.</li>
         <li>If an ally disconnects, the other person will have to complete the mission by themself. They may use their ally's units and resources as they see fit. If both players disconnect, the game will be considered a loss.</li>
     </ul>
-    <?php
-    include("../../ad.php");
-    ?>
     <h3>Mission Progress</h3>
     <p>In case both teams lose their runs, a "Mission Effort" score will be determined based on the mission progress. The below table outlines how the Mission Effort Score will be determined.</p>
     <table>
@@ -172,9 +166,6 @@ include("../../header.php");
             </tr>
         </tbody>
     </table>
-    <?php
-    include("../../ad.php");
-    ?>
     <h3>Abilities</h3>
     <p>In addition to the standard rules, each tournament will provide teams with three abilities that they can use (once per tournament) to help progress through the tournament. The abilities will be randomly selected from the list below.</p>
     <table>
@@ -218,9 +209,6 @@ include("../../header.php");
             </tr>
         </tbody>
     </table>
-    <?php
-    include("../../ad.php");
-    ?>
     <h3>Mutator Costs</h3>
     <p>The costs of the mutators is as follows:</p>
     <table>
@@ -282,9 +270,6 @@ include("../../header.php");
             <tr><td>We Move Unseen</td><td>2</td></tr>
         </tbody>
     </table>
-    <?php
-    include("../../ad.php");
-    ?>
     <h3>Good Sportsmanship</h3>
     <p>As with all esports tournaments, players are expected to demonstrate good sportsmanship. This means, but it is not limited to:</p>
     <ul>
@@ -319,9 +304,6 @@ include("../../header.php");
         else{
              include("registrationopen.php"); 
         }
-    ?>
-    <?php
-    include("../../ad.php");
     ?>
     
 </div>

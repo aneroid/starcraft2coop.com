@@ -69,15 +69,8 @@ include("../header.php");
     <h2>The Series</h2>
     <p>Rockslapping Champions is a comedy series of co-op games casted where a player has demonstrated poor decision-making and strategic-thinking ability.  It is named after <a href="/commanders/dehaka">Dehaka's Rockslapping</a> (a highly inefficient opening with Dehaka). The games are casted with a one-of-a-kind Co-op Observer UI, with "Did You Know" facts scattered throughout the video.</p>
     <p>The Co-op Observer Interface used during these casts is an exclusive interface used for starcraft2coop.com's content. It contains information that you'd expect from any observer interface (such as resource counts, supplies and upgrades). However, in addition to this, it also contains calldown information such as charges available, cooldown and unlock status.</p>
-    <?php
-    include("../ad1.php");
-    ?>
     <h2>Full Playlist</h2>
     <iframe width="480" height="270" src="https://www.youtube.com/embed/videoseries?list=PL-U97hco2Fu543NyDyGNox2VGtz6BkbWl" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    <!--
-    <?php
-    include("../ad2.php");
-    ?>-->
     <h2>Submit Your Replays for Casting</h2>
     <!--
     <p>You are welcome to submit replays for casting. Before submitting a replay, please consider the following:</p>
@@ -147,9 +140,6 @@ include("../header.php");
     <a href="https://policies.google.com/terms">Terms of Service</a> apply.</p>
     </form>-->
     <p>Submissions are now closed. Thank you.</p>
-    <?php
-    include("../ad3.php");
-    ?>
     <h2>Filter By Commander</h2>
     <p>If you would like to filter previous Rockslapping Champions episode by the Rockslapping Commander, you may click the link below to generate a full list of episodes. Click on the Commander Portraits to remove the commander from the list.</p>
     <p>Compilation episodes take into consideration all commanders featured in that episode. As long as a single commander is unfiltered out, compilation episodes will continue to appear in the list.</p>

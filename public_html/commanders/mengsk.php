@@ -93,9 +93,6 @@ include("../header.php");
     </div>
     <a id="comSum"></a><h2>Commander Summary</h2>
     <p>Mengsk uses an army of conscripted workers and soldiers to bolster his defenses backed up by powerful units from his Royal Guard and Artillery fire from the large distances.</p>
-    <?php
-    include("../ad1.php");
-    ?>
     <a id="levelUnlocks"></a><h2>Level Unlocks</h2>
     <table class="progressionTable">
         <thead>
@@ -236,9 +233,6 @@ include("../header.php");
         </tbody>
     </table>
     <p id="powerSpikeInfo">Highlighted rows denote large power spikes for the commander.</p>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="achievements"></a><h2>Achievements</h2>
     <p>The commander-specific achievements for Mengsk are:</p>
     <table>
@@ -272,9 +266,6 @@ include("../header.php");
             </tr>
         </tbody>
     </table>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="calldowns"></a><h2>Calldowns</h2>
     <p>The calldowns for Mengsk, at level 15, with no mastery points added are:</p>
     <table class="calldownTable">
@@ -362,15 +353,9 @@ include("../header.php");
             </tr>
         </tbody>
     </table>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="leveling"></a><h2>Sub-Ascension Leveling</h2>
     <p>Difficulty: Moderate</p>
     <p>Prior to gaining access to Earthsplitter Ordnances, Mengsk levelling can be extremely difficult, as it makes it impossible for him to take engagements without losing his army. Once Ordnances are unlocked, they should be used to weaken enemy bases and attack waves before pushing in. Shock Divisions should be used to provide damage, with Troopers in the front to keep enemy units off them.</p>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="masteries"></a><h2>Masteries</h2>
     <p>Below are the three Power Sets for Mengsk with the recommended point allocations for each. Note that these are meant to serve a general, all-purpose build that is effective across all maps with no Prestiges selected. You are highly encourged to change these masteries to suit your playstyle and particular challenges you face (e.g. <a href="/resources/weeklymutations">Weekly Mutations</a>).</p>
     <p>Power Set 1:</p>
@@ -448,9 +433,6 @@ include("../header.php");
         </tbody>
     </table>
     <p class="masterySummary">The Starting Imperial Mandate is the better choice here because it provides Mengsk with access to two Supply Bunkers at the 2 minute mark, allowing him to fast expand and build his economy.</p>
-    <?php
-    include("../ad2.php");
-    ?>
     <a id="prestiges"></a><h2>Prestiges</h2>
     <p>Below are the prestiges for Mengsk. Note that "Effective Level" is the level at which the prestige achieves it full effect.</p>
     <table class="prestigeTable">
@@ -586,9 +568,6 @@ include("../header.php");
         </tbody>
     </table>
     <p>All of Mengsk's prestiges are viable, depending on the player's preferred playstyle. However, for general play, Merchant of Death offers Mengsk the versatility in being able to deal with a wide variety of situations. While upgraded troopers are slightly more expensive, they pay back in dividends by increasing your overall effectiveness in trading with Amon.</p>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="army"></a><h2>Recommended Army Composition</h2>
     <p>The recommended army composition for Mengsk is below. Note that this assumes no Prestige talent selected and recommended Mastery Allocations. This is a basic recommendation for your army framework. It is recommended to gain an understanding for each of the units in the <a href="#units">Units</a> section and further add tech units so that you are able to better handle the situations you face.</p>
     <img class="army" src="/images/commanderdata/units/mengsk/dominionassaulttrooper.jpg" alt="Dominion Assault Trooper"><img class="army" src="/images/commanderdata/units/mengsk/dominionrockettrooper.jpg" alt="Dominion Rocket Trooper"><img class="army" src="/images/commanderdata/units/mengsk/aegisguard.jpg" alt="Aegis Guard"><img class="army" src="/images/commanderdata/units/mengsk/imperialintercessor.jpg" alt="Imperial Intercessor"><img  class="army" src="/images/commanderdata/units/mengsk/prideofaugustgrad.jpg" alt="Pride of Augustgrad"><img class="army"  src="/images/commanderdata/units/mengsk/imperialwitness.jpg" alt="Imperial Witness">
@@ -624,9 +603,6 @@ include("../header.php");
         });
     </script>
     
-    <?php
-    include("../ad.php");
-    ?>
     <a id="units"></a><h2>Combat Units</h2>
     <p>For more information on Mengsk's unit stats, comparison between units and upgrade calculations, visit the <a href="/tools/unitstats">Data Tables</a> page.</p>
     <p>Mengsk's combat units are listed below:</p>
@@ -1261,9 +1237,6 @@ include("../header.php");
             </table>
         </div>
     </div>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="buildOrder"></a><h2>Build Order</h2>
     <p>Below is the standard economic build order for Mengsk. For more information on how to read and construct your own build orders, please check the <a href="/guides/buildordertheory">Build Order Theory</a> page.</p>
     <p class="buildOrder">
@@ -1283,9 +1256,6 @@ include("../header.php");
         53 Starport with 8 Laborers<br>
         56 Imperial Witness<br>
     </p>
-    <?php
-    include("../ad3.php");
-    ?>
     <a id="guide"></a><h2>Gameplay Guide</h2>
     <h3>Playstyle Traps</h3>
     <p>Weapon upgrades for Troopers may seem expensive, but they can greatly increase the unit's performance in combat. Make sure to utilize any floating minerals to upgrade Trooper weapons where possible.</p>
@@ -1352,9 +1322,6 @@ include("../header.php");
             </tr>
         </tbody>
     </table>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="fastexpand"></a><h3>Fast Expanding</h3>
     <p>With 30 points into the Starting Mandate Mastery, Mengsk has access to one of the following listed combinations of calldown usage once he hits 50 Mandate, which is when double-Bunker expands begin. Single bunker expands can be done at the start of the game.</p>
     <ul>
@@ -1751,15 +1718,9 @@ include("../header.php");
         <li>Aim to have 3-4 Enlistment Centers in the mid-late game to quickly reinforce Troopers after taking engagements</li>
         <li>If a Trooper with a weapon is killed, the dropped weapon will remain on the ground for 300 seconds before despawning and refunding 120 minerals.</li>
     </ul>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="videos"></a><h2>Video Guides</h2>
     <p>The below videos demonstrate the various fast expands explained earlier. Note that as of patch 4.11.3, Mengsk's Starting Mandate Mastery has been modified which means the two Bunkers cannot be dropped at the start of the game. For double Bunker expands, you will need to wait (~2 mins) before both Bunkers can be placed. For single Bunker expands, the mineral line will not be saturated at the start of the game.</p>
     <iframe width="950" height="535" src="https://www.youtube.com/embed/videoseries?list=PL-U97hco2Fu67esg6PKcDnh9ejc_3UZ7p" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    <?php
-    include("../ad.php");
-    ?>
 </div>
 <?php include("../footer.php"); ?>
 </body>

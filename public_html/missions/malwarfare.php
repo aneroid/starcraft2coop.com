@@ -30,9 +30,6 @@ include("../header.php");
     </div>
     <a id="misSum"></a><h2>Mission Summary</h2>
     <p>Long ago, this protoss facility was used to convert the personalities of great warriors into AI known as the Purifiers. Researchers tested the process on a Tal'darim prisoner, whose rogue personality began to attack the facility. Now the Purifier guardian Aurana is attempting to regain control.</p>
-    <?php
-    include("../ad1.php");
-    ?>
     <a id="objectives"></a><h2>Objectives</h2>
     <h3>Primary Objective</h3>
         <ul>
@@ -43,9 +40,6 @@ include("../header.php");
         <ul>
             <li>Download AI Personalities (6)</li>
         </ul>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="towerOrder"></a><h2>Suppression Tower Order</h2>
     <div id="globalRaceSelect">
         <p>Change all base analysis pictures to race:</p>
@@ -88,9 +82,6 @@ include("../header.php");
         <li>Multi-Target Lock On: Deals 40 damage to all enemy units in the targeting circles and slows their attack speed and movement speed by 50% for 4 seconds</li>
         <li>Single-Target Lock On: Deals 150 damage to all enemy units in the targeting circle</li>
     </ul>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="bonus"></a><h2>Completing the Bonus Objective</h2>
     <p>The bonus objective requires you to download three AI Personalities each from two beacons on the map. This is the only bonus objective that requires resources to complete. Each AI personality costs 350 Minerals/100 Gas to download. Therefore, you will require 1050 minerals/300 Gas to download all personalities for a single objective. The objective will expire exactly 4 minutes after it starts. Each beacon is defended by a force of enemy units and static defense.</p>
     <p>The first beacon is shown below.</p>
@@ -98,9 +89,6 @@ include("../header.php");
     <p>The second beacon is shown below.</p>
     <?php $info = "beacon2"; include("../scripts/switchergenerator.php");?>
     <p>Note that when the first A.I. Personality download has been initiated, three attack waves will spawn to attack and destroy the objective. Once these are cleared, you only require vision in order to complete the rest of the downloads.</p>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="timings"></a><h2>Timings</h2>
     <p>Note: Information on Tech and Strength levels can be found on the <a href="/guides/enemycomps">Enemy Compositions</a> page.</p>
     <p>There are three different timings that will be listed in this section. These are:</p>
@@ -419,18 +407,12 @@ include("../header.php");
             </tr>
         </tbody>
     </table>
-    <?php
-    include("../ad2.php");
-    ?>
     <a id="spawnPoints"></a><h2>Spawn Points</h2>
     <p>The spawn points for the Harass waves and Attack waves are different. Harass waves are created from a random point in the lock area.</p>
     <p>However, attack waves have a fixed number of spawn positions. Attack Waves 1 and 2 have the same possible spawn points. The spawn points for attack waves 1 and 2 are shown below.</p>
     <img src="/images/missiondata/malwarfare/wave12spawnpoint.jpg" alt="Spawn Points for Attack Waves 1 and 2">
     <p>Attack Wave 3 only has one spawn point. This is shown below.</p>
     <img src="/images/missiondata/malwarfare/wave3spawnpoint.jpg" alt="Spawn Points for Attack Waves 3">
-    <?php
-    include("../ad.php");
-    ?>
     <a id="misTips"></a><h2>Mission Tips</h2>
     <ul>
         <li>Pay attention to Aurana's Transport while it is moving. It will slow down if enemy units attack it, giving them even more time to damage it.</li>
@@ -438,9 +420,6 @@ include("../header.php");
         <li>When downloading Personalities for the bonus objective, only three attack waves will spawn in close proximity to each other. Once those attack waves are cleared, all you need is vision to download the rest. No defenses are required.</li>
         <li>Pre-clearing the areas ahead of the transport is the best way to ensure it doesn't take damage and allows you to finish the mission as fast as possible.</li>
     </ul>
-    <?php
-    include("../ad3.php");
-    ?>
     <a id="comTips"></a><h2>Commander-specific Tips</h2>
     <ul>
         <li><a href="/commanders/abathur">Abathur</a>: Place Toxic Nests outside the camps at the expansions and lure the units to get early biomass.</li>

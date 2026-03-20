@@ -31,9 +31,6 @@ include("../header.php");
     </div>
     <a id="misSum"></a><h2>Mission Summary</h2>
     <p>Moebius Corps is using this massive battle station to target Dominion colonies. Help Stone deliver xel'naga artifacts to key target sites in order to destroy the station and save innocent lives.</p>
-    <?php
-    include("../ad1.php");
-    ?>
     <a id="objectives"></a><h2>Objectives</h2>
     <h3>Primary Objective</h3>
         <ul>
@@ -53,9 +50,6 @@ include("../header.php");
         <ul>
             <li>Escort Artifact Truck to Moebius Research Outpost (2)</li>
         </ul>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="objectiveOrder"></a><h2>Determining Objective Order</h2>
     <?php $mission = "cradleofdeath"; ?>
     <p>It is first important to understand the order of the objectives before analyzing enemy bases. Cradle of Death is a mission that has a random element to the objectives. The image below shows the objective locations. These names will be used throughout the guide to refer to the specific objectives on the map.</p>
@@ -101,9 +95,6 @@ include("../header.php");
         <li>Send your truck towards the Terrazine Extractors. If the valley entrance is guarded by constructs, it is the fourth objective. If there are no constructs, the fourth objective is the Vespene Refinery</li>
     </ol>
     <img src="/images/missiondata/cradleofdeath/objectivescout2.jpg" alt="Scouting Objective 2">
-    <?php
-    include("../ad.php");
-    ?>
     <a id="baseAnalysis"></a><h2>Enemy Base Analysis</h2>
     <div id="globalRaceSelect">
         <p>Change all base analysis pictures to race:</p>
@@ -137,9 +128,6 @@ include("../header.php");
     <?php $info = "terrazineextractorlong"; include("../scripts/switchergenerator.php");?>
     <p>If the last objective is the Vespene Refinery area, you will need to go South-West to get to it. This area is guarded with a heavy air presence.</p>
     <?php $info = "vespenerefinery"; include("../scripts/switchergenerator.php");?>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="bonus"></a><h2>Completing the Bonus Objective</h2>
     <p>The bonus objective requires you to Move your truck in front of a Moebius Research Outpost, which is guarded by a Construct and an enemy camp.</p>
     <p>There are a total of two bonus objectives present on the map. One will appear when the second main objective activates, and one will appear when the third main objective activates. Additionally, the first bonus objective will always lie in the north of the main objective. The second bonus objective will always lie to the south of the main objective.</p>
@@ -151,9 +139,6 @@ include("../header.php");
     <?php $info = "xenonreactorbonus1long"; include("../scripts/switchergenerator.php");?>
     <p>For the Xenon Reactor, the southern bonus area is shown below. This will be the bonus area you will need to clear if the Xenon Reactor is the third main objective.</p>
     <?php $info = "xenonreactorbonus2long"; include("../scripts/switchergenerator.php");?>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="timings"></a><h2>Timings</h2>
     <p>Note: Information on Tech and Strength levels can be found on the <a href="/guides/enemycomps">Enemy Compositions</a> page.</p>
     <p>Due to the nature of this map, there are two types of attacks on this map:</p>
@@ -351,9 +336,6 @@ include("../header.php");
             </tr>
         </tbody>
     </table>
-    <?php
-    include("../ad2.php");
-    ?>
     <a id="spawnPoints"></a><h2>Spawn Points</h2>
     <p>Attack waves will spawn from the location of the next objective you will need to complete. In the case you are on the final objective, it will spawn from the side you did not attack.</p>
     <p>The image below shows you the spawn point if the Attack Wave is coming from the Resource Stockpile side.</p>
@@ -368,9 +350,6 @@ include("../header.php");
         <li>If your truck is in your main, or your expansion, the Drop Attacks will drop outside the base of your ramp. They will never spawn inside your bases. The area that they will spawn on will be the one that is closest to your truck.</li>
         <li>If your truck is anywhere else on the map, the Attacks will drop a little distance away from your truck, in a location that lies in between the truck and the objective. In essence, they will try to block your truck from reaching the objective.</li>
     </ul>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="misTips"></a><h2>Mission Tips</h2>
     <ul>
         <li>If you want to pre-scout the mission order, use the trucks to do so.</li>
@@ -378,9 +357,6 @@ include("../header.php");
         <li>The only entrances to your base are through your ramps, which can easily be defended.</li>
         <li>Do not bother with clearing out all enemies and buildings from objective areas. The goal is to clear the construct on the beacon. Once your truck is in position, it is immune to damage.</li>
     </ul>
-    <?php
-    include("../ad3.php");
-    ?>
     <a id="comTips"></a><h2>Commander-specific Tips</h2>
     <ul>
         <li><a href="/commanders/abathur">Abathur</a>: Place Toxic Nests outside the Hybrid Facility and lure the units with your truck to get the biomass.</li>

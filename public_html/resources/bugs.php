@@ -51,9 +51,6 @@ include("../header.php");
         <li>Prestiging a commander while the game countdown is active adds experience to the level 1 commander while the player plays at mastery level</li>
         <li>Score screen displays jumping units (e.g. Raptor-strain Zerglings) as units made</li>
     </ul>
-    <?php
-    include("../ad2.php");
-    ?>
     <a id="amon"></a><h2>Amon</h2>
     <ul>
         <li>Attack Waves take units from the map if they are killed too quickly</li>
@@ -66,9 +63,6 @@ include("../header.php");
         <li>Hybrid Destroyer's Graviton Prison is not marked as a Stasis ability</li>
         <li>Raven Seeker Missiles will hit Interceptors if it was the target even if the Interceptor is already inside the Carrier before it hits</li>
     </ul>
-    <?php
-    include("../ad2.php");
-    ?>
     <a id="abathur"></a><h2>Abathur</h2>
     <ul>
         <li>Base
@@ -109,9 +103,6 @@ include("../header.php");
             </ul>
         </li>
     </ul>
-    <?php
-    include("../ad2.php");
-    ?>
     <a id="artanis"></a><h2>Artanis</h2>
     <ul>
         <li>Base
@@ -153,9 +144,6 @@ include("../header.php");
             </ul>
         </li>
     </ul>
-    <?php
-    include("../ad2.php");
-    ?>
     <a id="fenix"></a><h2>Fenix</h2>
     <ul>
         <li>Base
@@ -198,9 +186,6 @@ include("../header.php");
             </ul>
         </li>
     </ul>
-    <?php
-    include("../ad2.php");
-    ?>
     <a id="karax"></a><h2>Karax</h2>
     <ul>
         <li>Base
@@ -234,9 +219,6 @@ include("../header.php");
             </ul>
         </li>
     </ul>
-    <?php
-    include("../ad2.php");
-    ?>
     <a id="mengsk"></a><h2>Mengsk</h2>
     <ul>
         <li>Base
@@ -272,9 +254,6 @@ include("../header.php");
             </ul>
         </li>
     </ul>
-    <?php
-    include("../ad2.php");
-    ?>
     <a id="raynor"></a><h2>Raynor</h2>
     <ul>
         <li>Base
@@ -313,9 +292,6 @@ include("../header.php");
             </ul>
         </li>
     </ul>
-    <?php
-    include("../ad2.php");
-    ?>
     <a id="stukov"></a><h2>Stukov</h2>
     <ul>
         <li>Base
@@ -355,9 +331,6 @@ include("../header.php");
             </ul>
         </li>
     </ul>
-    <?php
-    include("../ad2.php");
-    ?>
     <a id="tychus"></a><h2>Tychus</h2>
     <ul>
         <li>Base
@@ -394,9 +367,6 @@ include("../header.php");
             </ul>
         </li>
     </ul>
-    <?php
-    include("../ad2.php");
-    ?>
     <a id="zagara"></a><h2>Zagara</h2>
     <ul>
         <li>Base
@@ -431,9 +401,6 @@ include("../header.php");
             </ul>
         </li>
     </ul>
-    <?php
-    include("../ad3.php");
-    ?>
     <a id="missions"></a><h2>Missions</h2>
     <ul>
         <li>Chain of Ascension: All spawned Bonus objectives are auto-completed at the end of the mission</li>
@@ -472,9 +439,6 @@ include("../header.php");
         <li>The Vermillion Problem: Amon's units are immune to lava surges despite the AI respecting the surges</li>
         <li>The Vermillion Problem: Lava Bursts from the mutator are treated the same as the Lava Spouts in the mission, triggering Donny Vermillion's voice line</li>
     </ul>
-    <?php
-    include("../ad3.php");
-    ?>
     <a id="mutators"></a><h2>Mutators</h2>
     <ul>
         <li>Aggressive Deployment drops will not spawn if a player's only valid drop target is placed over unpathable terrain</li>
@@ -500,9 +464,6 @@ include("../header.php");
         <li>When transmutating an air unit sometimes the unit will transmute to ground unit in an impassable terran and be stuck</li>
         <li>With Transmutation active, some units transform into tier 1 units due to not having a tier associated with them. eg Mothership and Stank</li>
     </ul>
-    <?php
-    include("../ad3.php");
-    ?>
     <a id="QOL"></a><h2>Quality of Life</h2>
     <ul>
         <li>Abathur: Amon units killed by non-player instances like Thrasher attacks will not drop Biomass</li>
@@ -533,9 +494,6 @@ include("../header.php");
         <li>Hybrids on Part and Parcel can teleport onto unpathable terrain, preventing them from being attacked by melee units</li>
         <li>Boom Bot codes cannot be input too quickly</li>
     </ul>
-    <?php
-    include("../ad3.php");
-    ?>
     <a id="aesthetic"></a><h2>Aesthetic</h2>
     <ul>
         <li>Abathur: Canceling a morph causes various visual bugs</li>
@@ -569,9 +527,6 @@ include("../header.php");
         <li>Zeratul: Void Apparitions are counted towards Units Made count</li>
         <li>When a player unit kills a missile from Missile Command with Just Die! active, the Just Die! respawn animation occurs on the player unit instead of the missile</li>
     </ul>
-    <?php
-    include("../ad2.php");
-    ?>
 </div>
 <?php include("../footer.php"); ?>
 </body>

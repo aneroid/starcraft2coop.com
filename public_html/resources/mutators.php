@@ -91,9 +91,6 @@ $_SESSION["known"] = true;
         <p><a href="#mutatorInteractions">Mutator Interactions</a></p>
         <p><a href="#mutatorList">Mutator List</a></p>
     </div>
-    <?php
-    include("../ad1.php");
-    ?>
     <a id="safetyZones"></a><h2>Safety Zones</h2>
     <p>Certain mutators create environmental hazards that can impact/debuff player units, including workers. These mutators get deactivated in areas called "Safety Zones". All player bases and expansions are considered Safety Zones. The mutators that obey the Safety Zone rules are as follows:</p>
     <ul>
@@ -170,9 +167,6 @@ $_SESSION["known"] = true;
             <img src="/images/mutatordata/safetyzonevoidthrashing.jpg" alt="Void Thrashing Safety Zone">
         </div>
     </div>
-    <?php
-    include("../ad2.php");
-    ?>
     <a id="mutatorInteractions"></a><h2>Mutator Interactions</h2>
     <?php
         include '../scripts/sqlconnection.php';
@@ -282,9 +276,6 @@ $_SESSION["known"] = true;
             $("#interactions").text("");
         })
     </script>
-    <?php
-    include("../ad3.php");
-    ?>
     <a id="mutatorList"></a><h2>Mutator List</h2>
     <p>A list of all of Starcraft II Co-op mutators is shown below. Names, icons, descriptions and mechanics of these mutators are listed. Click the "Details" button to display more information on each mutator. For more numeric data on mutators (as well as mutator information for other difficulty levels), please visit <a href="https://seamaguro.blogspot.com/2017/12/mutator-compendium.html" rel="nofollow">Maguro's Blog</a>.</p>
     <p>Most mutators also have a certain difficulty score associated with them, called an "Abomination Value". These scores are used for selecting different levels of difficulty levels for Brutal+ games. You can find a list of scores and difficulty level breakpoints on the <a href="brutal">Brutal+ Page</a>.</p>
@@ -370,9 +361,6 @@ $_SESSION["known"] = true;
                     <br><br>
                     <span class="detailsButton" onclick='$("#uberDarkness").toggle();'>Details</span>
                     <div id="uberDarkness" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>The vision range of Afraid of the Dark is highly reduced. Below is an example of what it looks like:</p>
                         <img src="/images/mutatordata/afraidofthedark.jpg" alt="Afraid of the Dark Vision Range">
@@ -445,9 +433,6 @@ $_SESSION["known"] = true;
                     <br><br>
                     <span class="detailsButton" onclick='$("#dropPods").toggle();'>Details</span>
                     <div id="dropPods" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>Drops will prioritize player units which fulfill particular conditions. These are:</p>
                         <ul>
@@ -528,9 +513,6 @@ $_SESSION["known"] = true;
     				<br><br>
                     <span class="detailsButton" onclick='$("#spawnBroodling").toggle();'>Details</span>
                     <div id="spawnBroodling" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>The number of Broodlings that spawn is equal to the unit's supply cost. If the unit costs no supply, 1 Broodling is spawned. Note that Hybrids take up 8 supply. Broodlings do not have a timed life and will remain on the map indefinitely until killed.</p>
                         <p class="subheading">Commander-specific Tips</p>
@@ -550,9 +532,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#avenger").toggle();'>Details</span>
                     <div id="avenger" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>When a unit dies, it gives out a certain number of Avenger stacks to units within a 1.25 range. The number of stacks equals the unit's supply count. If the unit costs no supply, 1 stack is given. Note that Hybrids take up 8 supply.</p>
                         <p>The total number of Avenger stacks (buffs) a unit can have is 10. These stacks are lost when the unit ownership changes (Mind Control, Domination, etc.).</p>
@@ -630,9 +609,6 @@ $_SESSION["known"] = true;
     				<br><br>
                     <span class="detailsButton" onclick='$("#barrier").toggle();'>Details</span>
                     <div id="barrier" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>Barrier triggers when a unit or structure first takes damage. Therefore, you can bypass Barrier by oneshotting a unit. The Barrier buff applies a 5 second shield that absorbs up to 100 damage. Once a unit has received the Barrier buff, it cannot receive it again.</p>
                         <p class="subheading">Commander-specific Tips</p>
@@ -650,9 +626,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#plague").toggle();'>Details</span>
                     <div id="plague" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>Any enemy unit has a 33% chance of having the Black Death mutator applied to it. This unit can infect up to 3 units within 5 range when it dies. Black Death does 1% of a unit's HP in damage every 0.5 seconds and ignores all shields.</p>
                         <p class="subheading">Commander-specific Tips</p>
@@ -682,9 +655,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#blizzard").toggle();'>Details</span>
                     <div id="blizzard" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>Blizzards slow down unit movement speed to 12% over the span of 5 seconds. It also deals 5 damage per second to all units in its range. The debuff lasts for 2 seconds.</p>
                         <p class="subheading">Commander-specific Tips</p>
@@ -705,9 +675,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#boomBots").toggle();'>Details</span>
                     <div id="boomBots" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>The bots will spawn from any enemy building. If you clear all enemy buildings on the map, the bots will stop spawning. Note that all-clearing Malwarfare and Void Launch does not stop them from spawning, because Suppression Towers and Launch Bays are indestructible enemy structures.</p> 
                         <p>A Boom Bot is shown below:</p>
@@ -801,9 +768,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#cycleRandom").toggle();'>Details</span>
                     <div id="cycleRandom" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>The start of the game has three mutators active. At 4:30 one mutator will get cycled out. 15 seconds later, one more gets added. Mutators get replaced every 90 seconds.</p>
                         <p>The list of mutators that can appear is shown below:</p>
@@ -869,9 +833,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#concussiveAttacks").toggle();'>Details</span>
                     <div id="concussiveAttacks" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>The debuff reduces movement speed by 50% and lasts 60 seconds to any unit or structure that is damaged by Amon or the Environment. Units with the "Frenzied" buff are immune to Concussive Attacks and cannot be slowed. These include Ultralisks, Brutalisks, Tyrannozors and Tychus' Odin.</p>
                         <p class="subheading">Commander-specific Tips</p>
@@ -889,9 +850,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#blackFog").toggle();'>Details</span>
                     <div id="blackFog" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>Attack wave and Objective ping markers will not be shown on the minimap. Reducing your Shader Settings to Medium quality and below will allow you to see the terrain, nullifying the mutator.</p>
                         <p class="subheading">Commander-specific Tips</p>
@@ -913,9 +871,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#damageBounce").toggle();'>Details</span>
                     <div id="damageBounce" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>50% of the damage you deal is split equally across all units within 5 range. This effect will only apply if the unit survives damage that is being dealt. Oneshotting a unit will not trigger Diffusion.</p>
                         <p class="subheading">Commander-specific Tips</p>
@@ -937,9 +892,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#tePDMamageReflect").toggle();'>Details</span>
                     <div id="tePDMamageReflect" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>HP is healed at 1 HP per 0.1 seconds as per the in-game code. However, due to the design of this function, HP is only healed at roughly 8HP per second on average. Only the unit that deals damage gets impacted by Double Edged. For example, Carriers are not affected, but their Interceptors are. Units within transports will be safe from the mutator if they are picked up.</p>
                         <p>Double Edged has an interesting interaction with Life Leech effects on units, such as those from Dehaka's Gene Mutations. Damage that is dealt by Double Edged is also counted towards damage dealt. That is, if a unit deals 100 damage to an enemy unit, it deals 100 damage to itself, and therefore, a total of 200 damage is counted for the Life Leech effect. This results in 40 life heal and 100 life healed over time.</p>
@@ -972,9 +924,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#structureSteal").toggle();'>Details</span>
                     <div id="structureSteal" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>Shields and HP are replenished after the structure is captured. The structure will be destroyed if there's no path to player 1's base. Heroic Structures (with the exception of Swann's Laser Drill) are not stolen by Amon.</p>
                         <p>Structures will only be captured by Amon under the following conditions:</p>
@@ -1008,9 +957,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#sidestep").toggle();'>Details</span>
                     <div id="sidestep" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>The enemy unit will teleport within 5 range of the attacking unit if the attacking unit is less than 20 range away. Otherwise, it will teleport within 5 range of its current position.</p>
                         <p>In addition to the teleport, the unit becomes invulnerable for 0.25 seconds. A unit cannot teleport more than once every 2 seconds.</p>
@@ -1030,9 +976,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#deathPull").toggle();'>Details</span>
                     <div id="deathPull" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>All player units within 9 range get affected by Fatal Attraction on the death of a unit. This only applies to units which can move. Burrowed Swarm Hosts, Sieged up Siege Tanks, etc. are not affected by Fatal Attraction. The supply cost of a unit determines the strength of the pull as well the length of time the unit is stunned (cannot use attack, use abilities or be moved) as shown below:</p>
                         <table class="dataTable">
@@ -1081,9 +1024,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#fear").toggle();'>Details</span>
                     <div id="fear" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>Fear lasts for 10 seconds on non-heroic units and 5 seconds on heroic units. Fear is applied as a chance, depending on a unit's vitality (HP + Shields). It is calculated as a percentage as 2000/Vitality. So, a unit with 20 vitality or lower has 100% chance of getting feared.</p>
                         <p class="subheading">Commander-specific Tips</p>
@@ -1105,9 +1045,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#fireworks").toggle();'>Details</span>
                     <div id="fireworks" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>When an enemy unit dies, it launches a number of fireworks equal to its supply cost. This will target random player units within a range of 10. However, if no player units are nearby, it will target random locations within a range of 3. Fireworks deal 50 damage each.</p>
                         <p class="subheading">Commander-specific Tips</p>
@@ -1125,9 +1062,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#giftFight").toggle();'>Details</span>
                     <div id="giftFight" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>The first gift spawns at 3:00. Following gifts will spawn after 2:10 intervals until the mission time exceeds 20:00, after which gifts will spawn every 1:40.</p>
                         <p>Gifts only spawn 40 units away from Players 1, 2 and 3 and as long as no units are within 7 range of the intended gift spawn location.</p>
@@ -1379,9 +1313,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#nukes").toggle();'>Details</span>
                     <div id="nukes" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>Nukes get deployed every 2 seconds (with a marker appearing on the ground) and will always be at least 25 units away from your main and at least 15 units from any resource patch.</p>
                         <p>Nukes will be deploayed within 50 range of a randomly-selected player unit.</p>
@@ -1403,9 +1334,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#hardenedWill").toggle();'>Details</span>
                     <div id="hardenedWill" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>Hardened Will checks a distance of 6 units around a Heroic unit's area. If there are any non-heroic units in that area, Hardened Will gets applied.</p>
                         <p class="subheading">Commander-specific Tips</p>
@@ -1424,9 +1352,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#heroesFromTheStorm").toggle();'>Details</span>
                     <div id="heroesFromTheStorm" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>Heroes will be added to attack waves as the mission goes on using a "Hero Pool" system which keeps track of how many heroes can spawn. The Hero Pool starts at 1. Every time a hero spawns, the Hero Pool gets reduced by 1. At particular mission times, the current value of the Hero Pool is increased as per the following table:</p>
                         <p>On Dead Of Night, Nydus unloads are regarded as attack wave spawns and will therefore also spawn Amon heroes.</p>
@@ -1899,9 +1824,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#inspiration").toggle();'>Details</span>
                     <div id="inspiration" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>Inspiration grants an increase of 25% attack speed and 3 armor to all units within 5 range of a Heroic unit. The buff can also be applied to structures and static defense.</p>
 
@@ -1916,9 +1838,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#justDie").toggle();'>Details</span>
                     <div id="justDie" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>A unit that has just died and is being revived by the mutator is stunned (cannot move, attack or use skills) and invulnerable for 1 second.</p>
                         <p>Objectives and bonus objectives that are non-structures will have Just Die! applied, so they will respawn once after killed.</p>
@@ -1940,9 +1859,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#killBots").toggle();'>Details</span>
                     <div id="killBots" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>The bots will spawn from any enemy building. If you clear all enemy buildings on the map, the bots will stop spawning. Note that all-clearing Malwarfare and Void Launch does not stop them from spawning, because Suppression Towers and Launch Bays are indestructible enemy structures.</p> 
                         <p>There are three types of Kill Bots that will spawn, as follows:</p>
@@ -2107,9 +2023,6 @@ $_SESSION["known"] = true;
 				<br><br>
                     <span class="detailsButton" onclick='$("#laserDrill").toggle();'>Details</span>
                     <div id="laserDrill" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>The drill does damage in three separate phases, depending on the time it is left attacking a certain unit, as shown below:</p>
                         <table class="dataTable centered">
@@ -2222,9 +2135,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#lavaBurst").toggle();'>Details</span>
                     <div id="lavaBurst" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>Lava Bursts appear every 0.5 seconds and will always be at least 25 units away from your main and at least 10 units from any resource patch. Lava Bursts will also not appear directly underneath your structures.</p>
                         <p>Lava Bursts will be marked on the terrain. These markings will last for 4 seconds before they start dealing damage. Lava Bursts deal 5 (+2 vs. Armored) damage per 0.125 seconds (40 DPS) to non-heroic units. The damage phase of the Lava Bursts lasts 16 seconds.</p>
@@ -2302,9 +2212,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#lifeLeech").toggle();'>Details</span>
                     <div id="lifeLeech" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>Life Leech heals Amon's units for 100% of the damage they do against player units.</p>
 
@@ -2319,9 +2226,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#longRange").toggle();'>Details</span>
                     <div id="longRange" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>All enemies get +3 to their ranged weapon range and sight range.</p>
                     </div>
@@ -2335,9 +2239,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#redEnvelopes").toggle();'>Details</span>
                     <div id="redEnvelopes" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>Envelopes either contain 50 gas or 50 minerals for both players and need to be picked up. They can only be picked up by ground units.</p>
                         <p>During the first 3:00, all envelopes will spawn within 30 range of player bases every 7 seconds. After that, envelopes can spawn anywhere on the map every 5.4 seconds.</p>
@@ -2353,9 +2254,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#magMines").toggle();'>Details</span>
                     <div id="magMines" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>At the start of the game, 200 Mag-mines are placed randomly throughout the map. Mag-mines cannot be placed within 30 range of player start locations or within 5 range of resource patches.</p>
                         <p>The mines will deal 250 damage, after a 2.5-second trigger delay, allowing you to dodge them easily. They trigger without the need for detection.</p>
@@ -2380,9 +2278,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#orderCosts").toggle();'>Details</span>
                     <div id="orderCosts" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>Hero units, top bar abilities and Tychus outlaws all cost 10 minerals and 5 gas to issue commands to. The cost of issue a command to a regular unit depends on its actual unit cost and supply cost. For gasless units, the cost is 2 x its supply in minerals. For gas units, it's 1 x its supply in gas and minerals. Note that if you do not have the resources, issuing orders is free. However, if you have no gas, then Micro Transaction mineral cost will be doubled.</p>
                         <p>Costs will only be applied if commands are issued to a unit. Therefore, units following another unit will only incur the initial cost to set them on follow. When that unit moves, no costs will be charged for all units following that unit.</p>
@@ -2398,9 +2293,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#entomb").toggle();'>Details</span>
                     <div id="entomb" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>The first set of mineral shields will appear at 2:40. Following mineral shields will appear every 2:00. Each mineral patch has a 15% chance of getting shielded. This percentage goes up by 5% for every round of Mineral Shields.</p>
                         <p>Each Mineral shield has 50HP and lasts for 60 seconds. Mineral shields do not get auto-targeted, so you will need to manually target them to destroy them.</p>
@@ -2421,9 +2313,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#mineFields").toggle();'>Details</span>
                     <div id="mineFields" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>At the start of the game, a total of 25 patches of Widow Mines and Spider Mines will be created. Each patch will contain 5 Widow Mines and 7 Spider Mines. The patches cannot be placed within 30 range of player start locations or within 5 range of resource patches or within 8 range of each other.</p>
                         <p>Widow Mines deal direct target damage 250 (+35 vs shields) and splash damage of 80 (+40 vs shields). They have 180HP and will trigger from 5 range.</p>
@@ -2454,9 +2343,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#missileBarrage").toggle();'>Details</span>
                     <div id="missileBarrage" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>Missiles get launched from the sides of the map. The spawning of the missiles cannot be stopped, but the missiles can be destroyed. There are different types of missiles that will appear. These are shown in the table below:</p>
                         <table class="dataTable centered">
@@ -2576,9 +2462,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#momentOfSilence").toggle();'>Details</span>
                     <div id="momentOfSilence" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>Moment of Silence is cast within 8 range of the dead unit. It has a 12-second duration.</p>
                         <p>If the hybrid is a Hybrid Nemesis, there is a 2-second delay before the effect is applied. Otherwise, there is a 1-second delay.</p>
@@ -2600,9 +2483,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#hybridDeathNuke").toggle();'>Details</span>
                     <div id="hybridDeathNuke" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>All hybrids detonate a nuke. There is a 2-second delay before a nuke detonates if the dead hybrid is a Hybrid Nemesis or a Moebius Hybrid A from Part and Parcel, 1-second delay otherwise.</p>
                         <p>If the hybrid is a Hybrid destroyer, it detonates a small nuke. All other hybrids detonate a large nuke. Nukes deal a base damage of 750 (950 vs structures) within radius #1, 50% of base damage within radius #2, and 25% of base damage within radius #3 as shown in the table below:</p>
@@ -2645,9 +2525,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#killKarma").toggle();'>Details</span>
                     <div id="killKarma" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>Each kill adds a damage stack that increases the damage dealt to the unit by a certain amount. The amount of damage increase is based on the number of kills a unit as, as shown in the following table:</p>
                         <table class="dataTable centered">
@@ -2690,9 +2567,6 @@ $_SESSION["known"] = true;
     				<br><br>
                     <span class="detailsButton" onclick='$("#orbitalStrike").toggle();'>Details</span>
                     <div id="orbitalStrike" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>Orbital Strikes will be cast every 1:20 seconds from the start of the game. They will be at least 30 units away from your main and at least 15 units from any resource patch. Additionally, they will also not be cast if there are less than 5 viable targets.</p>
                         <p>The number of targets is dependent on the mission time, as shown in the table below:</p>
@@ -2739,9 +2613,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#outbreak").toggle();'>Details</span>
                     <div id="outbreak" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>Infested will start spawning from enemy structures starting at 2:00. If you clear all enemy structures, the infested will stop spawning.</p>
                         <p>Infested spawn in random quantities per wave, each wave occurring every 25 seconds. Before 13:20, between 2 to 4 infested will spawn per wave. After that, 4 to 6 infestd will spawn per wave.</p>
@@ -2797,9 +2668,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#photonOverload").toggle();'>Details</span>
                     <div id="photonOverload" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>It gets cast on any structure that takes damage (shield or life). Deals 20 damage to a single unit within 10 range every 1.25 seconds and lasts for 15 seconds.</p>
 
@@ -2814,9 +2682,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#polarity").toggle();'>Details</span>
                     <div id="polarity" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>Applies to both, units and structures. Units do not take damage, but can be debuffed.</p>
                         <p class="subheading">Commander-specific Tips</p>
@@ -2842,9 +2707,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#allCasters").toggle();'>Details</span>
                     <div id="allCasters" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>At the start of the game, all units start with 50 energy and have an energy regeneration rate of 0.5625. They have a maximum energy of 200. The skills and the energy bar are lost when the unit ownership changes (Mind Control, Domination, etc.).</p>
                         <p>While these units have an energy bar and use it for casts, they draw from a total energy pool for each player. Once this pool is depleted, no skills will be cast, even if the unit has energy. Additionally, if the unit does not have energy, it will not cast a skill, even if the pool has enough energy.</p>
@@ -3010,9 +2872,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#propagators").toggle();'>Details</span>
                     <div id="propagators" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>Propagators spawn from enemy buildings, so all-clearing a mission will stop them from spawning.  Note that all-clearing Malwarfare and Void Launch does not stop them from spawning, because Suppression Towers and Launch Bays are indestructible enemy structures.</p>
                         <p>An additional word of warning: On Temple of the Past, the first Propagator will attack the rocks and convert them to another Propagator, thus forcing players to deal with two Propagators on the first spawn. One way of avoiding this is to destroy the rocks prior to the Propagator spawn.</p>
@@ -3143,9 +3002,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#purifierBeam").toggle();'>Details</span>
                     <div id="purifierBeam" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>The Purifier Beam cannot be destroyed. It does a base damage of 10 every 0.25 seconds within 1 radius, 50% of the base damage within 2.2 radius, and 10% of the base damage within 2.8 radius.</p>
                         <p>Purifier Beams will always stay least 20 units away from resource patches.</p>
@@ -3175,9 +3031,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#random").toggle();'>Details</span>
                     <div id="random" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>Picks a random mutator that is available on the Custom Mutator list, except for Vertigo.</p>
                     </div>
@@ -3191,9 +3044,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#deathFire").toggle();'>Details</span>
                     <div id="deathFire" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>Scorched Earth only deals damage to ground units. There are three sizes of scorching areas of effect. This depends on the supply cost of the unit used. This is with exception to the Xel'Naga Construct on Lock & Load, which spawns a large circle. Details of scorching areas are shown below:</p>
                         <table class="dataTable centered">
@@ -3241,9 +3091,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#deathAOE").toggle();'>Details</span>
                     <div id="deathAOE" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>All enemy units explode, dealing damage to player units. The explosion occurs after a 1.75 second delay and deals 20 damage in a 1.5 radius. For units with supply cost 3 or more, the explosion repeats at [supply cost + 1] times.</p>
                     </div>
@@ -3257,9 +3104,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#sharedSupply").toggle();'>Details</span>
                     <div id="sharedSupply" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>Used supply is shared between both players. However, total supply caps are still player-based. Therefore, regular commanders will still be limited by the number of Pylons/Supply Depots/Overlords that they have. Max supply commanders will still have access to their normal supply cap. However, both players' supplies will be affected when a unit is produced on either side.</p>
                         <p>Commanders with a supply cap of 100 can suffer greatly with this mutator. If they are paired up with a 200 supply cap commander who consumed over 100 supply, the 100 Supply cap commander will be unable to produce any units which cost supply until the total consumed supply falls below 100.</p>
@@ -3274,9 +3118,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#shortSighted").toggle();'>Details</span>
                     <div id="shortSighted" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>Reduces all player units sight range by 60%, down to a minimum of 1 range. Units that have 0 range (e.g. Essence or Biomass drops) will have their range increased to 1.</p>
                         <p class="subheading">Commander-specific Tips</p>
@@ -3300,9 +3141,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#minedOut").toggle();'>Details</span>
                     <div id="minedOut" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>All mineral patches contain a maximum of 1500 minerals per patch. Automated refineries, assimilators, MULEs and workers will all harvest 1 resource per tick/trip.</p>
                         <p>Resource pickups spawn every 5.4 seconds before the 3-minute mark, after which they will spawn every 7 seconds. Each pickup contains either 50 minerals or 50 gas. A spawn will either contain two mineral pickups, or 1 mineral pickup and 1 gas pickup. They can only be picked up by ground units.</p>
@@ -3319,9 +3157,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#unitSpeed").toggle();'>Details</span>
                     <div id="unitSpeed" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>All enemy units have a movement speed of 5.5.</p>
                     </div>
@@ -3335,9 +3170,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#temporalField").toggle();'>Details</span>
                     <div id="temporalField" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>Temporal Fields scale time to 1% of the normal speed, reducing all time-based effects in their area of effect. All cloaked units are revealed. This includes cooldowns, regeneration, and attacks. Heroic units' movement speed and attack speed are slowed to 50%. They spawn every 3 seconds and there is a 1 second delay before a Temporal field becomes active. Each field lasts for 20 seconds.</p>
                         <p>Temporal Fields will always be at least 30 units away from the starting locations as well as at least 4 units away from mineral patches.</p>
@@ -3358,9 +3190,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#timeWarp").toggle();'>Details</span>
                     <div id="timeWarp" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>Time Warps scale time to 33% of the normal speed, reducing all time-based effects in their area of effect. This includes cooldowns, regeneration, timed life and attacks. They spawn every 3 seconds and there is a 2.5 second delay before a Time Warp becomes active. Each field lasts for 30 seconds. Units with the Frenzied passive (such as Brutalisks, the Odin and Ultralisks) will be unaffected.</p>
                         <p>Time Warps will always be at least 25 units away from the starting locations as well as at least 4 units away from mineral patches.</p>
@@ -3375,9 +3204,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#evolve").toggle();'>Details</span>
                     <div id="evolve" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>Every time an enemy unit does damage to a player unit, it has a chance to change to a unit of 1 higher supply that it costs. 0 supply units are counted as 1 supply units.</p>
                         <p>Note that the change is permanent. Therefore, newly Transmutated units will drop higher amounts of Biomass, Essence, etc. than the unit they were previously. Additionally, units that would not drop Biomass (such as units from Void Rifts) will also start to drop Biomass.</p>
@@ -3536,9 +3362,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#trickOrTreat").toggle();'>Details</span>
                     <div id="trickOrTreat" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>The Candy Bowl can store a maximum of 50 candy. You have to spend 25 minerals to add 1 candy to the bowl. The candy bowl is shown below:</p>
                         <img src="/images/mutatordata/trickortreatcandybowl.jpg" alt="Candy Bowl">
@@ -3640,9 +3463,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#foodHunt").toggle();'>Details</span>
                     <div id="foodHunt" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>Players start with 50 supply and will need to kill Turkeys on the map in order to raise the supply cap.</p>
                         <p>The max supply will be reduced every variable interval. The interval is based on the supply. Supply drops by 1 every 250/[Supply]. So, at 250 supply, you will lose 1 Supply/per second.</p>
@@ -3692,9 +3512,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#tornadoes").toggle();'>Details</span>
                     <div id="tornadoes" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>The total number of Twisters on the map is based on the map size. It is the (width + height)/19. Each Twister does 25 damage and knocks all units back.</p>
                         <p>Twisters will always be at least 25 units away from the starting locations as well as at least 5 units away from mineral patches.</p>
@@ -3710,9 +3527,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#vertigo").toggle();'>Details</span>
                     <div id="vertigo" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>Every 20 seconds, your camera will change position.</p>
 
@@ -3727,9 +3541,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#reanimator").toggle();'>Details</span>
                     <div id="reanimator" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>Void Reanimators will spawn 10 seconds after the first killed enemy unit from a random enemy building. Following Void Reanimators will spawn every 55 seconds. If you destroy all enemy buildings on the map, no Void Reanimators will spawn.  Note that all-clearing Malwarfare and Void Launch does not stop them from spawning, because Suppression Towers and Launch Bays are indestructible enemy structures.</p>
                         <p>Void Reanimators have 200 HP and 200 Shields. They do not have an attack. There can only be a maximum of 4 Void Reanimators on the map. They only resurrect dead enemy units. Below is an image of a Void Reanimator:</p>
@@ -3780,9 +3591,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#voidRifts").toggle();'>Details</span>
                     <div id="voidRifts" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>Void Rifts have 500 HP with 1 armor. They spawn random enemy units as time progresses. An image of a Void Rift is shown below:</p>
                         <img src="/images/mutatordata/voidrift.jpg" alt="Void Rift">
@@ -3960,9 +3768,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#spawnInfested").toggle();'>Details</span>
                     <div id="spawnInfested" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p>On Miner Evacuation, all infested from Walking Infested will have double HP.</p>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>The number of Infested Terrans that spawn is equal to the unit's supply cost. If the unit costs no supply, 1 Infested Terran is spawned. Note that Hybrids take up 8 supply.</p>
@@ -3983,9 +3788,6 @@ $_SESSION["known"] = true;
 				    <br><br>
                     <span class="detailsButton" onclick='$("#permaCloak").toggle();'>Details</span>
                     <div id="permaCloak" class="details">
-                        <?php
-                        include("../hiddenad.php");
-                        ?>
                         <p class="subheading">Detailed Mutator Information</p>
                         <p>All non-structure units are cloaked, including map objectives.</p>
                     </div>
@@ -3994,9 +3796,6 @@ $_SESSION["known"] = true;
 			</tr>
         </tbody>
     </table>
-    <?php
-    include("../ad.php");
-    ?>
     <script>
         $(".detailsButton").on("click", function(){
             $('.toggled:visible').addClass("adsbygoogle");

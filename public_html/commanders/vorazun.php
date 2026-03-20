@@ -49,9 +49,6 @@ include("../header.php");
     </div>
     <a id="comSum"></a><h2>Commander Summary</h2>
     <p>Vorazun uses the power of cloaked units to wreak havoc around the battlefield, combined with a powerful ability to stop time.</p>
-    <?php
-    include("../ad1.php");
-    ?>
     <a id="levelUnlocks"></a><h2>Level Unlocks</h2>
     <table class="progressionTable">
         <thead>
@@ -188,9 +185,6 @@ include("../header.php");
         </tbody>
     </table>
     <p id="powerSpikeInfo">Highlighted rows denote large power spikes for the commander.</p>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="achievements"></a><h2>Achievements</h2>
     <p>The commander-specific achievements for Vorazun are:</p>
     <table>
@@ -224,9 +218,6 @@ include("../header.php");
             </tr>
         </tbody>
     </table>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="calldowns"></a><h2>Calldowns</h2>
     <p>The calldowns for Vorazun, at level 15, with no mastery points added are:</p>
     <table class="calldownTable">
@@ -378,16 +369,10 @@ include("../header.php");
             </table>
         </div>
     </div>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="leveling"></a><h2>Sub-Ascension Leveling</h2>
     <p>Difficulty: Moderate</p>
     <p>As Vorazun's Corsairs can't cloak during early levels and Black Hole does not negate armor, build Dark Templars and Stalkers as your core army composition. Stalkers can deal with air units fairly well, especially when they have their Blink upgrades which can regenerate their shields rapidly. Due to the lack of Emergency Recall during early stages of leveling, use Black Holes liberally to ensure you do not lose Dark Templars.</p>
     <p>While leveling through Mastery levels, allocate points into Power Set 3's Spear of Adun Energy mastery until you hit the desired number of points, before allocating them to Chrono Boost efficiency.</p>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="masteries"></a><h2>Masteries</h2>
     <p>Below are the three Power Sets for Vorazun with the recommended point allocations for each. Note that these are meant to serve a general, all-purpose build that is effective across all maps with no Prestiges selected. You are highly encourged to change these masteries to suit your playstyle and particular challenges you face (e.g. <a href="/resources/weeklymutations">Weekly Mutations</a>).</p>
     <p>Power Set 1:</p>
@@ -465,9 +450,6 @@ include("../header.php");
         </tbody>
     </table>
     <p class="masterySummary">A full 30 points into the initial energy will provide Vorazun players with the early-game pushing potential they require while they build up army and compounds very well with 30 points into the Shadow Guard duration mastery above. The Shadow Guard will need to be microed more carefully to take advantage of their full timer, but as a result, can solve Vorazun's Early game problems.</p>
-    <?php
-    include("../ad2.php");
-    ?>
     <a id="prestiges"></a><h2>Prestiges</h2>
     <p>Below are the prestiges for Vorazun. Note that "Effective Level" is the level at which the prestige achieves it full effect.</p>
     <table class="prestigeTable">
@@ -594,9 +576,6 @@ include("../header.php");
         </tbody>
     </table>
     <p>Both Spirit of Respite and Keeper of Shadows are solid picks for general Vorazun-play, and will come down to the player's preferred playstyle. However, playing Vorazun without a Prestige Talent selected also works fine.</p>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="army"></a><h2>Recommended Army Composition</h2>
     <p>The recommended army composition for Vorazun is below. Note that this assumes no Prestige talent selected and recommended Mastery Allocations. This is a basic recommendation for your army framework. It is recommended to gain an understanding for each of the units in the <a href="#units">Units</a> section and further add tech units so that you are able to better handle the situations you face.</p>
     <img class="army"src="/images/commanderdata/units/vorazun/darktemplar.jpg" alt="Dark Templar"><img class="army"src="/images/commanderdata/units/vorazun/corsair.jpg" alt="Corsair">
@@ -631,9 +610,6 @@ include("../header.php");
             
         });
     </script>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="units"></a><h2>Combat Units</h2>
     <p>For more information on Vorazun's unit stats, comparison between units and upgrade calculations, visit the <a href="/tools/unitstats">Data Tables</a> page.</p>
     <p>Vorazun's combat units are listed below:</p>
@@ -1086,9 +1062,6 @@ include("../header.php");
             </table>
         </div>
     </div>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="buildOrder"></a><h2>Build Order</h2>
     <p>Below is the standard economic build order for Vorazun. For more information on how to read and construct your own build orders, please check the <a href="/guides/buildordertheory">Build Order Theory</a> page.</p>
     <p class="buildOrder">
@@ -1103,9 +1076,6 @@ include("../header.php");
         28 Twilight + Warp Gate<br>
         29 Assimilators + Nexus
     </p>
-    <?php
-    include("../ad3.php");
-    ?>
     <a id="guide"></a><h2>Gameplay Guide</h2>
     <h3>Playstyle Traps</h3>
     <p>A common trap for Vorazun players is to go for a mass Void Ray build. While Void Rays are powerful, they are slow and expensive to make, often putting the player behind for the rest of the game.</p>
@@ -1224,9 +1194,6 @@ include("../header.php");
         <li>Stasis Wards can be used to chain-stasis enemies by placing a ward underneath already-stasis'ed enemies. Use this to handle high-HP targets and difficult <a href="/resources/mutators">Mutators</a>.</li>
         <li>In the early game, focus on Air attack upgrades over ground attack upgrades, as Dark Templars will be dealing most of their damage through Shadow Fury, which does not get affected by Ground attack upgrades. Additionally, Corsairs need these upgrades in order to kill enemy units.</li>
     </ul>
-    <?php
-    include("../ad.php");
-    ?>
 </div>
 <?php include("../footer.php"); ?>
 </body>

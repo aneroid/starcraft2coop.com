@@ -99,9 +99,6 @@ $_SESSION["known"] = true;
     <p>One of the most common questions that players interested in playing co-op ask is "Which commander is right for me?". A lot of new players have problems with commander selection, particularly their first paid commander. Co-op features a host of different commanders with a wide variety of playstyles, and given the large roster available, can be overwhelming. This is especially true considering that most co-op commanders are paid, so players would like to get the best out of their investment.</p>
     <p>While assigning arbitrary metrics for commanders and giving them a score from 1 to 5 is extremely subjective, the page below hopes to serve as a rough guide as to what each commander's power level and playstyle is, to allow new players to make a more informed decision as to which commander to play. It is highly advisable to read through the individual commander pages to see what abilities they have available to them, what strategies they utilize and what units they have to make a better informed decision. Additionally, players new to Co-op are advised to check the <a href="/guides/generaltips">General Tips</a> page to get some insight on some good strategies to use in Co-op.</p>
     <p>Additionally, participating in the community is another great way of learning about commanders and different playstyles. You may check out the <a href="/about/links">Links</a> page to find more Starcraft II Co-op Community content. Lastly, asking good questions and having an open-minded approach and a willingness to learn will take you a long way to improving your Co-op gameplay.</p>
-    <?php
-    include("../ad.php");
-    ?>
     <div id="commanderPanel">
         <div id="stats">
             <div id="commanderName">

@@ -30,9 +30,6 @@ include("../header.php");
     </div>
     <a id="misSum"></a><h2>Mission Summary</h2>
     <p>Infestation runs rampant throughout one of Kel-Moria’s remote mining colonies. Debra Greene, leader of the local miner’s guild, is determined to get her people to safety. Fight off both Amon and the infested to aid the evacuation. </p>
-    <?php
-    include("../ad1.php");
-    ?>
     <a id="objectives"></a><h2>Objectives</h2>
     <h3>Primary Objective</h3>
         <ul>
@@ -44,9 +41,6 @@ include("../header.php");
             <li>Kill the Blightbringer (1)</li>
             <li>Destroy the Eradicators (2)</li>
         </ul>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="evacShip"></a><h2>Evacuation Ship Locations and Order</h2>
     <?php $mission = "minerevacuation"; ?>
     <p>There are no enemy bases on this map, and so, base analysis is not required. However, ships launch in a semi-random order, which requires you to push into small enemy camps.</p>
@@ -134,9 +128,6 @@ include("../header.php");
             </tr>
         </tbody>
     </table>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="bonus"></a><h2>Completing the Bonus Objective</h2>
     <div id="objectiveImages">
         <img src="/images/missiondata/minerevacuation/blightbringer.jpg" alt="Blightbringer">
@@ -147,9 +138,6 @@ include("../header.php");
     <p>The Eradicators are much more dangerous. One Eradicator has an air attack, which it targets using many circular markers on the ground. The other Eradicator deals damage in a straight line and can decimate ground armies. It is best to engage the Eradicators with air units to prevent losing your army.</p>
     <p>The locations for BlightBringer (in yellow) and the Eradicators (in green) are shown below.</p>
     <img src="/images/missiondata/minerevacuation/bonusobjectivelocations.jpg" alt="Locations of the Bonus Objectives">
-    <?php
-    include("../ad.php");
-    ?>
     <a id="timings"></a><h2>Timings</h2>
     <p>Note: Information on Tech and Strength levels can be found on the <a href="/guides/enemycomps">Enemy Compositions</a> page.</p>
     <p>There are three types of timings that are of interest in this mission:</p>
@@ -296,23 +284,14 @@ include("../header.php");
         </tbody>
     </table>
     <p>Bonus objectives will spawn at 9:00 and 15:00. There is a 66% chance that Blightbringer will spawn first.</p>
-    <?php
-    include("../ad2.php");
-    ?>
     <a id="spawnPoints"></a><h2>Spawn Points</h2>
     <p>All Attack and Claimer Waves spawn from the edge of the map. Attack Waves have three spawn points and Claimer waves have nine spawn points. This makes it extremely impractical to spawn-camp the spawn points to take out the wave before they reach their target.</p>
-    <?php
-    include("../ad.php");
-    ?>
     <a id="misTips"></a><h2>Mission Tips</h2>
     <ul>
         <li>Pay attention to the minimap for Claimer waves. They can destroy a ship without you noticing.</li>
         <li>Do not engage the Eradicators with a full ground army. One of the Eradicators has a deadly ground attack.</li>
         <li>All attack waves after the first wave will target your expansion, so ensure you have ample defenses there.</li>
     </ul>
-    <?php
-    include("../ad3.php");
-    ?>
     <a id="comTips"></a><h2>Commander-specific Tips</h2>
     <ul>
         <li><a href="/commanders/kerrigan">Kerrigan</a>: Use Omega Worms to quickly reinforce your army as well as provide detection for Infested Banshees.</li>

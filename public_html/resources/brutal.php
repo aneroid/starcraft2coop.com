@@ -67,9 +67,6 @@ $_SESSION["known"] = true;
     <p>Brutal+ is considered an "Extended Difficulty". That is, missions will take place on the regular Brutal difficulty. However, in addition to the standard mission mechanics, a certain number of random <a href="mutators">mutators</a> are added to your game. You may queue into random queue on Brutal+ difficulty, as long as the commander you are queueing in with is at Level 15. For Brutal+2 and higher, you will require a person in your party to play.</p>
     <p>To learn more about how Brutal+ difficulty mutators are selected, you may watch the video below. The video goes over what Mutation Templates are, how the different mutator possibility counts are calculated mathematically and then how the weightings are rebalanced to be more in line with Blizzard's design intent.</p>
     <iframe width="475" height="268" src="https://www.youtube.com/embed/9jfWuM215_c" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    <?php
-    include("../ad1.php");
-    ?>
     <p>The number of mutators that will be selected is between two and four. Each difficulty level is assigned a total number of points, which corresponds to the total mutation difficulty. The point/mutator brackets for each difficulty level is shown below. Note that the mutator counts for generated Brutal+ mutations are not evenly distributed. You are more likely to see 2 and 3-mutator games than 4 mutator games, as is Blizzard's desgin intent. For more information, please watch the video above.</p>
     <table id="limits" class="centered">
         <thead>
@@ -95,9 +92,6 @@ $_SESSION["known"] = true;
             ?>
         </tbody>
     </table>
-    <?php
-    include("../ad2.php");
-    ?>
     <p>Each mutator in the game is assigned a point cost that corresponds to its difficulty level. For more information on mutators, you may check the <a href="mutators">Mutators page</a>, which contains a lot of mutator-specific information such as their internal mechanics and also provide some commander-specific tips on how to handle them. The list of mutators and their associated point costs are shown below.</p>
     <p>Click the column headers to sort Ascending/Descending by that column. Click a row to toggle that row and calculate the total cost of a selected set of mutators.</p>
     
@@ -211,9 +205,6 @@ $_SESSION["known"] = true;
         </select>
         <input type="submit" value="Go" id="generateMutation">
     </form>
-    <?php
-    include("../ad3.php");
-    ?>
     <div id="tooltip">tooltip</div>
     <div id="mutationBox">
         <p>Mutators (<span id="cost">0</span> Points):</p>

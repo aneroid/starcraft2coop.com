@@ -240,9 +240,6 @@ $_SESSION["known"] = true;
         <li>Only upgrades that change the units weapon stats are listed. For this reason, damage reduction like Fenix's Network Administrator is not shown.</li>
         <li>Since numbers are calculated, there may be small rounding errors.</li>
     </ul>
-    <?php
-    include("../ad1.php");
-    ?>
     <div id="tooltip" style="display: none; top: 1601px; left: 667px; position: absolute;"><b>Upgrade Name</b><br><br>Selected upgrade description.</div>
     <div class="tableContainer">
         <table id="unitStats">
@@ -442,9 +439,6 @@ $_SESSION["known"] = true;
             $("#comparison").html("");
         })
     </script>
-    <?php
-    include("../ad2.php");
-    ?>
     <h2>Enemy Target Vitalities</h2>
     <p>Use the below filters to see which enemy units and objectives fall below a certain vitality (HP + Shields). Click on a unit to see its vitality data and associated tags.</p>
     <p>Race Filters:</p>
@@ -555,9 +549,6 @@ $_SESSION["known"] = true;
         })
     </script>
     <div class="clear"></div>
-    <?php
-    include("../ad3.php");
-    ?>
 </div>
 <?php include("../footer.php"); ?>
 </body>

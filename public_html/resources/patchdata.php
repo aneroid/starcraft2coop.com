@@ -37,9 +37,6 @@ include("../header.php");
         <p><a href="#vt">Void Thrashing</a></p>
     </div>
     <p><span class="hidden">Text in green denote changes not listed in the patch notes.</span></p>
-    <?php
-    include("../ad1.php");
-    ?>
     <a id="core"></a><h2>Game Core (5.0.5) 2020-12-02</h2>
     <ul>
         <li>Commander Changes:
@@ -52,9 +49,6 @@ include("../header.php");
             </ul>
         </li>
     </ul>
-    <?php
-    include("../ad2.php");
-    ?>
     <a id="coa"></a><h2>Chain of Ascension (v.177) 2020-02-24</h2>
     <ul>
         <li><span class="hidden">Ji'nara will now have voice lines if player's forces or Amon's forces get destroyed around her.</span></li>
@@ -126,9 +120,6 @@ include("../header.php");
     <ul>
         <li><span class="hidden">Modified regular Transmission to Victory Tranmission on mission Victory.</span></li>
     </ul>
-    <?php
-    include("../ad3.php");
-    ?>
 </div>
 <?php include("../footer.php"); ?>
 </body>
