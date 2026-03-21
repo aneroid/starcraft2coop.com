@@ -179,38 +179,6 @@ include("../header.php");
             $bottomMutators1[] = [$mutators[$row[0]-1]['mutatorname'], $mutators[$row[0]-1]['mutatordescription'], $row[1]];
         }
         
-        $sql = "SELECT submitter, SUM(score), count(distinct episode) as Appearances FROM `rockslappingchampions`
-                Group BY submitter
-                Order by SUM(score) DESC
-                Limit 5";
-        $result=mysqli_query($con,$sql);
-        $topSubmitter = [];
-        
-        while($row = mysqli_fetch_array($result)) {
-            $topSubmitter[] = $row;
-        }
-        
-        $sql = "SELECT rockslapper, SUM(score), count(distinct episode) as Appearances FROM `rockslappingchampions`
-                Group BY rockslapper
-                Order by SUM(score) DESC
-                Limit 5";
-        $result=mysqli_query($con,$sql);
-        $topRC = [];
-        
-        while($row = mysqli_fetch_array($result)) {
-            $topRC[] = $row;
-        }
-        
-        $sql = "SELECT rockslapper, SUM(score), count(distinct episode) as Appearances FROM `rockslappingchampions`
-                Group BY rockslapper
-                Order by SUM(score) ASC
-                Limit 5";
-        $result=mysqli_query($con,$sql);
-        $bottomRC = [];
-        
-        while($row = mysqli_fetch_array($result)) {
-            $bottomRC[] = $row;
-        }
         $con->close();
 
     ?>
@@ -334,42 +302,15 @@ include("../header.php");
         </tbody>
     </table>
     <a id="community"></a><h2>Community Stats</h2>
-    <?php
-        $data = unserialize(file_get_contents("../scripts/replaycache.txt"));
-        list($comRefreshTime,
-             $comReplayCount,
-             $comServerGames, 
-             $comCommanderGames,
-             $comMissionGames,
-             $comDifficultyGames,
-             $comCompGames,
-             $comCommanderWinRate,
-             $comMissionWinRate,
-             $comCompWinRate,
-             $comMissionTimes) = $data;
-    ?>
-    <p>Note: Data refreshes once every 24 hours<br>
-        Current data refreshed on: <?php echo($comRefreshTime);?><br>
-        Total replays counted: <?php echo($comReplayCount);?></p>
+        <p>Note: Data refreshes once every 24 hours<br>
+        Current data refreshed on: 2024-05-04 04:00:01<br>
+        Total replays counted: 255876</p>
     <div class="infoIcon">
         <p class="subheading">Total Games Counted Across Servers</p>
         <img src="/images/replayanalyzer/info.png" alt="Info">
         <span class="tooltip">This is the number of games played per server.</span>
     </div>
-    <?php
-        $comServerGamesLabelsText = [];
-        foreach($comServerGames as $server=>$count){
-            $comServerGamesLabelsText[] = $server;
-            $comServerGamesPoints[] = intval($count);
-            $comServerColors[] = "color" . $server;
-            $comDarkServerColors[] = "color" . $server . "Dark";
-        }
-        $comServerGamesLabelsText = json_encode(array_values($comServerGamesLabelsText));
-        $comServerGamesPoints = json_encode(array_values($comServerGamesPoints));
-        $comServerColors = str_replace('"', "", json_encode($comServerColors));
-        $comDarkServerColors = str_replace('"', "", json_encode($comDarkServerColors));
-    ?>
-    <div class="chart">
+        <div class="chart">
         <canvas id="communityServerGamesChart" width="500" height="250"></canvas>
     </div>
     <script>
@@ -377,11 +318,11 @@ include("../header.php");
         var myChart = new Chart(ctx, {
             type: 'pie',
             data: {
-                labels: <?php echo($comServerGamesLabelsText); ?>,
+                labels: ["Asia","CN","EU","NA"],
                 datasets: [{
-                    data: <?php echo($comServerGamesPoints); ?>,
-                    backgroundColor:<?php echo($comServerColors); ?>,
-                    hoverBackgroundColor:<?php echo($comDarkServerColors); ?>,
+                    data: [15069,379,98577,141851],
+                    backgroundColor:[colorAsia,colorCN,colorEU,colorNA],
+                    hoverBackgroundColor:[colorAsiaDark,colorCNDark,colorEUDark,colorNADark],
                 }]
             },
             options:{
@@ -425,20 +366,7 @@ include("../header.php");
         <img src="/images/replayanalyzer/info.png" alt="Info">
         <span class="tooltip">This is the number of games played per commander sorted by decreasing popularity.</span>
     </div>
-    <?php
-        $comCommanderGamesLabelsText = [];
-        foreach($comCommanderGames as $commander=>$count){
-            $comCommanderGamesLabelsText[] = $commander;
-            $comCommanderGamesPoints[] = intval($count);
-            $comCommanderColors[] = strtolower($commander) . "Color";
-            $comDarkCommanderColors[] = "dark" . $commander . "Color";
-        }
-        $comCommanderGamesLabelsText = json_encode(array_values($comCommanderGamesLabelsText));
-        $comCommanderGamesPoints = json_encode(array_values($comCommanderGamesPoints));
-        $comCommanderColors = str_replace('"', "", json_encode($comCommanderColors));
-        $comDarkCommanderColors = str_replace('"', "", json_encode($comDarkCommanderColors));
-    ?>
-    <div class="chart">
+        <div class="chart">
         <canvas id="communityCommanderGamesChart" width="500" height="250"></canvas>
     </div>
     <script>
@@ -446,11 +374,11 @@ include("../header.php");
         var myChart = new Chart(ctx, {
             type: 'pie',
             data: {
-                labels: <?php echo($comCommanderGamesLabelsText); ?>,
+                labels: ["Tychus","Dehaka","Abathur","Mengsk","Stukov","Nova","Zagara","Kerrigan","Stetmann","Karax","Zeratul","Raynor","Horner","Swann","Alarak","Artanis","Fenix","Vorazun"],
                 datasets: [{
-                    data: <?php echo($comCommanderGamesPoints); ?>,
-                    backgroundColor:<?php echo($comCommanderColors); ?>,
-                    hoverBackgroundColor:<?php echo($comDarkCommanderColors); ?>,
+                    data: [22401,21504,18877,18129,17699,17045,13926,13667,12726,12652,12405,11676,11272,10949,10783,10224,10200,9741],
+                    backgroundColor:[tychusColor,dehakaColor,abathurColor,mengskColor,stukovColor,novaColor,zagaraColor,kerriganColor,stetmannColor,karaxColor,zeratulColor,raynorColor,hornerColor,swannColor,alarakColor,artanisColor,fenixColor,vorazunColor],
+                    hoverBackgroundColor:[darkTychusColor,darkDehakaColor,darkAbathurColor,darkMengskColor,darkStukovColor,darkNovaColor,darkZagaraColor,darkKerriganColor,darkStetmannColor,darkKaraxColor,darkZeratulColor,darkRaynorColor,darkHornerColor,darkSwannColor,darkAlarakColor,darkArtanisColor,darkFenixColor,darkVorazunColor],
                 }]
             },
             options:{
@@ -482,22 +410,7 @@ include("../header.php");
         <img src="/images/replayanalyzer/info.png" alt="Info">
         <span class="tooltip">This is the number of games played per mission sorted by decreasing popoularity.</span>
     </div>
-    <?php
-        $comMissionGamesLabelsText = [];
-        $counter = 0;
-        foreach($comMissionGames as $mission=>$count){
-            $comMissionGamesLabelsText[] = $mission;
-            $comMissionGamesPoints[] = intval($count);
-            $comMissionColors[] = "missionColors[$counter]";
-            $comDarkMissionColors[] = "darkMissionColors[$counter]";
-            $counter+=1;
-        }
-        $comMissionGamesLabelsText = json_encode(array_values($comMissionGamesLabelsText));
-        $comMissionGamesPoints = json_encode(array_values($comMissionGamesPoints));
-        $comMissionColors = str_replace('"', "", json_encode($comMissionColors));
-        $comDarkMissionColors = str_replace('"', "", json_encode($comDarkMissionColors));
-    ?>
-    <div class="chart">
+        <div class="chart">
         <canvas id="communityMissionGamesChart" width="500" height="250"></canvas>
     </div>
     <script>
@@ -505,11 +418,11 @@ include("../header.php");
         var myChart = new Chart(ctx, {
             type: 'pie',
             data: {
-                labels: <?php echo($comMissionGamesLabelsText); ?>,
+                labels: ["Void Thrashing","Oblivion Express","Dead of Night","Rifts to Korhal","Temple of the Past","Void Launch","Lock & Load","Mist Opportunities","Malwarfare","Miner Evacuation","Chain of Ascension","Scythe of Amon","Part and Parcel","The Vermillion Problem","Cradle of Death"],
                 datasets: [{
-                    data: <?php echo($comMissionGamesPoints); ?>,
-                    backgroundColor:<?php echo($comMissionColors); ?>,
-                    hoverBackgroundColor:<?php echo($comDarkMissionColors); ?>,
+                    data: [32228,23680,23455,18090,16890,16778,15438,15280,14686,14258,14094,14016,13475,12605,10903],
+                    backgroundColor:[missionColors[0],missionColors[1],missionColors[2],missionColors[3],missionColors[4],missionColors[5],missionColors[6],missionColors[7],missionColors[8],missionColors[9],missionColors[10],missionColors[11],missionColors[12],missionColors[13],missionColors[14]],
+                    hoverBackgroundColor:[darkMissionColors[0],darkMissionColors[1],darkMissionColors[2],darkMissionColors[3],darkMissionColors[4],darkMissionColors[5],darkMissionColors[6],darkMissionColors[7],darkMissionColors[8],darkMissionColors[9],darkMissionColors[10],darkMissionColors[11],darkMissionColors[12],darkMissionColors[13],darkMissionColors[14]],
                 }]
             },
             options:{
@@ -541,24 +454,7 @@ include("../header.php");
         <img src="/images/replayanalyzer/info.png" alt="Info">
         <span class="tooltip">This is the number of games played per difficulty.</span>
     </div>
-    <?php
-        $comDifficultyGamesLabelsText = [];
-        $total=0;
-        foreach($comDifficultyGames as $difficulty=>$count){
-            $comDifficultyGamesPoints[] = intval($count);
-            $total +=intval($count);
-            $comDifficultyColors[] = strtolower($difficulty) . "Color";
-            $comDarkDifficultyColors[] = "dark". $difficulty . "Color";
-        }
-        foreach($comDifficultyGames as $difficulty=>$count){
-            $comDifficultyGamesLabelsText[] = $difficulty . " (" . round($count*100/$total,2) . "%)";
-        }
-        $comDifficultyGamesLabelsText = json_encode(array_values($comDifficultyGamesLabelsText));
-        $comDifficultyGamesPoints = json_encode(array_values($comDifficultyGamesPoints));
-        $comDifficultyColors = str_replace('"', "", json_encode($comDifficultyColors));
-        $comDarkDifficultyColors = str_replace('"', "", json_encode($comDarkDifficultyColors));
-    ?>
-    <div class="chart">
+        <div class="chart">
         <canvas id="communityDifficultyGamesChart" width="500" height="250"></canvas>
     </div>
     <script>
@@ -566,11 +462,11 @@ include("../header.php");
         var myChart = new Chart(ctx, {
             type: 'pie',
             data: {
-                labels: <?php echo($comDifficultyGamesLabelsText); ?>,
+                labels: ["Casual (0.66%)","Normal (3.39%)","Hard (11.81%)","Brutal (72.71%)","Brutal1 (7.2%)","Brutal2 (0.74%)","Brutal3 (1.06%)","Brutal4 (1.85%)","Brutal5 (0.27%)","Brutal6 (0.31%)"],
                 datasets: [{
-                    data: <?php echo($comDifficultyGamesPoints); ?>,
-                    backgroundColor:<?php echo($comDifficultyColors); ?>,
-                    hoverBackgroundColor:<?php echo($comDarkDifficultyColors); ?>,
+                    data: [1686,8678,30211,186037,18421,1902,2707,4744,687,803],
+                    backgroundColor:[casualColor,normalColor,hardColor,brutalColor,brutal1Color,brutal2Color,brutal3Color,brutal4Color,brutal5Color,brutal6Color],
+                    hoverBackgroundColor:[darkCasualColor,darkNormalColor,darkHardColor,darkBrutalColor,darkBrutal1Color,darkBrutal2Color,darkBrutal3Color,darkBrutal4Color,darkBrutal5Color,darkBrutal6Color],
                 }]
             },
             options:{
@@ -606,22 +502,7 @@ include("../header.php");
         <img src="/images/replayanalyzer/info.png" alt="Info">
         <span class="tooltip">This is the number of games played per enemy composition faced where the composition could be identified.</span>
     </div>
-    <?php
-        $comCompGamesLabelsText = [];
-        foreach($comCompGames as $comp=>$count){
-            if(strpos($comp, 'Compositions') === false){
-                $comCompGamesPoints[] = intval($count);
-            }
-            else{
-                $comCompGamesPoints[] = 0;
-            }
-            $comCompGamesLabelsText[] = $comp;
-            
-        }
-        $comCompGamesLabelsText = json_encode(array_values($comCompGamesLabelsText));
-        $comCompGamesPoints = json_encode(array_values($comCompGamesPoints));
-    ?>
-    <div class="chart">
+        <div class="chart">
         <canvas id="communityCompGamesChart" width="500" height="250"></canvas>
     </div>
     <script>
@@ -629,9 +510,9 @@ include("../header.php");
         var myChart = new Chart(ctx, {
             type: 'pie',
             data: {
-                labels: <?php echo($comCompGamesLabelsText); ?>,
+                labels: ["Protoss Compositions","Masters and Machines","Towering Walkers","Disruptive Artillery","Hope of the Khalai","Siege of Storms","Shadow Disruption","Vanguard of Aiur","Fleet of the Matriarch","Terran Compositions","Raiding Party","Machines of War","Shadow Tech","Dominion Battlegroup","Classic Infantry","Classic Mech","Zerg Compositions","Ravaging Infestation","Broodling Corruption","Explosive Threats","Invasionary Swarm","Devouring Scourge"],
                 datasets: [{
-                    data: <?php echo($comCompGamesPoints); ?>,
+                    data: [0,10931,10915,10772,10220,10793,11077,9379,9006,0,14508,14671,14770,15006,12410,12501,0,18049,17088,18199,15046,14354],
                     backgroundColor:compColors,
                     hoverBackgroundColor:darkCompColors,
                 }]
@@ -699,27 +580,7 @@ include("../header.php");
         <img src="/images/replayanalyzer/info.png" alt="Info">
         <span class="tooltip">This is the win rate per commander sorted by decreasing win rate.</span>
     </div>
-    <?php
-        $comCommanderWinRateLabelsText = [];
-        $comCommanderWinPoints = [];
-        $comCommanderLossPoints = [];
-        $tempArray = [];
-        foreach($comCommanderWinRate as $commander=>$data){
-            $tempArray[] = [$commander,intval($data[0]),intval($data[1]),($data[0]/($data[0] + $data[1]))];
-        }
-        usort($tempArray, function($a, $b) {
-            return $b[3] <=> $a[3];
-        });
-        foreach($tempArray as $data){
-            $comCommanderWinRateLabelsText[] = $data[0];
-            $comCommanderWinPoints[] = $data[1];
-            $comCommanderLossPoints[] = $data[2];
-        }
-        $comCommanderWinRateLabelsText = json_encode(array_values($comCommanderWinRateLabelsText));
-        $comCommanderWinPoints = json_encode(array_values($comCommanderWinPoints));
-        $comCommanderLossPoints = json_encode(array_values($comCommanderLossPoints));
-    ?>
-    <div class="chart">
+        <div class="chart">
         <canvas id="communityCommanderWinRateChart" width="600" height="400"></canvas>
     </div>
     <script>
@@ -727,14 +588,14 @@ include("../header.php");
         var myChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: <?php echo($comCommanderWinRateLabelsText); ?>,
+                labels: ["Dehaka","Zeratul","Nova","Fenix","Artanis","Horner","Abathur","Alarak","Kerrigan","Stetmann","Mengsk","Zagara","Karax","Swann","Tychus","Vorazun","Stukov","Raynor"],
                 datasets: [{
-                    data: <?php echo($comCommanderWinPoints); ?>,
+                    data: [19884,11408,15612,9257,9268,10147,16891,9642,12166,11277,15989,12271,11139,9610,19642,8492,15167,9785],
                     backgroundColor: winColor,
                     hoverBackgroundColor: darkWinColor,
                 },
                 {
-                    data: <?php echo($comCommanderLossPoints); ?>,
+                    data: [1620,997,1433,943,956,1125,1986,1141,1501,1449,2140,1655,1513,1339,2759,1249,2532,1891],
                     backgroundColor: lossColor,
                     hoverBackgroundColor: darkLossColor,
                 }]
@@ -790,27 +651,7 @@ include("../header.php");
         <img src="/images/replayanalyzer/info.png" alt="Info">
         <span class="tooltip">This is the win rate per mission sorted by decreasing win rate.</span>
     </div>
-    <?php
-        $comMissionWinRateLabelsText = [];
-        $comMissionWinPoints = [];
-        $comMissionLossPoints = [];
-        $tempArray = [];
-        foreach($comMissionWinRate as $mission=>$data){
-            $tempArray[] = [$mission,intval($data[0]),intval($data[1]),($data[0]/($data[0] + $data[1]))];
-        }
-        usort($tempArray, function($a, $b) {
-            return $b[3] <=> $a[3];
-        });
-        foreach($tempArray as $data){
-            $comMissionWinRateLabelsText[] = $data[0];
-            $comMissionWinPoints[] = $data[1];
-            $comMissionLossPoints[] = $data[2];
-        }
-        $comMissionWinRateLabelsText = json_encode(array_values($comMissionWinRateLabelsText));
-        $comMissionWinPoints = json_encode(array_values($comMissionWinPoints));
-        $comMissionLossPoints = json_encode(array_values($comMissionLossPoints));
-    ?>
-    <div class="chart">
+        <div class="chart">
         <canvas id="communityMissionWinRateChart" width="600" height="400"></canvas>
     </div>
     <script>
@@ -818,14 +659,14 @@ include("../header.php");
         var myChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: <?php echo($comMissionWinRateLabelsText); ?>,
+                labels: ["Lock & Load","Void Thrashing","Rifts to Korhal","The Vermillion Problem","Void Launch","Dead of Night","Part and Parcel","Miner Evacuation","Cradle of Death","Oblivion Express","Temple of the Past","Malwarfare","Mist Opportunities","Scythe of Amon","Chain of Ascension"],
                 datasets: [{
-                    data: <?php echo($comMissionWinPoints); ?>,
+                    data: [14555,30327,16529,11441,15155,21170,12111,12648,9619,20865,14410,12366,12861,11768,11822],
                     backgroundColor: winColor,
                     hoverBackgroundColor: darkWinColor,
                 },
                 {
-                    data: <?php echo($comMissionLossPoints); ?>,
+                    data: [883,1901,1561,1164,1623,2285,1364,1610,1284,2815,2480,2320,2419,2248,2272],
                     backgroundColor: lossColor,
                     hoverBackgroundColor: darkLossColor,
                 }]
@@ -881,27 +722,7 @@ include("../header.php");
         <img src="/images/replayanalyzer/info.png" alt="Info">
         <span class="tooltip">This is the win rate per enemy composition where the composition could be identified sorted by decreasing win rate.</span>
     </div>
-    <?php
-        $comCompWinRateLabelsText = [];
-        $comCompWinPoints = [];
-        $comCompLossPoints = [];
-        $tempArray = [];
-        foreach($comCompWinRate as $comp=>$data){
-            $tempArray[] = [$comp,intval($data[0]),intval($data[1]),($data[0]/($data[0] + $data[1]))];
-        }
-        usort($tempArray, function($a, $b) {
-            return $b[3] <=> $a[3];
-        });
-        foreach($tempArray as $data){
-            $comCompWinRateLabelsText[] = $data[0];
-            $comCompWinPoints[] = $data[1];
-            $comCompLossPoints[] = $data[2];
-        }
-        $comCompWinRateLabelsText = json_encode(array_values($comCompWinRateLabelsText));
-        $comCompWinPoints = json_encode(array_values($comCompWinPoints));
-        $comCompLossPoints = json_encode(array_values($comCompLossPoints));
-    ?>
-    <div class="chart">
+        <div class="chart">
         <canvas id="communityCompWinRateChart" width="600" height="400"></canvas>
     </div>
     <script>
@@ -909,14 +730,14 @@ include("../header.php");
         var myChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: <?php echo($comCompWinRateLabelsText); ?>,
+                labels: ["Devouring Scourge","Shadow Disruption","Hope of the Khalai","Siege of Storms","Classic Infantry","Raiding Party","Invasionary Swarm","Broodling Corruption","Towering Walkers","Masters and Machines","Fleet of the Matriarch","Disruptive Artillery","Machines of War","Ravaging Infestation","Classic Mech","Vanguard of Aiur","Explosive Threats","Dominion Battlegroup","Shadow Tech"],
                 datasets: [{
-                    data: <?php echo($comCompWinPoints); ?>,
+                    data: [13304,10183,9365,9862,11338,13219,13704,15533,9884,9886,8130,9686,13118,16116,11059,8290,16032,13171,12873],
                     backgroundColor: winColor,
                     hoverBackgroundColor: darkWinColor,
                 },
                 {
-                    data: <?php echo($comCompLossPoints); ?>,
+                    data: [1050,894,855,931,1072,1289,1342,1555,1031,1045,876,1086,1553,1933,1442,1089,2167,1835,1897],
                     backgroundColor: lossColor,
                     hoverBackgroundColor: darkLossColor,
                 }]
@@ -980,15 +801,7 @@ include("../header.php");
             </tr>
         </thead>
         <tbody>
-            <?php
-                foreach($comMissionTimes as $mission=>$time){
-                    $printTime = gmdate("i:s", $time);
-                    echo("<tr>");
-                    echo("<td>$mission</td><td>$printTime</td>");
-                    echo("</tr>");
-                }
-            ?>
-        </tbody>
+            <tr><td>Lock & Load</td><td>05:33</td></tr><tr><td>Void Thrashing</td><td>06:30</td></tr><tr><td>Scythe of Amon</td><td>07:15</td></tr><tr><td>Rifts to Korhal</td><td>08:20</td></tr><tr><td>Chain of Ascension</td><td>09:25</td></tr><tr><td>Miner Evacuation</td><td>09:51</td></tr><tr><td>Dead of Night</td><td>10:44</td></tr><tr><td>Cradle of Death</td><td>11:02</td></tr><tr><td>Part and Parcel</td><td>14:22</td></tr>        </tbody>
     </table>
     <a id="rc"></a><h2>Rockslapping Champions</h2>
     <p>The flagship series of the site, these statistics gather information for some commonly-asked questions about the series. This also serves as a page that frequent submitters can use to try and one-up each other!</p>
@@ -1004,14 +817,11 @@ include("../header.php");
             </tr>
         </thead>
         <tbody>
-            <?
-            foreach ($topSubmitter as $element){
-                echo("<tr>");
-                echo("<td>$element[0]</td>");
-                echo "<td class=centered>$element[1]</td>";
-                echo("<td class=centered>$element[2]</td>");
-                echo("<tr>\n");
-            }?>
+            <tr><td>Sintharius</td><td class=centered>14.5</td><td class=centered>16</td><tr>
+<tr><td>eViLLiNg</td><td class=centered>14.0</td><td class=centered>14</td><tr>
+<tr><td>Aommaster</td><td class=centered>9.0</td><td class=centered>10</td><tr>
+<tr><td>macissammich</td><td class=centered>7.0</td><td class=centered>7</td><tr>
+<tr><td>Ancalagon</td><td class=centered>5.5</td><td class=centered>6</td><tr>
         </tbody>
     </table>
     
@@ -1025,14 +835,11 @@ include("../header.php");
             </tr>
         </thead>
         <tbody>
-            <?
-            foreach ($topRC as $element){
-                echo("<tr>");
-                echo("<td>$element[0]</td>");
-                echo "<td class=centered>$element[1]</td>";
-                echo("<td class=centered>$element[2]</td>");
-                echo("<tr>\n");
-            }?>
+            <tr><td>Raynor</td><td class=centered>16.5</td><td class=centered>19</td><tr>
+<tr><td>Artanis</td><td class=centered>15.0</td><td class=centered>16</td><tr>
+<tr><td>Tychus</td><td class=centered>12.5</td><td class=centered>15</td><tr>
+<tr><td>Vorazun</td><td class=centered>12.0</td><td class=centered>14</td><tr>
+<tr><td>Dehaka</td><td class=centered>12.0</td><td class=centered>15</td><tr>
         </tbody>
     </table>
     <script>
