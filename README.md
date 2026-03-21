@@ -1,8 +1,8 @@
 # starcraft2coop.com
 
-Here is the new starcraft2coop.com!
+Here is the new [starcraft2coop.com](https://starcraft2coop.com)!
 
-Written by Aommaster, hosted by Serine. Hopefully accepting community contributions one day!
+Written by Aommaster, hosted by Serine. Accepting community contributions now!
 
 ## License
 

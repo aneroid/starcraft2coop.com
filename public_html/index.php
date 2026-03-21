@@ -57,7 +57,8 @@ include("header.php");
                 <p>Site Update Notice</p>
             </td>
             <td>
-                starcraft2coop.com will stay available! Unfortunately, accounts and the replay analyzer are no longer working.
+                <p>starcraft2coop.com will stay available! Unfortunately, accounts and the replay analyzer are no longer working.</p>
+                <p>The site's source code is now available <a href="https://github.com/SerineMolecule/starcraft2coop.com" target="_blank">on GitHub</a>, where you can contribute changes.</p>
             </td>
         </tr>
     </table>
