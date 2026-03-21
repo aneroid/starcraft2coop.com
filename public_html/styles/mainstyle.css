@@ -79,9 +79,13 @@
     font-size:0.85em;
 }
 #commanderList img{
-    margin-left:5px;
-    margin-right:5px;
+    margin-left:4px;
+    margin-right:4px;
     border-radius:50%;
+    border: 1px solid transparent;
+}
+#missionList img{
+    border: 1px solid transparent;
 }
 #menu a{
     text-decoration: none;
@@ -103,6 +107,12 @@
 }
 #menu .highlight{
     color:rgb(219, 150, 32);
+}
+#menu .open{
+    text-decoration:underline;
+}
+#menu .highlight img {
+    border-color: rgb(219, 150, 32);
 }
 #footer{
     font-style:italic;

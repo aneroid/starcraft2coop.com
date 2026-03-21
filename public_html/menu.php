@@ -1,102 +1,107 @@
 <?php
 $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-$pagefile = basename($_SERVER['PHP_SELF']);
+$pageFile = basename($_SERVER['PHP_SELF']);
+$pageSection = basename(dirname($_SERVER['PHP_SELF']));
+if ($pageSection === 'tournament') {
+    $pageFile = 'tournament.php';
+    $pageSection = basename(dirname(dirname($_SERVER['PHP_SELF'])));
+}
 
 ?>
 
-<ul>
-    <li class=<?php if(basename($_SERVER['PHP_SELF'])==="index.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/">&#127968;</a></li>
-    <li class=<?php if(strpos($url,'commanders') !== false){echo'"highlight"';}else{echo'"normal"';}?>><a href="/" onclick="javascript:openSubmenu(event,'commanders');">Commanders</a></li>
-    <li class="normal"><a href="/" onclick="javascript:openSubmenu(event,'community');">Community</a></li>
-    <li class="normal"><a href="/" onclick="javascript:openSubmenu(event,'guides');">Guides</a></li>
-    <li class=<?php if(strpos($url,'missions') !== false){echo'"highlight"';}else{echo'"normal"';}?>><a href="/" onclick="javascript:openSubmenu(event,'missions');">Missions</a></li>
-    <li class="normal"><a href="/" onclick="javascript:openSubmenu(event,'resources');">Resources</a></li>
-    <li class="normal"><a href="/" onclick="javascript:openSubmenu(event,'tools');">Tools</a></li>
-    <li class="normal"><a href="/" onclick="javascript:openSubmenu(event,'about');">About</a></li>
+<ul id="topmenu">
+    <li class="normal"><a href="/">&#127968;</a></li>
+    <li class="<?=$pageSection==="commanders"?'highlight':'normal'?>"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-commanders">Commanders</a></li>
+    <li class="<?=$pageSection==="community"?'highlight':'normal'?>"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-community">Community</a></li>
+    <li class="<?=$pageSection==="guides"?'highlight':'normal'?>"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-guides">Guides</a></li>
+    <li class="<?=$pageSection==="missions"?'highlight':'normal'?>"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-missions">Missions</a></li>
+    <li class="<?=$pageSection==="resources"?'highlight':'normal'?>"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-resources">Resources</a></li>
+    <li class="<?=$pageSection==="tools"?'highlight':'normal'?>"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-tools">Tools</a></li>
+    <li class="<?=$pageSection==="about"?'highlight':'normal'?>"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-about">About</a></li>
 </ul>
 <div id="container">
     <div id="commanderList" class="submenu">
-        <a href="/commanders/raynor"><img src="/images/commanderportraits/raynorportrait.png" alt="Raynor Portrait"></a>
-        <a href="/commanders/kerrigan"><img src="/images/commanderportraits/kerriganportrait.png" alt="Kerrigan Portrait"></a>
-        <a href="/commanders/artanis"><img src="/images/commanderportraits/artanisportrait.png" alt="Artanis Portrait"></a>
-        <a href="/commanders/swann"><img src="/images/commanderportraits/swannportrait.png" alt="Swann Portrait"></a>
-        <a href="/commanders/zagara"><img src="/images/commanderportraits/zagaraportrait.png" alt="Zagara Portrait"></a>
-        <a href="/commanders/vorazun"><img src="/images/commanderportraits/vorazunportrait.png" alt="Vorazun Portrait"></a>
-        <a href="/commanders/karax"><img src="/images/commanderportraits/karaxportrait.png" alt="Karax Portrait"></a>
-        <a href="/commanders/abathur"><img src="/images/commanderportraits/abathurportrait.png" alt="Abathur Portrait"></a>
-        <a href="/commanders/alarak"><img src="/images/commanderportraits/alarakportrait.png" alt="Alarak Portrait"></a>
-        <a href="/commanders/nova"><img src="/images/commanderportraits/novaportrait.png" alt="Nova Portrait"></a>
-        <a href="/commanders/stukov"><img src="/images/commanderportraits/stukovportrait.png" alt="Stukov Portrait"></a>
-        <a href="/commanders/fenix"><img src="/images/commanderportraits/fenixportrait.png" alt="Fenix Portrait"></a>
-        <a href="/commanders/dehaka"><img src="/images/commanderportraits/dehakaportrait.png" alt="Dehaka Portrait"></a>
-        <a href="/commanders/horner"><img src="/images/commanderportraits/hornerportrait.png" alt="Han & Horner Portrait"></a>
-        <a href="/commanders/tychus"><img src="/images/commanderportraits/tychusportrait.png" alt="Tychus Portrait"></a>
-        <a href="/commanders/zeratul"><img src="/images/commanderportraits/zeratulportrait.png" alt="Zeratul Portrait"></a>
-        <a href="/commanders/stetmann"><img src="/images/commanderportraits/stetmannportrait.png" alt="Stetmann Portrait"></a>
-        <a href="/commanders/mengsk"><img src="/images/commanderportraits/mengskportrait.png" alt="Mengsk Portrait"></a>
+        <a href="/commanders/raynor" class="<?=$pageFile==='raynor.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/raynorportrait.png" alt="Raynor Portrait"></a>
+        <a href="/commanders/kerrigan" class="<?=$pageFile==='kerrigan.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/kerriganportrait.png" alt="Kerrigan Portrait"></a>
+        <a href="/commanders/artanis" class="<?=$pageFile==='artanis.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/artanisportrait.png" alt="Artanis Portrait"></a>
+        <a href="/commanders/swann" class="<?=$pageFile==='swann.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/swannportrait.png" alt="Swann Portrait"></a>
+        <a href="/commanders/zagara" class="<?=$pageFile==='zagara.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/zagaraportrait.png" alt="Zagara Portrait"></a>
+        <a href="/commanders/vorazun" class="<?=$pageFile==='vorazun.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/vorazunportrait.png" alt="Vorazun Portrait"></a>
+        <a href="/commanders/karax" class="<?=$pageFile==='karax.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/karaxportrait.png" alt="Karax Portrait"></a>
+        <a href="/commanders/abathur" class="<?=$pageFile==='abathur.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/abathurportrait.png" alt="Abathur Portrait"></a>
+        <a href="/commanders/alarak" class="<?=$pageFile==='alarak.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/alarakportrait.png" alt="Alarak Portrait"></a>
+        <a href="/commanders/nova" class="<?=$pageFile==='nova.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/novaportrait.png" alt="Nova Portrait"></a>
+        <a href="/commanders/stukov" class="<?=$pageFile==='stukov.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/stukovportrait.png" alt="Stukov Portrait"></a>
+        <a href="/commanders/fenix" class="<?=$pageFile==='fenix.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/fenixportrait.png" alt="Fenix Portrait"></a>
+        <a href="/commanders/dehaka" class="<?=$pageFile==='dehaka.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/dehakaportrait.png" alt="Dehaka Portrait"></a>
+        <a href="/commanders/horner" class="<?=$pageFile==='horner.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/hornerportrait.png" alt="Han & Horner Portrait"></a>
+        <a href="/commanders/tychus" class="<?=$pageFile==='tychus.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/tychusportrait.png" alt="Tychus Portrait"></a>
+        <a href="/commanders/zeratul" class="<?=$pageFile==='zeratul.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/zeratulportrait.png" alt="Zeratul Portrait"></a>
+        <a href="/commanders/stetmann" class="<?=$pageFile==='stetmann.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/stetmannportrait.png" alt="Stetmann Portrait"></a>
+        <a href="/commanders/mengsk" class="<?=$pageFile==='mengsk.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/mengskportrait.png" alt="Mengsk Portrait"></a>
     </div>
     <div id="missionList" class="submenu">
-        <a href="/missions/chainofascension"><img src="/images/missionthumbnails/chainofascension.png" alt="Chain of Ascension Thumbnail"></a>
-        <a href="/missions/cradleofdeath"><img src="/images/missionthumbnails/cradleofdeath.png" alt="Cradle of Death Thumbnail"></a>
-        <a href="/missions/deadofnight"><img src="/images/missionthumbnails/deadofnight.png" alt="Dead of Night Thumbnail"></a>
-        <a href="/missions/lockload"><img src="/images/missionthumbnails/lockload.png" alt="Lock & Load Thumbnail"></a>
-        <a href="/missions/malwarfare"><img src="/images/missionthumbnails/malwarfare.png" alt="Malwarfare Thumbnail"></a>
-        <a href="/missions/minerevacuation"><img src="/images/missionthumbnails/minerevacuation.png" alt="Miner Evacuation Thumbnail"></a>
-        <a href="/missions/mistopportunities"><img src="/images/missionthumbnails/mistopportunities.png" alt="Mist Opportunities Thumbnail"></a>
-        <a href="/missions/oblivionexpress"><img src="/images/missionthumbnails/oblivionexpress.png" alt="Oblivion Express Thumbnail"></a>
-        <a href="/missions/partparcel"><img src="/images/missionthumbnails/partparcel.png" alt="Part & Parcel Thumbnail"></a>
-        <a href="/missions/riftstokorhal"><img src="/images/missionthumbnails/riftstokorhal.png" alt="Rifts to Korhal Thumbnail"></a>
-        <a href="/missions/scytheofamon"><img src="/images/missionthumbnails/scytheofamon.png" alt="Scythe Of Amon Thumbnail"></a>
-        <a href="/missions/templeofthepast"><img src="/images/missionthumbnails/templeofthepast.png" alt="Temple of the Past Thumbnail"></a>
-        <a href="/missions/thevermillionproblem"><img src="/images/missionthumbnails/thevermillionproblem.png" alt="The Vermillion Problem Thumbnail"></a>
-        <a href="/missions/voidlaunch"><img src="/images/missionthumbnails/voidlaunch.png" alt="Void Launch Thumbnail"></a>
-        <a href="/missions/voidthrashing"><img src="/images/missionthumbnails/voidthrashing.png" alt="Void Thrashing Thumbnail"></a>
+        <a href="/missions/chainofascension" class="<?=$pageFile==='chainofascension.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/chainofascension.png" alt="Chain of Ascension Thumbnail"></a>
+        <a href="/missions/cradleofdeath" class="<?=$pageFile==='cradleofdeath.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/cradleofdeath.png" alt="Cradle of Death Thumbnail"></a>
+        <a href="/missions/deadofnight" class="<?=$pageFile==='deadofnight.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/deadofnight.png" alt="Dead of Night Thumbnail"></a>
+        <a href="/missions/lockload" class="<?=$pageFile==='lockload.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/lockload.png" alt="Lock & Load Thumbnail"></a>
+        <a href="/missions/malwarfare" class="<?=$pageFile==='malwarfare.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/malwarfare.png" alt="Malwarfare Thumbnail"></a>
+        <a href="/missions/minerevacuation" class="<?=$pageFile==='minerevacuation.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/minerevacuation.png" alt="Miner Evacuation Thumbnail"></a>
+        <a href="/missions/mistopportunities" class="<?=$pageFile==='mistopportunities.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/mistopportunities.png" alt="Mist Opportunities Thumbnail"></a>
+        <a href="/missions/oblivionexpress" class="<?=$pageFile==='oblivionexpress.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/oblivionexpress.png" alt="Oblivion Express Thumbnail"></a>
+        <a href="/missions/partparcel" class="<?=$pageFile==='partparcel.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/partparcel.png" alt="Part & Parcel Thumbnail"></a>
+        <a href="/missions/riftstokorhal" class="<?=$pageFile==='riftstokorhal.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/riftstokorhal.png" alt="Rifts to Korhal Thumbnail"></a>
+        <a href="/missions/scytheofamon" class="<?=$pageFile==='scytheofamon.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/scytheofamon.png" alt="Scythe Of Amon Thumbnail"></a>
+        <a href="/missions/templeofthepast" class="<?=$pageFile==='templeofthepast.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/templeofthepast.png" alt="Temple of the Past Thumbnail"></a>
+        <a href="/missions/thevermillionproblem" class="<?=$pageFile==='thevermillionproblem.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/thevermillionproblem.png" alt="The Vermillion Problem Thumbnail"></a>
+        <a href="/missions/voidlaunch" class="<?=$pageFile==='voidlaunch.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/voidlaunch.png" alt="Void Launch Thumbnail"></a>
+        <a href="/missions/voidthrashing" class="<?=$pageFile==='voidthrashing.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/voidthrashing.png" alt="Void Thrashing Thumbnail"></a>
     </div>
     <div id="guideList" class="submenu">
         <ul>
-            <li class=<?php if($pagefile==="buildordertheory.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/guides/buildordertheory">Build&nbsp;Order&nbsp;Theory</a></li>
-            <li class=<?php if($pagefile==="enemycomps.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/guides/enemycomps">Enemy&nbsp;Compositions</a></li>
-            <li class=<?php if($pagefile==="generaltips.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/guides/generaltips">General&nbsp;Tips</a></li>
-            <li class=<?php if($pagefile==="newplayer.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/guides/newplayer">New&nbsp;Players&nbsp;</a></li>
+            <li class="<?=$pageFile==="buildordertheory.php"?'highlight':'normal'?>"><a href="/guides/buildordertheory">Build&nbsp;Order&nbsp;Theory</a></li>
+            <li class="<?=$pageFile==="enemycomps.php"?'highlight':'normal'?>"><a href="/guides/enemycomps">Enemy&nbsp;Compositions</a></li>
+            <li class="<?=$pageFile==="generaltips.php"?'highlight':'normal'?>"><a href="/guides/generaltips">General&nbsp;Tips</a></li>
+            <li class="<?=$pageFile==="newplayer.php"?'highlight':'normal'?>"><a href="/guides/newplayer">New&nbsp;Players&nbsp;</a></li>
         </ul>
     </div>
     <div id="resources" class="submenu">
         <ul>
-            <li class=<?php if($pagefile==="achievements.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/resources/achievements">Achievements</a></li>
-            <li class=<?php if($pagefile==="ailogic.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/resources/ailogic">AI&nbsp;Logic</a></li>
-            <li class=<?php if($pagefile==="bugs.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/resources/bugs">Bugs</a></li>
-            <li class=<?php if($pagefile==="brutal.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/resources/brutal">Brutal+</a></li>
-            <li class=<?php if($pagefile==="deathprevention.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/resources/deathprevention">Death&nbsp;Prevent&nbsp;Effects</a></li>
-            <li class=<?php if($pagefile==="eastereggs.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/resources/eastereggs">Easter&nbsp;Eggs</a></li>
-            <li class=<?php if($pagefile==="levels.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/resources/levels">Levels</a></li>
-            <li class=<?php if($pagefile==="mutators.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/resources/mutators">Mutators</a></li>
-            <li class=<?php if($pagefile==="patchdata.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/resources/patchdata">Patch&nbsp;Data</a></li>
-            <li class=<?php if($pagefile==="stats.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/resources/stats">Stats</a></li>
-            <li class=<?php if($pagefile==="weeklymutations.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/resources/weeklymutations">Weekly&nbsp;Mutations</a></li>
+            <li class="<?=$pageFile==="achievements.php"?'highlight':'normal'?>"><a href="/resources/achievements">Achievements</a></li>
+            <li class="<?=$pageFile==="ailogic.php"?'highlight':'normal'?>"><a href="/resources/ailogic">AI&nbsp;Logic</a></li>
+            <li class="<?=$pageFile==="bugs.php"?'highlight':'normal'?>"><a href="/resources/bugs">Bugs</a></li>
+            <li class="<?=$pageFile==="brutal.php"?'highlight':'normal'?>"><a href="/resources/brutal">Brutal+</a></li>
+            <li class="<?=$pageFile==="deathprevention.php"?'highlight':'normal'?>"><a href="/resources/deathprevention">Death&nbsp;Prevent&nbsp;Effects</a></li>
+            <li class="<?=$pageFile==="eastereggs.php"?'highlight':'normal'?>"><a href="/resources/eastereggs">Easter&nbsp;Eggs</a></li>
+            <li class="<?=$pageFile==="levels.php"?'highlight':'normal'?>"><a href="/resources/levels">Levels</a></li>
+            <li class="<?=$pageFile==="mutators.php"?'highlight':'normal'?>"><a href="/resources/mutators">Mutators</a></li>
+            <li class="<?=$pageFile==="patchdata.php"?'highlight':'normal'?>"><a href="/resources/patchdata">Patch&nbsp;Data</a></li>
+            <li class="<?=$pageFile==="stats.php"?'highlight':'normal'?>"><a href="/resources/stats">Stats</a></li>
+            <li class="<?=$pageFile==="weeklymutations.php"?'highlight':'normal'?>"><a href="/resources/weeklymutations">Weekly&nbsp;Mutations</a></li>
             
         </ul>
     </div>
     <div id="tools" class="submenu">
         <ul>
-            <li class=<?php if($pagefile==="downloads.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/tools/downloads">Downloads</a></li>
-            <li class=<?php if($pagefile==="masterybreakpoints.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/tools/masterybreakpoints">Mastery&nbsp;Breakpoints</a></li>
-            <li class=<?php if($pagefile==="unitstats.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/tools/unitstats">Unit&nbsp;Stats</a></li>
+            <li class="<?=$pageFile==="downloads.php"?'highlight':'normal'?>"><a href="/tools/downloads">Downloads</a></li>
+            <li class="<?=$pageFile==="masterybreakpoints.php"?'highlight':'normal'?>"><a href="/tools/masterybreakpoints">Mastery&nbsp;Breakpoints</a></li>
+            <li class="<?=$pageFile==="unitstats.php"?'highlight':'normal'?>"><a href="/tools/unitstats">Unit&nbsp;Stats</a></li>
         </ul>
     </div>
     <div id="community" class="submenu">
         <ul>
-            <li class=<?php if($pagefile==="tournament.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/community/tournament/main">Co&#8209;op&nbsp;Tournament</a></li>
-            <li class=<?php if($pagefile==="gamespotlight.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/community/gamespotlight">Game&nbsp;Spotlight</a></li>
-            <li class=<?php if($pagefile==="mythbusters.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/community/mythbusters">Mythbusters</a></li>
-            <li class=<?php if($pagefile==="rockslappingchampions.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/community/rockslappingchampions">Rockslapping&nbsp;Champions</a></li>
+            <li class="<?=$pageFile==="tournament.php"?'highlight':'normal'?>"><a href="/community/tournament/main">Co&#8209;op&nbsp;Tournament</a></li>
+            <li class="<?=$pageFile==="gamespotlight.php"?'highlight':'normal'?>"><a href="/community/gamespotlight">Game&nbsp;Spotlight</a></li>
+            <li class="<?=$pageFile==="mythbusters.php"?'highlight':'normal'?>"><a href="/community/mythbusters">Mythbusters</a></li>
+            <li class="<?=$pageFile==="rockslappingchampions.php"?'highlight':'normal'?>"><a href="/community/rockslappingchampions">Rockslapping&nbsp;Champions</a></li>
             <li class="normal"><a href="/youtube">Youtube</a></li>
         </ul>
     </div>
     <div id="about" class="submenu">
         <ul>
-            <!--<li class=<?php if($pagefile==="contact.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/about/contact">Contact</a></li>-->
-            <li class=<?php if($pagefile==="faq.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/about/faq">FAQ</a></li>
-            <li class=<?php if($pagefile==="links.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/about/links">Links</a></li>
+            <!--<li class="<?=$pageFile==="contact.php"?'highlight':'normal'?>"><a href="/about/contact">Contact</a></li>-->
+            <li class="<?=$pageFile==="faq.php"?'highlight':'normal'?>"><a href="/about/faq">FAQ</a></li>
+            <li class="<?=$pageFile==="links.php"?'highlight':'normal'?>"><a href="/about/links">Links</a></li>
             <li class="normal"><a href="https://www.youtube.com/c/Starcraft2Coop" rel="nofollow">Youtube</a></li>
         </ul>
     </div>
@@ -108,38 +113,42 @@ $pagefile = basename($_SERVER['PHP_SELF']);
     </div>-->
 </div>
 <script>
-    function openSubmenu(event, selection){
-        event.preventDefault();
-        
-        switch (selection){
+    function openSubmenu(event, elem){
+        if (event) event.preventDefault();
+        if (!elem) elem = event.currentTarget;
+        var alreadyOpen = $(elem).hasClass('open');
+
+        $('#topmenu a').removeClass('open');
+        $(".submenu").hide();
+
+        if (alreadyOpen) return;
+
+        $(elem).addClass('open');
+        switch (elem.id.slice(13)){
             case "commanders":
-                $(".submenu").not("#commanderList").hide();
-                $("#commanderList").fadeToggle();
+                $("#commanderList").show();
                 break;
             case "missions":
-                $(".submenu").not("#missionList").hide();
-                $("#missionList").fadeToggle();
+                $("#missionList").show();
                 break;
             case "community":
-                $(".submenu").not("#community").hide();
-                $("#community").fadeToggle();
+                $("#community").show();
                 break;
             case "guides":
-                $(".submenu").not("#guideList").hide();
-                $("#guideList").fadeToggle();
+                $("#guideList").show();
                 break;
             case "resources":
-                $(".submenu").not("#resources").hide();
-                $("#resources").fadeToggle();
+                $("#resources").show();
                 break;
             case "tools":
-                $(".submenu").not("#tools").hide();
-                $("#tools").fadeToggle();
+                $("#tools").show();
                 break;
             case "about":
-                $(".submenu").not("#about").hide();
-                $("#about").fadeToggle();
+                $("#about").show();
                 break;
         }
     }
+    $('#topmenu li.highlight a').each(function () {
+        openSubmenu(null, this);
+    });
 </script>
