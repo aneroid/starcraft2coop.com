@@ -479,29 +479,29 @@ $_SESSION["known"] = true;
             $mutationEnd1 = $mutationEnd1->format('Y-m-d H:i:s');
             $oldMutationName = $weeklyList[1]['mutation'];
             
-            $sql = "SELECT difficulty, mycommander, allycommander, result 
-                    FROM userreplays
-                    WHERE mutation = 1 AND 
-                          mission='$map' AND 
-                          (difficulty='Casual' OR difficulty='Normal' OR difficulty='Hard' OR difficulty='Brutal') AND
-                          played BETWEEN '$mutationStart' AND '$mutationEnd'";
-            $result=mysqli_query($con,$sql);
-            $mutationGames = [];
-            while($row = mysqli_fetch_array($result)) {
-                $mutationGames[] = $row;
-            }
+            // $sql = "SELECT difficulty, mycommander, allycommander, result 
+            //         FROM userreplays
+            //         WHERE mutation = 1 AND 
+            //               mission='$map' AND 
+            //               (difficulty='Casual' OR difficulty='Normal' OR difficulty='Hard' OR difficulty='Brutal') AND
+            //               played BETWEEN '$mutationStart' AND '$mutationEnd'";
+            // $result=mysqli_query($con,$sql);
+            // $mutationGames = [];
+            // while($row = mysqli_fetch_array($result)) {
+            //     $mutationGames[] = $row;
+            // }
             
-            $sql = "SELECT difficulty, mycommander, allycommander, result 
-                    FROM userreplays
-                    WHERE mutation = 1 AND 
-                          mission='$map1' AND 
-                          (difficulty='Casual' OR difficulty='Normal' OR difficulty='Hard' OR difficulty='Brutal') AND
-                          played BETWEEN '$mutationStart1' AND '$mutationEnd1'";
-            $result=mysqli_query($con,$sql);
-            $mutationGames1 = [];
-            while($row = mysqli_fetch_array($result)) {
-                $mutationGames1[] = $row;
-            }
+            // $sql = "SELECT difficulty, mycommander, allycommander, result 
+            //         FROM userreplays
+            //         WHERE mutation = 1 AND 
+            //               mission='$map1' AND 
+            //               (difficulty='Casual' OR difficulty='Normal' OR difficulty='Hard' OR difficulty='Brutal') AND
+            //               played BETWEEN '$mutationStart1' AND '$mutationEnd1'";
+            // $result=mysqli_query($con,$sql);
+            // $mutationGames1 = [];
+            // while($row = mysqli_fetch_array($result)) {
+            //     $mutationGames1[] = $row;
+            // }
         ?>
         
     </ul>
