@@ -1,7 +1,3 @@
-<!DOCTYPE html>
-
-<html lang="en">
-<head>
 <?php
 include("header.php");
 ?>
@@ -59,7 +55,7 @@ include("header.php");
                 <p>Site Update Notice</p>
             </td>
             <td>
-                starcraft2coop.com ill be shutting down at the end of March 2026. Thank you all very much for all the support over these past years!
+                starcraft2coop.com will stay available! Unfortunately, accounts and the replay analyzer are no longer working.
             </td>
         </tr>
     </table>

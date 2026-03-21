@@ -627,11 +627,6 @@ include("../header.php");
             $cookieData = json_decode($_COOKIE['sc2coop']);
             $username=$cookieData->username;
         }
-        if(isset($_SESSION["login"])){
-            if($_SESSION["login"]==true){
-                $username = $_SESSION["username"];
-            }
-        }
         if($username!=""){
             echo("<p>Initial values are based on replays you have uploaded to this site.</p>");
             include("../scripts/sqlconnection.php");

@@ -1,5 +1,7 @@
 <?php
 $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+$pagefile = basename($_SERVER['PHP_SELF']);
+
 ?>
 
 <ul>
@@ -11,7 +13,6 @@ $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
     <li class="normal"><a href="/" onclick="javascript:openSubmenu(event,'resources');">Resources</a></li>
     <li class="normal"><a href="/" onclick="javascript:openSubmenu(event,'tools');">Tools</a></li>
     <li class="normal"><a href="/" onclick="javascript:openSubmenu(event,'about');">About</a></li>
-    <li class=<?php if(basename($_SERVER['PHP_SELF'])==="account.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/account">My&nbsp;Account</a></li>
 </ul>
 <div id="container">
     <div id="commanderList" class="submenu">
@@ -53,50 +54,49 @@ $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
     </div>
     <div id="guideList" class="submenu">
         <ul>
-            <li class=<?php if(basename($_SERVER['PHP_SELF'])==="buildordertheory.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/guides/buildordertheory">Build&nbsp;Order&nbsp;Theory</a></li>
-            <li class=<?php if(basename($_SERVER['PHP_SELF'])==="enemycomps.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/guides/enemycomps">Enemy&nbsp;Compositions</a></li>
-            <li class=<?php if(basename($_SERVER['PHP_SELF'])==="generaltips.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/guides/generaltips">General&nbsp;Tips</a></li>
-            <li class=<?php if(basename($_SERVER['PHP_SELF'])==="newplayer.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/guides/newplayer">New&nbsp;Players&nbsp;</a></li>
+            <li class=<?php if($pagefile==="buildordertheory.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/guides/buildordertheory">Build&nbsp;Order&nbsp;Theory</a></li>
+            <li class=<?php if($pagefile==="enemycomps.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/guides/enemycomps">Enemy&nbsp;Compositions</a></li>
+            <li class=<?php if($pagefile==="generaltips.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/guides/generaltips">General&nbsp;Tips</a></li>
+            <li class=<?php if($pagefile==="newplayer.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/guides/newplayer">New&nbsp;Players&nbsp;</a></li>
         </ul>
     </div>
     <div id="resources" class="submenu">
         <ul>
-            <li class=<?php if(basename($_SERVER['PHP_SELF'])==="achievements.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/resources/achievements">Achievements</a></li>
-            <li class=<?php if(basename($_SERVER['PHP_SELF'])==="ailogic.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/resources/ailogic">AI&nbsp;Logic</a></li>
-            <li class=<?php if(basename($_SERVER['PHP_SELF'])==="bugs.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/resources/bugs">Bugs</a></li>
-            <li class=<?php if(basename($_SERVER['PHP_SELF'])==="brutal.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/resources/brutal">Brutal+</a></li>
-            <li class=<?php if(basename($_SERVER['PHP_SELF'])==="deathprevention.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/resources/deathprevention">Death&nbsp;Prevent&nbsp;Effects</a></li>
-            <li class=<?php if(basename($_SERVER['PHP_SELF'])==="eastereggs.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/resources/eastereggs">Easter&nbsp;Eggs</a></li>
-            <li class=<?php if(basename($_SERVER['PHP_SELF'])==="levels.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/resources/levels">Levels</a></li>
-            <li class=<?php if(basename($_SERVER['PHP_SELF'])==="mutators.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/resources/mutators">Mutators</a></li>
-            <li class=<?php if(basename($_SERVER['PHP_SELF'])==="patchdata.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/resources/patchdata">Patch&nbsp;Data</a></li>
-            <li class=<?php if(basename($_SERVER['PHP_SELF'])==="stats.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/resources/stats">Stats</a></li>
-            <li class=<?php if(basename($_SERVER['PHP_SELF'])==="weeklymutations.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/resources/weeklymutations">Weekly&nbsp;Mutations</a></li>
+            <li class=<?php if($pagefile==="achievements.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/resources/achievements">Achievements</a></li>
+            <li class=<?php if($pagefile==="ailogic.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/resources/ailogic">AI&nbsp;Logic</a></li>
+            <li class=<?php if($pagefile==="bugs.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/resources/bugs">Bugs</a></li>
+            <li class=<?php if($pagefile==="brutal.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/resources/brutal">Brutal+</a></li>
+            <li class=<?php if($pagefile==="deathprevention.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/resources/deathprevention">Death&nbsp;Prevent&nbsp;Effects</a></li>
+            <li class=<?php if($pagefile==="eastereggs.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/resources/eastereggs">Easter&nbsp;Eggs</a></li>
+            <li class=<?php if($pagefile==="levels.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/resources/levels">Levels</a></li>
+            <li class=<?php if($pagefile==="mutators.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/resources/mutators">Mutators</a></li>
+            <li class=<?php if($pagefile==="patchdata.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/resources/patchdata">Patch&nbsp;Data</a></li>
+            <li class=<?php if($pagefile==="stats.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/resources/stats">Stats</a></li>
+            <li class=<?php if($pagefile==="weeklymutations.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/resources/weeklymutations">Weekly&nbsp;Mutations</a></li>
             
         </ul>
     </div>
     <div id="tools" class="submenu">
         <ul>
-            <li class=<?php if(basename($_SERVER['PHP_SELF'])==="downloads.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/tools/downloads">Downloads</a></li>
-            <li class=<?php if(basename($_SERVER['PHP_SELF'])==="masterybreakpoints.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/tools/masterybreakpoints">Mastery&nbsp;Breakpoints</a></li>
-            <li class=<?php if(basename($_SERVER['PHP_SELF'])==="replayanalyzer.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/tools/replayanalyzer">Replay&nbsp;Analyzer</a></li>
-            <li class=<?php if(basename($_SERVER['PHP_SELF'])==="unitstats.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/tools/unitstats">Unit&nbsp;Stats</a></li>
+            <li class=<?php if($pagefile==="downloads.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/tools/downloads">Downloads</a></li>
+            <li class=<?php if($pagefile==="masterybreakpoints.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/tools/masterybreakpoints">Mastery&nbsp;Breakpoints</a></li>
+            <li class=<?php if($pagefile==="unitstats.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/tools/unitstats">Unit&nbsp;Stats</a></li>
         </ul>
     </div>
     <div id="community" class="submenu">
         <ul>
-            <li class=<?php if(basename($_SERVER['PHP_SELF'])==="tournament.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/community/tournament/main">Co&#8209;op&nbsp;Tournament</a></li>
-            <li class=<?php if(basename($_SERVER['PHP_SELF'])==="gamespotlight.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/community/gamespotlight">Game&nbsp;Spotlight</a></li>
-            <li class=<?php if(basename($_SERVER['PHP_SELF'])==="mythbusters.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/community/mythbusters">Mythbusters</a></li>
-            <li class=<?php if(basename($_SERVER['PHP_SELF'])==="rockslappingchampions.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/community/rockslappingchampions">Rockslapping&nbsp;Champions</a></li>
+            <li class=<?php if($pagefile==="tournament.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/community/tournament/main">Co&#8209;op&nbsp;Tournament</a></li>
+            <li class=<?php if($pagefile==="gamespotlight.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/community/gamespotlight">Game&nbsp;Spotlight</a></li>
+            <li class=<?php if($pagefile==="mythbusters.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/community/mythbusters">Mythbusters</a></li>
+            <li class=<?php if($pagefile==="rockslappingchampions.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/community/rockslappingchampions">Rockslapping&nbsp;Champions</a></li>
             <li class="normal"><a href="/youtube">Youtube</a></li>
         </ul>
     </div>
     <div id="about" class="submenu">
         <ul>
-            <!--<li class=<?php if(basename($_SERVER['PHP_SELF'])==="contact.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/about/contact">Contact</a></li>-->
-            <li class=<?php if(basename($_SERVER['PHP_SELF'])==="faq.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/about/faq">FAQ</a></li>
-            <li class=<?php if(basename($_SERVER['PHP_SELF'])==="links.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/about/links">Links</a></li>
+            <!--<li class=<?php if($pagefile==="contact.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/about/contact">Contact</a></li>-->
+            <li class=<?php if($pagefile==="faq.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/about/faq">FAQ</a></li>
+            <li class=<?php if($pagefile==="links.php"){echo'"highlight"';}else{echo'"normal"';}?>><a href="/about/links">Links</a></li>
             <li class="normal"><a href="https://www.youtube.com/c/Starcraft2Coop" rel="nofollow">Youtube</a></li>
         </ul>
     </div>
