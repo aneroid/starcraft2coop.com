@@ -221,40 +221,7 @@ include("../header.php");
             2019-02-17&#9;Void Launch&#9;Swann&#9;0&#9;Fenix&#9;73&#9;Standard&#9;Win&#9;1465</p>
     </div>
     <a id="download2"></a><h2>Download Links</h2>
-    <form action="downloads.php" name="download2form" id="download2Form" class="dynamic" method="post" enctype="multipart/form-data">
-        <input type="hidden" name="recaptcha_response" id="download2FormRecaptchaResponse">
-        <p><input type="submit" id="startDownload2" value="Download CRDS"></p>
-        <p id="captchaTOS">This site is protected by reCAPTCHA and the Google
-    <a href="https://policies.google.com/privacy">Privacy Policy</a> and
-    <a href="https://policies.google.com/terms">Terms of Service</a> apply.</p>
-    </form>
-    <script>
-        $("#download2Form").submit(function(e){
-            grecaptcha.execute('6LcWQfEUAAAAAKrJ7sgdGyROvE7wuzopdDeAV0qd', { action: "generateDownload" }).then(function (token) {
-                $("#download2FormRecaptchaResponse").val(token);
-                var captcha = $("#download2FormRecaptchaResponse").val();
-                $.ajax({
-                    type: "POST",
-                    url: "../scripts/getdownload.php",
-                    data: {
-                        tool: 'crds',
-                        recaptcha_response: captcha,
-                    },
-                    success: function(data) {
-                        console.log(data);
-                       if(data.indexOf("Error") == -1){
-                           window.location.href = data;
-                       }
-                       
-                    }
-                });
-                e.preventDefault();
-                return false;
-            })
-            e.preventDefault();
-            return false;
-        })
-    </script>
+    <p><a href="/files/CRDS.py" download>Download CRDS</a></p>
     <a id="usage2"></a><h2>Usage Notes</h2>
     <ul>
         <li>You will require Python 2, as S2Protocol has been written under that version of Python. You can download Python from <a href="https://www.python.org/downloads/release/python-2718/">here</a>. Make sure to select the appropriate installer for your system.</li>

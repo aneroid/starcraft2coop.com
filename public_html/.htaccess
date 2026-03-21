@@ -5,6 +5,9 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f 
 RewriteRule ^(.*)$ $1.php
 
+RemoveHandler .py
+AddType text/x-python .py
+
 # # comment out until we're live
 
 # RewriteCond %{HTTP_HOST} ^www\.(.*)$ [OR]

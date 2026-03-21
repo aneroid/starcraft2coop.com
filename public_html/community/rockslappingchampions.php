@@ -91,7 +91,7 @@ include("../header.php");
     </ul>
     <p>If you would like to see statistics about the series, please check out the <a href="/resources/stats">Statistics Page</a>. It shows statistics such as top submitters and commanders most featured as the Rockslapper in the series.</p>
     <?php
-    ini_set('file_uploads', 'On');
+    /* ini_set('file_uploads', 'On');
     	if(isset($_POST['url']) && $_POST['url'] == ''){
     		if(isset($_FILES["file"]) && isset($_POST['recaptcha_response'])){
     		    
@@ -126,7 +126,7 @@ include("../header.php");
                     }
         		}
         	}
-        }
+        } */
     ?>
     
     <form action="rockslappingchampions.php" name="submissionform" id="rcForm" class="captchaForm" onsubmit="return validate()" method="post" enctype="multipart/form-data">

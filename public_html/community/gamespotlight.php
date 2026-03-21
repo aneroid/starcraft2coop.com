@@ -50,7 +50,7 @@ include("../header.php");
         <li>Replays should not be too old (more than 2-3 years old) to ensure the Co-op Observer UI works well.</li>
     </ul>
     <?php
-    ini_set('file_uploads', 'On');
+    /* ini_set('file_uploads', 'On');
     	if(isset($_POST['url']) && $_POST['url'] == ''){
     		if(isset($_FILES["file"]) && isset($_POST['recaptcha_response'])){
     		    
@@ -85,7 +85,7 @@ include("../header.php");
                     }
         		}
         	}
-        }
+        } */
     ?>
     
     <form action="gamespotlight.php" name="submissionform" id="gsForm" class="captchaForm" onsubmit="return validate()" method="post" enctype="multipart/form-data">

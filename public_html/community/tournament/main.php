@@ -8,7 +8,6 @@ include("../../header.php");
   <style>
         
   </style>
-  <script src="https://www.google.com/recaptcha/api.js"></script>
   </head>
 <body>
 <div id="header"><img src="/images/mainpageheader.png" alt="Starcraft II Co-op Logo">
