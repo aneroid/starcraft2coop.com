@@ -9,7 +9,7 @@ if ($pageSection === 'tournament') {
 
 ?>
 <header id="header">
-    <img src="/images/mainpageheader.png" alt="Starcraft II Co-op">
+    <img src="/images/starcraft2coop.png" alt="Starcraft II Co-op">
 </header>
 <nav id="menu">
 <ul id="topmenu">

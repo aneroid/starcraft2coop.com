@@ -55,6 +55,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     width:75%;
+    max-width: 950px;
 }
 #menu{
     text-align:center;
