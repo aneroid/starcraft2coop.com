@@ -7,6 +7,9 @@
 .banner img{
     width:720px;
 }
+body {
+    background:rgb(10, 13, 33);
+}
 @media(min-width: 500px) { .adsense { max-height: 60px; } }
 @media(min-width: 800px) { .adsense { max-height: 100px; } }
 @media (min-width: 701px){
@@ -20,9 +23,6 @@
 }
 
 @media (max-width: 700px){
-  body {
-    background-color:rgb(10, 13, 33);
-  }
     #container{
         margin-top:10px;
         min-height:15px;
