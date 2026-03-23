@@ -7,6 +7,36 @@ if ($pageSection === 'tournament') {
     $pageSection = basename(dirname(dirname($_SERVER['PHP_SELF'])));
 }
 
+if ($_SERVER['SERVER_NAME'] === 'dev.starcraft2coop.com') {
+?>
+<style>
+.construction {
+    border: 15px solid transparent;
+    padding: 5px 10px;
+    background: #d9ca28;
+    /* opera doesn't support single-arg linear-gradient */
+    background-image: linear-gradient(#d9ca28, #d9ca28), repeating-linear-gradient(
+        -45deg,
+        #d9ca28,
+        #d9ca28 10px,
+        #292824 10px,
+        #292824 20px
+    );
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+
+    padding: 5px 10px;
+    font-weight: bold;
+    color: black;
+
+    font-family: 'Convergence', sans-serif;
+}
+</style>
+<div class="construction">
+    THIS IS THE TEST SITE. (<a href="https://starcraft2coop.com">Go to the real site</a>)
+</div>
+<?
+}
 ?>
 <header id="header">
     <img src="/images/starcraft2coop.png" alt="Starcraft II Co-op">
