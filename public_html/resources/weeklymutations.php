@@ -339,9 +339,7 @@ $_SESSION["known"] = true;
   </style>
   </head>
 <body>
-<div id="header"><img src="/images/mainpageheader.png" alt="Starcraft II Co-op Logo">
-</div>
-<div id="menu"><?php include("../menu.php"); ?></div>
+<?php include("../menu.php"); ?>
 <div id="content">
     <h1>A List of Weekly Mutations With Difficulties</h1>
     <h2>Sections on this Page</h2>

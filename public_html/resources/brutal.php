@@ -58,9 +58,7 @@ $_SESSION["known"] = true;
   </style>
   </head>
 <body>
-<div id="header"><img src="/images/mainpageheader.png" alt="Starcraft II Co-op Logo">
-</div>
-<div id="menu"><?php include("../menu.php"); ?></div>
+<?php include("../menu.php"); ?>
 <div id="content">
     <h1>Brutal+ Difficulty: Mutation Cost Brackets and Templates</h1>
     <?php include("../scripts/reporterror.php");?>

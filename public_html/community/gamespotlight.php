@@ -24,9 +24,7 @@ include("../header.php");
     </style>
   </head>
 <body>
-<div id="header"><img src="/images/mainpageheader.png" alt="Starcraft II Co-op Logo">
-</div>
-<div id="menu"><?php include("../menu.php"); ?></div>
+<?php include("../menu.php"); ?>
 <div id="content">
     <h1>Game Spotlight</h1>
     <p>Game Spotlight is a special non-routine series of game casts from some of the best Co-op players in the community. The videos provide a glimpse of what Co-op looks like at the highest levels of play and show how top Co-op players handle difficult situations. Each game will be casted with added "Did You Know" facts scattered throughout the video. A full playlist is below:</p>

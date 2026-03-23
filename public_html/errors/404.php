@@ -26,9 +26,7 @@
   </style>
   </head>
 <body>
-<div id="header"><img src="/images/mainpageheader.png" alt="Starcraft II Co-op Logo">
-</div>
-<div id="menu"><?php include("../menu.php"); ?></div>
+<?php include("../menu.php"); ?>
 <div id="content">
     <?php 
       if(isset($_SERVER['HTTP_REFERER'])){

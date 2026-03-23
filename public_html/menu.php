@@ -8,7 +8,10 @@ if ($pageSection === 'tournament') {
 }
 
 ?>
-
+<header id="header">
+    <img src="/images/mainpageheader.png" alt="Starcraft II Co-op">
+</header>
+<nav id="menu">
 <ul id="topmenu">
     <li class="normal"><a href="/">&#127968;</a></li>
     <li class="<?=$pageSection==="commanders"?'highlight':'normal'?>"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-commanders">Commanders</a></li>
@@ -112,6 +115,7 @@ if ($pageSection === 'tournament') {
         <a href="https://discord.gg/AbFXRAB" rel="nofollow"><img src="/images/links/discord.png" alt="Discord"></a>
     </div>-->
 </div>
+</nav>
 <script>
     function openSubmenu(event, elem){
         if (event) event.preventDefault();

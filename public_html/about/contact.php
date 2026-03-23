@@ -4,9 +4,7 @@ include("../header.php");
   <title>Starcraft 2 Co-op - Contact</title>
 </head>
 <body>
-<div id="header"><img src="/images/mainpageheader.png" alt="Starcraft II Co-op Logo">
-</div>
-<div id="menu"><?php include("../menu.php"); ?></div>
+<?php include("../menu.php"); ?>
 <div id="content">
     <h1>Contact</h1>
     <p>The site is being developed in <a href="https://github.com/SerineMolecule/starcraft2coop.com">the starcraft2coop.com GitHub repository</a> right now.</p>

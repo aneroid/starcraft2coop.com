@@ -11,9 +11,7 @@ include("../header.php");
   </style>
   </head>
 <body>
-<div id="header"><img src="/images/mainpageheader.png" alt="Starcraft II Co-op Logo">
-</div>
-<div id="menu"><?php include("../menu.php"); ?></div>
+<?php include("../menu.php"); ?>
 <div id="content">
     <h1>Links - Various Other Starcraft 2 Co-op Content</h1>
     <p>Below are some links to other content (including websites) dedicated to Starcraft II Co-op.</p>

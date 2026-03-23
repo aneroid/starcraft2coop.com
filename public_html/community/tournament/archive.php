@@ -17,9 +17,7 @@ include("../../header.php");
   </style>
   </head>
 <body>
-<div id="header"><img src="/images/mainpageheader.png" alt="Starcraft II Co-op Logo">
-</div>
-<div id="menu"><?php include("../../menu.php"); ?></div>
+<?php include("../../menu.php"); ?>
 <div id="content">
     <h1>Co-op Tournament Archives</h1>
     <p>Below are the archives of past Co-op Tournaments.

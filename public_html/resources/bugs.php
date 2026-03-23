@@ -7,9 +7,7 @@ include("../header.php");
   <link rel="canonical" href="https://starcraft2coop.com/resources/bugs">
   </head>
 <body>
-<div id="header"><img src="/images/mainpageheader.png" alt="Starcraft II Co-op Logo">
-</div>
-<div id="menu"><?php include("../menu.php"); ?></div>
+<?php include("../menu.php"); ?>
 <div id="content">
     <h1>Starcraft Co-op Bugs List</h1>
     <?php include("../scripts/reporterror.php");?>

@@ -7,9 +7,7 @@ include("../header.php");
   <link rel="canonical" href="https://starcraft2coop.com/community/mythbusters">
   </head>
 <body>
-<div id="header"><img src="/images/mainpageheader.png" alt="Starcraft II Co-op Logo">
-</div>
-<div id="menu"><?php include("../menu.php"); ?></div>
+<?php include("../menu.php"); ?>
 <div id="content">
     <h1>Mythbusters</h1>
     <p>Mythbusters takes theories and myths from the co-op community and puts them to the test. A full playlist is below:</p>

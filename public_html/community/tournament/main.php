@@ -10,9 +10,7 @@ include("../../header.php");
   </style>
   </head>
 <body>
-<div id="header"><img src="/images/mainpageheader.png" alt="Starcraft II Co-op Logo">
-</div>
-<div id="menu"><?php include("../../menu.php"); ?></div>
+<?php include("../../menu.php"); ?>
 <div id="content">
     <h1>The Co-Op Tournament</h1>
     <p>The Co-Op tournament is designed to test the limits of players' skill, knowledge and map awareness in Starcraft II Co-op mode. Currently, there is a $100 prize given to the winning team ($50 each player).</p>

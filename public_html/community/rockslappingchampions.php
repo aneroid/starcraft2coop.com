@@ -61,9 +61,7 @@ include("../header.php");
     </style>
   </head>
 <body>
-<div id="header"><img src="/images/mainpageheader.png" alt="Starcraft II Co-op Logo">
-</div>
-<div id="menu"><?php include("../menu.php"); ?></div>
+<?php include("../menu.php"); ?>
 <div id="content">
     <h1>Rockslapping Champions</h1>
     <h2>The Series</h2>
