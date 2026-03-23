@@ -8,24 +8,19 @@ RewriteRule ^(.*)$ $1.php
 RemoveHandler .py
 AddType text/x-python .py
 
-# # comment out until we're live
+# remove `www.`
+RewriteCond %{HTTP_HOST} ^www\.(.*)$
+RewriteRule ^(.*)$ https://starcraft2coop.com/$1 [R=302,L]
 
-# RewriteCond %{HTTP_HOST} ^www\.(.*)$ [OR]
-# RewriteCond %{https} off
-# RewriteRule ^(.*)$ https://starcraft2coop.com/$1 [R=301,L]
-# 
-# RewriteCond %{HTTP_HOST} !^(www\.)?starcraft2coop\.com$ [NC]
-# RewriteRule ^(.*) http://starcraft2coop.com/$1?domain=%{HTTP_HOST} [R=301,L]
-
-#Permanent Redirects for link shortening and Youtube links
+# Permanent Redirects for link shortening and Youtube links
 Redirect 301 /mutators /resources/mutators
 Redirect 301 /weeklymutations /resources/weeklymutations
 Redirect 301 /rockslappingchampions /community/rockslappingchampions
 Redirect 301 /gamespotlight /community/gamespotlight
 Redirect 301 /patrons /community/patrons
 Redirect 301 /mythbusters /community/mythbusters
-# 19-apr-2020 menu reorganization
 
+# 19-apr-2020 menu reorganization
 Redirect 301 /newplayer /resources/newplayer
 Redirect 301 /resources/links /about/links
 Redirect 301 /resources/downloads /tools/downloads
