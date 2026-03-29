@@ -6,6 +6,7 @@ if ($pageSection === 'tournament') {
     $pageFile = 'tournament.php';
     $pageSection = basename(dirname(dirname($_SERVER['PHP_SELF'])));
 }
+if (!$pageSection) $pageSection = 'index';
 
 ?>
 <header id="header">
@@ -48,7 +49,7 @@ if ($_SERVER['SERVER_NAME'] === 'dev.starcraft2coop.com') {
 ?>
 <nav id="menu">
 <ul id="topmenu">
-    <li class="normal"><a href="/">&#127968;</a></li>
+    <li class="<?=$pageSection==="index"?'highlight':'normal'?>"><a href="/" aria-label="Home" title="Home"><i class="fas fa-home" aria-hidden="true"></i></a></li>
     <li class="<?=$pageSection==="commanders"?'highlight':'normal'?>"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-commanders">Commanders</a></li>
     <!--li class="<?=$pageSection==="community"?'highlight':'normal'?>"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-community">Community</a></li-->
     <li class="<?=$pageSection==="guides"?'highlight':'normal'?>"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-guides">Guides</a></li>
