@@ -447,7 +447,7 @@ include("../header.php");
                                     <td>15:30</td>
                                     <td>3</td>
                                     <td>3</td>
-                                    <td>↖</td>
+                                    <td>↙</td>
                                     <td>Drop Pod/Warp-in</td>
                                 </tr>
                                 <tr>
