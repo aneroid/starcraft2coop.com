@@ -720,7 +720,7 @@ function generateMasteryUpgradeUpgradesArray($commander, $unit, $masteries){
                     FROM playertalents
                     WHERE commander='$commander'
                     AND unit = '$unit'
-                    AND nameid='${value[0]}'
+                    AND nameid='{$value[0]}'
                     AND target='upgrade'";
             $result=mysqli_query($con,$sql);
             while($row = mysqli_fetch_array($result)) {
@@ -800,7 +800,7 @@ function generateMasteriesArray($commander, $unit, $masteries){
                     FROM playertalents
                     WHERE commander='$commander'
                     AND unit = '$unit'
-                    AND nameid='${value[0]}'
+                    AND nameid='{$value[0]}'
                     AND target='unit'
                     AND talenttype='mastery'";
             $result=mysqli_query($con,$sql);
@@ -1000,8 +1000,8 @@ function getUnitUpgradesOutput($commander, $unit){
         $upgradeString .="<u>Masteries:</u>";
         $counter = 0;
         foreach($masteryList as $mastery){
-            $upgradeString .="<br><p>${mastery['name']}</p>";
-            $upgradeString .="<div class='rangeContainer'><input type='range' min='0' max='30' value='0' class='masterySlider' name='${mastery['nameid']}' id='mastery$counter'><span id='range$counter'>0</span></div>";
+            $upgradeString .="<br><p>{$mastery['name']}</p>";
+            $upgradeString .="<div class='rangeContainer'><input type='range' min='0' max='30' value='0' class='masterySlider' name='{$mastery['nameid']}' id='mastery$counter'><span id='range$counter'>0</span></div>";
             $counter +=1;
         }
         $upgradeString .="</div>";
@@ -1012,12 +1012,12 @@ function getUnitUpgradesOutput($commander, $unit){
         $upgradeString .="<u>Prestiges:</u>";
         $counter = 1;
         $motto = strtolower(str_replace([" ","-","(",")"], "", $basePrestige));
-        $upgradeString .="<br><label><input type='radio' name='${commander}Prestige' value='$motto' checked>$basePrestige</label>";
+        $upgradeString .="<br><label><input type='radio' name='{$commander}Prestige' value='$motto' checked>$basePrestige</label>";
         foreach($commanderPrestiges as $prestigeName){
             if(isset($prestigeList[str_replace(" ","", $prestigeName)])){
                 $nameid = $prestigeList[str_replace(" ","", $prestigeName)]['nameid'];
                 $name = $prestigeList[str_replace(" ","", $prestigeName)]['name'];
-                $upgradeString .="<br><label><input type='radio' name='${commander}Prestige' value='$nameid'>$name</label>";
+                $upgradeString .="<br><label><input type='radio' name='{$commander}Prestige' value='$nameid'>$name</label>";
                 $counter +=1;
             }
         }
