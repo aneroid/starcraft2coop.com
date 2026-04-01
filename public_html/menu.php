@@ -60,41 +60,41 @@ if ($_SERVER['SERVER_NAME'] === 'dev.starcraft2coop.com') {
 </ul>
 <div id="container">
     <div id="commanderList" class="submenu">
-        <a href="/commanders/raynor" class="<?=$pageFile==='raynor.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/raynorportrait.png" alt="Raynor Portrait"></a>
-        <a href="/commanders/kerrigan" class="<?=$pageFile==='kerrigan.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/kerriganportrait.png" alt="Kerrigan Portrait"></a>
-        <a href="/commanders/artanis" class="<?=$pageFile==='artanis.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/artanisportrait.png" alt="Artanis Portrait"></a>
-        <a href="/commanders/swann" class="<?=$pageFile==='swann.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/swannportrait.png" alt="Swann Portrait"></a>
-        <a href="/commanders/zagara" class="<?=$pageFile==='zagara.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/zagaraportrait.png" alt="Zagara Portrait"></a>
-        <a href="/commanders/vorazun" class="<?=$pageFile==='vorazun.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/vorazunportrait.png" alt="Vorazun Portrait"></a>
-        <a href="/commanders/karax" class="<?=$pageFile==='karax.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/karaxportrait.png" alt="Karax Portrait"></a>
-        <a href="/commanders/abathur" class="<?=$pageFile==='abathur.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/abathurportrait.png" alt="Abathur Portrait"></a>
-        <a href="/commanders/alarak" class="<?=$pageFile==='alarak.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/alarakportrait.png" alt="Alarak Portrait"></a>
-        <a href="/commanders/nova" class="<?=$pageFile==='nova.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/novaportrait.png" alt="Nova Portrait"></a>
-        <a href="/commanders/stukov" class="<?=$pageFile==='stukov.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/stukovportrait.png" alt="Stukov Portrait"></a>
-        <a href="/commanders/fenix" class="<?=$pageFile==='fenix.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/fenixportrait.png" alt="Fenix Portrait"></a>
-        <a href="/commanders/dehaka" class="<?=$pageFile==='dehaka.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/dehakaportrait.png" alt="Dehaka Portrait"></a>
-        <a href="/commanders/horner" class="<?=$pageFile==='horner.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/hornerportrait.png" alt="Han & Horner Portrait"></a>
-        <a href="/commanders/tychus" class="<?=$pageFile==='tychus.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/tychusportrait.png" alt="Tychus Portrait"></a>
-        <a href="/commanders/zeratul" class="<?=$pageFile==='zeratul.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/zeratulportrait.png" alt="Zeratul Portrait"></a>
-        <a href="/commanders/stetmann" class="<?=$pageFile==='stetmann.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/stetmannportrait.png" alt="Stetmann Portrait"></a>
-        <a href="/commanders/mengsk" class="<?=$pageFile==='mengsk.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/mengskportrait.png" alt="Mengsk Portrait"></a>
+        <a href="/commanders/raynor" class="<?=$pageFile==='raynor.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/raynorportrait.png" alt="Raynor"></a>
+        <a href="/commanders/kerrigan" class="<?=$pageFile==='kerrigan.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/kerriganportrait.png" alt="Kerrigan"></a>
+        <a href="/commanders/artanis" class="<?=$pageFile==='artanis.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/artanisportrait.png" alt="Artanis"></a>
+        <a href="/commanders/swann" class="<?=$pageFile==='swann.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/swannportrait.png" alt="Swann"></a>
+        <a href="/commanders/zagara" class="<?=$pageFile==='zagara.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/zagaraportrait.png" alt="Zagara"></a>
+        <a href="/commanders/vorazun" class="<?=$pageFile==='vorazun.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/vorazunportrait.png" alt="Vorazun"></a>
+        <a href="/commanders/karax" class="<?=$pageFile==='karax.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/karaxportrait.png" alt="Karax"></a>
+        <a href="/commanders/abathur" class="<?=$pageFile==='abathur.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/abathurportrait.png" alt="Abathur"></a>
+        <a href="/commanders/alarak" class="<?=$pageFile==='alarak.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/alarakportrait.png" alt="Alarak"></a>
+        <a href="/commanders/nova" class="<?=$pageFile==='nova.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/novaportrait.png" alt="Nova"></a>
+        <a href="/commanders/stukov" class="<?=$pageFile==='stukov.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/stukovportrait.png" alt="Stukov"></a>
+        <a href="/commanders/fenix" class="<?=$pageFile==='fenix.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/fenixportrait.png" alt="Fenix"></a>
+        <a href="/commanders/dehaka" class="<?=$pageFile==='dehaka.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/dehakaportrait.png" alt="Dehaka"></a>
+        <a href="/commanders/horner" class="<?=$pageFile==='horner.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/hornerportrait.png" alt="Han &amp; Horner"></a>
+        <a href="/commanders/tychus" class="<?=$pageFile==='tychus.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/tychusportrait.png" alt="Tychus"></a>
+        <a href="/commanders/zeratul" class="<?=$pageFile==='zeratul.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/zeratulportrait.png" alt="Zeratul"></a>
+        <a href="/commanders/stetmann" class="<?=$pageFile==='stetmann.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/stetmannportrait.png" alt="Stetmann"></a>
+        <a href="/commanders/mengsk" class="<?=$pageFile==='mengsk.php'?'highlight':'normal'?>"><img src="/images/commanderportraits/mengskportrait.png" alt="Mengsk"></a>
     </div>
     <div id="missionList" class="submenu">
-        <a href="/missions/chainofascension" class="<?=$pageFile==='chainofascension.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/chainofascension.png" alt="Chain of Ascension Thumbnail"></a>
-        <a href="/missions/cradleofdeath" class="<?=$pageFile==='cradleofdeath.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/cradleofdeath.png" alt="Cradle of Death Thumbnail"></a>
-        <a href="/missions/deadofnight" class="<?=$pageFile==='deadofnight.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/deadofnight.png" alt="Dead of Night Thumbnail"></a>
-        <a href="/missions/lockload" class="<?=$pageFile==='lockload.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/lockload.png" alt="Lock & Load Thumbnail"></a>
-        <a href="/missions/malwarfare" class="<?=$pageFile==='malwarfare.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/malwarfare.png" alt="Malwarfare Thumbnail"></a>
-        <a href="/missions/minerevacuation" class="<?=$pageFile==='minerevacuation.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/minerevacuation.png" alt="Miner Evacuation Thumbnail"></a>
-        <a href="/missions/mistopportunities" class="<?=$pageFile==='mistopportunities.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/mistopportunities.png" alt="Mist Opportunities Thumbnail"></a>
-        <a href="/missions/oblivionexpress" class="<?=$pageFile==='oblivionexpress.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/oblivionexpress.png" alt="Oblivion Express Thumbnail"></a>
-        <a href="/missions/partparcel" class="<?=$pageFile==='partparcel.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/partparcel.png" alt="Part & Parcel Thumbnail"></a>
-        <a href="/missions/riftstokorhal" class="<?=$pageFile==='riftstokorhal.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/riftstokorhal.png" alt="Rifts to Korhal Thumbnail"></a>
-        <a href="/missions/scytheofamon" class="<?=$pageFile==='scytheofamon.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/scytheofamon.png" alt="Scythe Of Amon Thumbnail"></a>
-        <a href="/missions/templeofthepast" class="<?=$pageFile==='templeofthepast.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/templeofthepast.png" alt="Temple of the Past Thumbnail"></a>
-        <a href="/missions/thevermillionproblem" class="<?=$pageFile==='thevermillionproblem.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/thevermillionproblem.png" alt="The Vermillion Problem Thumbnail"></a>
-        <a href="/missions/voidlaunch" class="<?=$pageFile==='voidlaunch.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/voidlaunch.png" alt="Void Launch Thumbnail"></a>
-        <a href="/missions/voidthrashing" class="<?=$pageFile==='voidthrashing.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/voidthrashing.png" alt="Void Thrashing Thumbnail"></a>
+        <a href="/missions/chainofascension" class="<?=$pageFile==='chainofascension.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/chainofascension.png" alt="Chain of Ascension"></a>
+        <a href="/missions/cradleofdeath" class="<?=$pageFile==='cradleofdeath.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/cradleofdeath.png" alt="Cradle of Death"></a>
+        <a href="/missions/deadofnight" class="<?=$pageFile==='deadofnight.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/deadofnight.png" alt="Dead of Night"></a>
+        <a href="/missions/lockload" class="<?=$pageFile==='lockload.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/lockload.png" alt="Lock & Load"></a>
+        <a href="/missions/malwarfare" class="<?=$pageFile==='malwarfare.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/malwarfare.png" alt="Malwarfare"></a>
+        <a href="/missions/minerevacuation" class="<?=$pageFile==='minerevacuation.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/minerevacuation.png" alt="Miner Evacuation"></a>
+        <a href="/missions/mistopportunities" class="<?=$pageFile==='mistopportunities.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/mistopportunities.png" alt="Mist Opportunities"></a>
+        <a href="/missions/oblivionexpress" class="<?=$pageFile==='oblivionexpress.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/oblivionexpress.png" alt="Oblivion Express"></a>
+        <a href="/missions/partparcel" class="<?=$pageFile==='partparcel.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/partparcel.png" alt="Part & Parcel"></a>
+        <a href="/missions/riftstokorhal" class="<?=$pageFile==='riftstokorhal.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/riftstokorhal.png" alt="Rifts to Korhal"></a>
+        <a href="/missions/scytheofamon" class="<?=$pageFile==='scytheofamon.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/scytheofamon.png" alt="Scythe Of Amon"></a>
+        <a href="/missions/templeofthepast" class="<?=$pageFile==='templeofthepast.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/templeofthepast.png" alt="Temple of the Past"></a>
+        <a href="/missions/thevermillionproblem" class="<?=$pageFile==='thevermillionproblem.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/thevermillionproblem.png" alt="The Vermillion Problem"></a>
+        <a href="/missions/voidlaunch" class="<?=$pageFile==='voidlaunch.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/voidlaunch.png" alt="Void Launch"></a>
+        <a href="/missions/voidthrashing" class="<?=$pageFile==='voidthrashing.php'?'highlight':'normal'?>"><img src="/images/missionthumbnails/voidthrashing.png" alt="Void Thrashing"></a>
     </div>
     <div id="guideList" class="submenu">
         <ul>
