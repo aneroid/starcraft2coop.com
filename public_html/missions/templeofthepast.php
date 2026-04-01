@@ -9,9 +9,10 @@ include("../header.php");
   <link rel="canonical" href="https://starcraft2coop.com/missions/templeofthepast">
   <script src="/scripts/preload.js"></script>
   <style>
-    .directions td:nth-child(4){
+    .arrow{
         font-size:1.8em;
         font-weight:bold;
+        vertical-align:middle;
     }
     .topAlign{
         vertical-align:text-top;
@@ -116,217 +117,217 @@ include("../header.php");
                                     <td>3:00</td>
                                     <td>1</td>
                                     <td>1</td>
-                                    <td>↗</td>
+                                    <td><span class="arrow">↗</span></td>
                                     <td>-</td>
                                 </tr>
                                 <tr>
                                     <td>4:00</td>
                                     <td>2</td>
                                     <td>2</td>
-                                    <td>↗</td>
+                                    <td><span class="arrow">↗</span></td>
                                     <td>-</td>
                                 </tr>
                                 <tr>
                                     <td>6:00</td>
                                     <td>2</td>
                                     <td>2</td>
-                                    <td>↗</td>
+                                    <td><span class="arrow">↗</span></td>
                                     <td>1 Minor Hybrid</td>
                                 </tr>
                                 <tr>
                                     <td>6:45</td>
                                     <td>1</td>
                                     <td>2</td>
-                                    <td>↗</td>
+                                    <td><span class="arrow">↗</span></td>
                                     <td>-</td>
                                 </tr>
                                 <tr>
                                     <td>7:30</td>
                                     <td>2</td>
                                     <td>2</td>
-                                    <td>↗</td>
+                                    <td><span class="arrow">↗</span></td>
                                     <td>-</td>
                                 </tr>
                                 <tr>
                                     <td>8:15</td>
                                     <td>2</td>
                                     <td>2</td>
-                                    <td>↗</td>
+                                    <td><span class="arrow">↗</span></td>
                                     <td>Thrasher + Attack Wave</td>
                                 </tr>
                                 <tr>
                                     <td>9:00</td>
                                     <td>3</td>
                                     <td>3</td>
-                                    <td>↘↖</td>
+                                    <td><span class="arrow">↘↖</span></td>
                                     <td>-</td>
                                 </tr>
                                 <tr>
                                     <td>10:00</td>
                                     <td>4,2</td>
                                     <td>3,3</td>
-                                    <td>↘↖</td>
+                                    <td><span class="arrow">↘↖</span></td>
                                     <td>1 Minor Hybrid for Player 1</td>
                                 </tr>
                                 <tr>
                                     <td>11:00</td>
                                     <td>4,4</td>
                                     <td>4,3</td>
-                                    <td>↘↖</td>
+                                    <td><span class="arrow">↘↖</span></td>
                                     <td>-</td>
                                 </tr>
                                 <tr>
                                     <td>12:00</td>
                                     <td>3</td>
                                     <td>4</td>
-                                    <td>↗</td>
+                                    <td><span class="arrow">↗</span></td>
                                     <td>-</td>
                                 </tr>
                                 <tr>
                                     <td>12:30</td>
                                     <td>4</td>
                                     <td>4</td>
-                                    <td>↗</td>
+                                    <td><span class="arrow">↗</span></td>
                                     <td>-</td>
                                 </tr>
                                 <tr>
                                     <td>13:15</td>
                                     <td>5</td>
                                     <td>4</td>
-                                    <td>↗</td>
+                                    <td><span class="arrow">↗</span></td>
                                     <td>-</td>
                                 </tr>
                                 <tr>
                                     <td>13:45</td>
                                     <td>-</td>
                                     <td>-</td>
-                                    <td>↖</td>
+                                    <td><span class="arrow">↖</span></td>
                                     <td>Thrasher Only</td>
                                 </tr>
                                 <tr>
                                     <td>15:00</td>
                                     <td>3</td>
                                     <td>3</td>
-                                    <td>↙</td>
+                                    <td><span class="arrow">↙</span></td>
                                     <td>Air Drop<br>1 Hybrid Nemesis</td>
                                 </tr>
                                 <tr>
                                     <td>15:20</td>
                                     <td>4</td>
                                     <td>4</td>
-                                    <td>↙</td>
+                                    <td><span class="arrow">↙</span></td>
                                     <td>Air Drop<br>1 Hybrid Nemesis</td>
                                 </tr>
                                 <tr>
                                     <td>16:10</td>
                                     <td>2</td>
                                     <td>2</td>
-                                    <td>↙</td>
+                                    <td><span class="arrow">↙</span></td>
                                     <td>Drop Pod/Warp-in</td>
                                 </tr>
                                 <tr>
                                     <td>16:40</td>
                                     <td>3</td>
                                     <td>3</td>
-                                    <td>↙</td>
+                                    <td><span class="arrow">↙</span></td>
                                     <td>Drop Pod/Warp-in</td>
                                 </tr>
                                 <tr>
                                     <td>16:55</td>
                                     <td>-</td>
                                     <td>-</td>
-                                    <td>↘</td>
+                                    <td><span class="arrow">↘</span></td>
                                     <td>Thrasher Only</td>
                                 </tr>
                                 <tr>
                                     <td>18:00</td>
                                     <td>5</td>
                                     <td>5</td>
-                                    <td>↘</td>
+                                    <td><span class="arrow">↘</span></td>
                                     <td>3 Minor Hybrid<br>1 Hybrid Nemesis<br>1 Major Hybrid</td>
                                 </tr>
                                 <tr>
                                     <td>18:15</td>
                                     <td>3</td>
                                     <td>5</td>
-                                    <td>↖</td>
+                                    <td><span class="arrow">↖</span></td>
                                     <td>3 Minor Hybrid<br>1 Hybrid Nemesis<br>1 Major Hybrid</td>
                                 </tr>
                                 <tr>
                                     <td>19:15</td>
                                     <td>4</td>
                                     <td>4</td>
-                                    <td>↙</td>
+                                    <td><span class="arrow">↙</span></td>
                                     <td>Air Drop</td>
                                 </tr>
                                 <tr>
                                     <td>20:00</td>
                                     <td>5</td>
                                     <td>5</td>
-                                    <td>↗</td>
+                                    <td><span class="arrow">↗</span></td>
                                     <td>-</td>
                                 </tr>
                                 <tr>
                                     <td>20:15</td>
                                     <td>3</td>
                                     <td>3</td>
-                                    <td>?</td>
+                                    <td><span class="arrow">↙↙</span></td>
                                     <td>Double Drop Pod/Warp-in</td>
                                 </tr>
                                 <tr>
                                     <td>20:45</td>
                                     <td>2,4</td>
                                     <td>3,3</td>
-                                    <td>?</td>
+                                    <td><span class="arrow">↖↖</span></td>
                                     <td>Double Drop Pod/Warp-in</td>
                                 </tr>
                                 <tr>
                                     <td>21:15</td>
                                     <td>3</td>
                                     <td>3</td>
-                                    <td>?</td>
+                                    <td><span class="arrow">↗↗</span></td>
                                     <td>Double Drop Pod/Warp-in</td>
                                 </tr>
                                 <tr>
                                     <td>21:30</td>
                                     <td>2</td>
                                     <td>3</td>
-                                    <td>?</td>
+                                    <td><span class="arrow">↙↙</span> or <span class="arrow">↖↖</span> or <span class="arrow">↗↗</span></td>
                                     <td>Double Drop Pod/Warp-in</td>
                                 </tr>
                                 <tr>
                                     <td>22:00</td>
                                     <td>6</td>
                                     <td>5</td>
-                                    <td>↗</td>
+                                    <td><span class="arrow">↗</span></td>
                                     <td>-</td>
                                 </tr>
                                 <tr>
                                     <td>22:30</td>
                                     <td>4,6</td>
                                     <td>5,5</td>
-                                    <td>↘↖</td>
+                                    <td><span class="arrow">↘↖</span></td>
                                     <td>Double Thrasher + Attack Wave</td>
                                 </tr>
                                 <tr>
                                     <td>23:30</td>
                                     <td>5</td>
                                     <td>5</td>
-                                    <td>↘</td>
+                                    <td><span class="arrow">↘</span></td>
                                     <td>4 Minor Hybrid<br>2 Hybrid Nemesis<br>1 Major Hybrid</td>
                                 </tr>
                                 <tr>
                                     <td>23:40</td>
                                     <td>3</td>
                                     <td>5</td>
-                                    <td>↖</td>
+                                    <td><span class="arrow">↖</span></td>
                                     <td>3 Minor Hybrid<br>2 Hybrid Nemesis<br>1 Major Hybrid</td>
                                 </tr>
                                 <tr>
                                     <td>24:40</td>
                                     <td>5,6,7</td>
                                     <td>5,5,7</td>
-                                    <td>↘↖↗</td>
+                                    <td><span class="arrow">↘↖↗</span></td>
                                     <td>-</td>
                                 </tr>
                             </tbody>
@@ -349,196 +350,196 @@ include("../header.php");
                                     <td>3:00</td>
                                     <td>1</td>
                                     <td>1</td>
-                                    <td>↗</td>
+                                    <td><span class="arrow">↗</span></td>
                                     <td>-</td>
                                 </tr>
                                 <tr>
                                     <td>4:10</td>
                                     <td>2</td>
                                     <td>2</td>
-                                    <td>↗</td>
+                                    <td><span class="arrow">↗</span></td>
                                     <td>-</td>
                                 </tr>
                                 <tr>
                                     <td>6:00</td>
                                     <td>2</td>
                                     <td>2</td>
-                                    <td>↗</td>
+                                    <td><span class="arrow">↗</span></td>
                                     <td>1 Minor Hybrid</td>
                                 </tr>
                                 <tr>
                                     <td>6:45</td>
                                     <td>1</td>
                                     <td>1</td>
-                                    <td>↗</td>
+                                    <td><span class="arrow">↗</span></td>
                                     <td>-</td>
                                 </tr>
                                 <tr>
                                     <td>7:30</td>
                                     <td>2</td>
                                     <td>3</td>
-                                    <td>↗</td>
+                                    <td><span class="arrow">↗</span></td>
                                     <td>-</td>
                                 </tr>
                                 <tr>
                                     <td>8:15</td>
                                     <td>-</td>
                                     <td>-</td>
-                                    <td>↗</td>
+                                    <td><span class="arrow">↗</span></td>
                                     <td>Thrasher Only</td>
                                 </tr>
                                 <tr>
                                     <td>9:00</td>
                                     <td>3</td>
                                     <td>3</td>
-                                    <td>↘ or ↖</td>
+                                    <td><span class="arrow">↘</span> or <span class="arrow">↖</span></td>
                                     <td>Two 3/3 Attack Waves together</td>
                                 </tr>
                                 <tr>
                                     <td>10:00</td>
                                     <td>4,2</td>
                                     <td>3,3</td>
-                                    <td>↘↖</td>
+                                    <td><span class="arrow">↘↖</span></td>
                                     <td>1 Minor Hybrid for Player 1<br>2 Minor Hybrid for Player 2</td>
                                 </tr>
                                 <tr>
                                     <td>11:00</td>
                                     <td>4</td>
                                     <td>4</td>
-                                    <td>↖ or ↘</td>
+                                    <td><span class="arrow">↖</span> or <span class="arrow">↘</span></td>
                                     <td>Two 4/4 Attack Waves together</td>
                                 </tr>
                                 <tr>
                                     <td>12:00</td>
                                     <td>3</td>
                                     <td>4</td>
-                                    <td>↗</td>
+                                    <td><span class="arrow">↗</span></td>
                                     <td>-</td>
                                 </tr>
                                 <tr>
                                     <td>12:30</td>
                                     <td>4</td>
                                     <td>4</td>
-                                    <td>↗</td>
+                                    <td><span class="arrow">↗</span></td>
                                     <td>3 Minor Hybrid</td>
                                 </tr>
                                 <tr>
                                     <td>13:35</td>
                                     <td>5</td>
                                     <td>4</td>
-                                    <td>↖</td>
+                                    <td><span class="arrow">↖</span></td>
                                     <td>-</td>
                                 </tr>
                                 <tr>
                                     <td>13:45</td>
                                     <td>-</td>
                                     <td>-</td>
-                                    <td>↖</td>
+                                    <td><span class="arrow">↖</span></td>
                                     <td>Thrasher Only</td>
                                 </tr>
                                 <tr>
                                     <td>15:00</td>
                                     <td>2</td>
                                     <td>2</td>
-                                    <td>↙</td>
+                                    <td><span class="arrow">↙</span></td>
                                     <td>Drop Pod/Warp-in</td>
                                 </tr>
                                 <tr>
                                     <td>15:30</td>
                                     <td>3</td>
                                     <td>3</td>
-                                    <td>↙</td>
+                                    <td><span class="arrow">↙</span></td>
                                     <td>Drop Pod/Warp-in</td>
                                 </tr>
                                 <tr>
                                     <td>15:45</td>
                                     <td>-</td>
                                     <td>-</td>
-                                    <td>↘</td>
+                                    <td><span class="arrow">↘</span></td>
                                     <td>Thrasher Only</td>
                                 </tr>
                                 <tr>
                                     <td>16:35</td>
                                     <td>3</td>
                                     <td>3</td>
-                                    <td>↙</td>
+                                    <td><span class="arrow">↙</span></td>
                                     <td>Air Drop<br>1 Hybrid Nemesis</td>
                                 </tr>
                                 <tr>
                                     <td>16:55</td>
                                     <td>4</td>
                                     <td>4</td>
-                                    <td>↙</td>
+                                    <td><span class="arrow">↙</span></td>
                                     <td>Air Drop<br>1 Hybrid Nemesis</td>
                                 </tr>
                                 <tr>
                                     <td>18:00</td>
                                     <td>5</td>
                                     <td>5</td>
-                                    <td>↘ or ↗</td>
+                                    <td><span class="arrow">↘</span> or <span class="arrow">↗</span></td>
                                     <td>3 Minor Hybrid<br>1 Hybrid Nemesis<br>1 Major Hybrid</td>
                                 </tr>
                                 <tr>
                                     <td>18:15</td>
                                     <td>3</td>
                                     <td>5</td>
-                                    <td>↖ or ↗</td>
+                                    <td><span class="arrow">↖</span> or <span class="arrow">↗</span></td>
                                     <td>3 Minor Hybrid<br>1 Hybrid Nemesis<br>1 Major Hybrid</td>
                                 </tr>
                                 <tr>
                                     <td>19:15</td>
                                     <td>4</td>
                                     <td>4</td>
-                                    <td>↙</td>
+                                    <td><span class="arrow">↙</span></td>
                                     <td>Air Drop</td>
                                 </tr>
                                 <tr>
                                     <td>20:00</td>
                                     <td>4</td>
                                     <td>5</td>
-                                    <td>↗</td>
+                                    <td><span class="arrow">↗</span></td>
                                     <td>Thrasher + Attack Wave<br>3 Minor Hybrid<br>1 Major Hybrid</td>
                                 </tr>
                                 <tr>
                                     <td>20:20</td>
                                     <td>3</td>
                                     <td>3</td>
-                                    <td>↙</td>
+                                    <td><span class="arrow">↙</span></td>
                                     <td>Air Drop<br>1 Hybrid Nemesis</td>
                                 </tr>
                                 <tr>
                                     <td>20:40</td>
                                     <td>2</td>
                                     <td>3</td>
-                                    <td>↙</td>
+                                    <td><span class="arrow">↙</span></td>
                                     <td>Air Drop<br>1 Hybrid Nemesis</td>
                                 </tr>
                                 <tr>
                                     <td>22:30</td>
                                     <td>4,6</td>
                                     <td>5,5</td>
-                                    <td>↘↖</td>
+                                    <td><span class="arrow">↘↖</span></td>
                                     <td>Double Thrasher + Attack Wave</td>
                                 </tr>
                                 <tr>
                                     <td>23:30</td>
                                     <td>5</td>
                                     <td>5</td>
-                                    <td>↘</td>
+                                    <td><span class="arrow">↘</span></td>
                                     <td>4 Minor Hybrid<br>2 Hybrid Nemesis<br>1 Major Hybrid</td>
                                 </tr>
                                 <tr>
                                     <td>23:40</td>
                                     <td>3</td>
                                     <td>5</td>
-                                    <td>↖</td>
+                                    <td><span class="arrow">↖</span></td>
                                     <td>3 Minor Hybrid<br>2 Hybrid Nemesis<br>1 Major Hybrid</td>
                                 </tr>
                                 <tr>
                                     <td>24:40</td>
                                     <td>5,6,7</td>
                                     <td>5,5,7</td>
-                                    <td>↘↖↗</td>
+                                    <td><span class="arrow">↘↖↗</span></td>
                                     <td>-</td>
                                 </tr>
                             </tbody>
