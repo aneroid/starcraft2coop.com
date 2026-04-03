@@ -3,6 +3,7 @@
         "squizlabs/php_codesniffer": "*"
     },
     "scripts": {
-        "ci": "phpcs --ignore=vendor,.dh-diag -n ."
+        "ci": "phpcs --ignore=vendor,.dh-diag -n .",
+        "fix": "phpcbf --ignore=vendor,.dh-diag -n ."
     }
 }
