@@ -6,32 +6,15 @@ if (!isset($_SESSION["known"])) {
     die();
 }
 if (isset($_GET['commander'])) {
-    if (!is_string($_GET['commander'])) {
-        echo("Error!");
-        die();
-    }
-    $commander = $_GET['commander'];
-    if (!preg_match('/[^A-Za-z\s0-9]/', $commander)) {
-        include 'sqlconnection.php';
-        $sql = "SELECT fullname, motto, stat01, stat02, stat03, stat04, stat05, stat06, stat07, stat08, stat09, summary
-                FROM commandersummaries
-                WHERE commander='$commander'";
-        $result = mysqli_query($con, $sql);
-        $commanderData = [];
-        while ($row = mysqli_fetch_array($result)) {
-            $commanderData[] = $row;
-        }
+    require __DIR__ . '/../data/queries.php';
 
-        if (count($commanderData) !== 1) {
-            echo("Error!");
-            die();
-        }
-        $finalString = json_encode($commanderData[0]);
-        echo $finalString;
-        $con->close();
-    } else {
-        echo("Error!");
-    }
+    $commander = $_GET['commander'];
+    $commanderData = get_commanders($commander);
+    $fields = ['fullname', 'motto', 'stat01', 'stat02', 'stat03', 'stat04', 'stat05', 'stat06', 'stat07', 'stat08', 'stat09', 'summary'];
+    $commanderData = select_fields($commanderData, $fields);
+
+    header('Content-Type: application/json; charset=utf-8');
+    echo json_encode($commanderData);
 } else {
     echo("Error!");
 }

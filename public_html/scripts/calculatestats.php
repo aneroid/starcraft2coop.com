@@ -893,16 +893,19 @@ function getUnitUpgradesOutput($commander, $unit)
             $prestigeList[str_replace(" ", "", $row['name'])] = $row;
         }
     }
+    $con->close();
 
-    $sql = "SELECT motto, prestige1, prestige2, prestige3
-            FROM commandersummaries
-            WHERE commander='$commander'";
-    $result = mysqli_query($con, $sql);
-    $commanderPrestiges = mysqli_fetch_assoc($result);
-    $commanderPrestiges = array_values($commanderPrestiges);
+    require __DIR__ . '/../data/queries.php';
+
+    $commanderData = get_commanders($commander);
+    $commanderPrestiges = [
+        $commanderData['motto'],
+        $commanderData['prestige1'],
+        $commanderData['prestige2'],
+        $commanderData['prestige3'],
+    ];
     $basePrestige = $commanderPrestiges[0];
 
-    $con->close();
     $upgradeString = "<div class='upgradesList'>";
     //Loop through all found upgrades, parse the icons and descriptions for display for selection
     if (!empty($upgradeList)) {
