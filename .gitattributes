@@ -1,8 +1,8 @@
 # .gitattributes based on template from GitHub
 # https://docs.github.com/en/get-started/getting-started-with-git/configuring-git-to-handle-line-endings#example
 
-# Set the default behavior, in case people don't have core.autocrlf set.
-* text=auto
+# Default to never messing with line breaks
+* -text
 
 # Declare files that will always have LF line endings on checkout.
 *.php text eol=lf
