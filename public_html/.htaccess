@@ -17,11 +17,10 @@ Redirect 301 /mutators /resources/mutators
 Redirect 301 /weeklymutations /resources/weeklymutations
 Redirect 301 /rockslappingchampions /community/rockslappingchampions
 Redirect 301 /gamespotlight /community/gamespotlight
-Redirect 301 /patrons /community/patrons
 Redirect 301 /mythbusters /community/mythbusters
 
 # 19-apr-2020 menu reorganization
-Redirect 301 /newplayer /resources/newplayer
+Redirect 301 /newplayer /guides/newplayer
 Redirect 301 /resources/links /about/links
 Redirect 301 /resources/downloads /tools/downloads
 Redirect 301 /tournament /community/tournament
