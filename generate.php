@@ -1,6 +1,6 @@
 <?php
-// run from CLI; generate static pages
 
+// run from CLI; generate static pages
 require "config.php";
 $pages = [
     '/resources/brutal',
