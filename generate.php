@@ -14,15 +14,16 @@ foreach ($pages as $page) {
 
     $pageDir = __DIR__ . $HTML_DIR . dirname($page);
     chdir($pageDir);
+
     ob_start();
     require __DIR__ . $HTML_DIR . "$page.php";
     $html = ob_get_clean();
-    str_replace("\r\n", "\n", $html);
+    $html = str_replace("\r\n", "\n", $html);
 
     $result = file_put_contents(__DIR__ . $HTML_DIR . "$page.html", $html);
     if (!$result) {
         echo "Error writing $page.html\n";
     } else {
-        echo "Generated $page.html with $result bytes\n";
+        echo "Generated $page.html ($result bytes)\n";
     }
 }
