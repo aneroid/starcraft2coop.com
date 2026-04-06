@@ -66,11 +66,13 @@ docker run --rm -v ${pwd}:/app composer:2.7.1 composer run-script fix
 If you edit the data files in `/source-data`, then you will need bun to run the build script.
 
 ### Bun install
+
 ```shell
 docker run --rm -v ${pwd}:/usr/src/app -w /usr/src/app oven/bun:1 bun install
 ```
 
 ### Bun run build
+
 ```shell
 docker run --rm -v ${pwd}:/usr/src/app -w /usr/src/app oven/bun:1 bun source-data/build
 ```
