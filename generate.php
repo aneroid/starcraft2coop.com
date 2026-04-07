@@ -65,7 +65,6 @@ $pages = [
     '/resources/levels',
     '/resources/mutators',
     '/resources/patchdata',
-    '/resources/weeklymutations',
 
     '/tools/downloads',
     '/tools/masterybreakpoints',
