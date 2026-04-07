@@ -1,8 +1,6 @@
-<!DOCTYPE html>
-
-<html lang="en">
-<head>
 <?php
+
+require "../admin-only.php";
 include("../header.php");
 ?>
   <title>Starcraft 2 Co-op - Downloads</title>

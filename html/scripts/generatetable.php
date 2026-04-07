@@ -3,10 +3,6 @@
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
-if (!isset($_SESSION["known"])) {
-    echo("Error!");
-    die();
-}
 include 'sqlconnection.php';
 
 if (!isset($_GET['maxvitality']) && !isset($_GET['minvitality'])) {

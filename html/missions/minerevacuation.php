@@ -1,4 +1,6 @@
 <?php
+
+require "../admin-only.php";
 include("../header.php");
 ?>
   <title>Starcraft 2 Co-op - Mission Guide - Miner Evacuation</title>

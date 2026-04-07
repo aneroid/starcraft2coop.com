@@ -1,10 +1,6 @@
 <?php
 
 session_start();
-if (!isset($_SESSION["known"])) {
-    echo("Error!");
-    return;
-}
 if (!isset($_GET['mode'])) {
     echo("Error!");
     return;

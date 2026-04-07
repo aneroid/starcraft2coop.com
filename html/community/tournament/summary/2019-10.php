@@ -1,4 +1,6 @@
 <?php
+
+require "../../../admin-only.php";
 include("../../../header.php");
 ?>
   <title>Starcraft 2 Co-op - Tournament Summary - Oct 2019</title>

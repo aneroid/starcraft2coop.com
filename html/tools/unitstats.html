@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png"/>
+<link rel='shortcut icon' href='/images/favicon.ico' type='image/x-icon' />
+<link rel="stylesheet"  media="all" type="text/css" href="/styles/mainstyle.css?v=1.32">
+<link rel="stylesheet" href="/styles/fontawesome/fontawesome-solid-5-home.css" />
+<link href='https://fonts.googleapis.com/css?family=Convergence' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <title>Starcraft 2 Co-op - Unit Stats</title>
+  <meta name="description" content="A calculator to provide you with unit stats before and after upgrades for every unit in Co-op. Also includes data on Amon's units.">
+  <meta name="keywords" content="Starcraft co-op unit stats">
+  <link rel="canonical" href="https://starcraft2coop.com/tools/unitstats">
+  <style>
+    @media (max-width: 700px){
+        #unitStats tr:not(#dataContainers) td:nth-child(2),#unitStats tr:not(#dataContainers) td:nth-child(3){
+            display:none;
+        }
+        #raceFilters{
+            line-height:50px;
+        }
+        #dataContainer{
+            width:100px;
+            height:250px;
+            float:right;
+            background-color:#1f1f1f;
+            border-radius:25px;
+            border:1px solid #ccc;
+            padding:5px;
+        }
+    }
+    @media (min-width: 701px){
+        #dataContainer{
+            width:240px;
+            height:250px;
+            float:right;
+            background-color:#1f1f1f;
+            border-radius:25px;
+            border:1px solid #ccc;
+            padding:5px;
+        }
+    }
+    #tooltip{
+        position:absolute;
+        background-color:khaki;
+        color:black;
+        font-size:0.8em;
+        display:none;
+        z-index:1;
+        padding:5px;
+        border-radius:5px;
+    }
+    .tableContainer{
+        overflow:hidden;
+    }
+    #unitStats{
+        overflow:hidden;
+        table-layout:fixed;
+        width:100%;
+    }
+    #unitStats th:nth-child(1){
+        width:30px;
+    }
+    #unitStats th:nth-child(2){
+        width:200px;
+        text-align: middle;
+    }
+    #unitStats th:nth-child(3){
+        width:250px;
+    }
+    #unitStats th:nth-child(4){
+        width:250px;
+    }
+    #unitStats td:first-child img{
+        cursor:pointer;
+        width:30px;
+        border-radius: 50%;
+    }
+    #leftList, #leftStats, #comparison{
+        vertical-align:top;
+        overflow:hidden;
+    }
+    #leftList ul{
+        list-style-type: none;
+        padding: 0;
+    }
+    #leftList li{
+        font-size:0.98em;
+        cursor:pointer;
+    }
+    #leftList{
+        text-align:left;
+    }
+    #unitStats th{
+        border: none;
+        vertical-align:bottom;
+    }
+    #unitStats td{
+        border:none;
+    }
+    #unitStats td{
+        border-right: 1px solid #ccc;
+    }
+    #unitStats th.rotate1 > div {
+      transform:
+        translate(23px, -7px)
+        rotate(315deg);
+        width: 30px;
+    }
+    #comparisonContainer{
+        vertical-align:top;
+    }
+    .title{
+        display:block;
+        text-align:center;
+        text-decoration:underline;
+        margin-top:15px;
+    }
+    #unitHP{
+        color:chartreuse;
+    }
+    #unitArmor{
+        color:darkgreen;
+    }
+    #unitShields{
+        color:aqua;
+    }
+    #unitShieldArmor{
+        color:darkseagreen;
+    }
+    #unitEnergy{
+        color:darkorchid;
+    }
+    .upgradesList{
+        margin-top:50px;
+        padding:5px;
+        border:1px solid white;
+        padding-right:3px;
+        padding-right:3px;
+        padding-bottom:5px;
+    }
+    .upgradesList img{
+        width:50px;
+        cursor:pointer;
+        opacity:0.25;
+    }
+    .upgradesList img.selectedUpgrade{
+        border:1px dashed yellow;
+        opacity: 1;
+    }
+    .masteryContainer, .prestigeContainer{
+        margin-top:15px;
+        padding:5px;
+        border:1px solid white;
+    }
+    .rangeContainer{
+        display:flex;
+    }
+    .modified{
+        color:yellow;
+    }
+    label{
+        width:150px;
+    }
+    #amonFilter td{
+        border:none;
+    }
+    #amonTableContainer{
+        max-width:60%;
+        float:left;
+        border: 1px solid #ccc;
+        padding-top:10px;
+        padding-bottom:10px;
+        border-radius:25px;
+        margin-bottom:50px;
+    }
+    #flexContainer{
+        width:100%;
+    }
+    .toggle{
+        border: 1px solid #ccc;
+        margin: 5px;
+        padding: 5px;
+        cursor:pointer;
+        border-radius:10px;
+    }
+    .content{
+        display: inline-flex;
+        border: 1px solid #ccc;
+        margin: 5px;
+        padding: 5px;
+        cursor:pointer;
+        border-radius:10px;
+    }
+    .Protoss{
+        background-color:peru;
+    }
+    .Terran{
+        background-color:darkblue;
+    }
+    .Zerg{
+        background-color:darkmagenta;
+    }
+    .Hybrid{
+        background-color:black;
+    }
+    .Infested{
+        background-color:darkred;
+    }
+    .Objective{
+        background-color:darkgreen;
+    }
+    .Mutator{
+        background-color:orangered;
+    }
+    .clear{
+        clear:both;
+    }
+    th.rotate1{
+        height: 140px;
+        white-space: nowrap;
+    }
+    th.rotate1 > div > span{
+        border-bottom: 1px solid #ccc;
+        padding: 5px 10px;
+    }
+  </style>
+  </head>
+<body>
+<header id="header">
+    <img src="/images/starcraft2coop.png" alt="Starcraft II Co-op">
+</header>
+<nav id="menu">
+<ul id="topmenu">
+    <li class="normal"><a href="/" aria-label="Home" title="Home"><i class="fas fa-home" aria-hidden="true"></i></a></li>
+    <li class="normal"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-commanders">Commanders</a></li>
+    <li class="normal"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-resources">Guides</a></li>
+    <li class="normal"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-missions">Missions</a></li>
+    <li class="normal"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-about">About</a></li>
+</ul>
+<div id="container">
+    <div id="commanderList" class="submenu">
+        <a href="/commanders/raynor" class="normal"><img src="/images/commanderportraits/raynorportrait.png" alt="Raynor"></a>
+        <a href="/commanders/kerrigan" class="normal"><img src="/images/commanderportraits/kerriganportrait.png" alt="Kerrigan"></a>
+        <a href="/commanders/artanis" class="normal"><img src="/images/commanderportraits/artanisportrait.png" alt="Artanis"></a>
+        <a href="/commanders/swann" class="normal"><img src="/images/commanderportraits/swannportrait.png" alt="Swann"></a>
+        <a href="/commanders/zagara" class="normal"><img src="/images/commanderportraits/zagaraportrait.png" alt="Zagara"></a>
+        <a href="/commanders/vorazun" class="normal"><img src="/images/commanderportraits/vorazunportrait.png" alt="Vorazun"></a>
+        <a href="/commanders/karax" class="normal"><img src="/images/commanderportraits/karaxportrait.png" alt="Karax"></a>
+        <a href="/commanders/abathur" class="normal"><img src="/images/commanderportraits/abathurportrait.png" alt="Abathur"></a>
+        <a href="/commanders/alarak" class="normal"><img src="/images/commanderportraits/alarakportrait.png" alt="Alarak"></a>
+        <a href="/commanders/nova" class="normal"><img src="/images/commanderportraits/novaportrait.png" alt="Nova"></a>
+        <a href="/commanders/stukov" class="normal"><img src="/images/commanderportraits/stukovportrait.png" alt="Stukov"></a>
+        <a href="/commanders/fenix" class="normal"><img src="/images/commanderportraits/fenixportrait.png" alt="Fenix"></a>
+        <a href="/commanders/dehaka" class="normal"><img src="/images/commanderportraits/dehakaportrait.png" alt="Dehaka"></a>
+        <a href="/commanders/horner" class="normal"><img src="/images/commanderportraits/hornerportrait.png" alt="Han &amp; Horner"></a>
+        <a href="/commanders/tychus" class="normal"><img src="/images/commanderportraits/tychusportrait.png" alt="Tychus"></a>
+        <a href="/commanders/zeratul" class="normal"><img src="/images/commanderportraits/zeratulportrait.png" alt="Zeratul"></a>
+        <a href="/commanders/stetmann" class="normal"><img src="/images/commanderportraits/stetmannportrait.png" alt="Stetmann"></a>
+        <a href="/commanders/mengsk" class="normal"><img src="/images/commanderportraits/mengskportrait.png" alt="Mengsk"></a>
+    </div>
+    <div id="missionList" class="submenu">
+        <a href="/missions/chainofascension" class="normal"><img src="/images/missionthumbnails/chainofascension.png" alt="Chain of Ascension"></a>
+        <a href="/missions/cradleofdeath" class="normal"><img src="/images/missionthumbnails/cradleofdeath.png" alt="Cradle of Death"></a>
+        <a href="/missions/deadofnight" class="normal"><img src="/images/missionthumbnails/deadofnight.png" alt="Dead of Night"></a>
+        <a href="/missions/lockload" class="normal"><img src="/images/missionthumbnails/lockload.png" alt="Lock & Load"></a>
+        <a href="/missions/malwarfare" class="normal"><img src="/images/missionthumbnails/malwarfare.png" alt="Malwarfare"></a>
+        <a href="/missions/minerevacuation" class="normal"><img src="/images/missionthumbnails/minerevacuation.png" alt="Miner Evacuation"></a>
+        <a href="/missions/mistopportunities" class="normal"><img src="/images/missionthumbnails/mistopportunities.png" alt="Mist Opportunities"></a>
+        <a href="/missions/oblivionexpress" class="normal"><img src="/images/missionthumbnails/oblivionexpress.png" alt="Oblivion Express"></a>
+        <a href="/missions/partparcel" class="normal"><img src="/images/missionthumbnails/partparcel.png" alt="Part & Parcel"></a>
+        <a href="/missions/riftstokorhal" class="normal"><img src="/images/missionthumbnails/riftstokorhal.png" alt="Rifts to Korhal"></a>
+        <a href="/missions/scytheofamon" class="normal"><img src="/images/missionthumbnails/scytheofamon.png" alt="Scythe Of Amon"></a>
+        <a href="/missions/templeofthepast" class="normal"><img src="/images/missionthumbnails/templeofthepast.png" alt="Temple of the Past"></a>
+        <a href="/missions/thevermillionproblem" class="normal"><img src="/images/missionthumbnails/thevermillionproblem.png" alt="The Vermillion Problem"></a>
+        <a href="/missions/voidlaunch" class="normal"><img src="/images/missionthumbnails/voidlaunch.png" alt="Void Launch"></a>
+        <a href="/missions/voidthrashing" class="normal"><img src="/images/missionthumbnails/voidthrashing.png" alt="Void Thrashing"></a>
+    </div>
+    <div id="guideList" class="submenu">
+        <ul>
+            <li class="normal"><a href="/guides/buildordertheory">Build&nbsp;Order&nbsp;Theory</a></li>
+            <li class="normal"><a href="/guides/enemycomps">Enemy&nbsp;Compositions</a></li>
+            <li class="normal"><a href="/guides/generaltips">General&nbsp;Tips</a></li>
+            <li class="normal"><a href="/guides/newplayer">New&nbsp;Players&nbsp;</a></li>
+            <li class="normal"><a href="/guides/youtube">Youtube&nbsp;</a></li>
+        </ul>
+    </div>
+    <div id="resources" class="submenu">
+        <div class="submenu-with-sections"><div class="submenu-section">
+            <strong>Resources:</strong>
+            <ul>
+                <li class="normal"><a href="/resources/mutators">Mutators</a></li>
+                <li class="normal"><a href="/resources/weeklymutations">Weekly&nbsp;Mutations</a></li>
+                <li class="normal"><a href="/resources/brutal">Brutal+</a></li>
+                <li class="normal"><a href="/tools/unitstats">Unit&nbsp;Stats</a></li>
+            </ul>
+        </div><div class="submenu-section">
+            <strong>Guides:</strong>
+            <ul>
+                <li class="normal"><a href="/guides/buildordertheory">Build&nbsp;Order&nbsp;Theory</a></li>
+                <li class="normal"><a href="/guides/enemycomps">Enemy&nbsp;Compositions</a></li>
+                <li class="normal"><a href="/guides/generaltips">General&nbsp;Tips</a></li>
+                <li class="normal"><a href="/guides/newplayer">New&nbsp;Players</a></li>
+                <li class="normal"><a href="/guides/youtube">Youtube</a></li>
+            </ul>
+        </div><div class="submenu-section">
+            <strong>Miscellaneous:</strong>
+            <ul>
+                <li class="normal"><a href="/resources/achievements">Achievements</a></li>
+                <li class="normal"><a href="/resources/ailogic">AI&nbsp;Logic</a></li>
+                <li class="normal"><a href="/resources/bugs">Bugs</a></li>
+                <li class="normal"><a href="/resources/deathprevention">Death&nbsp;Prevent&nbsp;Effects</a></li>
+                <li class="normal"><a href="/resources/eastereggs">Easter&nbsp;Eggs</a></li>
+                <li class="normal"><a href="/resources/levels">Levels</a></li>
+                <li class="normal"><a href="/resources/patchdata">Patch&nbsp;Data</a></li>
+                <li class="normal"><a href="/tools/downloads">Downloads</a></li>
+                <li class="normal"><a href="/tools/masterybreakpoints">Mastery&nbsp;Breakpoints</a></li>
+            </ul>
+        </div></div>
+    </div>
+    <div id="tools" class="submenu">
+        <ul>
+            <li class="normal"><a href="/tools/downloads">Downloads</a></li>
+            <li class="normal"><a href="/tools/masterybreakpoints">Mastery&nbsp;Breakpoints</a></li>
+            <li class="normal"><a href="/tools/unitstats">Unit&nbsp;Stats</a></li>
+        </ul>
+    </div>
+    <div id="community" class="submenu">
+        <ul>
+            <li class="normal"><a href="/community/tournament/main">Co&#8209;op&nbsp;Tournament</a></li>
+            <li class="normal"><a href="/community/gamespotlight">Game&nbsp;Spotlight</a></li>
+            <li class="normal"><a href="/community/mythbusters">Mythbusters</a></li>
+            <li class="normal"><a href="/community/rockslappingchampions">Rockslapping&nbsp;Champions</a></li>
+            <li class="normal"><a href="/youtube">Youtube</a></li>
+        </ul>
+    </div>
+    <div id="about" class="submenu">
+        <ul>
+            <!--<li class="normal"><a href="/about/contact">Contact</a></li>-->
+            <li class="normal"><a href="/about/faq">FAQ</a></li>
+            <li class="normal"><a href="/about/links">Links</a></li>
+            <!--li class="normal"><a href="https://www.youtube.com/c/Starcraft2Coop" rel="nofollow">Youtube</a></li-->
+            <li class="normal"><a href="/resources/stats">Misc. Stats</a></li>
+        </ul>
+    </div>
+    <!--<div id="imgs">
+        <a href="https://www.youtube.com/c/Starcraft2Coop" rel="nofollow"><img src="/images/links/yt.png" alt="Youtube"></a>
+        <a href="https://www.patreon.com/starcraft2coop" rel="nofollow"><img src="/images/links/patreon.png" alt="Patreon"></a>
+        <a href="https://www.twitch.tv/aommaster" rel="nofollow"><img src="/images/links/twitch.png" alt="Twitch"></a>
+        <a href="https://discord.gg/AbFXRAB" rel="nofollow"><img src="/images/links/discord.png" alt="Discord"></a>
+    </div>-->
+</div>
+</nav>
+<script>
+    function openSubmenu(event, elem){
+        if (event) event.preventDefault();
+        if (!elem) elem = event.currentTarget;
+        var alreadyOpen = $(elem).hasClass('open');
+
+        $('#topmenu a').removeClass('open');
+        $(".submenu").hide();
+
+        if (alreadyOpen) return;
+
+        $(elem).addClass('open');
+        switch (elem.id.slice(13)){
+            case "commanders":
+                $("#commanderList").show();
+                break;
+            case "missions":
+                $("#missionList").show();
+                break;
+            case "community":
+                $("#community").show();
+                break;
+            case "guides":
+                $("#guideList").show();
+                break;
+            case "resources":
+                $("#resources").show();
+                break;
+            case "tools":
+                $("#tools").show();
+                break;
+            case "about":
+                $("#about").show();
+                break;
+        }
+    }
+    if (document.location.pathname === "/") {
+        $('#submenu-link-commanders').each(function () {
+            openSubmenu(null, this);
+        });
+    } else {
+        $('#topmenu li.highlight a').each(function () {
+            openSubmenu(null, this);
+        });
+    }
+</script>
+<div id="content">
+    <h1>A List of Unit Stats for Player and Amon Units</h1>
+        <h2>Unit Comparison</h2>
+    <p>Use the below applet to see single unit stats or compare two units together. Click on a commander, then a unit of theirs to get its stats. To compare two units, select a commander and their unit on the opposite side.</p>
+    <p>Notes about the data:</p>
+    <ul>
+        <li>Data only shows base stats and upgrades that affect those base stats. Upgrades that affect skill cooldowns are not displayed.</li>
+        <li>All evolutions (e.g. Abathur's Devourer, Dehaka's Primal Combat units) build times only includes the evolution time, and not the build time of the parent units.</li>
+        <li>Any units with charge-based production (e.g. Artanis) uses the charge cooldown time as the build time. For Stukov, the unit's build time is displayed, and not the charge time.</li>
+        <li>For multiple-spawned units (e.g. Zerglings), resource costs are divided by the number of units spawned.</li>
+        <li>For buffs that have multiple stacks (e.g. Biomass), the maximum buff value will be calculated.</li>
+        <li>Only upgrades that change the units weapon stats are listed. For this reason, damage reduction like Fenix's Network Administrator is not shown.</li>
+        <li>Since numbers are calculated, there may be small rounding errors.</li>
+    </ul>
+    <div id="tooltip" style="display: none; top: 1601px; left: 667px; position: absolute;"><b>Upgrade Name</b><br><br>Selected upgrade description.</div>
+    <div class="tableContainer">
+        <table id="unitStats">
+            <thead>
+                <tr>
+                    <th class="rotate1"><div><span>Commander</span></div></th>
+                    <th>Unit</th>
+                    <th>Data</th>
+                    <th>Compare</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="dataContainers">
+                    <td></td>
+                    <td rowspan="19" id="leftList"></td>
+                    <td rowspan="19" id="leftStats"></td>
+                    <td rowspan="19" id="comparisonContainer"><button id='clearCompare' type='button'>Clear</button><div id="comparison"></div></td>
+                </tr>
+                <tr>
+                    <td><img src="/images/commanderportraits/raynorportrait.png" alt="Raynor"></td>
+                </tr>
+                <tr>
+                    <td><img src="/images/commanderportraits/kerriganportrait.png" alt="Kerrigan"></td>
+                </tr>
+                <tr>
+                    <td><img src="/images/commanderportraits/artanisportrait.png" alt="Artanis"></td>
+                </tr>
+                <tr>
+                    <td><img src="/images/commanderportraits/swannportrait.png" alt="Swann"></td>
+                </tr>
+                <tr>
+                    <td><img src="/images/commanderportraits/zagaraportrait.png" alt="Zagara"></td>
+                </tr>
+                <tr>
+                    <td><img src="/images/commanderportraits/vorazunportrait.png" alt="Vorazun"></td>
+                </tr>
+                <tr>
+                    <td><img src="/images/commanderportraits/karaxportrait.png" alt="Karax"></td>
+                </tr>
+                <tr>
+                    <td><img src="/images/commanderportraits/abathurportrait.png" alt="Abathur"></td>
+                </tr>
+                <tr>
+                    <td><img src="/images/commanderportraits/alarakportrait.png" alt="Alarak"></td>
+                </tr>
+                <tr>
+                    <td><img src="/images/commanderportraits/novaportrait.png" alt="Nova"></td>
+                </tr>
+                <tr>
+                    <td><img src="/images/commanderportraits/stukovportrait.png" alt="Stukov"></td>
+                </tr>
+                <tr>
+                    <td><img src="/images/commanderportraits/fenixportrait.png" alt="Fenix"></td>
+                </tr>
+                <tr>
+                    <td><img src="/images/commanderportraits/dehakaportrait.png" alt="Dehaka"></td>
+                </tr>
+                <tr>
+                    <td><img src="/images/commanderportraits/hornerportrait.png" alt="Horner"></td>
+                </tr>
+                <tr>
+                    <td><img src="/images/commanderportraits/tychusportrait.png" alt="Tychus"></td>
+                </tr>
+                <tr>
+                    <td><img src="/images/commanderportraits/zeratulportrait.png" alt="Zeratul"></td>
+                </tr>
+                <tr>
+                    <td><img src="/images/commanderportraits/stetmannportrait.png" alt="Stetmann"></td>
+                </tr>
+                <tr>
+                    <td><img src="/images/commanderportraits/mengskportrait.png" alt="Mengsk"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        var oldtdRight;
+        var oldtdLeft;
+        var unitColumn;
+        var selectedCommanders= ["",""];
+        var selectedUnits= ["",""];
+        $("#unitStats img").on("click", function(){
+            var selectedCommander = $(this).attr("alt");
+            $(this).parent().css("background-color", "darkslateblue");
+            if (oldtdLeft){
+                oldtdLeft.css("background-color","");
+            }
+            oldtdLeft=$(this).parent();
+            selectedCommanders[0] = selectedCommander;
+            $("#leftList").text("Loading...");
+
+            $.ajax({
+                type: 'GET',
+                url: '/scripts/calculatestats.php',
+                data: {mode:1, commander: selectedCommander},
+                success: function(response) {
+                    $("#leftList").html(response);
+                }
+            });
+        });
+        $("#unitStats").on("click", "li", function(){
+            var selectedUnit = $(this).text();
+            var dataColumn;
+            var unitColumn;
+            var selectedCommander = selectedCommanders[0];
+            selectedUnits[0] = selectedUnit;
+            $("#leftStats").text("Loading...");
+            $.ajax({
+                type: 'GET',
+                url: '/scripts/calculatestats.php',
+                data: {mode:2, commander: selectedCommander, unit: selectedUnit },
+                success: function(response) {
+                    response = JSON.parse(response);
+                    $("#leftList").find(".upgradesList").remove();
+                    $("#leftList").append(response[1]);
+                    $("#leftStats").html("<button id='setCompare' type='button'>Set Compare >></button><br><div id='statsContent'>" + response[0] + "</div>");
+                },
+            });
+        });
+
+        $("#leftList").on('mouseover',"img", function(e){
+            var upgrade = $(this).attr("alt").split(":");
+            $("#tooltip").html("<b>" + upgrade[0] + "</b><br><br>" + upgrade[1]);
+            $("#tooltip").show();
+        });
+        $("#leftList").on('mouseleave',"img", function(){
+            $("#tooltip").hide();
+        });
+        $("#leftList").on('mouseover',"img",function(e){
+            $('#tooltip').css('top', e.pageY-40);
+            $('#tooltip').css('left', e.pageX+5);
+            $('#tooltip').css('position', "absolute");
+
+        });
+        $("#leftList").on('click',"img", function(e){
+            $(this).toggleClass("selectedUpgrade");
+        });
+
+        $("#leftList").on('click',"#recalculate", function(e){
+            var jsonobject = {};
+            var upgradeArray=[];
+            var masteryArray=[];
+
+            jsonobject['mode'] = 3;
+            jsonobject['commander'] = selectedCommanders[0];
+            jsonobject['selectedUnit'] = selectedUnits[0];
+
+            $("#leftList").find(".upgradesList").find(".selectedUpgrade").each(function(){
+                var filePath = $(this).attr("src");
+                var tempArray = filePath.split("/");
+                upgradeArray.push(tempArray[5].replace(".png", ""));
+            })
+            jsonobject['upgrades']=upgradeArray;
+
+            if($("#leftList input[name='attackupgradelevel']:checked").length){
+                jsonobject['attacklevel'] = $("#leftList input[name='attackupgradelevel']:checked").val();
+                jsonobject['armorlevel'] = $("#leftList input[name='armorupgradelevel']:checked").val();
+            }
+            else if($("#leftList input[name='rank']:checked").length){
+                jsonobject['ranklevel'] = $("#leftList input[name='rank']:checked").val();
+            }
+            else{
+                jsonobject['artifactslevel'] =$("#leftList input[name='fragmentscollected']:checked").val();
+            }
+
+            if($("#leftList input[name='shieldupgradelevel']:checked").length){
+                jsonobject['shieldlevel'] = $("#leftList input[name='shieldupgradelevel']:checked").val();
+            }
+
+            $(".masterySlider").each(function(){
+                masteryArray.push([$(this).attr('name'), $(this).val()]);
+            })
+            jsonobject['masteries']= masteryArray;
+
+            if($("#leftList input[name='" + selectedCommanders[0] + "Prestige']:checked").length){
+                jsonobject['prestige'] = $("#leftList input[name='" + selectedCommanders[0] + "Prestige']:checked").val();
+            }
+
+            console.log(jsonobject);
+            $.ajax({
+                type: 'GET',
+                url: '/scripts/calculatestats.php',
+                data: jsonobject,
+                success: function(response){
+                    $("#leftStats").html("<button id='setCompare' type='button'>Set Compare >></button><br><div id='statsContent'>" + response + "</div>");
+                }
+            })
+        });
+        $("#leftList").on('input',".masterySlider", function(e){
+            $(this).siblings("span").text($(this).val());
+
+        })
+        $("#leftStats").on('click',"#setCompare", function(e){
+            $("#comparison").html($("#statsContent").html());
+        })
+        $("#clearCompare").on('click', function(e){
+            $("#comparison").html("");
+        })
+    </script>
+    <h2>Enemy Target Vitalities</h2>
+    <p>Use the below filters to see which enemy units and objectives fall below a certain vitality (HP + Shields). Click on a unit to see its vitality data and associated tags.</p>
+    <p>Race Filters:</p>
+    <p id="raceFilters">
+        <span class="toggle Protoss">Protoss</span>
+        <span class="toggle Terran">Terran</span>
+        <span class="toggle Zerg">Zerg</span>
+        <span class="toggle Hybrid">Hybrid</span>
+        <span class="toggle Infested">Infested</span>
+        <span class="toggle Objective">Objective</span>
+        <span class="toggle Mutator">Mutator</span>
+    </p>
+    <div id="formElements">
+        <table id="amonFilter">
+            <tbody>
+                <tr>
+                    <td><label>Min Vitality: </label></td>
+                    <td><input type="text" id="minVitality" maxlength="5" size="5"></td>
+                </tr>
+                <tr>
+                    <td><label>Max Vitality: </label></td>
+                    <td><input type="text" id="maxVitality" maxlength="5" size="5"></td>
+                </tr>
+            </tbody>
+        </table>
+        <button id="filter" type="button">Filter</button><button id="reset" type="button">Reset</button>
+    </div>
+    <br><br>
+    <script>
+        $(".toggle").on("click", function(){
+            var toggledRace = $(this).attr("class").toString().split(' ')[1];
+            if ($(this).css("opacity")==0.25){
+                $(this).css("opacity", 1.0);
+                $(".content." + toggledRace).fadeIn(400, function(){
+                    $(".content." + toggledRace).css("display","inline-flex");
+                })
+
+            }
+            else{
+                $(this).css("opacity", 0.25);
+                $(".content." + toggledRace).fadeOut(400, function(){
+                    $(".content." + toggledRace).css("display","none");
+                })
+
+            }
+
+        })
+    </script>
+    <div id="dataContainer"></div>
+    <div id="amonTableContainer">
+        <div id="flexContainer">
+            <div class='content Zerg'>Aberration</div><div class='content Protoss'>Adept</div><div class='content Terran'>Aegis Guard</div><div class='content Protoss'>Arbiter</div><div class='content Objective'>Archangel</div><div class='content Protoss'>Archon</div><div class='content Mutator'>Artanis</div><div class='content Zerg'>Baneling</div><div class='content Terran'>Banshee</div><div class='content Terran'>Battlecruiser</div><div class='content Objective'>Blightbringer</div><div class='content Zerg'>Brood Lord</div><div class='content Zerg'>Brood Queen</div><div class='content Zerg'>Broodling</div><div class='content Zerg'>Brutalisk</div><div class='content Terran'>Bunker</div><div class='content Protoss'>Carrier</div><div class='content Infested'>Choker</div><div class='content Protoss'>Colossus</div><div class='content Terran'>Combat Shield Marine</div><div class='content Zerg'>Corruptor</div><div class='content Protoss'>Corsair</div><div class='content Terran'>Cyclone</div><div class='content Protoss'>Dark Templar</div><div class='content Objective'>Death Grip Crystal</div><div class='content Terran'>Death Head</div><div class='content Objective'>Defense Bot</div><div class='content Mutator'>Dehaka</div><div class='content Mutator'>Dehaka Spawn</div><div class='content Terran'>Devil Dog</div><div class='content Zerg'>Devourer</div><div class='content Terran'>Diamondback</div><div class='content Protoss'>Disruptor</div><div class='content Terran'>Dominion Trooper</div><div class='content Protoss'>Dragoon</div><div class='content Terran'>Dusk Wings</div><div class='content Objective'>Eradicator</div><div class='content Objective'>Extraction Device</div><div class='content Terran'>Field Response Theta</div><div class='content Terran'>Firebat</div><div class='content Objective'>Gatekeeper Construct 1</div><div class='content Objective'>Gatekeeper Construct 2</div><div class='content Objective'>Gatekeeper Construct 3</div><div class='content Objective'>Gatekeeper Construct 4</div><div class='content Objective'>Gatekeeper Construct Bonus</div><div class='content Terran'>Ghost</div><div class='content Terran'>Goliath</div><div class='content Zerg'>Guardian</div><div class='content Terran'>Hammer Securities</div><div class='content Terran'>Hellbat</div><div class='content Terran'>Hellion</div><div class='content Terran'>Hels Angel</div><div class='content Infested'>HERC</div><div class='content Protoss'>High Templar</div><div class='content Mutator'>Hunter Killer</div><div class='content Infested'>Hunterling</div><div class='content Hybrid'>Hybrid Behemoth</div><div class='content Hybrid'>Hybrid Destroyer</div><div class='content Hybrid'>Hybrid Dominator</div><div class='content Hybrid'>Hybrid Experiment 1 A626 </div><div class='content Hybrid'>Hybrid Experiment 2 9E57</div><div class='content Hybrid'>Hybrid Experiment 3 523I</div><div class='content Hybrid'>Hybrid Nemesis</div><div class='content Hybrid'>Hybrid Reaver</div><div class='content Zerg'>Hydralisk</div><div class='content Protoss'>Immortal</div><div class='content Terran'>Imperial Intercessor</div><div class='content Terran'>Imperial Witness</div><div class='content Infested'>Infested Banshee</div><div class='content Infested'>Infested Bunker</div><div class='content Infested'>Infested Death Head</div><div class='content Infested'>Infested Diamondback</div><div class='content Infested'>Infested Hammer Securities</div><div class='content Infested'>Infested Liberator</div><div class='content Infested'>Infested Marine DON</div><div class='content Infested'>Infested Marine ME</div><div class='content Infested'>Infested Missile Turret</div><div class='content Infested'>Infested Siege Tank</div><div class='content Infested'>Infested Terran DoN</div><div class='content Infested'>Infested Terran ME</div><div class='content Mutator'>Infested Turkey</div><div class='content Infested'>Infested War Pig</div><div class='content Zerg'>Infestor</div><div class='content Terran'>Jacksons Revenge</div><div class='content Infested'>Kaboomer</div><div class='content Mutator'>Karax</div><div class='content Mutator'>Kerrigan</div><div class='content Zerg'>Leviathan</div><div class='content Terran'>Liberator</div><div class='content Zerg'>Locust</div><div class='content Terran'>Loki</div><div class='content Zerg'>Lurker</div><div class='content Terran'>Marauder</div><div class='content Terran'>Marine</div><div class='content Terran'>Medic</div><div class='content Terran'>Medivac</div><div class='content Mutator'>Missile Nuke</div><div class='content Terran'>Missile Turret</div><div class='content Mutator'>Moebius Corps Laser Drill</div><div class='content Objective'>Moebius Train 1</div><div class='content Objective'>Moebius Train 2</div><div class='content Objective'>Moebius Train 3</div><div class='content Objective'>Moebius Train 4</div><div class='content Objective'>Moebius Train 5</div><div class='content Objective'>Moebius Train 6</div><div class='content Objective'>Moebius Train 7</div><div class='content Objective'>Moebius Train 8</div><div class='content Objective'>Moebius Train OE Bonus 1</div><div class='content Objective'>Moebius Train OE Bonus 2</div><div class='content Objective'>Moebius Train PP Bonus 1</div><div class='content Objective'>Moebius Train PP Bonus 2</div><div class='content Objective'>Molten Salamander</div><div class='content Protoss'>Mothership</div><div class='content Terran'>MULE</div><div class='content Zerg'>Mutalisk</div><div class='content Terran'>Night Wolf</div><div class='content Mutator'>Nova</div><div class='content Protoss'>Observer</div><div class='content Protoss'>Oracle</div><div class='content Terran'>Outback Hunter</div><div class='content Zerg'>Overlord</div><div class='content Zerg'>Overseer</div><div class='content Protoss'>Phoenix</div><div class='content Protoss'>Photon Cannon</div><div class='content Objective'>Pirate Capital Ship</div><div class='content Mutator'>Point Defense Missile</div><div class='content Terran'>Pride of Augustgrad</div><div class='content Mutator'>Propagator</div><div class='content Protoss'>Pylon</div><div class='content Zerg'>Queen</div><div class='content Zerg'>Ravager</div><div class='content Terran'>Raven</div><div class='content Mutator'>Raynor</div><div class='content Terran'>Reaper</div><div class='content Protoss'>Reaver</div><div class='content Zerg'>Roach</div><div class='content Terran'>Science Vessel</div><div class='content Zerg'>Scourge</div><div class='content Protoss'>Scout</div><div class='content Protoss'>Sentry</div><div class='content Terran'>Sentry Bot</div><div class='content Terran'>Shock Division</div><div class='content Objective'>Shuttle</div><div class='content Terran'>Siege Breaker</div><div class='content Terran'>Siege Tank</div><div class='content Terran'>Skibis Angel</div><div class='content Terran'>Sky Fury</div><div class='content Objective'>Slayn Elemental 1</div><div class='content Objective'>Slayn Elemental 2</div><div class='content Terran'>Spartan Company</div><div class='content Terran'>Spider Mine</div><div class='content Zerg'>Spine Crawler</div><div class='content Mutator'>Splitter Missile</div><div class='content Zerg'>Spore Crawler</div><div class='content Infested'>Spotter</div><div class='content Protoss'>Stalker</div><div class='content Mutator'>Standard Missile</div><div class='content Infested'>Stank</div><div class='content Objective'>Suppression Tower 1</div><div class='content Objective'>Suppression Tower 2</div><div class='content Zerg'>Swarm Host</div><div class='content Zerg'>Swarm Queen</div><div class='content Protoss'>Tempest</div><div class='content Terran'>Thor</div><div class='content Mutator'>Turkey</div><div class='content Mutator'>Turking</div><div class='content Mutator'>Tychus</div><div class='content Zerg'>Ultralisk</div><div class='content Terran'>Viking</div><div class='content Zerg'>Viper</div><div class='content Objective'>Virophage</div><div class='content Protoss'>Void Ray</div><div class='content Mutator'>Void Reanimator</div><div class='content Mutator'>Void Rift</div><div class='content Objective'>Void Shard</div><div class='content Objective'>Void Sliver 1</div><div class='content Objective'>Void Sliver 2</div><div class='content Objective'>Void Sliver 3</div><div class='content Objective'>Void Sliver 4</div><div class='content Objective'>Void Sliver 5</div><div class='content Objective'>Void Thrasher TotP 1</div><div class='content Objective'>Void Thrasher TotP 2</div><div class='content Objective'>Void Thrasher TotP 3</div><div class='content Objective'>Void Thrasher TotP 4</div><div class='content Objective'>Void Thrasher VT</div><div class='content Infested'>Volatile Infested DoN</div><div class='content Infested'>Volatile Infested ME</div><div class='content Terran'>Vulture</div><div class='content Terran'>War Pig</div><div class='content Terran'>Warhound</div><div class='content Protoss'>Warp Prism</div><div class='content Terran'>Widow Mine</div><div class='content Terran'>Widow Mine Mutator</div><div class='content Terran'>Wraith</div><div class='content Objective'>XelNaga Construct</div><div class='content Mutator'>Zagara</div><div class='content Protoss'>Zealot</div><div class='content Objective'>Zenith Stone</div><div class='content Mutator'>Zeratul</div><div class='content Zerg'>Zergling</div>        </div>
+    </div>
+    <script>
+        $("#flexContainer").on("click",".content", function(){
+            selectedUnit=$(this).text();
+            $("#dataContainer").text("Loading...");
+            $.ajax({
+                type: 'GET',
+                url: '../scripts/getamonstats.php',
+                data: { unit: selectedUnit },
+                success: function(response) {
+                    $("#dataContainer").html(response);
+                }
+            });
+        })
+        $("#filter").on("click", function(){
+            var maxVit=$("#maxVitality").val();
+            var minVit=$("#minVitality").val();
+            if (maxVit!=="" || minVit!==""){
+                if(maxVit==""){
+                    maxVit = 0;
+                }
+                if(minVit==""){
+                    minVit = 0;
+                }
+                $.ajax({
+                    type: 'GET',
+                    url: '../scripts/generatetable.php',
+                    data: { maxvitality: maxVit, minvitality: minVit },
+                    success: function(response) {
+                        $("#flexContainer").html(response);
+                        $(".toggle").each(function(){
+                            if($(this).css("opacity")==0.25){
+                                $("#flexContainer").find("." + $(this).text()).css("display","none")
+                            }
+                        })
+                    }
+                });
+            }
+
+        })
+        $("#reset").on("click", function(){
+            $(".toggle").each(function(){
+                $(this).css("opacity",1);
+            })
+            $("#maxVitality").val("");
+            $("#minVitality").val("");
+            $.ajax({
+                type: 'GET',
+                url: '../scripts/generatetable.php',
+                data: {},
+                success: function(response) {
+                    $("#flexContainer").html(response);
+                }
+            });
+        })
+    </script>
+    <div class="clear"></div>
+</div>
+<div id="footer">
+    <p>Note: All data generated on this site is based on Brutal difficulty. Timings, compositions and other elements may differ on easier difficulty levels.</p>
+    <p>CC-BY-NC-SA-4.0. Originally written by Aommaster. This is a fansite not affiliated with StarCraft 2 or Blizzard Entertainment, Inc.</p>
+</div>
+</body>
+</html>
