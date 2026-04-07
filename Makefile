@@ -2,7 +2,8 @@ all: data static
 
 .PHONY: data
 data: node_modules
-	./source-data/build
+	bun ./source-data/build.ts
+	bun ./source-data/validate.ts
 
 .PHONY: static
 static: config.php

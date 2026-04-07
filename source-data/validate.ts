@@ -1,9 +1,7 @@
 #!/usr/bin/env bun
-// @ts-check
 import Ajv from 'ajv';
 
-/** @type {[`${string}.json`, string][]} */
-const files = [
+const files: [`${string}.json`, string][] = [
     ['brutalplus.json', 'BrutalPlusList'],
     ['commandersummaries.json', 'CommanderList'],
 ];
