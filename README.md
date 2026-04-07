@@ -12,9 +12,13 @@ Ads are NOT allowed
 
 ## Development environment setup
 
-For certain aspects of development, you'll need to have Bun and Composer installed and set up with `bun install` and `composer install`.
+You'll need Bun installed to build the data files, PHP installed to build the static files, and Composer installed to autoformat the PHP files.
 
-If you edit the data files in `/source-data`, you'll need to run `./source-data/build` to rebuild them into `/public_html/data`. If you want to change the format of the data files, you'll need to update the types in `/source-data/data-types.ts` and run `./source-data/build` to build them.
+If you edit the data files in `/source-data`, you'll need to run `make data` to rebuild them into `/public_html/data`. If you want to change the format of the data files, you'll need to update the types in `/source-data/data-types.ts` and run `make data` to build them.
+
+Running `make static` will rebuild the static files.
+
+Running `make` will rebuild everything.
 
 ### Docker
 
