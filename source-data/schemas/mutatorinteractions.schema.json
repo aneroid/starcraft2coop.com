@@ -17,7 +17,7 @@
                 },
                 "id2": {
                     "$ref": "#/definitions/PositiveInteger",
-                    "description": "ID of the second mutator in the pair"
+                    "description": "ID of the second mutator in the pair (id2 > id1)"
                 },
                 "interaction": {
                     "type": "string",
