@@ -43,22 +43,4 @@ for (const commander of commanders) {
     Bun.write(`html/data/commandersummaries/${commander.commander}.json`, JSON.stringify(commander, null, 4) + '\n');
 }
 
-console.log(`Writing to html/data/mutatorinteractions/get/`);
-const interactions: MutatorInteractionList = await Bun.file('source-data/mutatorinteractions.json').json();
-const interactsWith: Record<number, string[]> = {};
-for (const interaction of interactions) {
-    Bun.write(
-        `html/data/mutatorinteractions/get/${interaction.id1}-${interaction.id2}.json`,
-        JSON.stringify(interaction.interaction, null, 4) + '\n'
-    );
-    // TODO: should this be done separately below?
-    (interactsWith[interaction.id1] ??= []).push(interaction.id2.toString());
-    (interactsWith[interaction.id2] ??= []).push(interaction.id1.toString());
-}
-
-console.log(`Writing to html/data/mutatorinteractions/check/`);
-for (const [id, interactsWithList] of Object.entries(interactsWith)) {
-    Bun.write(`html/data/mutatorinteractions/check/${id}.json`, JSON.stringify(interactsWithList, null, 4) + '\n');
-}
-
 console.log(`Done`);

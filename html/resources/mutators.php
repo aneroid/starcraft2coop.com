@@ -183,94 +183,89 @@ $_SESSION["known"] = true;
         <select name="mut1" id="mut1">
             <?php
             echo "<option value='0'>-</option>";
-            foreach ($mutators as $mut) {
-                echo "<option value='$mut[0]'>$mut[1]</option>\n";
+            foreach ($mutators as [$id, $name]) {
+                echo "<option value='$id'>$name</option>\n";
             }
             ?>
         </select>
-        <img class="centerAlign" id="mut1img" src="/images/mutators/afraidofthedark.png" height="50" width="50" alt="Mutator 1">
+        <img class="centerAlign" id="mut1img" src="/images/mutators/random.png" height="50" width="50" alt="Mutator 1">
         <p></p>
         <p class="centerAlign" >Mutator 2:</p>
         <select name="mut2" id="mut2">
             <?php
             echo "<option value='0'>-</option>";
-            foreach ($mutators as $mut) {
-                echo "<option value='$mut[0]'>$mut[1]</option>\n";
+            foreach ($mutators as [$id, $name]) {
+                echo "<option value='$id'>$name</option>\n";
             }
             ?>
         </select>
-        <img class="centerAlign"  id="mut2img" src="/images/mutators/afraidofthedark.png" height="50" width="50" alt="Mutator 2">
+        <img class="centerAlign"  id="mut2img" src="/images/mutators/random.png" height="50" width="50" alt="Mutator 2">
         <p></p>
-        <button id="getInteraction" type="button">Get Interactions</button>
         <button id="reset" type="button">Reset</button>
     </form>
     <p>Interactions:</p>
     <p id="interactions"></p>
     <script>
-        $("#mut1").change(function(){
-            var filename = $("#mut1 option:selected").text().replace(/ /g,'').toLowerCase();
-            if (filename=="-"){
-                return;
+        var interactionsPairs = {};
+        var interactionsLoaded = false;
+        function getInteractions() {
+            if (interactionsLoaded !== false) {
+                return !!interactionsLoaded;
             }
-            $("#mut1img").attr("src", "/images/mutators/" + filename + ".png");
-            var mut1= $("#mut1").val();
+            interactionsLoaded = undefined;
             $.ajax({
                 type: 'GET',
-                url: '/data/mutatorinteractions/check/' + mut1 + '.json',
+                url: '/data/mutatorinteractions.json',
                 success: function(interactions) {
-                    $("#mut2 option").attr("disabled","disabled");
-                    for (var i=0; i< interactions.length; i++){
-                        $("#mut2 option[value='" + parseInt(interactions[i]) + "']").removeAttr("disabled");
+                    for (var i = 0; i < interactions.length; i++){
+                        var key = '' + interactions[i].id1 + '-' + interactions[i].id2;
+                        interactionsPairs[key] = interactions[i].interaction;
                     }
-                    if ($("#mut2").prop('selectedIndex').hasAttr("disabled")){
-                        $("#mut2").val(0);
-                    }
-
+                    interactionsLoaded = true;
+                    updateInteractions();
                 }
             });
+            return false;
+        }
+        function updateInteractions() {
+            if (!getInteractions()) return;
+            var mut1 = parseInt($("#mut1").val());
+            var filename1 = $("#mut1 option:selected").text().replace(/ /g,'').toLowerCase();
+            if (filename1 === '-') filename1 = 'random';
+            var mut2 = parseInt($("#mut2").val());
+            var filename2 = $("#mut2 option:selected").text().replace(/ /g,'').toLowerCase();
+            if (filename2 === '-') filename2 = 'random';
+            $("#mut2 option").each(function () {
+                var val = parseInt(this.value);
+                var key = '' + mut1 + '-' + val;
+                if (!val || !mut1 || interactionsPairs[key]) {
+                    this.disabled = false;
+                } else {
+                    this.disabled = true;
+                }
+            });
+            $("#mut1img").attr("src", "/images/mutators/" + filename1 + ".png");
+            $("#mut2img").attr("src", "/images/mutators/" + filename2 + ".png");
+            if (mut1 && mut2) {
+                var key = '' + mut1 + '-' + mut2;
+                $("#interactions").text(interactionsPairs[key] || "No interaction found.");
+            } else {
+                $("#interactions").text(mut1 || mut2 ? "(Select both mutators)" : "");
+            }
+        }
+        $("#mut1").change(function(){
+            updateInteractions();
         })
         $("#mut2").change(function(){
-            var filename = $("#mut2 option:selected").text().replace(/ /g,'').toLowerCase();
-            if (filename=="-"){
-                return;
-            }
-            var mut2= $("#mut2").val();
-            $("#mut2img").attr("src", "/images/mutators/" + filename + ".png");
-            $.ajax({
-                type: 'GET',
-                url: '/data/mutatorinteractions/check/' + mut2 + '.json',
-                success: function(interactions) {
-                    $("#mut1 option").attr("disabled","disabled");
-                    for (var i=0; i< interactions.length; i++){
-                        $("#mut1 option[value='" + parseInt(interactions[i]) + "']").removeAttr("disabled");
-                    }
-                    if ($("#mut1").prop('selectedIndex').hasAttr("disabled")){
-                        $("#mut1").val(0);
-                    }
-                }
-            });
-        })
-        $("#getInteraction").on("click", function(){
-            var mut1= $("#mut1").val() ;
-            var mut2= $("#mut2").val();
-            const minMut = Math.min(mut1, mut2);
-            const maxMut = Math.max(mut1, mut2);
-            $.ajax({
-                type: 'GET',
-                url: '/data/mutatorinteractions/get/' + minMut + '-' + maxMut + '.json',
-                success: function(response) {
-                    $("#interactions").text(response);
-                },
-                error: function() {
-                    $("#interactions").text('No interaction found.');
-                }
-            });
+            updateInteractions();
         })
         $("#reset").on("click", function(){
             $("#mut1").val(0);
             $("#mut2").val(0);
             $("#mut1 option").removeAttr("disabled");
             $("#mut2 option").removeAttr("disabled");
+            $("#mut1img").attr("src", "/images/mutators/random.png");
+            $("#mut2img").attr("src", "/images/mutators/random.png");
             $("#interactions").text("");
         })
     </script>
