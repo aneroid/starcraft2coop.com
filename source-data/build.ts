@@ -1,5 +1,6 @@
 #!/usr/bin/env bun
 import tsj from "ts-json-schema-generator";
+import type { BrutalPlusList, CommanderList, MutatorInteractionList } from "./data-types";
 
 const files: [`${string}.json`, string][] = [
     ['brutalplus.json', 'BrutalPlusList'],
@@ -31,22 +32,19 @@ for (const [file, type] of files) {
 }
 
 console.log(`Writing to html/data/brutalplus/`);
-/** @type {import('./data-types.ts').BrutalPlus[]} */
-const brutalPluses = await Bun.file('source-data/brutalplus.json').json();
+const brutalPluses: BrutalPlusList = await Bun.file('source-data/brutalplus.json').json();
 for (const brutalPlus of brutalPluses) {
     Bun.write(`html/data/brutalplus/${brutalPlus.difficulty}.json`, JSON.stringify(brutalPlus, null, 4) + '\n');
 }
 
 console.log(`Writing to html/data/commandersummaries/`);
-/** @type {import('./data-types.ts').Commander[]} */
-const commanders = await Bun.file('source-data/commandersummaries.json').json();
+const commanders: CommanderList = await Bun.file('source-data/commandersummaries.json').json();
 for (const commander of commanders) {
     Bun.write(`html/data/commandersummaries/${commander.commander}.json`, JSON.stringify(commander, null, 4) + '\n');
 }
 
 console.log(`Writing to html/data/mutatorinteractions/get/`);
-/** @type {import('./data-types.ts').MutatorInteraction[]} */
-const interactions = await Bun.file('source-data/mutatorinteractions.json').json();
+const interactions: MutatorInteractionList = await Bun.file('source-data/mutatorinteractions.json').json();
 const interactsWith: Record<number, string[]> = {};
 for (const interaction of interactions) {
     Bun.write(
