@@ -1,4 +1,6 @@
 ErrorDocument 404 /errors/404.php
+ErrorDocument 410 /account.html
+
 RewriteEngine on
 RewriteRule .* - [E=Cache-Control:no-cache]
 
@@ -8,6 +10,9 @@ AddType text/x-python .py
 # remove `www.`
 RewriteCond %{HTTP_HOST} ^www\.(.*)$
 RewriteRule ^(.*)$ https://starcraft2coop.com/$1 [R=302,L]
+
+# response codes for Gone pages
+RewriteRule /account - [G,L]
 
 # Extensionless URLs - prefer .html, fall back to .php
 RewriteCond %{REQUEST_FILENAME} !-d
