@@ -1,8 +1,15 @@
 all: data static
 
+.PHONY: test
+test: validate-data check
+
 .PHONY: data
 data: node_modules
 	bun ./source-data/build.ts
+	bun ./source-data/validate.ts
+
+.PHONY: validate-data
+validate-data:
 	bun ./source-data/validate.ts
 
 .PHONY: static
