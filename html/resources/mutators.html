@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="apple-touch-icon" href="/images/apple-touch-icon.png"/>
 <link rel='shortcut icon' href='/images/favicon.ico' type='image/x-icon' />
-<link rel="stylesheet"  media="all" type="text/css" href="/styles/mainstyle.css?v=1.32">
+<link rel="stylesheet"  media="all" type="text/css" href="/styles/mainstyle.css?v=1.32b">
 <link rel="stylesheet" href="/styles/fontawesome/fontawesome-solid-5-home.css" />
 <link href='https://fonts.googleapis.com/css?family=Convergence' rel='stylesheet' type='text/css'>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -94,7 +94,7 @@
 <ul id="topmenu">
     <li class="normal"><a href="/" aria-label="Home" title="Home"><i class="fas fa-home" aria-hidden="true"></i></a></li>
     <li class="normal"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-commanders">Commanders</a></li>
-    <li class="normal"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-resources">Guides</a></li>
+    <li class="highlight"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-resources">Guides</a></li>
     <li class="normal"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-missions">Missions</a></li>
     <li class="normal"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-about">About</a></li>
 </ul>
@@ -149,7 +149,7 @@
         <div class="submenu-with-sections"><div class="submenu-section">
             <strong>Resources:</strong>
             <ul>
-                <li class="normal"><a href="/resources/mutators">Mutators</a></li>
+                <li class="highlight"><a href="/resources/mutators">Mutators</a></li>
                 <li class="normal"><a href="/resources/weeklymutations">Weekly&nbsp;Mutations</a></li>
                 <li class="normal"><a href="/resources/brutal">Brutal+</a></li>
                 <li class="normal"><a href="/tools/unitstats">Unit&nbsp;Stats</a></li>
@@ -259,13 +259,13 @@
 </script>
 <div id="content">
     <h1>Co-op Mutators List: Names, Icons, Descriptions and Mechanics</h1>
+        <div id="links">
         <h2>Sections on this Page</h2>
-    <div id="links">
         <p><a href="#safetyZones">Safety Zone</a></p>
         <p><a href="#mutatorInteractions">Mutator Interactions</a></p>
         <p><a href="#mutatorList">Mutator List</a></p>
     </div>
-    <a id="safetyZones"></a><h2>Safety Zones</h2>
+    <h2 id="safetyZones">Safety Zones</h2>
     <p>Certain mutators create environmental hazards that can impact/debuff player units, including workers. These mutators get deactivated in areas called "Safety Zones". All player bases and expansions are considered Safety Zones. The mutators that obey the Safety Zone rules are as follows:</p>
     <ul>
         <li>Blizzard</li>
@@ -341,7 +341,7 @@
             <img src="/images/mutatordata/safetyzonevoidthrashing.jpg" alt="Void Thrashing Safety Zone">
         </div>
     </div>
-    <a id="mutatorInteractions"></a><h2>Mutator Interactions</h2>
+    <h2 id="mutatorInteractions">Mutator Interactions</h2>
         <form action="mutators.php" method="post">
         <p class="centerAlign">Mutator 1:</p>
         <select name="mut1" id="mut1">
@@ -559,7 +559,7 @@
             $("#interactions").text("");
         })
     </script>
-    <a id="mutatorList"></a><h2>Mutator List</h2>
+    <h2 id="mutatorList">Mutator List</h2>
     <p>A list of all of Starcraft II Co-op mutators is shown below. Names, icons, descriptions and mechanics of these mutators are listed. Click the "Details" button to display more information on each mutator. For more numeric data on mutators (as well as mutator information for other difficulty levels), please visit <a href="https://seamaguro.blogspot.com/2017/12/mutator-compendium.html" rel="nofollow">Maguro's Blog</a>.</p>
     <p>Most mutators also have a certain difficulty score associated with them, called an "Abomination Value". These scores are used for selecting different levels of difficulty levels for Brutal+ games. You can find a list of scores and difficulty level breakpoints on the <a href="brutal">Brutal+ Page</a>.</p>
     <p>You may quickly navigate to a mutator by clicking the links below:</p>
@@ -4095,3 +4095,5 @@
 </div>
 </body>
 </html>
+
+<script src="/scripts/nav.js"></script>

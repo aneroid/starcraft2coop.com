@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="apple-touch-icon" href="/images/apple-touch-icon.png"/>
 <link rel='shortcut icon' href='/images/favicon.ico' type='image/x-icon' />
-<link rel="stylesheet"  media="all" type="text/css" href="/styles/mainstyle.css?v=1.32">
+<link rel="stylesheet"  media="all" type="text/css" href="/styles/mainstyle.css?v=1.32b">
 <link rel="stylesheet" href="/styles/fontawesome/fontawesome-solid-5-home.css" />
 <link href='https://fonts.googleapis.com/css?family=Convergence' rel='stylesheet' type='text/css'>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -32,7 +32,7 @@
     <li class="normal"><a href="/" aria-label="Home" title="Home"><i class="fas fa-home" aria-hidden="true"></i></a></li>
     <li class="normal"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-commanders">Commanders</a></li>
     <li class="normal"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-resources">Guides</a></li>
-    <li class="normal"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-missions">Missions</a></li>
+    <li class="highlight"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-missions">Missions</a></li>
     <li class="normal"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-about">About</a></li>
 </ul>
 <div id="container">
@@ -65,7 +65,7 @@
         <a href="/missions/minerevacuation" class="normal"><img src="/images/missionthumbnails/minerevacuation.png" alt="Miner Evacuation"></a>
         <a href="/missions/mistopportunities" class="normal"><img src="/images/missionthumbnails/mistopportunities.png" alt="Mist Opportunities"></a>
         <a href="/missions/oblivionexpress" class="normal"><img src="/images/missionthumbnails/oblivionexpress.png" alt="Oblivion Express"></a>
-        <a href="/missions/partparcel" class="normal"><img src="/images/missionthumbnails/partparcel.png" alt="Part & Parcel"></a>
+        <a href="/missions/partparcel" class="highlight"><img src="/images/missionthumbnails/partparcel.png" alt="Part & Parcel"></a>
         <a href="/missions/riftstokorhal" class="normal"><img src="/images/missionthumbnails/riftstokorhal.png" alt="Rifts to Korhal"></a>
         <a href="/missions/scytheofamon" class="normal"><img src="/images/missionthumbnails/scytheofamon.png" alt="Scythe Of Amon"></a>
         <a href="/missions/templeofthepast" class="normal"><img src="/images/missionthumbnails/templeofthepast.png" alt="Temple of the Past"></a>
@@ -197,8 +197,8 @@
 <div id="content">
     <h1>Co-op Mission Guide: Part and Parcel</h1>
     <p id="missionPlace">Moebius Research Station</p>
+        <div id="links">
         <h2>Sections on this Page</h2>
-    <div id="links">
         <p><a href="#misSum">Mission Summary</a></p>
         <p><a href="#objectives">Objectives</a></p>
         <p><a href="#idRace">Identifying the Enemy Race</a></p>
@@ -210,9 +210,9 @@
         <p><a href="#misTips">Mission Tips</a></p>
         <p><a href="#comTips">Commander-Specific Tips</a></p>
     </div>
-    <a id="misSum"></a><h2>Mission Summary</h2>
+    <h2 id="misSum">Mission Summary</h2>
     <p>Moebius Corps researchers have been experimenting on hybrid as they attempt to create even more destructive horrors. Help General Davis put an end to this by using Moebius Corps' own unfinished mech, the Balius, to kill the hybrid.</p>
-    <a id="objectives"></a><h2>Objectives</h2>
+    <h2 id="objectives">Objectives</h2>
     <h3>Primary Objective</h3>
         <ul>
             <li>Kill Moebius Hybrid (3)</li>
@@ -223,10 +223,10 @@
         <ul>
             <li>Destroy the Trains (2)</li>
         </ul>
-    <a id="idRace"></a><h2>Identifying the Enemy Race</h2>
+    <h2 id="idRace">Identifying the Enemy Race</h2>
     <p>It is possible to uniquely identify the enemy race on this map. First, check for creep (Alt +T) to check if the enemy is Zerg. If not, use a worker to attack one of the boxes near your Primary Structure. If the enemy race is Protoss, an enemy composition indicator will appear. If the enemy is Terran, no composition indicator will appear. A video is below:</p>
     <iframe width="475" height="268" src="https://www.youtube.com/embed/fXVobSPfE5c" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    <a id="baseAnalysis"></a><h2>Enemy Base Analysis</h2>
+    <h2 id="baseAnalysis">Enemy Base Analysis</h2>
     <div id="globalRaceSelect">
         <p>Change all base analysis pictures to race:</p>
         <form action="#">
@@ -256,7 +256,7 @@
     <div class='switcher'><div class='long' id='eastbaselongdiv'><img id ='eastbaselong' src=' /images/missiondata/partparcel/eastbaselong_protoss.jpg' alt='eastbaselong Picture'></div><div class = 'baseMinimap'><form action='#'><label><input type='radio' name='eastbaselong' value='protoss' checked>Protoss</label><br><label><input type='radio' name='eastbaselong' value='terran'>Terran</label><br><label><input type='radio' name='eastbaselong' value='zerg'>Zerg</label><br></form><br><br><div><img src='/images/missiondata/partparcel/eastbaselongminimap.jpg' alt='eastbaselong Minimap'></div></div></div><script>$("input[name='eastbaselong']").change(function(){var race= $(this).val();var oldImg = $('#eastbaselong');var img = new Image();img.src = '/images/missiondata/partparcel/eastbaselong_'+ race + '.jpg';var newImg = $(img).hide();$('#eastbaselongdiv').append(img);oldImg.stop(true).fadeOut(500, function() {   $(this).remove();});newImg.fadeIn(500);newImg.attr('id', 'eastbaselong');return false;});var imgList=[];imgList.push('/images/missiondata/partparcel/eastbaselong_protoss.jpg');imgList.push('/images/missiondata/partparcel/eastbaselong_terran.jpg');imgList.push('/images/missiondata/partparcel/eastbaselong_zerg.jpg');preload(imgList);</script>    <p>Just north of this base, there is an alcove with some more parts to collect.</p>
     <div class='switcher'><div class='basePic' id='alcovediv'><img id ='alcove' src=' /images/missiondata/partparcel/alcove_protoss.jpg' alt='alcove Picture'></div><div class = 'baseMinimap'><form action='#'><label><input type='radio' name='alcove' value='protoss' checked>Protoss</label><br><label><input type='radio' name='alcove' value='terran'>Terran</label><br><label><input type='radio' name='alcove' value='zerg'>Zerg</label><br></form><br><br><div><img src='/images/missiondata/partparcel/alcoveminimap.jpg' alt='alcove Minimap'></div></div></div><script>$("input[name='alcove']").change(function(){var race= $(this).val();var oldImg = $('#alcove');var img = new Image();img.src = '/images/missiondata/partparcel/alcove_'+ race + '.jpg';var newImg = $(img).hide();$('#alcovediv').append(img);oldImg.stop(true).fadeOut(500, function() {   $(this).remove();});newImg.fadeIn(500);newImg.attr('id', 'alcove');return false;});var imgList=[];imgList.push('/images/missiondata/partparcel/alcove_protoss.jpg');imgList.push('/images/missiondata/partparcel/alcove_terran.jpg');imgList.push('/images/missiondata/partparcel/alcove_zerg.jpg');preload(imgList);</script>    <p>At the top left of the map there is a large enemy camp with several parts available for pick up as well.</p>
     <div class='switcher'><div class='long' id='necamplongdiv'><img id ='necamplong' src=' /images/missiondata/partparcel/necamplong_protoss.jpg' alt='necamplong Picture'></div><div class = 'baseMinimap'><form action='#'><label><input type='radio' name='necamplong' value='protoss' checked>Protoss</label><br><label><input type='radio' name='necamplong' value='terran'>Terran</label><br><label><input type='radio' name='necamplong' value='zerg'>Zerg</label><br></form><br><br><div><img src='/images/missiondata/partparcel/necamplongminimap.jpg' alt='necamplong Minimap'></div></div></div><script>$("input[name='necamplong']").change(function(){var race= $(this).val();var oldImg = $('#necamplong');var img = new Image();img.src = '/images/missiondata/partparcel/necamplong_'+ race + '.jpg';var newImg = $(img).hide();$('#necamplongdiv').append(img);oldImg.stop(true).fadeOut(500, function() {   $(this).remove();});newImg.fadeIn(500);newImg.attr('id', 'necamplong');return false;});var imgList=[];imgList.push('/images/missiondata/partparcel/necamplong_protoss.jpg');imgList.push('/images/missiondata/partparcel/necamplong_terran.jpg');imgList.push('/images/missiondata/partparcel/necamplong_zerg.jpg');preload(imgList);</script>    <p>The final place you will need to push is the North enemy base. This is the area with most defenses. There is a ramp off to each side as well, if you prefer to attack from the side.</p>
-    <div class='switcher'><div class='long' id='finalbaselongdiv'><img id ='finalbaselong' src=' /images/missiondata/partparcel/finalbaselong_protoss.jpg' alt='finalbaselong Picture'></div><div class = 'baseMinimap'><form action='#'><label><input type='radio' name='finalbaselong' value='protoss' checked>Protoss</label><br><label><input type='radio' name='finalbaselong' value='terran'>Terran</label><br><label><input type='radio' name='finalbaselong' value='zerg'>Zerg</label><br></form><br><br><div><img src='/images/missiondata/partparcel/finalbaselongminimap.jpg' alt='finalbaselong Minimap'></div></div></div><script>$("input[name='finalbaselong']").change(function(){var race= $(this).val();var oldImg = $('#finalbaselong');var img = new Image();img.src = '/images/missiondata/partparcel/finalbaselong_'+ race + '.jpg';var newImg = $(img).hide();$('#finalbaselongdiv').append(img);oldImg.stop(true).fadeOut(500, function() {   $(this).remove();});newImg.fadeIn(500);newImg.attr('id', 'finalbaselong');return false;});var imgList=[];imgList.push('/images/missiondata/partparcel/finalbaselong_protoss.jpg');imgList.push('/images/missiondata/partparcel/finalbaselong_terran.jpg');imgList.push('/images/missiondata/partparcel/finalbaselong_zerg.jpg');preload(imgList);</script>    <a id="hybridAbilities"></a><h2>Hybrid Abilities</h2>
+    <div class='switcher'><div class='long' id='finalbaselongdiv'><img id ='finalbaselong' src=' /images/missiondata/partparcel/finalbaselong_protoss.jpg' alt='finalbaselong Picture'></div><div class = 'baseMinimap'><form action='#'><label><input type='radio' name='finalbaselong' value='protoss' checked>Protoss</label><br><label><input type='radio' name='finalbaselong' value='terran'>Terran</label><br><label><input type='radio' name='finalbaselong' value='zerg'>Zerg</label><br></form><br><br><div><img src='/images/missiondata/partparcel/finalbaselongminimap.jpg' alt='finalbaselong Minimap'></div></div></div><script>$("input[name='finalbaselong']").change(function(){var race= $(this).val();var oldImg = $('#finalbaselong');var img = new Image();img.src = '/images/missiondata/partparcel/finalbaselong_'+ race + '.jpg';var newImg = $(img).hide();$('#finalbaselongdiv').append(img);oldImg.stop(true).fadeOut(500, function() {   $(this).remove();});newImg.fadeIn(500);newImg.attr('id', 'finalbaselong');return false;});var imgList=[];imgList.push('/images/missiondata/partparcel/finalbaselong_protoss.jpg');imgList.push('/images/missiondata/partparcel/finalbaselong_terran.jpg');imgList.push('/images/missiondata/partparcel/finalbaselong_zerg.jpg');preload(imgList);</script>    <h2 id="hybridAbilities">Hybrid Abilities</h2>
     <img id="hybridExperiment" src="/images/missiondata/partparcel/hybrid.jpg" alt="Moebius Hybrid Experiment">
     <p>The Hybrid that spawns after the containment cell is broken has its own abilities. These are listed below:</p>
     <table>
@@ -328,10 +328,10 @@
         </tbody>
     </table>
     <p>The first Hybrid will only have one ability. The second two. And the third, three. Abilities are shared between the Hybrids. That is, a Hybrid will have all of the previous Hybrids' abitiles and an additional new one. A Hybrid cannot have both, Fire Chains and Puddle Lines at the same time.</p>
-    <a id="bonus"></a><h2>Completing the Bonus Objective</h2>
+    <h2 id="bonus">Completing the Bonus Objective</h2>
     <p>The bonus objective requires you to destroy two Moebius trains before they cross the map. The the first train will spawn from the left, and the second from the right. They both spawn on the same rail. The path these trains take is shown below:</p>
     <img src="/images/missiondata/partparcel/bonuspath.jpg" alt="Bonus Train Path">
-    <a id="timings"></a><h2>Timings</h2>
+    <h2 id="timings">Timings</h2>
     <p>Note: Information on Tech and Strength levels can be found on the <a href="/guides/enemycomps">Enemy Compositions</a> page.</p>
     <p>The timings for the attack waves, Strength and Tech Levels and targets on this map are shown below.</p>
     <p>The Attack Wave Timings for this mission are:</p>
@@ -433,7 +433,7 @@
             </tr>
         </tbody>
     </table>
-    <a id="spawnPoints"></a><h2>Spawn Points</h2>
+    <h2 id="spawnPoints">Spawn Points</h2>
     <p>There are four spawn points for the attack waves on this map. The left spawn point for normal attack waves is shown below:</p>
     <img src="/images/missiondata/partparcel/attackwaveleftspawn.jpg" alt="Left Spawn Point of Normal Attack Wave">
     <p>The left spawn point for attack waves targeting the expansion is shown below:</p>
@@ -442,14 +442,14 @@
     <img src="/images/missiondata/partparcel/attackwaverightspawn.jpg" alt="Right Spawn Point of Attack Wave">
     <p>The right spawn point for attack waves targeting the expansion is shown below:</p>
     <img src="/images/missiondata/partparcel/expattackwaverightspawn.jpg" alt="Right Spawn Point of Expansion Attack Wave">
-    <a id="misTips"></a><h2>Mission Tips</h2>
+    <h2 id="misTips">Mission Tips</h2>
     <ul>
         <li>Even once the Balius is complete, you can use that time to collect more parts. This will further add seconds to your clock, and the parts will count for the next phase of the mission, sometimes, allowing you to start the next Hybrid phase immediately.</li>
         <li>There are more parts present on the map than you need to complete the mission.</li>
         <li>Gen. Davis will not attack the bonus objective for you, but will attack other enemy units.</li>
         <li>If the Balius gets too damaged while pushing to the Hybrid, the Balius will enter flight mode, break the Hybrid containment cell, then fly back.</li>
     </ul>
-    <a id="comTips"></a><h2>Commander-specific Tips</h2>
+    <h2 id="comTips">Commander-specific Tips</h2>
     <ul>
         <li><a href="/commanders/horner">Han & Horner</a>: Strike Fighter Platforms can be used to break and collect parts.</li>
         <li><a href="/commanders/tychus">Tychus</a>: Crooked Sam can use his demolition charge on multiple train carriages at the same time, making him extremely effective at dealing with the bonus objective.</li>
@@ -465,3 +465,5 @@
 </div>
 </body>
 </html>
+
+<script src="/scripts/nav.js"></script>

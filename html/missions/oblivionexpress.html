@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="apple-touch-icon" href="/images/apple-touch-icon.png"/>
 <link rel='shortcut icon' href='/images/favicon.ico' type='image/x-icon' />
-<link rel="stylesheet"  media="all" type="text/css" href="/styles/mainstyle.css?v=1.32">
+<link rel="stylesheet"  media="all" type="text/css" href="/styles/mainstyle.css?v=1.32b">
 <link rel="stylesheet" href="/styles/fontawesome/fontawesome-solid-5-home.css" />
 <link href='https://fonts.googleapis.com/css?family=Convergence' rel='stylesheet' type='text/css'>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -27,7 +27,7 @@
     <li class="normal"><a href="/" aria-label="Home" title="Home"><i class="fas fa-home" aria-hidden="true"></i></a></li>
     <li class="normal"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-commanders">Commanders</a></li>
     <li class="normal"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-resources">Guides</a></li>
-    <li class="normal"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-missions">Missions</a></li>
+    <li class="highlight"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-missions">Missions</a></li>
     <li class="normal"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-about">About</a></li>
 </ul>
 <div id="container">
@@ -59,7 +59,7 @@
         <a href="/missions/malwarfare" class="normal"><img src="/images/missionthumbnails/malwarfare.png" alt="Malwarfare"></a>
         <a href="/missions/minerevacuation" class="normal"><img src="/images/missionthumbnails/minerevacuation.png" alt="Miner Evacuation"></a>
         <a href="/missions/mistopportunities" class="normal"><img src="/images/missionthumbnails/mistopportunities.png" alt="Mist Opportunities"></a>
-        <a href="/missions/oblivionexpress" class="normal"><img src="/images/missionthumbnails/oblivionexpress.png" alt="Oblivion Express"></a>
+        <a href="/missions/oblivionexpress" class="highlight"><img src="/images/missionthumbnails/oblivionexpress.png" alt="Oblivion Express"></a>
         <a href="/missions/partparcel" class="normal"><img src="/images/missionthumbnails/partparcel.png" alt="Part & Parcel"></a>
         <a href="/missions/riftstokorhal" class="normal"><img src="/images/missionthumbnails/riftstokorhal.png" alt="Rifts to Korhal"></a>
         <a href="/missions/scytheofamon" class="normal"><img src="/images/missionthumbnails/scytheofamon.png" alt="Scythe Of Amon"></a>
@@ -192,8 +192,8 @@
 <div id="content">
     <h1>Co-op Mission Guide: Oblivion Express</h1>
     <p id="missionPlace">Tarsonis</p>
+        <div id="links">
         <h2>Sections on this Page</h2>
-    <div id="links">
         <p><a href="#misSum">Mission Summary</a></p>
         <p><a href="#objectives">Objectives</a></p>
         <p><a href="#baseAnalysis">Enemy Base Analysis</a></p>
@@ -203,9 +203,9 @@
         <p><a href="#misTips">Mission Tips</a></p>
         <p><a href="#comTips">Commander-Specific Tips</a></p>
     </div>
-    <a id="misSum"></a><h2>Mission Summary</h2>
+    <h2 id="misSum">Mission Summary</h2>
     <p>Moebius Corps is moving trains of unrevealed cargo across the surface of Tarsonis. Join forces with your ally and intercept the trains before they can escape.</p>
-    <a id="objectives"></a><h2>Objectives</h2>
+    <h2 id="objectives">Objectives</h2>
     <h3>Primary Objective</h3>
         <ul>
             <li>Destroy Moebius Corps Trains (9)</li>
@@ -215,7 +215,7 @@
         <ul>
             <li>Destroy Fast Train on the Bottom Line</li>
         </ul>
-    <a id="baseAnalysis"></a><h2>Enemy Base Analysis</h2>
+    <h2 id="baseAnalysis">Enemy Base Analysis</h2>
     <div id="globalRaceSelect">
         <p>Change all base analysis pictures to race:</p>
         <form action="#">
@@ -240,10 +240,10 @@
     <img src="/images/missiondata/oblivionexpress/mainobjectivepath.jpg" alt="Paths Taken by the Main Objectives">
     <p>The top base is shown below.</p>
     <div class='switcher'><div class='long' id='topbaselongdiv'><img id ='topbaselong' src=' /images/missiondata/oblivionexpress/topbaselong_protoss.jpg' alt='topbaselong Picture'></div><div class = 'baseMinimap'><form action='#'><label><input type='radio' name='topbaselong' value='protoss' checked>Protoss</label><br><label><input type='radio' name='topbaselong' value='terran'>Terran</label><br><label><input type='radio' name='topbaselong' value='zerg'>Zerg</label><br></form><br><br><div><img src='/images/missiondata/oblivionexpress/topbaselongminimap.jpg' alt='topbaselong Minimap'></div></div></div><script>$("input[name='topbaselong']").change(function(){var race= $(this).val();var oldImg = $('#topbaselong');var img = new Image();img.src = '/images/missiondata/oblivionexpress/topbaselong_'+ race + '.jpg';var newImg = $(img).hide();$('#topbaselongdiv').append(img);oldImg.stop(true).fadeOut(500, function() {   $(this).remove();});newImg.fadeIn(500);newImg.attr('id', 'topbaselong');return false;});var imgList=[];imgList.push('/images/missiondata/oblivionexpress/topbaselong_protoss.jpg');imgList.push('/images/missiondata/oblivionexpress/topbaselong_terran.jpg');imgList.push('/images/missiondata/oblivionexpress/topbaselong_zerg.jpg');preload(imgList);</script>    <p>The bottom base is shown below.</p>
-    <div class='switcher'><div class='long' id='bottombaselongdiv'><img id ='bottombaselong' src=' /images/missiondata/oblivionexpress/bottombaselong_protoss.jpg' alt='bottombaselong Picture'></div><div class = 'baseMinimap'><form action='#'><label><input type='radio' name='bottombaselong' value='protoss' checked>Protoss</label><br><label><input type='radio' name='bottombaselong' value='terran'>Terran</label><br><label><input type='radio' name='bottombaselong' value='zerg'>Zerg</label><br></form><br><br><div><img src='/images/missiondata/oblivionexpress/bottombaselongminimap.jpg' alt='bottombaselong Minimap'></div></div></div><script>$("input[name='bottombaselong']").change(function(){var race= $(this).val();var oldImg = $('#bottombaselong');var img = new Image();img.src = '/images/missiondata/oblivionexpress/bottombaselong_'+ race + '.jpg';var newImg = $(img).hide();$('#bottombaselongdiv').append(img);oldImg.stop(true).fadeOut(500, function() {   $(this).remove();});newImg.fadeIn(500);newImg.attr('id', 'bottombaselong');return false;});var imgList=[];imgList.push('/images/missiondata/oblivionexpress/bottombaselong_protoss.jpg');imgList.push('/images/missiondata/oblivionexpress/bottombaselong_terran.jpg');imgList.push('/images/missiondata/oblivionexpress/bottombaselong_zerg.jpg');preload(imgList);</script>    <a id="bonus"></a><h2>Completing the Bonus Objective</h2>
+    <div class='switcher'><div class='long' id='bottombaselongdiv'><img id ='bottombaselong' src=' /images/missiondata/oblivionexpress/bottombaselong_protoss.jpg' alt='bottombaselong Picture'></div><div class = 'baseMinimap'><form action='#'><label><input type='radio' name='bottombaselong' value='protoss' checked>Protoss</label><br><label><input type='radio' name='bottombaselong' value='terran'>Terran</label><br><label><input type='radio' name='bottombaselong' value='zerg'>Zerg</label><br></form><br><br><div><img src='/images/missiondata/oblivionexpress/bottombaselongminimap.jpg' alt='bottombaselong Minimap'></div></div></div><script>$("input[name='bottombaselong']").change(function(){var race= $(this).val();var oldImg = $('#bottombaselong');var img = new Image();img.src = '/images/missiondata/oblivionexpress/bottombaselong_'+ race + '.jpg';var newImg = $(img).hide();$('#bottombaselongdiv').append(img);oldImg.stop(true).fadeOut(500, function() {   $(this).remove();});newImg.fadeIn(500);newImg.attr('id', 'bottombaselong');return false;});var imgList=[];imgList.push('/images/missiondata/oblivionexpress/bottombaselong_protoss.jpg');imgList.push('/images/missiondata/oblivionexpress/bottombaselong_terran.jpg');imgList.push('/images/missiondata/oblivionexpress/bottombaselong_zerg.jpg');preload(imgList);</script>    <h2 id="bonus">Completing the Bonus Objective</h2>
     <p>The bonus objective requires you to kill two fast trains that will spawn on the bottom rail. The path these bonus objectives will take is shown below.</p>
     <img src="/images/missiondata/oblivionexpress/bonusobjectivepath.jpg" alt="Path Taken by the Bonus Objectives">
-    <a id="timings"></a><h2>Timings</h2>
+    <h2 id="timings">Timings</h2>
     <p>Note: Information on Tech and Strength levels can be found on the <a href="/guides/enemycomps">Enemy Compositions</a> page.</p>
     <p>There are two timings of interest in this mission:</p>
     <ul>
@@ -398,7 +398,7 @@
         </tbody>
     </table>
     <p>The bonus objectives will spawn at 12:00 and 21:00 respectively.</p>
-    <a id="spawnPoints"></a><h2>Spawn Points</h2>
+    <h2 id="spawnPoints">Spawn Points</h2>
     <p>The spawn points for attack waves and escort waves are different.</p>
     <p>The attack wave gather points are dependent on which side the attack wave comes from. The Northern gather point is shown below. This is, in essence, the start of the top rail.</p>
     <img src="/images/missiondata/oblivionexpress/northerngatherpoint.jpg" alt="Northern Gather Point">
@@ -409,11 +409,11 @@
     <img src="/images/missiondata/oblivionexpress/topescortspawnpoint.jpg" alt="Spawn Points of the Top Escort">
     <p>For the middle rail, the spawn points for the escorts are shown below.</p>
     <img src="/images/missiondata/oblivionexpress/midescortspawnpoint.jpg" alt="Spawn Points of the Middle Escort">
-    <a id="misTips"></a><h2>Mission Tips</h2>
+    <h2 id="misTips">Mission Tips</h2>
     <ul>
         <li>If you choose to build static defense, build it in the area west of your main, where both rails move towards each other.</li>
     </ul>
-    <a id="comTips"></a><h2>Commander-specific Tips</h2>
+    <h2 id="comTips">Commander-specific Tips</h2>
     <ul>
         <li><a href="/commanders/abathur">Abathur</a>: Place Toxic Nests outside the north ramp and lure the first attack wave into it to get biomass.</li>
         <li><a href="/commanders/artanis">Artanis</a>: If you choose to use Tempests on this mission, the Disintegration ability can be used on each train carriage, compounding the total damage you can do to the train.</li>
@@ -435,3 +435,5 @@
 </div>
 </body>
 </html>
+
+<script src="/scripts/nav.js"></script>

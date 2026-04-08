@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="apple-touch-icon" href="/images/apple-touch-icon.png"/>
 <link rel='shortcut icon' href='/images/favicon.ico' type='image/x-icon' />
-<link rel="stylesheet"  media="all" type="text/css" href="/styles/mainstyle.css?v=1.32">
+<link rel="stylesheet"  media="all" type="text/css" href="/styles/mainstyle.css?v=1.32b">
 <link rel="stylesheet" href="/styles/fontawesome/fontawesome-solid-5-home.css" />
 <link href='https://fonts.googleapis.com/css?family=Convergence' rel='stylesheet' type='text/css'>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -27,7 +27,7 @@
     <li class="normal"><a href="/" aria-label="Home" title="Home"><i class="fas fa-home" aria-hidden="true"></i></a></li>
     <li class="normal"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-commanders">Commanders</a></li>
     <li class="normal"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-resources">Guides</a></li>
-    <li class="normal"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-missions">Missions</a></li>
+    <li class="highlight"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-missions">Missions</a></li>
     <li class="normal"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-about">About</a></li>
 </ul>
 <div id="container">
@@ -65,7 +65,7 @@
         <a href="/missions/scytheofamon" class="normal"><img src="/images/missionthumbnails/scytheofamon.png" alt="Scythe Of Amon"></a>
         <a href="/missions/templeofthepast" class="normal"><img src="/images/missionthumbnails/templeofthepast.png" alt="Temple of the Past"></a>
         <a href="/missions/thevermillionproblem" class="normal"><img src="/images/missionthumbnails/thevermillionproblem.png" alt="The Vermillion Problem"></a>
-        <a href="/missions/voidlaunch" class="normal"><img src="/images/missionthumbnails/voidlaunch.png" alt="Void Launch"></a>
+        <a href="/missions/voidlaunch" class="highlight"><img src="/images/missionthumbnails/voidlaunch.png" alt="Void Launch"></a>
         <a href="/missions/voidthrashing" class="normal"><img src="/images/missionthumbnails/voidthrashing.png" alt="Void Thrashing"></a>
     </div>
     <div id="guideList" class="submenu">
@@ -192,8 +192,8 @@
 <div id="content">
     <h1>Co-op Mission Guide: Void Launch</h1>
     <p id="missionPlace">Kaldir</p>
+        <div id="links">
         <h2>Sections on this Page</h2>
-    <div id="links">
         <p><a href="#misSum">Mission Summary</a></p>
         <p><a href="#objectives">Objectives</a></p>
         <p><a href="#baseAnalysis">Enemy Base Analysis</a></p>
@@ -203,9 +203,9 @@
         <p><a href="#misTips">Mission Tips</a></p>
         <p><a href="#comTips">Commander-Specific Tips</a></p>
     </div>
-    <a id="misSum"></a><h2>Mission Summary</h2>
+    <h2 id="misSum">Mission Summary</h2>
     <p>Amon is using Kaldir's warp conduits to transport his troops across the sector. Destroy the shuttles carrying the troops before they reach the warp conduits.</p>
-    <a id="objectives"></a><h2>Objectives</h2>
+    <h2 id="objectives">Objectives</h2>
     <h3>Primary Objective</h3>
         <ul>
             <li>Destroy Shuttles (7 Waves).</li>
@@ -215,7 +215,7 @@
         <ul>
             <li>Escort Scientists to Xel'Naga Shrines (3)</li>
         </ul>
-    <a id="baseAnalysis"></a><h2>Enemy Base Analysis</h2>
+    <h2 id="baseAnalysis">Enemy Base Analysis</h2>
     <div id="globalRaceSelect">
         <p>Change all base analysis pictures to race:</p>
         <form action="#">
@@ -239,7 +239,7 @@
     <p>The base on the far left is shown below:</p>
     <div class='switcher'><div class='long' id='leftbaselongdiv'><img id ='leftbaselong' src=' /images/missiondata/voidlaunch/leftbaselong_protoss.jpg' alt='leftbaselong Picture'></div><div class = 'baseMinimap'><form action='#'><label><input type='radio' name='leftbaselong' value='protoss' checked>Protoss</label><br><label><input type='radio' name='leftbaselong' value='terran'>Terran</label><br><label><input type='radio' name='leftbaselong' value='zerg'>Zerg</label><br></form><br><br><div><img src='/images/missiondata/voidlaunch/leftbaselongminimap.jpg' alt='leftbaselong Minimap'></div></div></div><script>$("input[name='leftbaselong']").change(function(){var race= $(this).val();var oldImg = $('#leftbaselong');var img = new Image();img.src = '/images/missiondata/voidlaunch/leftbaselong_'+ race + '.jpg';var newImg = $(img).hide();$('#leftbaselongdiv').append(img);oldImg.stop(true).fadeOut(500, function() {   $(this).remove();});newImg.fadeIn(500);newImg.attr('id', 'leftbaselong');return false;});var imgList=[];imgList.push('/images/missiondata/voidlaunch/leftbaselong_protoss.jpg');imgList.push('/images/missiondata/voidlaunch/leftbaselong_terran.jpg');imgList.push('/images/missiondata/voidlaunch/leftbaselong_zerg.jpg');preload(imgList);</script>    <p>To the East of this base is a smaller base guarding the middle bay. This is the least heavily defended base present. However, it can only be accessed through one of the other two bases:</p>
     <div class='switcher'><div class='long' id='midbaselongdiv'><img id ='midbaselong' src=' /images/missiondata/voidlaunch/midbaselong_protoss.jpg' alt='midbaselong Picture'></div><div class = 'baseMinimap'><form action='#'><label><input type='radio' name='midbaselong' value='protoss' checked>Protoss</label><br><label><input type='radio' name='midbaselong' value='terran'>Terran</label><br><label><input type='radio' name='midbaselong' value='zerg'>Zerg</label><br></form><br><br><div><img src='/images/missiondata/voidlaunch/midbaselongminimap.jpg' alt='midbaselong Minimap'></div></div></div><script>$("input[name='midbaselong']").change(function(){var race= $(this).val();var oldImg = $('#midbaselong');var img = new Image();img.src = '/images/missiondata/voidlaunch/midbaselong_'+ race + '.jpg';var newImg = $(img).hide();$('#midbaselongdiv').append(img);oldImg.stop(true).fadeOut(500, function() {   $(this).remove();});newImg.fadeIn(500);newImg.attr('id', 'midbaselong');return false;});var imgList=[];imgList.push('/images/missiondata/voidlaunch/midbaselong_protoss.jpg');imgList.push('/images/missiondata/voidlaunch/midbaselong_terran.jpg');imgList.push('/images/missiondata/voidlaunch/midbaselong_zerg.jpg');preload(imgList);</script>    <p>The base on the far right is shown below:</p>
-    <div class='switcher'><div class='long' id='rightbaselongdiv'><img id ='rightbaselong' src=' /images/missiondata/voidlaunch/rightbaselong_protoss.jpg' alt='rightbaselong Picture'></div><div class = 'baseMinimap'><form action='#'><label><input type='radio' name='rightbaselong' value='protoss' checked>Protoss</label><br><label><input type='radio' name='rightbaselong' value='terran'>Terran</label><br><label><input type='radio' name='rightbaselong' value='zerg'>Zerg</label><br></form><br><br><div><img src='/images/missiondata/voidlaunch/rightbaselongminimap.jpg' alt='rightbaselong Minimap'></div></div></div><script>$("input[name='rightbaselong']").change(function(){var race= $(this).val();var oldImg = $('#rightbaselong');var img = new Image();img.src = '/images/missiondata/voidlaunch/rightbaselong_'+ race + '.jpg';var newImg = $(img).hide();$('#rightbaselongdiv').append(img);oldImg.stop(true).fadeOut(500, function() {   $(this).remove();});newImg.fadeIn(500);newImg.attr('id', 'rightbaselong');return false;});var imgList=[];imgList.push('/images/missiondata/voidlaunch/rightbaselong_protoss.jpg');imgList.push('/images/missiondata/voidlaunch/rightbaselong_terran.jpg');imgList.push('/images/missiondata/voidlaunch/rightbaselong_zerg.jpg');preload(imgList);</script>    <a id="bonus"></a><h2>Completing the Bonus Objective</h2>
+    <div class='switcher'><div class='long' id='rightbaselongdiv'><img id ='rightbaselong' src=' /images/missiondata/voidlaunch/rightbaselong_protoss.jpg' alt='rightbaselong Picture'></div><div class = 'baseMinimap'><form action='#'><label><input type='radio' name='rightbaselong' value='protoss' checked>Protoss</label><br><label><input type='radio' name='rightbaselong' value='terran'>Terran</label><br><label><input type='radio' name='rightbaselong' value='zerg'>Zerg</label><br></form><br><br><div><img src='/images/missiondata/voidlaunch/rightbaselongminimap.jpg' alt='rightbaselong Minimap'></div></div></div><script>$("input[name='rightbaselong']").change(function(){var race= $(this).val();var oldImg = $('#rightbaselong');var img = new Image();img.src = '/images/missiondata/voidlaunch/rightbaselong_'+ race + '.jpg';var newImg = $(img).hide();$('#rightbaselongdiv').append(img);oldImg.stop(true).fadeOut(500, function() {   $(this).remove();});newImg.fadeIn(500);newImg.attr('id', 'rightbaselong');return false;});var imgList=[];imgList.push('/images/missiondata/voidlaunch/rightbaselong_protoss.jpg');imgList.push('/images/missiondata/voidlaunch/rightbaselong_terran.jpg');imgList.push('/images/missiondata/voidlaunch/rightbaselong_zerg.jpg');preload(imgList);</script>    <h2 id="bonus">Completing the Bonus Objective</h2>
     <div id="objectiveImages">
         <img src="/images/missiondata/voidlaunch/researchvessel.jpg" alt="Research Vessel">
         <img src="/images/missiondata/voidlaunch/researchvessel.jpg" alt="Research Vessel">
@@ -249,7 +249,7 @@
     <p>The first Shrine is guarded by a very small force of enemy units.</p>
     <div class='switcher'><div class='basePic' id='shrine1div'><img id ='shrine1' src=' /images/missiondata/voidlaunch/shrine1_protoss.jpg' alt='shrine1 Picture'></div><div class = 'baseMinimap'><form action='#'><label><input type='radio' name='shrine1' value='protoss' checked>Protoss</label><br><label><input type='radio' name='shrine1' value='terran'>Terran</label><br><label><input type='radio' name='shrine1' value='zerg'>Zerg</label><br></form><br><br><div><img src='/images/missiondata/voidlaunch/shrine1minimap.jpg' alt='shrine1 Minimap'></div></div></div><script>$("input[name='shrine1']").change(function(){var race= $(this).val();var oldImg = $('#shrine1');var img = new Image();img.src = '/images/missiondata/voidlaunch/shrine1_'+ race + '.jpg';var newImg = $(img).hide();$('#shrine1div').append(img);oldImg.stop(true).fadeOut(500, function() {   $(this).remove();});newImg.fadeIn(500);newImg.attr('id', 'shrine1');return false;});var imgList=[];imgList.push('/images/missiondata/voidlaunch/shrine1_protoss.jpg');imgList.push('/images/missiondata/voidlaunch/shrine1_terran.jpg');imgList.push('/images/missiondata/voidlaunch/shrine1_zerg.jpg');preload(imgList);</script>    <p>The second Shrine is guarded by a relatively strong force of units.</p>
     <div class='switcher'><div class='basePic' id='shrine2div'><img id ='shrine2' src=' /images/missiondata/voidlaunch/shrine2_protoss.jpg' alt='shrine2 Picture'></div><div class = 'baseMinimap'><form action='#'><label><input type='radio' name='shrine2' value='protoss' checked>Protoss</label><br><label><input type='radio' name='shrine2' value='terran'>Terran</label><br><label><input type='radio' name='shrine2' value='zerg'>Zerg</label><br></form><br><br><div><img src='/images/missiondata/voidlaunch/shrine2minimap.jpg' alt='shrine2 Minimap'></div></div></div><script>$("input[name='shrine2']").change(function(){var race= $(this).val();var oldImg = $('#shrine2');var img = new Image();img.src = '/images/missiondata/voidlaunch/shrine2_'+ race + '.jpg';var newImg = $(img).hide();$('#shrine2div').append(img);oldImg.stop(true).fadeOut(500, function() {   $(this).remove();});newImg.fadeIn(500);newImg.attr('id', 'shrine2');return false;});var imgList=[];imgList.push('/images/missiondata/voidlaunch/shrine2_protoss.jpg');imgList.push('/images/missiondata/voidlaunch/shrine2_terran.jpg');imgList.push('/images/missiondata/voidlaunch/shrine2_zerg.jpg');preload(imgList);</script>    <p>The last Shrine is guarded by an enemy camp which will require a significant force to clear.</p>
-    <div class='switcher'><div class='long' id='shrine3longdiv'><img id ='shrine3long' src=' /images/missiondata/voidlaunch/shrine3long_protoss.jpg' alt='shrine3long Picture'></div><div class = 'baseMinimap'><form action='#'><label><input type='radio' name='shrine3long' value='protoss' checked>Protoss</label><br><label><input type='radio' name='shrine3long' value='terran'>Terran</label><br><label><input type='radio' name='shrine3long' value='zerg'>Zerg</label><br></form><br><br><div><img src='/images/missiondata/voidlaunch/shrine3longminimap.jpg' alt='shrine3long Minimap'></div></div></div><script>$("input[name='shrine3long']").change(function(){var race= $(this).val();var oldImg = $('#shrine3long');var img = new Image();img.src = '/images/missiondata/voidlaunch/shrine3long_'+ race + '.jpg';var newImg = $(img).hide();$('#shrine3longdiv').append(img);oldImg.stop(true).fadeOut(500, function() {   $(this).remove();});newImg.fadeIn(500);newImg.attr('id', 'shrine3long');return false;});var imgList=[];imgList.push('/images/missiondata/voidlaunch/shrine3long_protoss.jpg');imgList.push('/images/missiondata/voidlaunch/shrine3long_terran.jpg');imgList.push('/images/missiondata/voidlaunch/shrine3long_zerg.jpg');preload(imgList);</script>    <a id="timings"></a><h2>Timings</h2>
+    <div class='switcher'><div class='long' id='shrine3longdiv'><img id ='shrine3long' src=' /images/missiondata/voidlaunch/shrine3long_protoss.jpg' alt='shrine3long Picture'></div><div class = 'baseMinimap'><form action='#'><label><input type='radio' name='shrine3long' value='protoss' checked>Protoss</label><br><label><input type='radio' name='shrine3long' value='terran'>Terran</label><br><label><input type='radio' name='shrine3long' value='zerg'>Zerg</label><br></form><br><br><div><img src='/images/missiondata/voidlaunch/shrine3longminimap.jpg' alt='shrine3long Minimap'></div></div></div><script>$("input[name='shrine3long']").change(function(){var race= $(this).val();var oldImg = $('#shrine3long');var img = new Image();img.src = '/images/missiondata/voidlaunch/shrine3long_'+ race + '.jpg';var newImg = $(img).hide();$('#shrine3longdiv').append(img);oldImg.stop(true).fadeOut(500, function() {   $(this).remove();});newImg.fadeIn(500);newImg.attr('id', 'shrine3long');return false;});var imgList=[];imgList.push('/images/missiondata/voidlaunch/shrine3long_protoss.jpg');imgList.push('/images/missiondata/voidlaunch/shrine3long_terran.jpg');imgList.push('/images/missiondata/voidlaunch/shrine3long_zerg.jpg');preload(imgList);</script>    <h2 id="timings">Timings</h2>
     <p>Note: Information on Tech and Strength levels can be found on the <a href="/guides/enemycomps">Enemy Compositions</a> page.</p>
     <p>Shuttle Timings, Headings, Escort Strength and Tech Levels for this mission are shown below. Note that wave #7 will occur in one of three different patterns, all listed in the table.</p>
     <div class="tableContainer">
@@ -560,15 +560,15 @@
         <li>14:48</li>
         <li>19:48</li>
     </ul>
-    <a id="spawnPoints"></a><h2>Spawn Points</h2>
+    <h2 id="spawnPoints">Spawn Points</h2>
     <p>All the shuttles and their escorts will spawn from the launch bays. However, there are two other spawning points, dedicated for the attack waves that attack player bases. These are located near the two entrances to the enemy bases on the map on either side of the first Xel'Naga Shrine. These are shown below.</p>
     <img src="/images/missiondata/voidlaunch/attackwavespawnpoints.jpg" alt="Attack Wave Spawn Points">
-    <a id="misTips"></a><h2>Mission Tips</h2>
+    <h2 id="misTips">Mission Tips</h2>
     <ul>
         <li>Clearing the enemy bases early can give you access to two additional expansions for an even greater foothold in the game.</li>
         <li>Once the enemies around a bay is cleared, build anti-air static defenses to instantly shoot down shuttles as they spawn.</li>
     </ul>
-    <a id="comTips"></a><h2>Commander-specific Tips</h2>
+    <h2 id="comTips">Commander-specific Tips</h2>
     <ul>
         <li><a href="/commanders/abathur">Abathur</a>: Place Toxic Nests on attack wave spawn locations to weaken them.</li>
         <li><a href="/commanders/dehaka">Dehaka</a>: Get your early Essence by attacking the enemies near the first Xel'Naga Shrine.</li>
@@ -586,3 +586,5 @@
 </div>
 </body>
 </html>
+
+<script src="/scripts/nav.js"></script>

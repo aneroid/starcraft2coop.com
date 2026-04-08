@@ -75,22 +75,22 @@ $pages = [
 
 ];
 
-$HTML_DIR = '/html';
+$HTML_DIR = __DIR__ . '/html';
 $_SERVER['ADMIN_KEY'] = $ADMIN_KEY;
 $_SERVER['SERVER_NAME'] = $SERVER_NAME;
 
 foreach ($pages as $page) {
     $_SERVER['REQUEST_URI'] = "$page";
-    $_SERVER['PHP_SELF'] = __DIR__ . "/html$page.php";
-    $pageDir = __DIR__ . $HTML_DIR . dirname($page);
+    $_SERVER['PHP_SELF'] = "$page.php";
+    $pageDir = $HTML_DIR . dirname($page);
     chdir($pageDir);
 
     ob_start();
-    require __DIR__ . $HTML_DIR . "$page.php";
+    require $HTML_DIR . "$page.php";
     $html = ob_get_clean();
     $html = str_replace("\r\n", "\n", $html);
 
-    $result = file_put_contents(__DIR__ . $HTML_DIR . "$page.html", $html);
+    $result = file_put_contents($HTML_DIR . "$page.html", $html);
     if (!$result) {
         echo "Error writing $page.html\n";
     } else {

@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="apple-touch-icon" href="/images/apple-touch-icon.png"/>
 <link rel='shortcut icon' href='/images/favicon.ico' type='image/x-icon' />
-<link rel="stylesheet"  media="all" type="text/css" href="/styles/mainstyle.css?v=1.32">
+<link rel="stylesheet"  media="all" type="text/css" href="/styles/mainstyle.css?v=1.32b">
 <link rel="stylesheet" href="/styles/fontawesome/fontawesome-solid-5-home.css" />
 <link href='https://fonts.googleapis.com/css?family=Convergence' rel='stylesheet' type='text/css'>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -27,7 +27,7 @@
     <li class="normal"><a href="/" aria-label="Home" title="Home"><i class="fas fa-home" aria-hidden="true"></i></a></li>
     <li class="normal"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-commanders">Commanders</a></li>
     <li class="normal"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-resources">Guides</a></li>
-    <li class="normal"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-missions">Missions</a></li>
+    <li class="highlight"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-missions">Missions</a></li>
     <li class="normal"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-about">About</a></li>
 </ul>
 <div id="container">
@@ -55,7 +55,7 @@
         <a href="/missions/chainofascension" class="normal"><img src="/images/missionthumbnails/chainofascension.png" alt="Chain of Ascension"></a>
         <a href="/missions/cradleofdeath" class="normal"><img src="/images/missionthumbnails/cradleofdeath.png" alt="Cradle of Death"></a>
         <a href="/missions/deadofnight" class="normal"><img src="/images/missionthumbnails/deadofnight.png" alt="Dead of Night"></a>
-        <a href="/missions/lockload" class="normal"><img src="/images/missionthumbnails/lockload.png" alt="Lock & Load"></a>
+        <a href="/missions/lockload" class="highlight"><img src="/images/missionthumbnails/lockload.png" alt="Lock & Load"></a>
         <a href="/missions/malwarfare" class="normal"><img src="/images/missionthumbnails/malwarfare.png" alt="Malwarfare"></a>
         <a href="/missions/minerevacuation" class="normal"><img src="/images/missionthumbnails/minerevacuation.png" alt="Miner Evacuation"></a>
         <a href="/missions/mistopportunities" class="normal"><img src="/images/missionthumbnails/mistopportunities.png" alt="Mist Opportunities"></a>
@@ -192,8 +192,8 @@
 <div id="content">
     <h1>Co-op Mission Guide: Lock & Load</h1>
     <p id="missionPlace">Ulnar</p>
+        <div id="links">
         <h2>Sections on this Page</h2>
-    <div id="links">
         <p><a href="#misSum">Mission Summary</a></p>
         <p><a href="#objectives">Objectives</a></p>
         <p><a href="#baseAnalysis">Enemy Base Analysis</a></p>
@@ -203,9 +203,9 @@
         <p><a href="#misTips">Mission Tips</a></p>
         <p><a href="#comTips">Commander-Specific Tips</a></p>
     </div>
-    <a id="misSum"></a><h2>Mission Summary</h2>
+    <h2 id="misSum">Mission Summary</h2>
     <p>Amon seeks to destroy Ulnar before it can be used to open a gate to the Void. You and your ally must take control of the celestial locks before their energies overload.</p>
-    <a id="objectives"></a><h2>Objectives</h2>
+    <h2 id="objectives">Objectives</h2>
     <h3>Primary Objective</h3>
         <ul>
             <li>Activate Celestial Locks (5)</li>
@@ -215,7 +215,7 @@
         <ul>
             <li>Destroy the Xel'Naga Construct (1)</li>
         </ul>
-    <a id="baseAnalysis"></a><h2>Enemy Base Analysis</h2>
+    <h2 id="baseAnalysis">Enemy Base Analysis</h2>
     <div id="globalRaceSelect">
         <p>Change all base analysis pictures to race:</p>
         <form action="#">
@@ -287,13 +287,13 @@
     <div class='switcher'><div class='basePic' id='lock_e_topcampdiv'><img id ='lock_e_topcamp' src=' /images/missiondata/lockload/lock_e_topcamp_protoss.jpg' alt='lock_e_topcamp Picture'></div><div class = 'baseMinimap'><form action='#'><label><input type='radio' name='lock_e_topcamp' value='protoss' checked>Protoss</label><br><label><input type='radio' name='lock_e_topcamp' value='terran'>Terran</label><br><label><input type='radio' name='lock_e_topcamp' value='zerg'>Zerg</label><br></form><br><br><div><img src='/images/missiondata/lockload/lock_e_topcampminimap.jpg' alt='lock_e_topcamp Minimap'></div></div></div><script>$("input[name='lock_e_topcamp']").change(function(){var race= $(this).val();var oldImg = $('#lock_e_topcamp');var img = new Image();img.src = '/images/missiondata/lockload/lock_e_topcamp_'+ race + '.jpg';var newImg = $(img).hide();$('#lock_e_topcampdiv').append(img);oldImg.stop(true).fadeOut(500, function() {   $(this).remove();});newImg.fadeIn(500);newImg.attr('id', 'lock_e_topcamp');return false;});var imgList=[];imgList.push('/images/missiondata/lockload/lock_e_topcamp_protoss.jpg');imgList.push('/images/missiondata/lockload/lock_e_topcamp_terran.jpg');imgList.push('/images/missiondata/lockload/lock_e_topcamp_zerg.jpg');preload(imgList);</script>    <p>The Eastern Lock is well-defended by Capital Ships and a Hybrid Dominator.</p>
     <div class='switcher'><div class='basePic' id='lock_ediv'><img id ='lock_e' src=' /images/missiondata/lockload/lock_e_protoss.jpg' alt='lock_e Picture'></div><div class = 'baseMinimap'><form action='#'><label><input type='radio' name='lock_e' value='protoss' checked>Protoss</label><br><label><input type='radio' name='lock_e' value='terran'>Terran</label><br><label><input type='radio' name='lock_e' value='zerg'>Zerg</label><br></form><br><br><div><img src='/images/missiondata/lockload/lock_eminimap.jpg' alt='lock_e Minimap'></div></div></div><script>$("input[name='lock_e']").change(function(){var race= $(this).val();var oldImg = $('#lock_e');var img = new Image();img.src = '/images/missiondata/lockload/lock_e_'+ race + '.jpg';var newImg = $(img).hide();$('#lock_ediv').append(img);oldImg.stop(true).fadeOut(500, function() {   $(this).remove();});newImg.fadeIn(500);newImg.attr('id', 'lock_e');return false;});var imgList=[];imgList.push('/images/missiondata/lockload/lock_e_protoss.jpg');imgList.push('/images/missiondata/lockload/lock_e_terran.jpg');imgList.push('/images/missiondata/lockload/lock_e_zerg.jpg');preload(imgList);</script>    <p>The last Lock that has to be captured is the Northern Lock. Like the Eastern Lock, there are two ramps that can be used to access it. The Southern ramp is guarded by a small force of units.</p>
     <div class='switcher'><div class='basePic' id='lock_n_rampguarddiv'><img id ='lock_n_rampguard' src=' /images/missiondata/lockload/lock_n_rampguard_protoss.jpg' alt='lock_n_rampguard Picture'></div><div class = 'baseMinimap'><form action='#'><label><input type='radio' name='lock_n_rampguard' value='protoss' checked>Protoss</label><br><label><input type='radio' name='lock_n_rampguard' value='terran'>Terran</label><br><label><input type='radio' name='lock_n_rampguard' value='zerg'>Zerg</label><br></form><br><br><div><img src='/images/missiondata/lockload/lock_n_rampguardminimap.jpg' alt='lock_n_rampguard Minimap'></div></div></div><script>$("input[name='lock_n_rampguard']").change(function(){var race= $(this).val();var oldImg = $('#lock_n_rampguard');var img = new Image();img.src = '/images/missiondata/lockload/lock_n_rampguard_'+ race + '.jpg';var newImg = $(img).hide();$('#lock_n_rampguarddiv').append(img);oldImg.stop(true).fadeOut(500, function() {   $(this).remove();});newImg.fadeIn(500);newImg.attr('id', 'lock_n_rampguard');return false;});var imgList=[];imgList.push('/images/missiondata/lockload/lock_n_rampguard_protoss.jpg');imgList.push('/images/missiondata/lockload/lock_n_rampguard_terran.jpg');imgList.push('/images/missiondata/lockload/lock_n_rampguard_zerg.jpg');preload(imgList);</script>    <p>If you choose to go up the Eastern ramp, you can bypass the above force entirely.</p>
-    <div class='switcher'><div class='basePic' id='lock_ndiv'><img id ='lock_n' src=' /images/missiondata/lockload/lock_n_protoss.jpg' alt='lock_n Picture'></div><div class = 'baseMinimap'><form action='#'><label><input type='radio' name='lock_n' value='protoss' checked>Protoss</label><br><label><input type='radio' name='lock_n' value='terran'>Terran</label><br><label><input type='radio' name='lock_n' value='zerg'>Zerg</label><br></form><br><br><div><img src='/images/missiondata/lockload/lock_nminimap.jpg' alt='lock_n Minimap'></div></div></div><script>$("input[name='lock_n']").change(function(){var race= $(this).val();var oldImg = $('#lock_n');var img = new Image();img.src = '/images/missiondata/lockload/lock_n_'+ race + '.jpg';var newImg = $(img).hide();$('#lock_ndiv').append(img);oldImg.stop(true).fadeOut(500, function() {   $(this).remove();});newImg.fadeIn(500);newImg.attr('id', 'lock_n');return false;});var imgList=[];imgList.push('/images/missiondata/lockload/lock_n_protoss.jpg');imgList.push('/images/missiondata/lockload/lock_n_terran.jpg');imgList.push('/images/missiondata/lockload/lock_n_zerg.jpg');preload(imgList);</script>    <a id="bonus"></a><h2>Completing the Bonus Objective</h2>
+    <div class='switcher'><div class='basePic' id='lock_ndiv'><img id ='lock_n' src=' /images/missiondata/lockload/lock_n_protoss.jpg' alt='lock_n Picture'></div><div class = 'baseMinimap'><form action='#'><label><input type='radio' name='lock_n' value='protoss' checked>Protoss</label><br><label><input type='radio' name='lock_n' value='terran'>Terran</label><br><label><input type='radio' name='lock_n' value='zerg'>Zerg</label><br></form><br><br><div><img src='/images/missiondata/lockload/lock_nminimap.jpg' alt='lock_n Minimap'></div></div></div><script>$("input[name='lock_n']").change(function(){var race= $(this).val();var oldImg = $('#lock_n');var img = new Image();img.src = '/images/missiondata/lockload/lock_n_'+ race + '.jpg';var newImg = $(img).hide();$('#lock_ndiv').append(img);oldImg.stop(true).fadeOut(500, function() {   $(this).remove();});newImg.fadeIn(500);newImg.attr('id', 'lock_n');return false;});var imgList=[];imgList.push('/images/missiondata/lockload/lock_n_protoss.jpg');imgList.push('/images/missiondata/lockload/lock_n_terran.jpg');imgList.push('/images/missiondata/lockload/lock_n_zerg.jpg');preload(imgList);</script>    <h2 id="bonus">Completing the Bonus Objective</h2>
     <div id="objectiveImages">
         <img src="/images/missiondata/lockload/xelnagaconstruct.jpg" alt="Xel'Naga Construct">
     </div>
     <p>The bonus objective requires you to kill the Xel'Naga Construct. The Construct is guarded by a small force of enemy units as shown below.</p>
     <div class='switcher'><div class='basePic' id='xelnagaconstructdiv'><img id ='xelnagaconstruct' src=' /images/missiondata/lockload/xelnagaconstruct_protoss.jpg' alt='xelnagaconstruct Picture'></div><div class = 'baseMinimap'><form action='#'><label><input type='radio' name='xelnagaconstruct' value='protoss' checked>Protoss</label><br><label><input type='radio' name='xelnagaconstruct' value='terran'>Terran</label><br><label><input type='radio' name='xelnagaconstruct' value='zerg'>Zerg</label><br></form><br><br><div><img src='/images/missiondata/lockload/xelnagaconstructminimap.jpg' alt='xelnagaconstruct Minimap'></div></div></div><script>$("input[name='xelnagaconstruct']").change(function(){var race= $(this).val();var oldImg = $('#xelnagaconstruct');var img = new Image();img.src = '/images/missiondata/lockload/xelnagaconstruct_'+ race + '.jpg';var newImg = $(img).hide();$('#xelnagaconstructdiv').append(img);oldImg.stop(true).fadeOut(500, function() {   $(this).remove();});newImg.fadeIn(500);newImg.attr('id', 'xelnagaconstruct');return false;});var imgList=[];imgList.push('/images/missiondata/lockload/xelnagaconstruct_protoss.jpg');imgList.push('/images/missiondata/lockload/xelnagaconstruct_terran.jpg');imgList.push('/images/missiondata/lockload/xelnagaconstruct_zerg.jpg');preload(imgList);</script>    <p>The Xel'Naga Construct can be quite difficult to kill in the early game. Usually, it is much easier to kill it on the way to Northern Lock if that is the last Lock to be captured.</p>
-    <a id="timings"></a><h2>Timings</h2>
+    <h2 id="timings">Timings</h2>
     <p>Note: Information on Tech and Strength levels can be found on the <a href="/guides/enemycomps">Enemy Compositions</a> page.</p>
     <p>Enemy attack waves will target certain Locks first. The first player-captured Lock on their list will be their target. If all the Locks on their list are overloaded (ie. enemy-controlled), they will target your base.</p>
     <p>The attack wave timings, Strength and Tech Levels, and their Lock targets are shown below. Here, "O" stands for the middle lock.</p>
@@ -394,17 +394,17 @@
         </tbody>
     </table>
     <p>The pattern above will repeat every 2 minutes indefinitely.</p>
-    <a id="spawnPoints"></a><h2>Spawn Points</h2>
+    <h2 id="spawnPoints">Spawn Points</h2>
     <p>Attack waves have two gather points each on the left and on the right side of the map. The gather point selected will be the closest to the target. In most cases, the Northern gather point will be selected. The Southern gather point is only selected if the attack wave ends up targeting a player's base.</p>
     <p>The gather points on the left side of the map are shown below:</p>
     <img src="/images/missiondata/lockload/leftgatherpoints.jpg" alt="Left Gather Points">
     <p>The gather points on the right side of the map are shown below:</p>
     <img src="/images/missiondata/lockload/rightgatherpoints.jpg" alt="Right Gather Points">
-    <a id="misTips"></a><h2>Mission Tips</h2>
+    <h2 id="misTips">Mission Tips</h2>
     <ul>
         <li>Place static defenses on each captured Lock to grant you vision so you can defend against attack waves.</li>
     </ul>
-    <a id="comTips"></a><h2>Commander-specific Tips</h2>
+    <h2 id="comTips">Commander-specific Tips</h2>
     <ul>
         <li><a href="/commanders/abathur">Abathur</a>: Place Toxic Nests on the ramps and entrances to captured Locks to defend and get Biomass.</li>
         <li><a href="/commanders/dehaka">Dehaka</a>: Place a burrowed drone on each captured lock to give you vision for Dehaka's Deep Tunnel ability.</li>
@@ -425,3 +425,5 @@
 </div>
 </body>
 </html>
+
+<script src="/scripts/nav.js"></script>

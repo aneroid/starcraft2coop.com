@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="apple-touch-icon" href="/images/apple-touch-icon.png"/>
 <link rel='shortcut icon' href='/images/favicon.ico' type='image/x-icon' />
-<link rel="stylesheet"  media="all" type="text/css" href="/styles/mainstyle.css?v=1.32">
+<link rel="stylesheet"  media="all" type="text/css" href="/styles/mainstyle.css?v=1.32b">
 <link rel="stylesheet" href="/styles/fontawesome/fontawesome-solid-5-home.css" />
 <link href='https://fonts.googleapis.com/css?family=Convergence' rel='stylesheet' type='text/css'>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -27,7 +27,7 @@
     <li class="normal"><a href="/" aria-label="Home" title="Home"><i class="fas fa-home" aria-hidden="true"></i></a></li>
     <li class="normal"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-commanders">Commanders</a></li>
     <li class="normal"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-resources">Guides</a></li>
-    <li class="normal"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-missions">Missions</a></li>
+    <li class="highlight"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-missions">Missions</a></li>
     <li class="normal"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-about">About</a></li>
 </ul>
 <div id="container">
@@ -56,7 +56,7 @@
         <a href="/missions/cradleofdeath" class="normal"><img src="/images/missionthumbnails/cradleofdeath.png" alt="Cradle of Death"></a>
         <a href="/missions/deadofnight" class="normal"><img src="/images/missionthumbnails/deadofnight.png" alt="Dead of Night"></a>
         <a href="/missions/lockload" class="normal"><img src="/images/missionthumbnails/lockload.png" alt="Lock & Load"></a>
-        <a href="/missions/malwarfare" class="normal"><img src="/images/missionthumbnails/malwarfare.png" alt="Malwarfare"></a>
+        <a href="/missions/malwarfare" class="highlight"><img src="/images/missionthumbnails/malwarfare.png" alt="Malwarfare"></a>
         <a href="/missions/minerevacuation" class="normal"><img src="/images/missionthumbnails/minerevacuation.png" alt="Miner Evacuation"></a>
         <a href="/missions/mistopportunities" class="normal"><img src="/images/missionthumbnails/mistopportunities.png" alt="Mist Opportunities"></a>
         <a href="/missions/oblivionexpress" class="normal"><img src="/images/missionthumbnails/oblivionexpress.png" alt="Oblivion Express"></a>
@@ -192,8 +192,8 @@
 <div id="content">
     <h1>Co-op Mission Guide: Malwarfare</h1>
     <p id="missionPlace">Purifer Facility</p>
+        <div id="links">
         <h2>Sections on this Page</h2>
-    <div id="links">
         <p><a href="#misSum">Mission Summary</a></p>
         <p><a href="#objectives">Objectives</a></p>
         <p><a href="#towerOrder">Suppression Tower Order</a></p>
@@ -203,9 +203,9 @@
         <p><a href="#misTips">Mission Tips</a></p>
         <p><a href="#comTips">Commander-Specific Tips</a></p>
     </div>
-    <a id="misSum"></a><h2>Mission Summary</h2>
+    <h2 id="misSum">Mission Summary</h2>
     <p>Long ago, this protoss facility was used to convert the personalities of great warriors into AI known as the Purifiers. Researchers tested the process on a Tal'darim prisoner, whose rogue personality began to attack the facility. Now the Purifier guardian Aurana is attempting to regain control.</p>
-    <a id="objectives"></a><h2>Objectives</h2>
+    <h2 id="objectives">Objectives</h2>
     <h3>Primary Objective</h3>
         <ul>
             <li>Do not let Aurana's Transport be destroyed</li>
@@ -215,7 +215,7 @@
         <ul>
             <li>Download AI Personalities (6)</li>
         </ul>
-    <a id="towerOrder"></a><h2>Suppression Tower Order</h2>
+    <h2 id="towerOrder">Suppression Tower Order</h2>
     <div id="globalRaceSelect">
         <p>Change all base analysis pictures to race:</p>
         <form action="#">
@@ -255,12 +255,12 @@
         <li>Multi-Target Lock On: Deals 40 damage to all enemy units in the targeting circles and slows their attack speed and movement speed by 50% for 4 seconds</li>
         <li>Single-Target Lock On: Deals 150 damage to all enemy units in the targeting circle</li>
     </ul>
-    <a id="bonus"></a><h2>Completing the Bonus Objective</h2>
+    <h2 id="bonus">Completing the Bonus Objective</h2>
     <p>The bonus objective requires you to download three AI Personalities each from two beacons on the map. This is the only bonus objective that requires resources to complete. Each AI personality costs 350 Minerals/100 Gas to download. Therefore, you will require 1050 minerals/300 Gas to download all personalities for a single objective. The objective will expire exactly 4 minutes after it starts. Each beacon is defended by a force of enemy units and static defense.</p>
     <p>The first beacon is shown below.</p>
     <div class='switcher'><div class='basePic' id='beacon1div'><img id ='beacon1' src=' /images/missiondata/malwarfare/beacon1_protoss.jpg' alt='beacon1 Picture'></div><div class = 'baseMinimap'><form action='#'><label><input type='radio' name='beacon1' value='protoss' checked>Protoss</label><br><label><input type='radio' name='beacon1' value='terran'>Terran</label><br><label><input type='radio' name='beacon1' value='zerg'>Zerg</label><br></form><br><br><div><img src='/images/missiondata/malwarfare/beacon1minimap.jpg' alt='beacon1 Minimap'></div></div></div><script>$("input[name='beacon1']").change(function(){var race= $(this).val();var oldImg = $('#beacon1');var img = new Image();img.src = '/images/missiondata/malwarfare/beacon1_'+ race + '.jpg';var newImg = $(img).hide();$('#beacon1div').append(img);oldImg.stop(true).fadeOut(500, function() {   $(this).remove();});newImg.fadeIn(500);newImg.attr('id', 'beacon1');return false;});var imgList=[];imgList.push('/images/missiondata/malwarfare/beacon1_protoss.jpg');imgList.push('/images/missiondata/malwarfare/beacon1_terran.jpg');imgList.push('/images/missiondata/malwarfare/beacon1_zerg.jpg');preload(imgList);</script>    <p>The second beacon is shown below.</p>
     <div class='switcher'><div class='basePic' id='beacon2div'><img id ='beacon2' src=' /images/missiondata/malwarfare/beacon2_protoss.jpg' alt='beacon2 Picture'></div><div class = 'baseMinimap'><form action='#'><label><input type='radio' name='beacon2' value='protoss' checked>Protoss</label><br><label><input type='radio' name='beacon2' value='terran'>Terran</label><br><label><input type='radio' name='beacon2' value='zerg'>Zerg</label><br></form><br><br><div><img src='/images/missiondata/malwarfare/beacon2minimap.jpg' alt='beacon2 Minimap'></div></div></div><script>$("input[name='beacon2']").change(function(){var race= $(this).val();var oldImg = $('#beacon2');var img = new Image();img.src = '/images/missiondata/malwarfare/beacon2_'+ race + '.jpg';var newImg = $(img).hide();$('#beacon2div').append(img);oldImg.stop(true).fadeOut(500, function() {   $(this).remove();});newImg.fadeIn(500);newImg.attr('id', 'beacon2');return false;});var imgList=[];imgList.push('/images/missiondata/malwarfare/beacon2_protoss.jpg');imgList.push('/images/missiondata/malwarfare/beacon2_terran.jpg');imgList.push('/images/missiondata/malwarfare/beacon2_zerg.jpg');preload(imgList);</script>    <p>Note that when the first A.I. Personality download has been initiated, three attack waves will spawn to attack and destroy the objective. Once these are cleared, you only require vision in order to complete the rest of the downloads.</p>
-    <a id="timings"></a><h2>Timings</h2>
+    <h2 id="timings">Timings</h2>
     <p>Note: Information on Tech and Strength levels can be found on the <a href="/guides/enemycomps">Enemy Compositions</a> page.</p>
     <p>There are three different timings that will be listed in this section. These are:</p>
     <ul>
@@ -578,20 +578,20 @@
             </tr>
         </tbody>
     </table>
-    <a id="spawnPoints"></a><h2>Spawn Points</h2>
+    <h2 id="spawnPoints">Spawn Points</h2>
     <p>The spawn points for the Harass waves and Attack waves are different. Harass waves are created from a random point in the lock area.</p>
     <p>However, attack waves have a fixed number of spawn positions. Attack Waves 1 and 2 have the same possible spawn points. The spawn points for attack waves 1 and 2 are shown below.</p>
     <img src="/images/missiondata/malwarfare/wave12spawnpoint.jpg" alt="Spawn Points for Attack Waves 1 and 2">
     <p>Attack Wave 3 only has one spawn point. This is shown below.</p>
     <img src="/images/missiondata/malwarfare/wave3spawnpoint.jpg" alt="Spawn Points for Attack Waves 3">
-    <a id="misTips"></a><h2>Mission Tips</h2>
+    <h2 id="misTips">Mission Tips</h2>
     <ul>
         <li>Pay attention to Aurana's Transport while it is moving. It will slow down if enemy units attack it, giving them even more time to damage it.</li>
         <li>Aurana's Transport does not regen to full HP at the end of every Terminal. It heals a total of 5000 HP per terminal.</li>
         <li>When downloading Personalities for the bonus objective, only three attack waves will spawn in close proximity to each other. Once those attack waves are cleared, all you need is vision to download the rest. No defenses are required.</li>
         <li>Pre-clearing the areas ahead of the transport is the best way to ensure it doesn't take damage and allows you to finish the mission as fast as possible.</li>
     </ul>
-    <a id="comTips"></a><h2>Commander-specific Tips</h2>
+    <h2 id="comTips">Commander-specific Tips</h2>
     <ul>
         <li><a href="/commanders/abathur">Abathur</a>: Place Toxic Nests outside the camps at the expansions and lure the units to get early biomass.</li>
         <li><a href="/commanders/abathur">Abathur</a>: Place Toxic Nests on attack wave and suppression tower defense spawn locations to weaken them.</li>
@@ -614,3 +614,5 @@
 </div>
 </body>
 </html>
+
+<script src="/scripts/nav.js"></script>
