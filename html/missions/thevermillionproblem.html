@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png"/>
+<link rel='shortcut icon' href='/images/favicon.ico' type='image/x-icon' />
+<link rel="stylesheet"  media="all" type="text/css" href="/styles/mainstyle.css?v=1.32b">
+<link rel="stylesheet" href="/styles/fontawesome/fontawesome-solid-5-home.css" />
+<link href='https://fonts.googleapis.com/css?family=Convergence' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <title>Starcraft 2 Co-op - Mission Guide - The Vermillion Problem</title>
+  <meta name="description" content="Starcraft 2 Co-op Mission Guide The Vermillion Problem">
+  <meta name="keywords" content="Starcraft co-op guides Vermillion Problem mission">
+  <link rel="stylesheet"  media="all" type="text/css" href="/styles/missionstyle.css?v=1.00">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link rel="canonical" href="https://starcraft2coop.com/missions/thevermillionproblem">
+  <script src="/scripts/preload.js"></script>
+  <style>
+      #spawnView{
+          position:relative;
+      }
+      #spawn{
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: 1;
+      }
+      #spawnView form{
+          display:inline-block;
+          margin-left:20px;
+          vertical-align:top;
+          line-height:2em;
+      }
+  </style>
+  </head>
+<body>
+<header id="header">
+    <img src="/images/starcraft2coop.png" alt="Starcraft II Co-op">
+</header>
+<nav id="menu">
+<ul id="topmenu">
+    <li class="normal"><a href="/" aria-label="Home" title="Home"><i class="fas fa-home" aria-hidden="true"></i></a></li>
+    <li class="normal"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-commanders">Commanders</a></li>
+    <li class="normal"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-resources">Guides</a></li>
+    <li class="highlight"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-missions">Missions</a></li>
+    <li class="normal"><a href="/" onclick="javascript:openSubmenu(event);" id="submenu-link-about">About</a></li>
+</ul>
+<div id="container">
+    <div id="commanderList" class="submenu">
+        <a href="/commanders/raynor" class="normal"><img src="/images/commanderportraits/raynorportrait.png" alt="Raynor"></a>
+        <a href="/commanders/kerrigan" class="normal"><img src="/images/commanderportraits/kerriganportrait.png" alt="Kerrigan"></a>
+        <a href="/commanders/artanis" class="normal"><img src="/images/commanderportraits/artanisportrait.png" alt="Artanis"></a>
+        <a href="/commanders/swann" class="normal"><img src="/images/commanderportraits/swannportrait.png" alt="Swann"></a>
+        <a href="/commanders/zagara" class="normal"><img src="/images/commanderportraits/zagaraportrait.png" alt="Zagara"></a>
+        <a href="/commanders/vorazun" class="normal"><img src="/images/commanderportraits/vorazunportrait.png" alt="Vorazun"></a>
+        <a href="/commanders/karax" class="normal"><img src="/images/commanderportraits/karaxportrait.png" alt="Karax"></a>
+        <a href="/commanders/abathur" class="normal"><img src="/images/commanderportraits/abathurportrait.png" alt="Abathur"></a>
+        <a href="/commanders/alarak" class="normal"><img src="/images/commanderportraits/alarakportrait.png" alt="Alarak"></a>
+        <a href="/commanders/nova" class="normal"><img src="/images/commanderportraits/novaportrait.png" alt="Nova"></a>
+        <a href="/commanders/stukov" class="normal"><img src="/images/commanderportraits/stukovportrait.png" alt="Stukov"></a>
+        <a href="/commanders/fenix" class="normal"><img src="/images/commanderportraits/fenixportrait.png" alt="Fenix"></a>
+        <a href="/commanders/dehaka" class="normal"><img src="/images/commanderportraits/dehakaportrait.png" alt="Dehaka"></a>
+        <a href="/commanders/horner" class="normal"><img src="/images/commanderportraits/hornerportrait.png" alt="Han &amp; Horner"></a>
+        <a href="/commanders/tychus" class="normal"><img src="/images/commanderportraits/tychusportrait.png" alt="Tychus"></a>
+        <a href="/commanders/zeratul" class="normal"><img src="/images/commanderportraits/zeratulportrait.png" alt="Zeratul"></a>
+        <a href="/commanders/stetmann" class="normal"><img src="/images/commanderportraits/stetmannportrait.png" alt="Stetmann"></a>
+        <a href="/commanders/mengsk" class="normal"><img src="/images/commanderportraits/mengskportrait.png" alt="Mengsk"></a>
+    </div>
+    <div id="missionList" class="submenu">
+        <a href="/missions/chainofascension" class="normal"><img src="/images/missionthumbnails/chainofascension.png" alt="Chain of Ascension"></a>
+        <a href="/missions/cradleofdeath" class="normal"><img src="/images/missionthumbnails/cradleofdeath.png" alt="Cradle of Death"></a>
+        <a href="/missions/deadofnight" class="normal"><img src="/images/missionthumbnails/deadofnight.png" alt="Dead of Night"></a>
+        <a href="/missions/lockload" class="normal"><img src="/images/missionthumbnails/lockload.png" alt="Lock & Load"></a>
+        <a href="/missions/malwarfare" class="normal"><img src="/images/missionthumbnails/malwarfare.png" alt="Malwarfare"></a>
+        <a href="/missions/minerevacuation" class="normal"><img src="/images/missionthumbnails/minerevacuation.png" alt="Miner Evacuation"></a>
+        <a href="/missions/mistopportunities" class="normal"><img src="/images/missionthumbnails/mistopportunities.png" alt="Mist Opportunities"></a>
+        <a href="/missions/oblivionexpress" class="normal"><img src="/images/missionthumbnails/oblivionexpress.png" alt="Oblivion Express"></a>
+        <a href="/missions/partparcel" class="normal"><img src="/images/missionthumbnails/partparcel.png" alt="Part & Parcel"></a>
+        <a href="/missions/riftstokorhal" class="normal"><img src="/images/missionthumbnails/riftstokorhal.png" alt="Rifts to Korhal"></a>
+        <a href="/missions/scytheofamon" class="normal"><img src="/images/missionthumbnails/scytheofamon.png" alt="Scythe Of Amon"></a>
+        <a href="/missions/templeofthepast" class="normal"><img src="/images/missionthumbnails/templeofthepast.png" alt="Temple of the Past"></a>
+        <a href="/missions/thevermillionproblem" class="highlight"><img src="/images/missionthumbnails/thevermillionproblem.png" alt="The Vermillion Problem"></a>
+        <a href="/missions/voidlaunch" class="normal"><img src="/images/missionthumbnails/voidlaunch.png" alt="Void Launch"></a>
+        <a href="/missions/voidthrashing" class="normal"><img src="/images/missionthumbnails/voidthrashing.png" alt="Void Thrashing"></a>
+    </div>
+    <div id="guideList" class="submenu">
+        <ul>
+            <li class="normal"><a href="/guides/buildordertheory">Build&nbsp;Order&nbsp;Theory</a></li>
+            <li class="normal"><a href="/guides/enemycomps">Enemy&nbsp;Compositions</a></li>
+            <li class="normal"><a href="/guides/generaltips">General&nbsp;Tips</a></li>
+            <li class="normal"><a href="/guides/newplayer">New&nbsp;Players&nbsp;</a></li>
+            <li class="normal"><a href="/guides/youtube">Youtube&nbsp;</a></li>
+        </ul>
+    </div>
+    <div id="resources" class="submenu">
+        <div class="submenu-with-sections"><div class="submenu-section">
+            <strong>Resources:</strong>
+            <ul>
+                <li class="normal"><a href="/resources/mutators">Mutators</a></li>
+                <li class="normal"><a href="/resources/weeklymutations">Weekly&nbsp;Mutations</a></li>
+                <li class="normal"><a href="/resources/brutal">Brutal+</a></li>
+                <li class="normal"><a href="/tools/unitstats">Unit&nbsp;Stats</a></li>
+            </ul>
+        </div><div class="submenu-section">
+            <strong>Guides:</strong>
+            <ul>
+                <li class="normal"><a href="/guides/buildordertheory">Build&nbsp;Order&nbsp;Theory</a></li>
+                <li class="normal"><a href="/guides/enemycomps">Enemy&nbsp;Compositions</a></li>
+                <li class="normal"><a href="/guides/generaltips">General&nbsp;Tips</a></li>
+                <li class="normal"><a href="/guides/newplayer">New&nbsp;Players</a></li>
+                <li class="normal"><a href="/guides/youtube">Youtube</a></li>
+            </ul>
+        </div><div class="submenu-section">
+            <strong>Miscellaneous:</strong>
+            <ul>
+                <li class="normal"><a href="/resources/achievements">Achievements</a></li>
+                <li class="normal"><a href="/resources/ailogic">AI&nbsp;Logic</a></li>
+                <li class="normal"><a href="/resources/bugs">Bugs</a></li>
+                <li class="normal"><a href="/resources/deathprevention">Death&nbsp;Prevent&nbsp;Effects</a></li>
+                <li class="normal"><a href="/resources/eastereggs">Easter&nbsp;Eggs</a></li>
+                <li class="normal"><a href="/resources/levels">Levels</a></li>
+                <li class="normal"><a href="/resources/patchdata">Patch&nbsp;Data</a></li>
+                <li class="normal"><a href="/tools/downloads">Downloads</a></li>
+                <li class="normal"><a href="/tools/masterybreakpoints">Mastery&nbsp;Breakpoints</a></li>
+            </ul>
+        </div></div>
+    </div>
+    <div id="tools" class="submenu">
+        <ul>
+            <li class="normal"><a href="/tools/downloads">Downloads</a></li>
+            <li class="normal"><a href="/tools/masterybreakpoints">Mastery&nbsp;Breakpoints</a></li>
+            <li class="normal"><a href="/tools/unitstats">Unit&nbsp;Stats</a></li>
+        </ul>
+    </div>
+    <div id="community" class="submenu">
+        <ul>
+            <li class="normal"><a href="/community/tournament/main">Co&#8209;op&nbsp;Tournament</a></li>
+            <li class="normal"><a href="/community/gamespotlight">Game&nbsp;Spotlight</a></li>
+            <li class="normal"><a href="/community/mythbusters">Mythbusters</a></li>
+            <li class="normal"><a href="/community/rockslappingchampions">Rockslapping&nbsp;Champions</a></li>
+            <li class="normal"><a href="/youtube">Youtube</a></li>
+        </ul>
+    </div>
+    <div id="about" class="submenu">
+        <ul>
+            <!--<li class="normal"><a href="/about/contact">Contact</a></li>-->
+            <li class="normal"><a href="/about/faq">FAQ</a></li>
+            <li class="normal"><a href="/about/links">Links</a></li>
+            <!--li class="normal"><a href="https://www.youtube.com/c/Starcraft2Coop" rel="nofollow">Youtube</a></li-->
+            <li class="normal"><a href="/resources/stats">Misc. Stats</a></li>
+        </ul>
+    </div>
+    <!--<div id="imgs">
+        <a href="https://www.youtube.com/c/Starcraft2Coop" rel="nofollow"><img src="/images/links/yt.png" alt="Youtube"></a>
+        <a href="https://www.patreon.com/starcraft2coop" rel="nofollow"><img src="/images/links/patreon.png" alt="Patreon"></a>
+        <a href="https://www.twitch.tv/aommaster" rel="nofollow"><img src="/images/links/twitch.png" alt="Twitch"></a>
+        <a href="https://discord.gg/AbFXRAB" rel="nofollow"><img src="/images/links/discord.png" alt="Discord"></a>
+    </div>-->
+</div>
+</nav>
+<script>
+    function openSubmenu(event, elem){
+        if (event) event.preventDefault();
+        if (!elem) elem = event.currentTarget;
+        var alreadyOpen = $(elem).hasClass('open');
+
+        $('#topmenu a').removeClass('open');
+        $(".submenu").hide();
+
+        if (alreadyOpen) return;
+
+        $(elem).addClass('open');
+        switch (elem.id.slice(13)){
+            case "commanders":
+                $("#commanderList").show();
+                break;
+            case "missions":
+                $("#missionList").show();
+                break;
+            case "community":
+                $("#community").show();
+                break;
+            case "guides":
+                $("#guideList").show();
+                break;
+            case "resources":
+                $("#resources").show();
+                break;
+            case "tools":
+                $("#tools").show();
+                break;
+            case "about":
+                $("#about").show();
+                break;
+        }
+    }
+    if (document.location.pathname === "/") {
+        $('#submenu-link-commanders').each(function () {
+            openSubmenu(null, this);
+        });
+    } else {
+        $('#topmenu li.highlight a').each(function () {
+            openSubmenu(null, this);
+        });
+    }
+</script>
+<div id="content">
+    <h1>Co-op Mission Guide: The Vermillion Problem</h1>
+    <p id="missionPlace">Veridia Prime</p>
+        <div id="links">
+        <h2>Sections on this Page</h2>
+        <p><a href="#misSum">Mission Summary</a></p>
+        <p><a href="#objectives">Objectives</a></p>
+        <p><a href="#baseAnalysis">Enemy Base Analysis</a></p>
+        <p><a href="#bonus">Completing the Bonus Objective</a></p>
+        <p><a href="#timings">Timings</a></p>
+        <p><a href="#spawnPoints">Spawn Points</a></p>
+        <p><a href="#crystalSpawn">Crystal Spawn Order</a></p>
+        <p><a href="#misTips">Mission Tips</a></p>
+        <p><a href="#comTips">Commander-Specific Tips</a></p>
+    </div>
+    <h2 id="misSum">Mission Summary</h2>
+    <p>Amon has incited volcanic eruptions that are destroying Veridia Prime. Gather the crystals required to reactivate the environmental stabilizers and restore the planet before it is obliterated.</p>
+    <h2 id="objectives">Objectives</h2>
+    <h3>Primary Objective</h3>
+        <ul>
+            <li>Collect Xenon Crystals (20).</li>
+            <li>Do Not Allow Planet to Explode.</li>
+        </ul>
+    <h3>Secondary Objective</h3>
+        <ul>
+            <li>Kill the Molten Salamander (1)</li>
+        </ul>
+    <h2 id="baseAnalysis">Enemy Base Analysis</h2>
+    <div id="globalRaceSelect">
+        <p>Change all base analysis pictures to race:</p>
+        <form action="#">
+            <label><input type="radio" name="globalRace" value="protoss" checked>Protoss</label><br>
+            <label><input type="radio" name="globalRace" value="terran">Terran</label><br>
+            <label><input type="radio" name="globalRace" value="zerg">Zerg</label><br>
+        </form>
+        <script>
+            $("input[name='globalRace']").change(function(){
+                var race= $(this).val();
+                $('input:radio[value="' + race + '"]').each(function () {
+                    if($(this).attr('name')!=="globalRace"){
+                        $(this).prop('checked', true).trigger('change');
+                    }
+                })
+                return false;
+            })
+        </script>
+    </div>
+        <p>Pushing into enemy bases is a key part of play on The Vermillion Problem, because most crystals will spawn behind enemy lines.</p>
+    <p>The first base you will be pushing into will be the one at your expansion. It is guarded by a small force of units, so you will need a small army or a hero unit to clear it.</p>
+    <p>Beweare of the small force of units guarding the northern ramp (not shown below). This force of units is based on the race, and consists of the following:</p>
+    <ul>
+        <li><b>Protoss:</b> Three Stalkers</li>
+        <li><b>Terran:</b> Three Goliaths</li>
+        <li><b>Zerg:</b> Two Ravagers and Eight Zerglings</li>
+    </ul>
+    <div class='switcher'><div class='long' id='expansionlongdiv'><img id ='expansionlong' src=' /images/missiondata/thevermillionproblem/expansionlong_protoss.jpg' alt='expansionlong Picture'></div><div class = 'baseMinimap'><form action='#'><label><input type='radio' name='expansionlong' value='protoss' checked>Protoss</label><br><label><input type='radio' name='expansionlong' value='terran'>Terran</label><br><label><input type='radio' name='expansionlong' value='zerg'>Zerg</label><br></form><br><br><div><img src='/images/missiondata/thevermillionproblem/expansionlongminimap.jpg' alt='expansionlong Minimap'></div></div></div><script>$("input[name='expansionlong']").change(function(){var race= $(this).val();var oldImg = $('#expansionlong');var img = new Image();img.src = '/images/missiondata/thevermillionproblem/expansionlong_'+ race + '.jpg';var newImg = $(img).hide();$('#expansionlongdiv').append(img);oldImg.stop(true).fadeOut(500, function() {   $(this).remove();});newImg.fadeIn(500);newImg.attr('id', 'expansionlong');return false;});var imgList=[];imgList.push('/images/missiondata/thevermillionproblem/expansionlong_protoss.jpg');imgList.push('/images/missiondata/thevermillionproblem/expansionlong_terran.jpg');imgList.push('/images/missiondata/thevermillionproblem/expansionlong_zerg.jpg');preload(imgList);</script>    <p>At this point, the bases you will clear will usually depend on where the crystals spawn, rather than a particular order.</p>
+    <p>The base to the West is usually the most lightly defended base after the expansion. It is shown below:</p>
+    <div class='switcher'><div class='basePic' id='wbasediv'><img id ='wbase' src=' /images/missiondata/thevermillionproblem/wbase_protoss.jpg' alt='wbase Picture'></div><div class = 'baseMinimap'><form action='#'><label><input type='radio' name='wbase' value='protoss' checked>Protoss</label><br><label><input type='radio' name='wbase' value='terran'>Terran</label><br><label><input type='radio' name='wbase' value='zerg'>Zerg</label><br></form><br><br><div><img src='/images/missiondata/thevermillionproblem/wbaseminimap.jpg' alt='wbase Minimap'></div></div></div><script>$("input[name='wbase']").change(function(){var race= $(this).val();var oldImg = $('#wbase');var img = new Image();img.src = '/images/missiondata/thevermillionproblem/wbase_'+ race + '.jpg';var newImg = $(img).hide();$('#wbasediv').append(img);oldImg.stop(true).fadeOut(500, function() {   $(this).remove();});newImg.fadeIn(500);newImg.attr('id', 'wbase');return false;});var imgList=[];imgList.push('/images/missiondata/thevermillionproblem/wbase_protoss.jpg');imgList.push('/images/missiondata/thevermillionproblem/wbase_terran.jpg');imgList.push('/images/missiondata/thevermillionproblem/wbase_zerg.jpg');preload(imgList);</script>    <p>The next base usually captured is the base to the North. It is slightly more heavily defended, but should be relatively easy to capture.</p>
+    <div class='switcher'><div class='long' id='nbaselongdiv'><img id ='nbaselong' src=' /images/missiondata/thevermillionproblem/nbaselong_protoss.jpg' alt='nbaselong Picture'></div><div class = 'baseMinimap'><form action='#'><label><input type='radio' name='nbaselong' value='protoss' checked>Protoss</label><br><label><input type='radio' name='nbaselong' value='terran'>Terran</label><br><label><input type='radio' name='nbaselong' value='zerg'>Zerg</label><br></form><br><br><div><img src='/images/missiondata/thevermillionproblem/nbaselongminimap.jpg' alt='nbaselong Minimap'></div></div></div><script>$("input[name='nbaselong']").change(function(){var race= $(this).val();var oldImg = $('#nbaselong');var img = new Image();img.src = '/images/missiondata/thevermillionproblem/nbaselong_'+ race + '.jpg';var newImg = $(img).hide();$('#nbaselongdiv').append(img);oldImg.stop(true).fadeOut(500, function() {   $(this).remove();});newImg.fadeIn(500);newImg.attr('id', 'nbaselong');return false;});var imgList=[];imgList.push('/images/missiondata/thevermillionproblem/nbaselong_protoss.jpg');imgList.push('/images/missiondata/thevermillionproblem/nbaselong_terran.jpg');imgList.push('/images/missiondata/thevermillionproblem/nbaselong_zerg.jpg');preload(imgList);</script>    <p>Due to the flow of the mission, there will be a lava surge by the time this base is cleared. It is usually optimal to continue pushing downwards to the North-East base. Watch out for the Hybrid Dominator in this area.</p>
+    <div class='switcher'><div class='basePic' id='nebasediv'><img id ='nebase' src=' /images/missiondata/thevermillionproblem/nebase_protoss.jpg' alt='nebase Picture'></div><div class = 'baseMinimap'><form action='#'><label><input type='radio' name='nebase' value='protoss' checked>Protoss</label><br><label><input type='radio' name='nebase' value='terran'>Terran</label><br><label><input type='radio' name='nebase' value='zerg'>Zerg</label><br></form><br><br><div><img src='/images/missiondata/thevermillionproblem/nebaseminimap.jpg' alt='nebase Minimap'></div></div></div><script>$("input[name='nebase']").change(function(){var race= $(this).val();var oldImg = $('#nebase');var img = new Image();img.src = '/images/missiondata/thevermillionproblem/nebase_'+ race + '.jpg';var newImg = $(img).hide();$('#nebasediv').append(img);oldImg.stop(true).fadeOut(500, function() {   $(this).remove();});newImg.fadeIn(500);newImg.attr('id', 'nebase');return false;});var imgList=[];imgList.push('/images/missiondata/thevermillionproblem/nebase_protoss.jpg');imgList.push('/images/missiondata/thevermillionproblem/nebase_terran.jpg');imgList.push('/images/missiondata/thevermillionproblem/nebase_zerg.jpg');preload(imgList);</script>    <p>The rest of the bases do require some strong forces in order to clear. The base to the South-West is probably the easiest of the remaining bases that can have crystals near them.</p>
+    <div class='switcher'><div class='long' id='swbaselongdiv'><img id ='swbaselong' src=' /images/missiondata/thevermillionproblem/swbaselong_protoss.jpg' alt='swbaselong Picture'></div><div class = 'baseMinimap'><form action='#'><label><input type='radio' name='swbaselong' value='protoss' checked>Protoss</label><br><label><input type='radio' name='swbaselong' value='terran'>Terran</label><br><label><input type='radio' name='swbaselong' value='zerg'>Zerg</label><br></form><br><br><div><img src='/images/missiondata/thevermillionproblem/swbaselongminimap.jpg' alt='swbaselong Minimap'></div></div></div><script>$("input[name='swbaselong']").change(function(){var race= $(this).val();var oldImg = $('#swbaselong');var img = new Image();img.src = '/images/missiondata/thevermillionproblem/swbaselong_'+ race + '.jpg';var newImg = $(img).hide();$('#swbaselongdiv').append(img);oldImg.stop(true).fadeOut(500, function() {   $(this).remove();});newImg.fadeIn(500);newImg.attr('id', 'swbaselong');return false;});var imgList=[];imgList.push('/images/missiondata/thevermillionproblem/swbaselong_protoss.jpg');imgList.push('/images/missiondata/thevermillionproblem/swbaselong_terran.jpg');imgList.push('/images/missiondata/thevermillionproblem/swbaselong_zerg.jpg');preload(imgList);</script>    <p>If you choose to push East from this base towards the bonus objective, you'll need to destroy a small enemy camp. Note that the ramp from the opposite side of this island is unguarded and you can reach the bonus objective without fighting enemy units.</p>
+    <div class='switcher'><div class='basePic' id='bonuscampdiv'><img id ='bonuscamp' src=' /images/missiondata/thevermillionproblem/bonuscamp_protoss.jpg' alt='bonuscamp Picture'></div><div class = 'baseMinimap'><form action='#'><label><input type='radio' name='bonuscamp' value='protoss' checked>Protoss</label><br><label><input type='radio' name='bonuscamp' value='terran'>Terran</label><br><label><input type='radio' name='bonuscamp' value='zerg'>Zerg</label><br></form><br><br><div><img src='/images/missiondata/thevermillionproblem/bonuscampminimap.jpg' alt='bonuscamp Minimap'></div></div></div><script>$("input[name='bonuscamp']").change(function(){var race= $(this).val();var oldImg = $('#bonuscamp');var img = new Image();img.src = '/images/missiondata/thevermillionproblem/bonuscamp_'+ race + '.jpg';var newImg = $(img).hide();$('#bonuscampdiv').append(img);oldImg.stop(true).fadeOut(500, function() {   $(this).remove();});newImg.fadeIn(500);newImg.attr('id', 'bonuscamp');return false;});var imgList=[];imgList.push('/images/missiondata/thevermillionproblem/bonuscamp_protoss.jpg');imgList.push('/images/missiondata/thevermillionproblem/bonuscamp_terran.jpg');imgList.push('/images/missiondata/thevermillionproblem/bonuscamp_zerg.jpg');preload(imgList);</script>    <p>If you push East from your expansion, there are a patches of enemies present. The first is a camp of units.</p>
+    <div class='switcher'><div class='basePic' id='ebasecampdiv'><img id ='ebasecamp' src=' /images/missiondata/thevermillionproblem/ebasecamp_protoss.jpg' alt='ebasecamp Picture'></div><div class = 'baseMinimap'><form action='#'><label><input type='radio' name='ebasecamp' value='protoss' checked>Protoss</label><br><label><input type='radio' name='ebasecamp' value='terran'>Terran</label><br><label><input type='radio' name='ebasecamp' value='zerg'>Zerg</label><br></form><br><br><div><img src='/images/missiondata/thevermillionproblem/ebasecampminimap.jpg' alt='ebasecamp Minimap'></div></div></div><script>$("input[name='ebasecamp']").change(function(){var race= $(this).val();var oldImg = $('#ebasecamp');var img = new Image();img.src = '/images/missiondata/thevermillionproblem/ebasecamp_'+ race + '.jpg';var newImg = $(img).hide();$('#ebasecampdiv').append(img);oldImg.stop(true).fadeOut(500, function() {   $(this).remove();});newImg.fadeIn(500);newImg.attr('id', 'ebasecamp');return false;});var imgList=[];imgList.push('/images/missiondata/thevermillionproblem/ebasecamp_protoss.jpg');imgList.push('/images/missiondata/thevermillionproblem/ebasecamp_terran.jpg');imgList.push('/images/missiondata/thevermillionproblem/ebasecamp_zerg.jpg');preload(imgList);</script>    <p>If you follow the path up North, you'll get to the enemy base.</p>
+    <div class='switcher'><div class='long' id='ebaselongdiv'><img id ='ebaselong' src=' /images/missiondata/thevermillionproblem/ebaselong_protoss.jpg' alt='ebaselong Picture'></div><div class = 'baseMinimap'><form action='#'><label><input type='radio' name='ebaselong' value='protoss' checked>Protoss</label><br><label><input type='radio' name='ebaselong' value='terran'>Terran</label><br><label><input type='radio' name='ebaselong' value='zerg'>Zerg</label><br></form><br><br><div><img src='/images/missiondata/thevermillionproblem/ebaselongminimap.jpg' alt='ebaselong Minimap'></div></div></div><script>$("input[name='ebaselong']").change(function(){var race= $(this).val();var oldImg = $('#ebaselong');var img = new Image();img.src = '/images/missiondata/thevermillionproblem/ebaselong_'+ race + '.jpg';var newImg = $(img).hide();$('#ebaselongdiv').append(img);oldImg.stop(true).fadeOut(500, function() {   $(this).remove();});newImg.fadeIn(500);newImg.attr('id', 'ebaselong');return false;});var imgList=[];imgList.push('/images/missiondata/thevermillionproblem/ebaselong_protoss.jpg');imgList.push('/images/missiondata/thevermillionproblem/ebaselong_terran.jpg');imgList.push('/images/missiondata/thevermillionproblem/ebaselong_zerg.jpg');preload(imgList);</script>    <p>Just South of this base, there is a small enclave of enemies.</p>
+    <div class='switcher'><div class='long' id='eenclavelongdiv'><img id ='eenclavelong' src=' /images/missiondata/thevermillionproblem/eenclavelong_protoss.jpg' alt='eenclavelong Picture'></div><div class = 'baseMinimap'><form action='#'><label><input type='radio' name='eenclavelong' value='protoss' checked>Protoss</label><br><label><input type='radio' name='eenclavelong' value='terran'>Terran</label><br><label><input type='radio' name='eenclavelong' value='zerg'>Zerg</label><br></form><br><br><div><img src='/images/missiondata/thevermillionproblem/eenclavelongminimap.jpg' alt='eenclavelong Minimap'></div></div></div><script>$("input[name='eenclavelong']").change(function(){var race= $(this).val();var oldImg = $('#eenclavelong');var img = new Image();img.src = '/images/missiondata/thevermillionproblem/eenclavelong_'+ race + '.jpg';var newImg = $(img).hide();$('#eenclavelongdiv').append(img);oldImg.stop(true).fadeOut(500, function() {   $(this).remove();});newImg.fadeIn(500);newImg.attr('id', 'eenclavelong');return false;});var imgList=[];imgList.push('/images/missiondata/thevermillionproblem/eenclavelong_protoss.jpg');imgList.push('/images/missiondata/thevermillionproblem/eenclavelong_terran.jpg');imgList.push('/images/missiondata/thevermillionproblem/eenclavelong_zerg.jpg');preload(imgList);</script>    <h2 id="bonus">Completing the Bonus Objective</h2>
+    <div id="objectiveImages">
+        <img src="/images/missiondata/thevermillionproblem/moltensalamander.jpg" alt="Molten Salamander">
+    </div>
+    <p>The bonus objective requires you to kill the Molten Salamander that spawns in the marked location below.</p>
+    <img src="/images/missiondata/thevermillionproblem/moltensalamanderspawnlocation.jpg" alt="Minimap of Molten Salamander spawn location">
+    <h2 id="timings">Timings</h2>
+    <p>Note: Information on Tech and Strength levels can be found on the <a href="/guides/enemycomps">Enemy Compositions</a> page.</p>
+    <p>Some attack waves in this mission have variance associated with their spawn timings. That is, attack waves have a little bit of randomness as to when they will spawn. The attack wave timings and variances are shown below. A variance of 1:30 seconds means attack waves can spawn anywhere from 1:30 <i>before</i> the attack wave timing to 1:30 <i>after</i> the attack wave timing.</p>
+    <p>The Attack Wave Timings for this mission are:</p>
+    <table class="centered">
+        <thead>
+            <tr>
+                <th>Wave</th>
+                <th>Time</th>
+                <th>Tech Level</th>
+                <th>Strength Level</th>
+                <th>Target</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>3:30</td>
+                <td>1</td>
+                <td>1</td>
+                <td>Main</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>6:00</td>
+                <td>2</td>
+                <td>2</td>
+                <td>Main</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>9:00 ± 1:30</td>
+                <td>3</td>
+                <td>4</td>
+                <td>Expansion</td>
+            </tr>
+            <tr>
+                <td>4*</td>
+                <td>12:00 ± 1:30</td>
+                <td>3</td>
+                <td>4</td>
+                <td>Expansion</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>15:00 ± 1:30</td>
+                <td>5</td>
+                <td>5</td>
+                <td>Main</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>18:00 ± 1:30</td>
+                <td>5</td>
+                <td>5</td>
+                <td>Main</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>21:00 ± 1:30</td>
+                <td>5</td>
+                <td>5</td>
+                <td>Expansion</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>24:00 ± 1:30</td>
+                <td>6</td>
+                <td>6</td>
+                <td>Expansion</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>27:00</td>
+                <td>5</td>
+                <td>5</td>
+                <td>Expansion</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>* Attack wave #4 is a multi-pronged attack wave that will have attacking units spawn from two different locations.</p>
+    <p>The final attack wave will repeat every two minutes until the end of the mission.</p>
+    <p>The Molten Salamander will start to spawn every lava surge after 11:00.</p>
+    <h2 id="spawnPoints">Spawn Points</h2>
+    <p>The spawn points for attack waves are shown below.</p>
+    <p>Attack Wave Spawn Location (West Base):</p>
+    <img src="/images/missiondata/thevermillionproblem/wattackwavespawn.jpg" alt="West Attack Wave Spawn">
+    <p>Attack Wave Spawn Location (East Base, usually not cleared because crystals do not spawn there):</p>
+    <img src="/images/missiondata/thevermillionproblem/eattackwavespawn.jpg" alt="East Attack Wave Spawn">
+    <p>Attack Wave Spawn Location (South, near Bonus Objective):</p>
+    <img src="/images/missiondata/thevermillionproblem/sattackwavespawn.jpg" alt="South Attack Wave Spawn">
+    <p>Crystals also have certain spawn locations. However, at each collection stage, crystals can spawn in more than 10 individual locations, making it infeasible to list them all out individually. Addtionally, spawn locations are randomized as the mission progresses.</p>
+    <h2 id="crystalSpawn">Crystal Spawn Order</h2>
+    <p>The spawn order and locations of the Xenon Crystals can be viewed below. This may be useful when playing against <a href="/resources/mutators">mutators</a> that hide the crystal locations on the minimap, such as Darkness.</p>
+    <div id="spawnView">
+        <img id="base"  src="/images/missiondata/thevermillionproblem/mapbase.jpg" alt="Terrain">
+        <img id="spawn" src="/images/missiondata/thevermillionproblem/spawn_01.png" alt="Spawn Overlay">
+        <form action='#'>
+            <label><input type='radio' name='spawn' value='1' checked>Spawn 1</label><br>
+            <label><input type='radio' name='spawn' value='2'>Spawn 2</label><br>
+            <label><input type='radio' name='spawn' value='3'>Spawn 3</label><br>
+            <label><input type='radio' name='spawn' value='4'>Spawn 4</label><br>
+            <label><input type='radio' name='spawn' value='5'>Spawn 5</label><br>
+            <label><input type='radio' name='spawn' value='6'>Spawn 6</label><br>
+            <label><input type='radio' name='spawn' value='7'>Spawn 7</label><br>
+            <label><input type='radio' name='spawn' value='8'>Spawn 8</label><br>
+            <label><input type='radio' name='spawn' value='9'>Spawn 9</label><br>
+        </form>
+    </div>
+    <script>
+        var imgList=[];
+        for (var i=1; i<9; i++){
+            imgList.push('/images/missiondata/thevermillionproblem/spawn_0' + i + '.png');
+        }
+        preload(imgList);
+        $("input[name='spawn']").change(function(){
+            var spawnNum= $(this).val();
+            var oldImg = $('#spawn');
+            var img = new Image();
+            img.src = '/images/missiondata/thevermillionproblem/spawn_0'+ spawnNum + '.png';
+            var newImg = $(img).hide();
+            $('#base').after(img);
+            oldImg.stop(true).fadeOut(500, function() {
+                $(this).remove();
+            });
+            newImg.fadeIn(500);
+            newImg.attr('id', 'spawn');
+            return false;
+        })
+    </script>
+    <h2 id="misTips">Mission Tips</h2>
+    <ul>
+        <li>Ensure you have adequate defenses in your main and expansion for the attack waves.</li>
+        <li>Pay attention to your army as you push into enemy defenses due to the large number of Hybrid Dominators present on this map.</li>
+        <li>All crystals from the 3rd spawn will come with a small harass force. Ensure you clear them out before you send your workers to pick up the crystal. These forces do not spawn immediately with the crystal, and have some travel time before they arrive.</li>
+    </ul>
+    <h2 id="comTips">Commander-specific Tips</h2>
+    <ul>
+        <li><a href="/commanders/abathur">Abathur</a>: Place Toxic Nests on spawn locations to weaken attack waves.</li>
+        <li><a href="/commanders/horner">Han & Horner</a>: Place Mag Mines on spawn locations to weaken attack waves.</li>
+        <li><a href="/commanders/kerrigan">Kerrigan</a>: Place Omega Worms on each of the islands to help you and your ally intercept attack waves and crystals in a timely manner.</li>
+        <li><a href="/commanders/nova">Nova</a>: If you use Siege Tanks, place Spider-mines on spawn locations to weaken attack waves.</li>
+        <li><a href="/commanders/raynor">Raynor</a>: If you use Vultures, place Spider-mines on spawn locations to weaken attack waves.</li>
+        <li><a href="/commanders/stetmann">Stetmann</a>: Use the Speed Stetzone to return crystals faster.</li>
+        <li><a href="/commanders/stukov">Stukov</a>: Once you have creep spread, move your Infested Colonist Compound to your Expansion area.</li>
+        <li><a href="/commanders/zagara">Zagara</a>: Build your macro hatcheries at your expansion for quick reinforcements.</li>
+        <li><a href="/commanders/zeratul">Zeratul</a>: Place a Void Array on each of the islands to help you intercept attack waves and crystals in a timely manner.</li>
+    </ul>
+</div>
+<div id="footer">
+    <p>Note: All data generated on this site is based on Brutal difficulty. Timings, compositions and other elements may differ on easier difficulty levels.</p>
+    <p>CC-BY-NC-SA-4.0. Originally written by Aommaster. This is a fansite not affiliated with StarCraft 2 or Blizzard Entertainment, Inc.</p>
+</div>
+</body>
+</html>
+
+<script src="/scripts/nav.js"></script>

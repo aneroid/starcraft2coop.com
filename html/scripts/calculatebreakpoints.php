@@ -1,10 +1,6 @@
 <?php
 
 session_start();
-if (!isset($_SESSION["known"])) {
-    print("Error!");
-    die();
-}
 if (isset($_POST['ability'])) {
     $ability = $_POST['ability'];
     $returnArray = [];

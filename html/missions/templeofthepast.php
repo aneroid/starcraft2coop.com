@@ -1,6 +1,8 @@
 <?php
+
+require "../admin-only.php";
 include("../header.php");
-include("../scripts/switchergenerator.php");
+require_once("../scripts/switchergenerator.php");
 ?>
   <title>Starcraft 2 Co-op - Mission Guide - Temple of the Past</title>
   <meta name="description" content="Starcraft 2 Co-op Mission Guide Temple of the Past">

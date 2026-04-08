@@ -1,4 +1,6 @@
 <?php
+
+require "../admin-only.php";
 include("../header.php");
 $_SESSION["known"] = true;
 ?>

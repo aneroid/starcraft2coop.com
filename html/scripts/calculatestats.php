@@ -1,10 +1,6 @@
 <?php
 
 session_start();
-if (!isset($_SESSION["known"])) {
-    echo("Error!");
-    return;
-}
 if (!isset($_GET['mode'])) {
     echo("Error!");
     return;
@@ -895,7 +891,7 @@ function getUnitUpgradesOutput($commander, $unit)
     }
     $con->close();
 
-    require __DIR__ . '/../data/queries.php';
+    require_once __DIR__ . '/../data/queries.php';
 
     $commanderData = get_commander($commander);
     $commanderPrestiges = [

@@ -1,9 +1,6 @@
 <?php
 
 require "../admin-only.php";
-
-error_log("[Static] running for " . __FILE__);
-
 include("../header.php");
 $_SESSION["known"] = true;
 ?>

@@ -1,4 +1,5 @@
 ErrorDocument 404 /errors/404.php
+
 RewriteEngine on
 RewriteRule .* - [E=Cache-Control:no-cache]
 
@@ -8,6 +9,14 @@ AddType text/x-python .py
 # remove `www.`
 RewriteCond %{HTTP_HOST} ^www\.(.*)$
 RewriteRule ^(.*)$ https://starcraft2coop.com/$1 [R=302,L]
+
+# Serve /account with 410 Gone
+<If "%{REQUEST_URI} =~ m#^/account(\.html)?$#">
+    ErrorDocument 410 /account.html
+</If>
+# NO space after "!=" below
+RewriteCond %{ENV:REDIRECT_STATUS} !=410
+RewriteRule ^account(\.html)?$ - [G,L]
 
 # Extensionless URLs - prefer .html, fall back to .php
 RewriteCond %{REQUEST_FILENAME} !-d
