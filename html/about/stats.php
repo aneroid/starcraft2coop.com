@@ -45,7 +45,7 @@ include("../header.php");
     <h1>Site-Specific and Co-op Related Statistics</h1>
     <?php
 
-    require __DIR__ . '/../data/queries.php';
+    require_once __DIR__ . '/../data/queries.php';
     include '../scripts/sqlconnection.php';
 
     $sql = "SELECT count(*)

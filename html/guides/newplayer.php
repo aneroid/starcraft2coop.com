@@ -165,7 +165,7 @@ $_SESSION["known"] = true;
     <div id="commanderSelection">
         <?php
 
-        require __DIR__ . '/../data/queries.php';
+        require_once __DIR__ . '/../data/queries.php';
 
         $allCommanders = get_commanders();
         foreach ($allCommanders as $row) {
