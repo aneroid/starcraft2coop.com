@@ -73,8 +73,8 @@ include("../header.php");
     <h1>Co-op Commander Guide: Mengsk</h1>
     <p id="commanderMotto">Emperor of the Dominion</p>
     <?php include("../scripts/reporterror.php");?>
-    <h2>Sections on this Page</h2>
     <div id="links">
+        <h2>Sections on this Page</h2>
         <p><a href="#comSum">Commander Summary</a></p>
         <p><a href="#levelUnlocks">Level Unlocks</a></p>
         <p><a href="#achievements">Achievements</a></p>
@@ -1723,3 +1723,5 @@ include("../header.php");
 <?php include("../footer.php"); ?>
 </body>
 </html>
+
+<script src="/scripts/nav.js"></script>

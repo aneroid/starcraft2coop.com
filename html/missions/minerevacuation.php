@@ -15,8 +15,8 @@ include("../header.php");
     <h1>Co-op Mission Guide: Miner Evacuation</h1>
     <p id="missionPlace">Jarban</p>
     <?php include("../scripts/reporterror.php");?>
-    <h2>Sections on this Page</h2>
     <div id="links">
+        <h2>Sections on this Page</h2>
         <p><a href="#misSum">Mission Summary</a></p>
         <p><a href="#objectives">Objectives</a></p>
         <p><a href="#evacShip">Evacuation Ship Locations and Order</a></p>
@@ -301,3 +301,5 @@ include("../header.php");
 <?php include("../footer.php"); ?>
 </body>
 </html>
+
+<script src="/scripts/nav.js"></script>

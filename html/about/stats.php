@@ -178,8 +178,8 @@ include("../header.php");
 
     $con->close();
     ?>
-    <h2>Sections on this Page</h2>
     <div id="links">
+        <h2>Sections on this Page</h2>
         <p><a href="#general">General</a></p>
         <p><a href="#site">Site-Specific</a></p>
         <p><a href="#weeklyMutations">Weekly Mutations</a></p>
@@ -876,3 +876,5 @@ include("../header.php");
 <?php include("../footer.php"); ?>
 </body>
 </html>
+
+<script src="/scripts/nav.js"></script>

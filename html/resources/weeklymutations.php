@@ -342,8 +342,8 @@ $_SESSION["known"] = true;
 <?php include("../menu.php"); ?>
 <div id="content">
     <h1>A List of Weekly Mutations With Difficulties</h1>
-    <h2>Sections on this Page</h2>
     <div id="links">
+        <h2>Sections on this Page</h2>
         <p><a href="#guide">Weekly Mutation Beginner's Guide</a></p>
         <p><a href="#cycle">Weekly Mutations Cycle</a></p>
         <p><a href="#past">Casted Weekly Mutations</a></p>
@@ -903,3 +903,5 @@ $_SESSION["known"] = true;
 <?php include("../footer.php"); ?>
 </body>
 </html>
+
+<script src="/scripts/nav.js"></script>

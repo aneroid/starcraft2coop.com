@@ -11,8 +11,8 @@ include("../header.php");
 <div id="content">
     <h1>Starcraft Co-op Bugs List</h1>
     <?php include("../scripts/reporterror.php");?>
-    <h2>Sections on this Page</h2>
     <div id="links">
+        <h2>Sections on this Page</h2>
         <p><a href="#core">Game Core</a></p>
         <p><a href="#amon">Amon</a></p>
         <p><a href="#abathur">Abathur</a></p>
@@ -529,3 +529,5 @@ include("../header.php");
 <?php include("../footer.php"); ?>
 </body>
 </html>
+
+<script src="/scripts/nav.js"></script>

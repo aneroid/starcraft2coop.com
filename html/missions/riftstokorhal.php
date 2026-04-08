@@ -16,8 +16,8 @@ include("../scripts/switchergenerator.php");
     <h1>Co-op Mission Guide: Rifts to Korhal</h1>
     <p id="missionPlace">Korhal</p>
     <?php include("../scripts/reporterror.php");?>
-    <h2>Sections on this Page</h2>
     <div id="links">
+        <h2>Sections on this Page</h2>
         <p><a href="#misSum">Mission Summary</a></p>
         <p><a href="#objectives">Objectives</a></p>
         <p><a href="#baseAnalysis">Enemy Base Analysis</a></p>
@@ -245,3 +245,5 @@ include("../scripts/switchergenerator.php");
 <?php include("../footer.php"); ?>
 </body>
 </html>
+
+<script src="/scripts/nav.js"></script>

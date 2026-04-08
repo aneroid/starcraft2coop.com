@@ -83,8 +83,8 @@ $_SESSION["known"] = true;
 <div id="content">
     <h1>Co-op Mutators List: Names, Icons, Descriptions and Mechanics</h1>
     <?php include("../scripts/reporterror.php");?>
-    <h2>Sections on this Page</h2>
     <div id="links">
+        <h2>Sections on this Page</h2>
         <p><a href="#safetyZones">Safety Zone</a></p>
         <p><a href="#mutatorInteractions">Mutator Interactions</a></p>
         <p><a href="#mutatorList">Mutator List</a></p>
@@ -3814,3 +3814,5 @@ $_SESSION["known"] = true;
 <?php include("../footer.php"); ?>
 </body>
 </html>
+
+<script src="/scripts/nav.js"></script>

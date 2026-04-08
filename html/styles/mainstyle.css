@@ -7,7 +7,7 @@
 .banner img{
     width:720px;
 }
-body {
+html {
     font-family: 'Convergence', sans-serif;
     background:rgb(10, 13, 33);
     color: white;
@@ -15,6 +15,10 @@ body {
 
     background-image: linear-gradient(rgb(30, 37, 91), rgb(10, 13, 33));
     background-attachment: fixed;
+}
+html, body {
+    margin: 0;
+    padding: 0;
 }
 
 #topmenu {
@@ -65,6 +69,7 @@ body {
     text-align:center;
     max-width:1150px;
     margin:auto;
+    padding: 0 8px;
 }
 #menu a{
     text-decoration: none;
@@ -215,10 +220,6 @@ th,td{
 #content h1,h2,h3{
     margin-top:50px;
 }
-#links{
-    line-height:0;
-    font-size:0.75em;
-}
 #content #reportClick{
     text-decoration:underline;
     color: red;
@@ -247,4 +248,123 @@ th,td{
 }
 label {
     white-space:nowrap;
+}
+
+/* Nav */
+
+#content {
+    padding: 0 8px;
+}
+#toc {
+	font-size: 13px;
+}
+#toc ul::before {
+	display: block;
+	content: 'Contents';
+	padding: 5px 8px;
+	font-weight: bold;
+}
+#toc ul, #toc li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+#toc ul {
+	padding: 5px 0;
+	max-width: 400px;
+    background: #222;
+	margin: 30px 30px 0;
+}
+#toc ul a {
+	display: block;
+	padding: 5px 10px;
+	text-decoration: none;
+	border-left: 5px solid transparent;
+    color: yellow;
+}
+#toc ul a:visited {
+    color: orange;
+}
+#toc ul a.active {
+	border-color: yellow;
+	text-decoration: underline;
+}
+#toc ul a.h3 {
+	padding-left: 25px;
+}
+
+#toc {
+	position: sticky;
+	float: left;
+	margin: 0;
+	top: 0;
+	padding: 0;
+	max-height: 100vh;
+	overflow-y: auto;
+}
+#toc .nav-show {
+	display: none;
+	width: 30px;
+	height: 30px;
+	font-size: 0;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: #444;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+}
+#toc .nav-show::before {
+	content: '≡';
+	font-size: 25px;
+}
+#toc ul {
+	display: none;
+}
+#links {
+    font-size: 13px;
+}
+#links p {
+    margin: 8px 0;
+}
+@media (min-width: 1160px) {
+	#toc, #toc ul {
+		display: block;
+	}
+	#toc .nav-show {
+		display: none;
+	}
+	#toc {
+		position: sticky;
+		float: left;
+		margin: 0;
+        margin-top: 90px;
+		top: 0;
+		width: 200px;
+		padding: 0;
+		height: 100vh;
+		overflow-y: auto;
+	}
+    #content.has-toc {
+        margin-left: 210px;
+    }
+    #content.has-toc #links {
+        display: none;
+    }
+	#toc ul {
+		margin: 20px 0 0 20px;
+	}
+	#toc ul {
+		margin: 0;
+		border: 0;
+		background: transparent;
+		font-size: 13px;
+	}
+
+    @media (min-width: 1370px) {
+        #content.has-toc {
+            margin-left: auto;
+        }
+    }
 }

@@ -56,8 +56,8 @@ include("../header.php");
 <div id="content">
     <h1>Co-op Levels, Experience Requirements, Mastery and Ascension Levels</h1>
     <?php include("../scripts/reporterror.php");?>
-    <h2>Sections on this Page</h2>
     <div id="links">
+        <h2>Sections on this Page</h2>
         <p><a href="#summary">Summary</a></p>
         <p><a href="#rewards">Rewards</a></p>
         <p><a href="#expTables">Experience Tables</a></p>
@@ -1107,3 +1107,5 @@ include("../header.php");
 <?php include("../footer.php"); ?>
 </body>
 </html>
+
+<script src="/scripts/nav.js"></script>

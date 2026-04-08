@@ -22,8 +22,8 @@ include("../header.php");
 <div id="content">
     <h1>General Tips For Co-op Players</h1>
     <?php include("../scripts/reporterror.php");?>
-    <h2>Sections on this Page</h2>
     <div id="links">
+        <h2>Sections on this Page</h2>
         <p><a href="#tips1">Tips for Beginners</a></p>
         <p class="subgroup"><a href="#overproduction">Avoid Overproduction</a></p>
         <p class="subgroup"><a href="#minimap">Learn the Minimap Icons</a></p>
@@ -124,3 +124,5 @@ include("../header.php");
 <?php include("../footer.php"); ?>
 </body>
 </html>
+
+<script src="/scripts/nav.js"></script>

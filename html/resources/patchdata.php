@@ -15,8 +15,8 @@ include("../header.php");
 <?php include("../menu.php"); ?>
 <div id="content">
     <h1>Starcraft Co-op Patch Data</h1>
-    <h2>Sections on this Page</h2>
     <div id="links">
+        <h2>Sections on this Page</h2>
         <p><a href="#core">Game Core</a></p>
         <p><a href="#coa">Chain of Ascension</a></p>
         <p><a href="#cod">Cradle of Death</a></p>
@@ -122,3 +122,5 @@ include("../header.php");
 <?php include("../footer.php"); ?>
 </body>
 </html>
+
+<script src="/scripts/nav.js"></script>

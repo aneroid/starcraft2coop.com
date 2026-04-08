@@ -36,8 +36,8 @@ include("../header.php");
 <div id="content">
     <h1>Build Order Theory: How to Develop Your Own Build Orders</h1>
     <?php include("../scripts/reporterror.php");?>
-    <h2>Sections on this Page</h2>
     <div id="links">
+        <h2>Sections on this Page</h2>
         <p><a href="#what">What is a Build Order</a></p>
         <p><a href="#spending">Spending Resources</a></p>
         <p><a href="#coreConcept">Core Concept: Making Workers</a></p>
@@ -845,3 +845,5 @@ include("../header.php");
 <?php include("../footer.php"); ?>
 </body>
 </html>
+
+<script src="/scripts/nav.js"></script>

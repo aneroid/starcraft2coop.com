@@ -87,8 +87,8 @@ include("../header.php");
 <div id="content">
     <h1>Enemy Compositions: Units in Attack Waves and Hybrid Data</h1>
     <?php include("../scripts/reporterror.php");?>
-    <h2>Sections on this Page</h2>
     <div id="links">
+        <h2>Sections on this Page</h2>
         <p><a href="#genNotes">General Notes</a></p>
         <p><a href="#race">Enemy Race</a></p>
         <p><a href="#composition">Composition</a></p>
@@ -1119,3 +1119,5 @@ include("../header.php");
 <?php include("../footer.php"); ?>
 </body>
 </html>
+
+<script src="/scripts/nav.js"></script>
