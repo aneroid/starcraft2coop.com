@@ -13,6 +13,7 @@ $_SERVER['SERVER_NAME'] = $SERVER_NAME;
 
 foreach ($pages as $page) {
     $_SERVER['REQUEST_URI'] = "$page";
+    $_SERVER['PHP_SELF'] = __DIR__ . "/html$page.php";
     $pageDir = __DIR__ . $HTML_DIR . dirname($page);
     chdir($pageDir);
 
