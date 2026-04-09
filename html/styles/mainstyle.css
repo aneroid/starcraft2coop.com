@@ -21,6 +21,13 @@ html, body {
     padding: 0;
 }
 
+:where(table ul) {
+    padding: 0 0 0 1.2em;
+}
+::marker {
+    color: #888;
+}
+
 #topmenu {
     display: flex;
     flex-wrap: wrap;
