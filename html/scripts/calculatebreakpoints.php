@@ -1,6 +1,5 @@
 <?php
 
-session_start();
 if (isset($_POST['ability'])) {
     $ability = $_POST['ability'];
     $returnArray = [];

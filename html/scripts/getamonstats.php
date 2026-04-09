@@ -1,6 +1,5 @@
 <?php
 
-session_start();
 if (isset($_GET['unit'])) {
     if (!is_string($_GET['unit'])) {
         echo("Error!");

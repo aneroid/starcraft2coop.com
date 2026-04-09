@@ -1,6 +1,5 @@
 <?php
 include("../header.php");
-$_SESSION["known"] = true;
 ?>
   <title>Starcraft 2 Co-op - Weekly Mutations</title>
   <meta name="description" content="Starcraft 2 Co-op Weekly Mutations">

@@ -2,7 +2,6 @@
 
 require "../admin-only.php";
 include("../header.php");
-$_SESSION["known"] = true;
 ?>
   <title>Starcraft 2 Co-op - Commander Selection Guide</title>
   <meta name="description" content="Starcraft 2 Co-op Commander Selection Guide for new players, providing information on strengths and weaknesses of commanders.">

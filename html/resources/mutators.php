@@ -2,7 +2,6 @@
 
 require "../admin-only.php";
 include("../header.php");
-$_SESSION["known"] = true;
 ?>
   <title>Starcraft 2 Co-op - Mutator List</title>
   <meta name="description" content="A list of all mutators in Starcraft II Co-op, along with detailed descriptions of their mechanics and commander-specific tips.">

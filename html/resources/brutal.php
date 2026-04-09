@@ -2,7 +2,6 @@
 
 require "../admin-only.php";
 include("../header.php");
-$_SESSION["known"] = true;
 ?>
   <title>Starcraft 2 Co-op - Brutal+ Difficulty</title>
   <meta name="description" content="Starcraft 2 Co-op Brutal+ Difficulty Mutators">

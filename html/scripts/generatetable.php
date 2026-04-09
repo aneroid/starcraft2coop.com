@@ -1,8 +1,5 @@
 <?php
 
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
 include 'sqlconnection.php';
 
 if (!isset($_GET['maxvitality']) && !isset($_GET['minvitality'])) {

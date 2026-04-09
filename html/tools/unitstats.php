@@ -2,7 +2,6 @@
 
 require "../admin-only.php";
 include("../header.php");
-$_SESSION["known"] = true;
 ?>
   <title>Starcraft 2 Co-op - Unit Stats</title>
   <meta name="description" content="A calculator to provide you with unit stats before and after upgrades for every unit in Co-op. Also includes data on Amon's units.">

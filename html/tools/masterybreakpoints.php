@@ -2,7 +2,6 @@
 
 require "../admin-only.php";
 include("../header.php");
-$_SESSION["known"] = true;
 ?>
   <title>Starcraft 2 Co-op - Mastery Breakpoints Calculator</title>
   <meta name="description" content="Figure out how many mastery points you need to reach certain breakpoints with this calculator.">
