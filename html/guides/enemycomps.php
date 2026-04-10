@@ -88,7 +88,7 @@ include PROJECT_ROOT . "/html/header.php";
 <?php include PROJECT_ROOT . "/html/menu.php"; ?>
 <div id="content">
     <h1>Enemy Compositions: Units in Attack Waves and Hybrid Data</h1>
-    <?php include("../scripts/reporterror.php");?>
+    <?php include PROJECT_ROOT . "/html/scripts/reporterror.php"; ?>
     <div id="links">
         <h2>Sections on this Page</h2>
         <p><a href="#genNotes">General Notes</a></p>

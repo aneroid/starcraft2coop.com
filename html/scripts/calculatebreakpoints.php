@@ -163,7 +163,7 @@ if (isset($_POST['ability'])) {
         if ($structure == 0) {
             $appendString .= " and structure='0'";
         }
-        include("sqlconnection.php");
+        include 'sqlconnection.php';
         $sql = "SELECT name, race, hp+shields as vitality, light,structure
                   FROM amonunits
                   WHERE breakpoint='1' $appendString

@@ -378,7 +378,7 @@ include PROJECT_ROOT . "/html/header.php";
     <ul>
         <?php
 
-        include '../scripts/sqlconnection.php';
+        include PROJECT_ROOT . "/html/scripts/sqlconnection.php";
 
         $sql = "SELECT mutatorid, mutatorname, mutatordescription, abomination
                     FROM mutators

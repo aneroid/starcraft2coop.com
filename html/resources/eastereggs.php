@@ -19,7 +19,7 @@ include PROJECT_ROOT . "/html/header.php";
 <?php include PROJECT_ROOT . "/html/menu.php"; ?>
 <div id="content">
     <h1>Easter Eggs and Other Hidden Content in Co-op</h1>
-    <?php include("../scripts/reporterror.php");?>
+    <?php include PROJECT_ROOT . "/html/scripts/reporterror.php"; ?>
     <p>A number of Easter Eggs are hidden throughout the Co-op mode content. These are listed below.</p>
     <h2>Commander-Specific</h2>
     <h3>Alarak's Crystal</h3>

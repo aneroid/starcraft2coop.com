@@ -45,8 +45,8 @@ include PROJECT_ROOT . "/html/header.php";
     <h1>Site-Specific and Co-op Related Statistics</h1>
     <?php
 
-    require_once __DIR__ . '/../data/queries.php';
-    include '../scripts/sqlconnection.php';
+    require_once PROJECT_ROOT . '/html/data/queries.php';
+    include PROJECT_ROOT . "/html/scripts/sqlconnection.php";
 
     $sql = "SELECT count(*)
             FROM mutators";

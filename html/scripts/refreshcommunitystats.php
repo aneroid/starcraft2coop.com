@@ -1,6 +1,6 @@
 <?php
 
-include("sqlconnection.php");
+include 'sqlconnection.php';
 
 //Globals
 $rushableMissions = ["Chain of Ascension", "Cradle of Death", "Dead of Night", "Lock & Load", "Miner Evacuation", "Part and Parcel", "Rifts to Korhal", "Scythe of Amon", "Void Thrashing"];

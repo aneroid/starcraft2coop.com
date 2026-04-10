@@ -57,7 +57,7 @@ include PROJECT_ROOT . "/html/header.php";
 <?php include PROJECT_ROOT . "/html/menu.php"; ?>
 <div id="content">
     <h1>Co-op Levels, Experience Requirements, Mastery and Ascension Levels</h1>
-    <?php include("../scripts/reporterror.php");?>
+    <?php include PROJECT_ROOT . "/html/scripts/reporterror.php"; ?>
     <div id="links">
         <h2>Sections on this Page</h2>
         <p><a href="#summary">Summary</a></p>
@@ -629,7 +629,7 @@ include PROJECT_ROOT . "/html/header.php";
     }
     if ($username != "") {
         echo("<p>Initial values are based on replays you have uploaded to this site.</p>");
-        include("../scripts/sqlconnection.php");
+        include PROJECT_ROOT . "/html/scripts/sqlconnection.php";
         $sql = "SELECT server, mycommander, commanderlevel, masterylevel, prestige from userreplays
                     WHERE username='$username'
                     ORDER BY played ASC";

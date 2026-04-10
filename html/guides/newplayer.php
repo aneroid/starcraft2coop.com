@@ -164,7 +164,7 @@ include PROJECT_ROOT . "/html/header.php";
     <div id="commanderSelection">
         <?php
 
-        require_once __DIR__ . '/../data/queries.php';
+        require_once PROJECT_ROOT . '/html/data/queries.php';
 
         $allCommanders = get_commanders();
         foreach ($allCommanders as $row) {

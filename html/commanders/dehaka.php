@@ -39,7 +39,7 @@ include PROJECT_ROOT . "/html/header.php";
     <div id="tooltip">tooltip</div>
     <h1>Co-op Commander Guide: Dehaka</h1>
     <p id="commanderMotto">Primal Pack Leader</p>
-    <?php include("../scripts/reporterror.php");?>
+    <?php include PROJECT_ROOT . "/html/scripts/reporterror.php"; ?>
     <div id="links">
         <h2>Sections on this Page</h2>
         <p><a href="#comSum">Commander Summary</a></p>
@@ -1643,7 +1643,7 @@ include PROJECT_ROOT . "/html/header.php";
     <ul>
 
     <?php
-    include '../scripts/sqlconnection.php';
+    include PROJECT_ROOT . "/html/scripts/sqlconnection.php";
     $sql = "SELECT name, race
             FROM amonunits
             WHERE psionic=1 and race<>'Objective' and race<>'Mutator'

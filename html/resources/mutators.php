@@ -83,7 +83,7 @@ include PROJECT_ROOT . "/html/header.php";
 <?php include PROJECT_ROOT . "/html/menu.php"; ?>
 <div id="content">
     <h1>Co-op Mutators List: Names, Icons, Descriptions and Mechanics</h1>
-    <?php include("../scripts/reporterror.php");?>
+    <?php include PROJECT_ROOT . "/html/scripts/reporterror.php"; ?>
     <div id="links">
         <h2>Sections on this Page</h2>
         <p><a href="#safetyZones">Safety Zone</a></p>
@@ -168,7 +168,7 @@ include PROJECT_ROOT . "/html/header.php";
     </div>
     <h2 id="mutatorInteractions">Mutator Interactions</h2>
     <?php
-    include '../scripts/sqlconnection.php';
+    include PROJECT_ROOT . "/html/scripts/sqlconnection.php";
     $sql = "SELECT mutatorname, mutatorid
             FROM mutators
             ORDER BY mutatorname ASC";

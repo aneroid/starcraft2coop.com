@@ -17,7 +17,7 @@ require_once("../scripts/switchergenerator.php");
 <div id="content">
     <h1>Co-op Mission Guide: Rifts to Korhal</h1>
     <p id="missionPlace">Korhal</p>
-    <?php include("../scripts/reporterror.php");?>
+    <?php include PROJECT_ROOT . "/html/scripts/reporterror.php"; ?>
     <div id="links">
         <h2>Sections on this Page</h2>
         <p><a href="#misSum">Mission Summary</a></p>

@@ -32,7 +32,7 @@ include PROJECT_ROOT . "/html/header.php";
     <div id="tooltip">tooltip</div>
     <h1>Co-op Commander Guide: Han & Horner</h1>
     <p id="commanderMotto">Mercenary Leader and Dominion Admiral</p>
-    <?php include("../scripts/reporterror.php");?>
+    <?php include PROJECT_ROOT . "/html/scripts/reporterror.php"; ?>
     <div id="links">
         <h2>Sections on this Page</h2>
         <p><a href="#comSum">Commander Summary</a></p>
