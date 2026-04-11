@@ -21,7 +21,13 @@ if ($grep_output) {
 
 $HTML_DIR = __DIR__ . '/html';
 $GENERATING_STATIC_PAGES = true;
+$prev_error_level = error_reporting(E_ALL);
 
+set_error_handler(function (int $severity, string $message, string $file, int $line) {
+    throw new ErrorException($message, 0, $severity, $file, $line);
+});
+
+$all_errors = [];
 foreach ($pages as $page) {
     $_SERVER['REQUEST_URI'] = "$page";
     $_SERVER['PHP_SELF'] = "$page.php";
@@ -29,15 +35,30 @@ foreach ($pages as $page) {
     chdir($pageDir);
 
     ob_start();
-    require $HTML_DIR . "$page.php";
+    try {
+        require $HTML_DIR . "$page.php";
+    } catch (ErrorException $e) {
+        // TODO: exit on first generate error or let it run for all?
+        $all_errors[] = "Captured an exception in {$e->getFile()}: {$e->getMessage()} (line {$e->getLine()})";
+    }
     $html = ob_get_clean();
     $html = str_replace("\r\n", "\n", $html);
 
     $result = file_put_contents($HTML_DIR . "$page.html", $html);
     if (!$result) {
-        echo "Error writing $page.html\n";
-        exit(1);
+        $msg = "Error writing $page.html";
+        $all_errors[] = $msg;
+        echo "$msg\n";
+        break;  // TODO: exit on first write error?
     } else {
         echo "Generated $page.html ($result bytes)\n";
     }
 }
+
+foreach ($all_errors as $error) {
+    echo "$error\n";
+}
+
+// reset the error level and exit with status 0 or 1
+error_reporting($prev_error_level);
+exit(empty($all_errors) ? 0 : 1);
