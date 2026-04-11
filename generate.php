@@ -30,6 +30,7 @@ $pages = [
 
     '/community/tournament/summary/2019-10',
     '/community/tournament/archive',
+    '/community/tournament/signup',
     '/community/tournament/index',
     '/community/gamespotlight',
     '/community/mythbusters',
