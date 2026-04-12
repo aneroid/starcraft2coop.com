@@ -13,11 +13,13 @@
             "properties": {
                 "id1": {
                     "type": "string",
-                    "description": "ID of the first mutator in the pair"
+                    "description": "ID of the first mutator in the pair, Normalized",
+                    "pattern": "^[a-z0-9]+$"
                 },
                 "id2": {
                     "type": "string",
-                    "description": "ID of the second mutator in the pair (id2 > id1)"
+                    "description": "ID of the second mutator in the pair, Normalized & id2 > id1",
+                    "pattern": "^[a-z0-9]+$"
                 },
                 "interaction": {
                     "type": "string",
