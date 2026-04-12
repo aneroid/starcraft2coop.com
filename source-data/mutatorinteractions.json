@@ -795,8 +795,8 @@
     "interaction": "Infested apply the Concussive Attacks debuff."
   },
   {
-    "id1": "concussiveattacks",
-    "id2": "boombots",
+    "id1": "boombots",
+    "id2": "concussiveattacks",
     "interaction": "Boom Bots apply the Concussive Attacks debuff."
   },
   {
@@ -845,8 +845,8 @@
     "interaction": "Void Rifts are marked on the minimap."
   },
   {
-    "id1": "darkness",
-    "id2": "boombots",
+    "id1": "boombots",
+    "id2": "darkness",
     "interaction": "Boom Bots do not appear on the minimap."
   },
   {
@@ -955,8 +955,8 @@
     "interaction": "Void Reanimators spawn out of structures converted by Eminent Domain."
   },
   {
-    "id1": "eminentdomain",
-    "id2": "boombots",
+    "id1": "boombots",
+    "id2": "eminentdomain",
     "interaction": "Boom Bots spawn out of structures converted by Eminent Domain."
   },
   {
@@ -1115,8 +1115,8 @@
     "interaction": "Infested trigger Fatal Attraction when they die."
   },
   {
-    "id1": "fatalattraction",
-    "id2": "boombots",
+    "id1": "boombots",
+    "id2": "fatalattraction",
     "interaction": "Boom Bots trigger Fatal Attraction when they die."
   },
   {
@@ -1240,8 +1240,8 @@
     "interaction": "Infested can apply the Fear effect."
   },
   {
-    "id1": "fear",
-    "id2": "boombots",
+    "id1": "boombots",
+    "id2": "fear",
     "interaction": "Boom Bots do not apply the Fear effect."
   },
   {
@@ -1310,8 +1310,8 @@
     "interaction": "Infested do not launch Fireworks when they die."
   },
   {
-    "id1": "fireworks",
-    "id2": "boombots",
+    "id1": "boombots",
+    "id2": "fireworks",
     "interaction": "Boom Bots launch Fireworks when they die."
   },
   {
@@ -1475,8 +1475,8 @@
     "interaction": "Units spawned from Gift Exchange are cloaked."
   },
   {
-    "id1": "giftexchange",
-    "id2": "boombots",
+    "id1": "boombots",
+    "id2": "giftexchange",
     "interaction": "Boom Bots do not capture gifts."
   },
   {
@@ -1550,8 +1550,8 @@
     "interaction": "Infested cause Hardened Will to activate."
   },
   {
-    "id1": "hardenedwill",
-    "id2": "boombots",
+    "id1": "boombots",
+    "id2": "hardenedwill",
     "interaction": "Boom Bots do not get the Hardened Will buff."
   },
   {
@@ -1680,8 +1680,8 @@
     "interaction": "Infested can get the Inspiration buff."
   },
   {
-    "id1": "inspiration",
-    "id2": "boombots",
+    "id1": "boombots",
+    "id2": "inspiration",
     "interaction": "Boom Bots do not provide the Inspiration buff."
   },
   {
@@ -1790,8 +1790,8 @@
     "interaction": "Respawned units are cloaked."
   },
   {
-    "id1": "justdie",
-    "id2": "boombots",
+    "id1": "boombots",
+    "id2": "justdie",
     "interaction": "Boom Bots do not respawn when they self-destruct."
   },
   {
@@ -1955,8 +1955,8 @@
     "interaction": "Infested provide vision for the Laser Drill."
   },
   {
-    "id1": "laserdrill",
-    "id2": "boombots",
+    "id1": "boombots",
+    "id2": "laserdrill",
     "interaction": "Boom Bots provide vision for the Laser Drill.\r\nBoom Bots do not spawn from the Laser Drill."
   },
   {
@@ -2220,8 +2220,8 @@
     "interaction": "Hybrids spawned from Void Rifts trigger Moment of Silence when they die."
   },
   {
-    "id1": "momentofsilence",
-    "id2": "boombots",
+    "id1": "boombots",
+    "id2": "momentofsilence",
     "interaction": "Boom Bots do not trigger Moment of Silence when they die."
   },
   {
@@ -2400,8 +2400,8 @@
     "interaction": "Infested can cast abilities."
   },
   {
-    "id1": "poweroverwhelming",
-    "id2": "boombots",
+    "id1": "boombots",
+    "id2": "poweroverwhelming",
     "interaction": "Boom Bots can cast abilities. Boom Bots can spawn out of Point Defense Drones dropped by Power Overwhelming."
   },
   {
@@ -2480,8 +2480,8 @@
     "interaction": "Infested set the ground on fire when they die."
   },
   {
-    "id1": "scorchedearth",
-    "id2": "boombots",
+    "id1": "boombots",
+    "id2": "scorchedearth",
     "interaction": "Boom Bots set the ground on fire when they die."
   },
   {
@@ -2510,8 +2510,8 @@
     "interaction": "Infested create an explosion when they die."
   },
   {
-    "id1": "selfdestruction",
-    "id2": "boombots",
+    "id1": "boombots",
+    "id2": "selfdestruction",
     "interaction": "Boom Bots create an explosion when they die."
   },
   {
@@ -2545,8 +2545,8 @@
     "interaction": "Infested units move faster with Speed Freaks."
   },
   {
-    "id1": "speedfreaks",
-    "id2": "boombots",
+    "id1": "boombots",
+    "id2": "speedfreaks",
     "interaction": "Boom Bots move faster with Speed Freaks."
   },
   {
@@ -2645,8 +2645,8 @@
     "interaction": "Void Reanimators are cloaked."
   },
   {
-    "id1": "voidreanimators",
-    "id2": "boombots",
+    "id1": "boombots",
+    "id2": "voidreanimators",
     "interaction": "Void Reanimators do not resurrect Boom Bots."
   },
   {
@@ -2660,8 +2660,8 @@
     "interaction": "Units spawned from Void Rifts are cloaked."
   },
   {
-    "id1": "voidrifts",
-    "id2": "boombots",
+    "id1": "boombots",
+    "id2": "voidrifts",
     "interaction": "Boom Bots do not spawn from Void Rifts."
   },
   {
@@ -2670,13 +2670,13 @@
     "interaction": "Infested are cloaked."
   },
   {
-    "id1": "walkinginfested",
-    "id2": "boombots",
+    "id1": "boombots",
+    "id2": "walkinginfested",
     "interaction": "Boom Bots spawn Infested when they die."
   },
   {
-    "id1": "wemoveunseen",
-    "id2": "boombots",
+    "id1": "boombots",
+    "id2": "wemoveunseen",
     "interaction": "Boom Bots are cloaked, but their tags are still visible.\r\nCodes cannot be input without detection."
   }
 ]

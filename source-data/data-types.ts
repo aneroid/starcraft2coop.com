@@ -68,10 +68,12 @@ export interface Commander {
 export type CommanderList = Commander[];
 
 export interface MutatorInteraction {
-    /** ID of the first mutator in the pair */
-    id1: MutatorId;
-    /** ID of the second mutator in the pair (id2 > id1) */
-    id2: MutatorId;
+    /** ID of the first mutator in the pair, Normalized
+     * @pattern ^[a-z0-9]+$ */
+    id1: string;
+    /** ID of the second mutator in the pair, Normalized & id2 > id1
+     * @pattern ^[a-z0-9]+$ */
+    id2: string;
     /** Description of how the two mutators interact */
     interaction: string;
 }
