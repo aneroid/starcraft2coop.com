@@ -22,7 +22,7 @@ Running `make` will rebuild everything.
 
 ### Docker
 
-Read [Docker.md](./Docker.md) for instructions on how to set up a local development environment using Docker.
+Read [Docker.md](docker/Docker.md) for instructions on how to set up a local development environment using Docker.
 
 ### Locally installed Apache, PHP, and MySQL/MariaDB
 
