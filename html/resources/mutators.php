@@ -278,7 +278,7 @@ require_once "../wrapper-static.php";
                     var filename = mutators[key].replace(/ /g,'').toLowerCase();
                     html += "<p><img src=\"/images/mutators/" + filename + ".png\" height=\"25\" width=\"25\" style=\"vertical-align:middle\"> " + mutators[key] + ": " + interactions[key] + "</p>";
                 }
-                $("#interactions").html(html);
+                $("#interactions").html(html || "No interaction found.");
             } else if (mut1 && mut2) {
                 $("#interactions").text(getInteraction(mut1, mut2) || "No interaction found.");
             } else if (mut1 && !$mut2.length) {
