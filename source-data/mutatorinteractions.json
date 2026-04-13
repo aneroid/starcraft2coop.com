@@ -1245,11 +1245,6 @@
     "interaction": "Boom Bots do not apply the Fear effect."
   },
   {
-    "id1": 16,
-    "id2": 64,
-    "interaction": "Transmuted units can apply the Fear effect."
-  },
-  {
     "id1": 17,
     "id2": 18,
     "interaction": "Units spawned from Gift Exchange launch Fireworks when they die."
