@@ -165,15 +165,12 @@ require_once "../wrapper-static.php";
     </div>
     <h2 id="mutatorInteractions">Mutator Interactions</h2>
     <?php
-    include '../scripts/sqlconnection.php';
-    $sql = "SELECT mutatorname, mutatorid
-            FROM mutators
-            ORDER BY mutatorname ASC";
-    $result = mysqli_query($con, $sql);
+    require_once '../data/queries.php';
+    $mutatorInfo = get_mutators();
+    usort($mutatorInfo, fn($a, $b) => $a['mutatorname'] <=> $b['mutatorname']);
     $mutators = [];
-
-    while ($row = mysqli_fetch_array($result)) {
-        $mutators[] = [$row['mutatorid'],$row['mutatorname']];
+    foreach ($mutatorInfo as $mutator) {
+        $mutators[] = [$mutator['mutatorid'],$mutator['mutatorname']];
     }
     ?>
     <form action="mutators.php" method="post">

@@ -98,27 +98,14 @@
   </head>
 <body>
     <?php
-    include '../scripts/sqlconnection.php';
-    $sql = "SELECT mutatorid, mutatorname, mutatordescription, abomination
-                FROM mutators
-                ORDER BY mutatorid ASC";
-    $result = mysqli_query($con, $sql);
-    $mutators = [];
-
-    while ($row = mysqli_fetch_array($result)) {
-        $mutators[] = $row;
-    }
-
-    $sql = "SELECT DISTINCT mutation,map, mut01, mut02, mut03
-                FROM weeklymutations
-                WHERE mutation <> 'Sudden But Inevitable'
-                ORDER BY mutation";
-    $result = mysqli_query($con, $sql);
-    while ($row = mysqli_fetch_array($result)) {
+    require_once '../data/queries.php';
+    $mutators = get_mutators();
+    $mutations = get_weekly_mutations();
+    $mutations = array_filter($mutations, fn($mutation) => $mutation['mutation'] != 'Sudden But Inevitable');
+    foreach ($mutations as &$row) {
         if ($row['map'] == "Lock and Load") {
             $row['map'] = "Lock Load";
         }
-        $mutations[] = $row;
     }
     ?>
     <div id="mutatorsList" class="hidden">

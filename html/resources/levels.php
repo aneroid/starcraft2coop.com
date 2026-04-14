@@ -618,48 +618,6 @@ require_once "../wrapper-static.php";
     </div>
     <h2 id="numbers">Some Interesting Numbers</h2>
     <p>Use this calculator to get some interesting numbers regarding your leveling.</p>
-    <?php
-    $username = "";
-    if (isset($_COOKIE['sc2coop'])) {
-        $cookieData = json_decode($_COOKIE['sc2coop']);
-        $username = $cookieData->username;
-    }
-    if ($username != "") {
-        echo("<p>Initial values are based on replays you have uploaded to this site.</p>");
-        include("../scripts/sqlconnection.php");
-        $sql = "SELECT server, mycommander, commanderlevel, masterylevel, prestige from userreplays
-                    WHERE username='$username'
-                    ORDER BY played ASC";
-        $result = mysqli_query($con, $sql);
-        $levelInfo = [];
-        while ($row = mysqli_fetch_array($result)) {
-            if (isset($levelInfo[$row['server']])) {
-                if ($row['masterylevel'] > $levelInfo[$row['server']][0]) {
-                    $levelInfo[$row['server']][0] = $row['masterylevel'];
-                }
-                if (isset($levelInfo[$row['server']][1][$row['mycommander']])) {
-                    $levelInfo[$row['server']][1][$row['mycommander']] [0] = $row['commanderlevel'];
-                    if ($row['prestige'] > $levelInfo[$row['server']][1][$row['mycommander']][1]) {
-                        $levelInfo[$row['server']][1][$row['mycommander']][1] = $row['prestige'];
-                    }
-                } else {
-                    $levelInfo[$row['server']][1][$row['mycommander']] = [$row['commanderlevel'],$row['prestige']];
-                }
-            } else {
-                $levelInfo[$row['server']] = [$row['masterylevel'],[]];
-                $levelInfo[$row['server']][1][$row['mycommander']] = [$row['commanderlevel'],$row['prestige']];
-            }
-        }
-        $prestigeInfo = [];
-        foreach ($levelInfo as $server => $data) {
-            $prestigeInfo[$server] = [0,0,0,0];
-            foreach ($data[1] as $commander) {
-                $prestigeInfo[$server][$commander[1]] += 1;
-            }
-        }
-    }
-
-    ?>
     <form action="#">
         (There are a total of <?php echo(count(scandir("../images/commanderportraits")) - 2); ?> commanders currently)
         <br>
