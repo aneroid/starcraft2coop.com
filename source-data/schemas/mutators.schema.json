@@ -23,13 +23,18 @@
                 },
                 "mutatordescription": {
                     "type": "string"
+                },
+                "customusable": {
+                    "type": "boolean",
+                    "description": "Usable in custom mutator mode"
                 }
             },
             "required": [
                 "mutatorid",
                 "mutatorname",
                 "abomination",
-                "mutatordescription"
+                "mutatordescription",
+                "customusable"
             ],
             "additionalProperties": false
         },

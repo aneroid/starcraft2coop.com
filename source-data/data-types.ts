@@ -80,6 +80,8 @@ export interface Mutator {
     /** Mutator difficulty points (see Brutal+ page) */
     abomination: NonNegativeInteger;
     mutatordescription: string;
+    /** Usable in custom mutator mode */
+    customusable: boolean;
 }
 
 export interface MutatorWithStats extends Mutator {
