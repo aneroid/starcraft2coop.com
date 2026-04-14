@@ -523,11 +523,11 @@ require_once "../wrapper.php";
     <p>Filters (click a filter to remove):</p>
     <div id="maps"><p>Map: <select id="mapselect">
         <?php
-        foreach (get_missions() as $name) {
-            $string = str_replace(" ", "", $name);
+        foreach (get_missions() as $row) {
+            $string = str_replace(" ", "", $row['name']);
             $string = str_replace("and", "", $string);
             $string = str_replace("&", "", $string);
-            echo("<option value='" . strtolower($string) . "'>" . $name . "</option>");
+            echo("<option value='" . strtolower($string) . "'>" . $row['name'] . "</option>");
         }
         ?>
         </select>

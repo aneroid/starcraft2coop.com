@@ -1,6 +1,6 @@
 #!/usr/bin/env bun
 import tsj from "ts-json-schema-generator";
-import type { BrutalPlusList, CommanderList } from "./data-types";
+import type { BrutalPlusList, CommanderList, Mission, MutationCycleList, MutatorWithStats } from "./data-types";
 
 const files: [`${string}.json`, string][] = [
     ['brutalplus.json', 'BrutalPlusList'],
@@ -9,7 +9,7 @@ const files: [`${string}.json`, string][] = [
     ['mutators.json', 'MutatorList'],
     ['weeklymutations.json', 'WeeklyMutationList'],
     ['mutationcycle.json', 'MutationCycleList'],
-    ['missions.json', 'Maps'],
+    ['missionnames.json', 'MissionNames'],
 ];
 
 /////////////////////////////////////////////////
@@ -30,8 +30,41 @@ console.log(`Done`)
 
 /////////////////////////////////////////////////
 
+console.log(`Generating stats`);
+
+const mutationCycle: MutationCycleList = await Bun.file('source-data/mutationcycle.json').json();
+
+const missionNames: string[] = await Bun.file('source-data/missionnames.json').json();
+const mutators: MutatorWithStats[] = await Bun.file('source-data/mutators.json').json();
+const missions: Mission[] = [];
+
+const missionData: Record<string, Mission> = {};
+const mutatorData: Record<number, MutatorWithStats> = {};
+
+for (const missionName of missionNames) {
+    missionData[missionName] = { name: missionName, mutationcount: 0 };
+    missions.push(missionData[missionName]);
+}
+for (const mutator of mutators) {
+    mutator.mutationcount = 0;
+    mutatorData[mutator.mutatorid] = mutator;
+}
+
+for (const mutation of mutationCycle) {
+    missionData[mutation.map]!.mutationcount++;
+    mutatorData[mutation.mut01]!.mutationcount++;
+    if (mutation.mut02) mutatorData[mutation.mut02]!.mutationcount++;
+    if (mutation.mut03) mutatorData[mutation.mut03]!.mutationcount++;
+}
+
+Bun.write(`html/data/missions.json`, JSON.stringify(missions, null, 4) + '\n');
+Bun.write(`html/data/mutators.json`, JSON.stringify(mutators, null, 4) + '\n');
+
+/////////////////////////////////////////////////
+
 console.log(`Writing to html/data/`);
 for (const [file, type] of files) {
+    if (file === 'mutators.json') continue;
     const data = await Bun.file(`source-data/${file}`).json();
     Bun.write(`html/data/${file}`, JSON.stringify(data, null, 4) + '\n');
 }

@@ -82,6 +82,10 @@ export interface Mutator {
     mutatordescription: string;
 }
 
+export interface MutatorWithStats extends Mutator {
+    mutationcount: NonNegativeInteger;
+}
+
 export type MutatorList = Mutator[];
 
 export interface WeeklyMutation {
@@ -119,4 +123,9 @@ export interface MutationCycle {
 
 export type MutationCycleList = MutationCycle[];
 
-export type Maps = string[];
+export type MissionNames = string[];
+
+export interface Mission {
+    name: string;
+    mutationcount: NonNegativeInteger;
+}

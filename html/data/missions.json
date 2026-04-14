@@ -1,17 +1,62 @@
 [
-    "Chain of Ascension",
-    "Cradle of Death",
-    "Dead of Night",
-    "Lock and Load",
-    "Malwarfare",
-    "Miner Evacuation",
-    "Mist Opportunities",
-    "Oblivion Express",
-    "Part and Parcel",
-    "Rifts to Korhal",
-    "Scythe of Amon",
-    "Temple of the Past",
-    "The Vermillion Problem",
-    "Void Launch",
-    "Void Thrashing"
+    {
+        "name": "Chain of Ascension",
+        "mutationcount": 12
+    },
+    {
+        "name": "Cradle of Death",
+        "mutationcount": 9
+    },
+    {
+        "name": "Dead of Night",
+        "mutationcount": 12
+    },
+    {
+        "name": "Lock and Load",
+        "mutationcount": 15
+    },
+    {
+        "name": "Malwarfare",
+        "mutationcount": 10
+    },
+    {
+        "name": "Miner Evacuation",
+        "mutationcount": 12
+    },
+    {
+        "name": "Mist Opportunities",
+        "mutationcount": 15
+    },
+    {
+        "name": "Oblivion Express",
+        "mutationcount": 13
+    },
+    {
+        "name": "Part and Parcel",
+        "mutationcount": 9
+    },
+    {
+        "name": "Rifts to Korhal",
+        "mutationcount": 14
+    },
+    {
+        "name": "Scythe of Amon",
+        "mutationcount": 9
+    },
+    {
+        "name": "Temple of the Past",
+        "mutationcount": 14
+    },
+    {
+        "name": "The Vermillion Problem",
+        "mutationcount": 12
+    },
+    {
+        "name": "Void Launch",
+        "mutationcount": 16
+    },
+    {
+        "name": "Void Thrashing",
+        "mutationcount": 12
+    }
 ]

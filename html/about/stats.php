@@ -67,91 +67,11 @@ require_once "../wrapper-static.php";
 
     $mutators = get_mutators();
 
-    $sql = "SELECT map, count(map) FROM `weeklymutations`
-            GROUP BY map
-            ORDER BY count(map) DESC, map
-            LIMIT 5";
-    $result = mysqli_query($con, $sql);
-    $topMaps = [];
+    $sortedMissions = get_missions();
+    usort($sortedMissions, fn($a, $b) => $b['mutationcount'] <=> $a['mutationcount']);
 
-    while ($row = mysqli_fetch_array($result)) {
-        $topMaps[] = $row;
-    }
-
-    $sql = "SELECT map, count(map) FROM (SELECT * FROM weeklymutations GROUP BY mutation) AS T
-            GROUP BY map
-            ORDER BY count(map) DESC, map
-            LIMIT 5";
-    $result = mysqli_query($con, $sql);
-    $topMaps1 = [];
-
-    while ($row = mysqli_fetch_array($result)) {
-        $topMaps1[] = $row;
-    }
-
-    $sql = "SELECT id, count(*) FROM (SELECT mut01 AS id FROM weeklymutations
-            UNION ALL
-            SELECT mut02 AS id FROM weeklymutations
-            UNION ALL
-            SELECT mut03 AS id FROM weeklymutations) weeklymutations
-            WHERE id<>0
-            GROUP BY id
-            ORDER BY count(*) DESC, id
-            LIMIT 5";
-    $result = mysqli_query($con, $sql);
-    $topMutators = [];
-
-    while ($row = mysqli_fetch_array($result)) {
-        $topMutators[] = [$mutators[$row[0] - 1]['mutatorname'], $mutators[$row[0] - 1]['mutatordescription'], $row[1]];
-    }
-
-    $sql = "SELECT id, count(*) FROM (SELECT mut01 AS id FROM weeklymutations
-            UNION ALL
-            SELECT mut02 AS id FROM weeklymutations
-            UNION ALL
-            SELECT mut03 AS id FROM weeklymutations) weeklymutations
-            WHERE id<>0
-            GROUP BY id
-            ORDER BY count(*) ASC, id
-            LIMIT 5";
-    $result = mysqli_query($con, $sql);
-    $bottomMutators = [];
-
-    while ($row = mysqli_fetch_array($result)) {
-        $bottomMutators[] = [$mutators[$row[0] - 1]['mutatorname'], $mutators[$row[0] - 1]['mutatordescription'], $row[1]];
-    }
-
-    $sql = "SELECT id, count(*) FROM (SELECT mut01 AS id FROM (SELECT * FROM weeklymutations GROUP BY mutation) AS T
-            UNION ALL
-            SELECT mut02 AS id FROM (SELECT * FROM weeklymutations GROUP BY mutation) AS T
-            UNION ALL
-            SELECT mut03 AS id FROM (SELECT * FROM weeklymutations GROUP BY mutation) AS T) AS T
-            WHERE id<>0
-            GROUP BY id
-            ORDER BY count(*) DESC, id
-            LIMIT 5";
-    $result = mysqli_query($con, $sql);
-    $topMutators1 = [];
-
-    while ($row = mysqli_fetch_array($result)) {
-        $topMutators1[] = [$mutators[$row[0] - 1]['mutatorname'], $mutators[$row[0] - 1]['mutatordescription'], $row[1]];
-    }
-
-    $sql = "SELECT id, count(*) FROM (SELECT mut01 AS id FROM (SELECT * FROM weeklymutations GROUP BY mutation) AS T
-            UNION ALL
-            SELECT mut02 AS id FROM (SELECT * FROM weeklymutations GROUP BY mutation) AS T
-            UNION ALL
-            SELECT mut03 AS id FROM (SELECT * FROM weeklymutations GROUP BY mutation) AS T) AS T
-            WHERE id<>0
-            GROUP BY id
-            ORDER BY count(*) ASC, id
-            LIMIT 5";
-    $result = mysqli_query($con, $sql);
-    $bottomMutators1 = [];
-
-    while ($row = mysqli_fetch_array($result)) {
-        $bottomMutators1[] = [$mutators[$row[0] - 1]['mutatorname'], $mutators[$row[0] - 1]['mutatordescription'], $row[1]];
-    }
+    $sortedMutators = $mutators;
+    usort($sortedMutators, fn($a, $b) => $b['mutationcount'] <=> $a['mutationcount']);
 
     $con->close();
     ?>
@@ -182,24 +102,19 @@ require_once "../wrapper-static.php";
     <table>
         <thead>
             <tr>
-                <th colspan=2>With Repeats</th>
-                <th colspan=2>Without Repeats</th>
+                <th colspan=2>Per cycle</th>
             </tr>
             <tr>
-                <th>Map</th>
-                <th>Appearances</th>
                 <th>Map</th>
                 <th>Appearances</th>
             </tr>
         </thead>
         <tbody>
             <?php
-            for ($i = 0; $i < 5; $i++) {
+            foreach ($sortedMissions as $mission) {
                 echo("<tr>");
-                echo("<td>{$topMaps[$i][0]}</td>");
-                echo("<td class=centered>{$topMaps[$i][1]}</td>");
-                echo("<td>{$topMaps1[$i][0]}</td>");
-                echo("<td class=centered>{$topMaps1[$i][1]}</td>");
+                echo("<td>{$mission['name']}</td>");
+                echo("<td class=centered>{$mission['mutationcount']}</td>");
                 echo("<tr>\n");
             }
             ?>
@@ -209,76 +124,31 @@ require_once "../wrapper-static.php";
     <table>
         <thead>
             <tr>
-                <th colspan=3>With Repeats</th>
-                <th colspan=3>Without Repeats</th>
+                <th colspan=2>Per cycle</th>
             </tr>
             <tr>
                 <th>Mutator</th>
-                <th>Icon</th>
-                <th>Appearances</th>
-                <th>Mutator</th>
-                <th>Icon</th>
                 <th>Appearances</th>
             </tr>
         </thead>
         <tbody>
             <?php
-            for ($i = 0; $i < 5; $i++) {
+            foreach ($sortedMutators as $mutator) {
+                if ($mutator['mutatorname'] === 'Random') continue;
                 echo("<tr>");
-                $element = $topMutators[$i];
-                $filename = str_replace(' ', '', strtolower($element[0]));
-                echo("<td>$element[0]</td>");
-                echo "<td><img class='mutatorIcon' src='/images/mutators/" . $filename . ".png' alt=\"" . $element[0] . ":" . $element[1] . "\"></td>";
-                echo("<td class=centered>$element[2]</td>");
-                $element = $topMutators1[$i];
-                $filename = str_replace(' ', '', strtolower($element[0]));
-                echo("<td>$element[0]</td>");
-                echo "<td><img class='mutatorIcon' src='/images/mutators/" . $filename . ".png' alt=\"" . $element[0] . ":" . $element[1] . "\"></td>";
-                echo("<td class=centered>$element[2]</td>");
+                $filename = str_replace(' ', '', strtolower($mutator['mutatorname']));
+                $img = "<img class='mutatorIcon' src='/images/mutators/" . $filename . ".png' alt=\"" . $mutator['mutatorname'] . ":" . $mutator['mutatordescription'] . "\" width=\"25\" height=\"25\">";
+                echo("<td>$img {$mutator['mutatorname']}</td>");
+                echo("<td class=centered>{$mutator['mutationcount']}</td>");
                 echo("<tr>\n");
             }
             ?>
         </tbody>
     </table>
 
-    <p>Most Infrequent Mutators:</p>
-    <table>
-        <thead>
-            <tr>
-                <th colspan=3>With Repeats</th>
-                <th colspan=3>Without Repeats</th>
-            </tr>
-            <tr>
-                <th>Mutator</th>
-                <th>Icon</th>
-                <th>Appearances</th>
-                <th>Mutator</th>
-                <th>Icon</th>
-                <th>Appearances</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-            for ($i = 0; $i < 5; $i++) {
-                echo("<tr>");
-                $element = $bottomMutators[$i];
-                $filename = str_replace(' ', '', strtolower($element[0]));
-                echo("<td>$element[0]</td>");
-                echo "<td><img class='mutatorIcon' src='/images/mutators/" . $filename . ".png' alt=\"" . $element[0] . ":" . $element[1] . "\"></td>";
-                echo("<td class=centered>$element[2]</td>");
-                $element = $bottomMutators1[$i];
-                $filename = str_replace(' ', '', strtolower($element[0]));
-                echo("<td>$element[0]</td>");
-                echo "<td><img class='mutatorIcon' src='/images/mutators/" . $filename . ".png' alt=\"" . $element[0] . ":" . $element[1] . "\"></td>";
-                echo("<td class=centered>$element[2]</td>");
-                echo("<tr>\n");
-            }
-            ?>
-        </tbody>
-    </table>
     <h2 id="community">Community Stats</h2>
-        <p>Note: Data refreshes once every 24 hours<br>
-        Current data refreshed on: 2024-05-04 04:00:01<br>
+        <p>Note: Data generated from replays uploaded to the site, back when replay uploading was supported. Replay uploading is no longer supported.<br>
+        Data generated on: 2024-05-04 04:00:01<br>
         Total replays counted: 255876</p>
     <div class="infoIcon">
         <p class="subheading">Total Games Counted Across Servers</p>
