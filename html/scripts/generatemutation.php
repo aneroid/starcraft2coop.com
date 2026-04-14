@@ -169,18 +169,10 @@ function generateMutatorCountArray()
     //Generate an array with mutator cost vs. # of mutators with that cost
     global $pointCeiling;
 
-    include 'sqlconnection.php';
-
-    $sql = "SELECT abomination, count(abomination) FROM mutators group by abomination";
-    $result = mysqli_query($con, $sql);
+    $mutators = get_mutators();
     $countArray = array_fill(0, $pointCeiling + 1, 0);
-    while ($row = mysqli_fetch_array($result)) {
-        if (intval($row[1]) > 0) {
-            $countArray[$row[0]] = intval($row[1]);
-        } else {
-            $countArray[$row[0]] = 0;
-        }
+    foreach ($mutators as $mutator) {
+        $countArray[$mutator['abomination']]++;
     }
-    $con->close();
     return $countArray;
 }

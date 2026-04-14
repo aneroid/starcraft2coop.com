@@ -45,14 +45,7 @@ require_once "../wrapper-static.php";
     require_once __DIR__ . '/../data/queries.php';
     include '../scripts/sqlconnection.php';
 
-    $sql = "SELECT count(*)
-            FROM mutators";
-    $result = mysqli_query($con, $sql);
-    $row = mysqli_fetch_array($result);
-    $mutatorCount = $row[0];
-
-    $result = get_mutator_interactions();
-    $mutatorInteractionCount = count($result);
+    $mutatorInteractionCount = count(get_mutator_interactions());
 
     $sql = "SELECT count(*)
             FROM mutatorcommandertips";
@@ -66,28 +59,13 @@ require_once "../wrapper-static.php";
     $row = mysqli_fetch_array($result);
     $patchCount = $row[0];
 
-    $sql = "SELECT count(*)
-            FROM weeklymutations";
-    $result = mysqli_query($con, $sql);
-    $row = mysqli_fetch_array($result);
-    $weeklyMutationCount = $row[0];
+    $weeklyMutations = get_weeklymutations();
+    $weeklyMutationCount = count($weeklyMutations);
 
-    $sql = "SELECT count(*)
-            FROM weeklymutations
-            WHERE mut01=8";
-    $result = mysqli_query($con, $sql);
-    $row = mysqli_fetch_array($result);
-    $WOMCount = $row[0];
+    $woms = array_filter($weeklyMutations, fn($weeklyMutation) => $weeklyMutation['mut01'] == 8);
+    $WOMCount = count($woms);
 
-    $sql = "SELECT mutatorid, mutatorname, mutatordescription, abomination
-            FROM mutators
-            ORDER BY mutatorid ASC";
-    $result = mysqli_query($con, $sql);
-    $mutators = [];
-
-    while ($row = mysqli_fetch_array($result)) {
-        $mutators[] = $row;
-    }
+    $mutators = get_mutators();
 
     $sql = "SELECT map, count(map) FROM `weeklymutations`
             GROUP BY map
@@ -188,9 +166,9 @@ require_once "../wrapper-static.php";
     <div id="tooltip">tooltip</div>
     <h2 id="general">General</h2>
     <p>These statistics are directly related to the Co-op game mode and do not include any community-made content. Please note that as new content gets added, these statistics may not be accurate until the entire site has been updated to reflect the new patch. When this happens, a post will be made on the front page of the site, notifying readers of this.</p>
-    <p>Total Commanders: <?= count(scandir("../commanders")) - 3 ?></p>
-    <p>Total Missions: <?= count(scandir("../missions")) - 3 ?></p>
-    <p>Total Mutators: <?= $mutatorCount ?></p>
+    <p>Total Commanders: <?= count(get_commanders()) ?></p>
+    <p>Total Missions: <?= count(get_missions()) ?></p>
+    <p>Total Mutators: <?= count(get_mutators()) ?></p>
     <h2 id="site">Site-Specific</h2>
     <p>These statistics provide you with a bit of a behind-the-scenes look at starcraft2coop.com. There is a lot of data that is stored in the site's databases that allow users to pull useful information when they wish, such as mutator interactions. A lot of this data is automatically pulled and presented to readers in an easy-to-find manner, such as on the <a href="/resources/weeklymutations">Weekly Mutations</a> page.</p>
     <p>Total Mutator Interactions: <?= $mutatorInteractionCount ?></p>

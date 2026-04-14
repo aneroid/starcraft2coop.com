@@ -374,125 +374,6 @@ require_once "../wrapper.php";
     <p>Completing a Weekly Mutation on a difficulty level will unlock the bounties for all difficulties below. For example, completing a Weekly Mutation on Brutal difficulty (commonly known as a "Brutation"), will give you 185,000. You can only earn each weekly bounty once.</p>
     <p>For a brief description of each mutator, hover over its icon. For details, please go to the <a href="/resources/mutators">Mutators</a> page.</p>
     <ul>
-        <?php
-
-        include '../scripts/sqlconnection.php';
-
-        $sql = "SELECT mutatorid, mutatorname, mutatordescription, abomination
-                    FROM mutators
-                    ORDER BY mutatorid ASC";
-        $result = mysqli_query($con, $sql);
-        $mutators = [];
-
-        while ($row = mysqli_fetch_array($result)) {
-            $mutators[] = $row;
-        }
-
-        $sql = "SELECT mutationid, releasedate, mutation, link, map, mut01, mut02, mut03
-                FROM weeklymutations
-                ORDER BY mutationid DESC";
-        $weeklyList = [];
-        $result = mysqli_query($con, $sql);
-        $row = mysqli_fetch_array($result);
-        $weeklyList[] = $row;
-        $url = $row['link'];
-
-        $mutationName = $row['mutation'];
-
-        $toggled = false;
-        $listed = false;
-        $currentMutation = 0;
-
-        while ($row = mysqli_fetch_array($result)) {
-            $weeklyList[] = $row;
-        }
-
-        $sql2 = "SELECT difficulty, minpoints FROM brutalplus";
-        $result2 = mysqli_query($con, $sql2);
-        $difficultyArray = [];
-        while ($row = mysqli_fetch_array($result2)) {
-            $difficultyArray[] = $row;
-        }
-        if ($unknown) {
-            $score = 0;
-        }
-
-        $val = getDiffString($score);
-        $diff = $val[0];
-        if ($val[0] !== 0) {
-            $diffString = "Brutal+" . $val[1];
-        } else {
-            $diffString = "Unknown";
-        }
-
-        function getDiffString($score)
-        {
-            global $difficultyArray;
-            if ($score == 0) {
-                $diff = 0;
-                $diffString = "?";
-            } elseif ($score > 20) {
-                $diff = 7;
-                $diffString = "&#9760;&#65039;";
-            } else {
-                $diffString = "&#128522;";
-                $diff = 1;
-                for ($i = 0; $i < count($difficultyArray); $i++) {
-                    if ($score >= intval($difficultyArray[$i]['minpoints'])) {
-                        $diff = intval($difficultyArray[$i]['difficulty']);
-                        $diffString = $diff;
-                    } else {
-                        break;
-                    }
-                }
-            }
-
-            return [$diff,$diffString];
-        }
-
-        $mutationStart = new DateTime($weeklyList[0]['releasedate'] . " 18:00:00");
-        $mutationStart->modify("-1 day");
-        $mutationEnd = clone $mutationStart;
-        $mutationEnd ->modify("+7 days 17 hours");
-        $map = str_replace("Lock and Load", "Lock & Load", $weeklyList[0]['map']);
-
-        $mutationStart1 = clone $mutationStart;
-        $mutationStart1->modify("-7 days");
-        $mutationEnd1 = clone $mutationEnd;
-        $mutationEnd1->modify("-7 days");
-        $map1 = str_replace("Lock and Load", "Lock & Load", $weeklyList[1]['map']);
-
-        $mutationStart = $mutationStart->format('Y-m-d H:i:s');
-        $mutationEnd = $mutationEnd->format('Y-m-d H:i:s');
-        $mutationStart1 = $mutationStart1->format('Y-m-d H:i:s');
-        $mutationEnd1 = $mutationEnd1->format('Y-m-d H:i:s');
-        $oldMutationName = $weeklyList[1]['mutation'];
-
-        // $sql = "SELECT difficulty, mycommander, allycommander, result
-        //         FROM userreplays
-        //         WHERE mutation = 1 AND
-        //               mission='$map' AND
-        //               (difficulty='Casual' OR difficulty='Normal' OR difficulty='Hard' OR difficulty='Brutal') AND
-        //               played BETWEEN '$mutationStart' AND '$mutationEnd'";
-        // $result=mysqli_query($con,$sql);
-        // $mutationGames = [];
-        // while($row = mysqli_fetch_array($result)) {
-        //     $mutationGames[] = $row;
-        // }
-
-        // $sql = "SELECT difficulty, mycommander, allycommander, result
-        //         FROM userreplays
-        //         WHERE mutation = 1 AND
-        //               mission='$map1' AND
-        //               (difficulty='Casual' OR difficulty='Normal' OR difficulty='Hard' OR difficulty='Brutal') AND
-        //               played BETWEEN '$mutationStart1' AND '$mutationEnd1'";
-        // $result=mysqli_query($con,$sql);
-        // $mutationGames1 = [];
-        // while($row = mysqli_fetch_array($result)) {
-        //     $mutationGames1[] = $row;
-        // }
-        ?>
-
     </ul>
 
     <script>
@@ -525,15 +406,36 @@ require_once "../wrapper.php";
             </thead>
             <tbody>
     <?php
-    $sql = "SELECT mutationid, mutation, map, mut01, mut02, mut03
-            FROM mutationcycle
-            ORDER BY mutationid ASC";
-    $cycleList = [];
-    $result = mysqli_query($con, $sql);
+    require_once '../data/queries.php';
 
-    while ($row = mysqli_fetch_array($result)) {
-        $cycleList[] = $row;
+    $difficultyArray = get_brutalpluses();
+    function getDiffString($score)
+    {
+        global $difficultyArray;
+        if ($score == 0) {
+            $diff = 0;
+            $diffString = "?";
+        } elseif ($score > 20) {
+            $diff = 7;
+            $diffString = "&#9760;&#65039;";
+        } else {
+            $diffString = "&#128522;";
+            $diff = 1;
+            for ($i = 0; $i < count($difficultyArray); $i++) {
+                if ($score >= intval($difficultyArray[$i]['minpoints'])) {
+                    $diff = intval($difficultyArray[$i]['difficulty']);
+                    $diffString = $diff;
+                } else {
+                    break;
+                }
+            }
+        }
+
+        return [$diff,$diffString];
     }
+
+    $cycleList = get_mutationcycle();
+    $mutators = get_mutators();
     $mutationCount = count($cycleList);
     //$mutationCycleStart = new DateTime("2020-10-26 18:00:00");
     //$today = new DateTime('now');
@@ -621,17 +523,11 @@ require_once "../wrapper.php";
     <p>Filters (click a filter to remove):</p>
     <div id="maps"><p>Map: <select id="mapselect">
         <?php
-        $sql = "SELECT distinct map FROM weeklymutations ORDER BY cast(map as char) ASC";
-        $result2 = mysqli_query($con, $sql);
-
-        while ($row = mysqli_fetch_array($result2)) {
-            $string = $row['map'];
-            if ($string !== "") {
-                $string = str_replace(" ", "", $string);
-                $string = str_replace("and", "", $string);
-                $string = str_replace("&", "", $string);
-                echo("<option value='" . strtolower($string) . "'>" . $row['map'] . "</option>");
-            }
+        foreach (get_missions() as $name) {
+            $string = str_replace(" ", "", $name);
+            $string = str_replace("and", "", $string);
+            $string = str_replace("&", "", $string);
+            echo("<option value='" . strtolower($string) . "'>" . $name . "</option>");
         }
         ?>
         </select>
@@ -640,16 +536,11 @@ require_once "../wrapper.php";
     </div>
     <div id="mutators"><p>Mutators: <select id="mutatorselect">
         <?php
-        $sql = "SELECT mutatorname FROM mutators ORDER BY mutatorname ASC";
-        $result2 = mysqli_query($con, $sql);
-
-        while ($row = mysqli_fetch_array($result2)) {
+        foreach (get_mutators() as $row) {
             $string = $row['mutatorname'];
-            if ($string !== "") {
-                $string = str_replace(" ", "", $string);
-                $string = str_replace("&", "", $string);
-                echo("<option value='" . strtolower($string) . "'>" . $row['mutatorname'] . "</option>");
-            }
+            $string = str_replace(" ", "", $string);
+            $string = str_replace("&", "", $string);
+            echo("<option value='" . strtolower($string) . "'>" . $row['mutatorname'] . "</option>");
         }
         ?>
         </select>
@@ -667,7 +558,7 @@ require_once "../wrapper.php";
         </p>
     </div>
     <p>
-        <button type="button" id="filter">Filter</button>
+        <!--button type="button" id="filter">Filter</button-->
         <button type="button" id="clear">Clear Filters</button>
     </p>
     <script>
@@ -682,6 +573,7 @@ require_once "../wrapper.php";
             if(!exists){
                 $("#maps p").append('<img class="clickable" src="/images/missionthumbnails/'+ $("#mapselect").val().replace(/ /g,'').toLowerCase() +'.png" alt="' + $("#mapselect").val() + '">')
             }
+            updateCastedFilter();
         });
         $("#addmutator").click(function(){
             var exists = false;
@@ -694,6 +586,7 @@ require_once "../wrapper.php";
             if(!exists){
                 $("#mutators p").append('<img class="clickable" src="/images/mutators/'+ $("#mutatorselect").val().replace(/ /g,'').toLowerCase() +'.png" alt="' + $("#mutatorselect").val() + '">')
             }
+            updateCastedFilter();
         });
         $("#adddifficulty").click(function(){
             var label="";
@@ -714,8 +607,9 @@ require_once "../wrapper.php";
             if(!exists){
                 $("#difficultyLevel p").append('<div class="clickable brutalFilter' + $("#difficultyselect").val() + '">'+ label + '</div>');
             }
+            updateCastedFilter();
         });
-        $("#filter").click(function(){
+        function updateCastedFilter(){
             var mapClasses = [];
             var mutatorClasses = [];
             var difficultyClasses = [];
@@ -746,18 +640,20 @@ require_once "../wrapper.php";
             }
 
             collection.show();
-            $("#columnNames").show();
+            $("#castedColumnNames").show();
             recount();
-        });
+        }
         function recount(){
             $("#filterCount").text($('#mutationList tr:visible').length-1);
         }
         $("#clear").click(function(){
             $(".clickable").remove();
             $("#mutationList tr").show();
+            updateCastedFilter();
         });
         $(document).on('click','.clickable',function(){
             $(this).remove();
+            updateCastedFilter();
         });
         $( document ).ready(function() {
             recount();
@@ -770,7 +666,7 @@ require_once "../wrapper.php";
     <div class="tableContainer">
         <table id="mutationList">
             <thead>
-                <tr id="columnNames">
+                <tr id="castedColumnNames">
                     <th>Release Date</th>
                     <th>Name</th>
                     <th>Map</th>
@@ -781,6 +677,7 @@ require_once "../wrapper.php";
             </thead>
             <tbody>
                 <?php
+                $weeklyList = get_weeklymutations();
                 foreach ($weeklyList as $row) {
                     $classVals = str_replace("and", "", str_replace(' ', '', strtolower($row["map"])));
                     $score = 0;
@@ -848,7 +745,6 @@ require_once "../wrapper.php";
                     }
                     echo "</tr>\n";
                 }
-                $con->close();
                 ?>
             </tbody>
         </table>

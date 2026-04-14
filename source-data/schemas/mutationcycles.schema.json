@@ -1,0 +1,62 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$ref": "#/definitions/MutationCycleList",
+    "definitions": {
+        "MutationCycleList": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/MutationCycle"
+            }
+        },
+        "MutationCycle": {
+            "type": "object",
+            "properties": {
+                "mutationid": {
+                    "$ref": "#/definitions/PositiveInteger"
+                },
+                "mutation": {
+                    "type": "string"
+                },
+                "map": {
+                    "type": "string"
+                },
+                "mut01": {
+                    "$ref": "#/definitions/PositiveInteger"
+                },
+                "mut02": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/PositiveInteger"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "mut03": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/PositiveInteger"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                }
+            },
+            "required": [
+                "mutationid",
+                "mutation",
+                "map",
+                "mut01",
+                "mut02",
+                "mut03"
+            ],
+            "additionalProperties": false
+        },
+        "PositiveInteger": {
+            "type": "integer",
+            "minimum": 1
+        }
+    }
+}

@@ -49,3 +49,39 @@ function get_mutator_interactions(): array
     $json = file_get_contents(__DIR__ . '/mutatorinteractions.json');
     return json_decode($json, true);
 }
+
+/**
+ * @return array All Mutator info.
+ */
+function get_mutators(): array
+{
+    $json = file_get_contents(__DIR__ . '/mutators.json');
+    return json_decode($json, true);
+}
+
+/**
+ * @return array List of map names.
+ */
+function get_missions(): array
+{
+    $json = file_get_contents(__DIR__ . '/missions.json');
+    return json_decode($json, true);
+}
+
+/**
+ * @return array All WeeklyMutation info.
+ */
+function get_weeklymutations(): array
+{
+    $json = file_get_contents(__DIR__ . '/weeklymutations.json');
+    return json_decode($json, true);
+}
+
+/**
+ * @return array All MutationCycle info.
+ */
+function get_mutationcycle(): array
+{
+    $json = file_get_contents(__DIR__ . '/mutationcycle.json');
+    return json_decode($json, true);
+}

@@ -76,13 +76,10 @@ require_once "../wrapper-static.php";
         </thead>
         <tbody>
             <?php
-            include '../scripts/sqlconnection.php';
+            require_once '../data/queries.php';
 
-            $sql = "SELECT *
-                    FROM brutalplus
-                    ORDER BY difficulty ASC";
-            $result = mysqli_query($con, $sql);
-            while ($row = mysqli_fetch_array($result)) {
+            $brutalPlus = get_brutalpluses();
+            foreach ($brutalPlus as $row) {
                 echo "<tr><td>" . $row['difficulty'] . "</td><td>" . $row['minpoints'] . "</td><td>" . $row['maxpoints'] . "</td><td>" . $row['minmutators'] . "</td><td>" . $row['maxmutators'] . "</td></tr>";
             }
             ?>
@@ -101,14 +98,11 @@ require_once "../wrapper-static.php";
         <tbody>
             <?php
 
-            $sql = "SELECT mutatorname, abomination
-                    FROM mutators
-                    ORDER BY mutatorname ASC";
-            $result = mysqli_query($con, $sql);
+            $mutatorInfo = get_mutators();
             $mutators = array_fill(0, 11, []);
 //10 is the highest point value
             $countArray = array_fill(0, 11, 0);
-            while ($row = mysqli_fetch_array($result)) {
+            foreach ($mutatorInfo as $row) {
                 if ($row['abomination'] > 0) {
                     echo "<tr><td>" . $row['mutatorname'] . "</td><td>" . $row['abomination'] . "</td></tr>";
                     $countArray[$row['abomination']] += 1;

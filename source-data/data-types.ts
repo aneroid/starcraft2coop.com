@@ -107,3 +107,16 @@ export interface WeeklyMutation {
 }
 
 export type WeeklyMutationList = WeeklyMutation[];
+
+export interface MutationCycle {
+    mutationid: PositiveInteger;
+    mutation: string;
+    map: string;
+    mut01: PositiveInteger;
+    mut02: PositiveInteger | null;
+    mut03: PositiveInteger | null;
+}
+
+export type MutationCycleList = MutationCycle[];
+
+export type Maps = string[];

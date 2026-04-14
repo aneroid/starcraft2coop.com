@@ -8,6 +8,8 @@ const files: [`${string}.json`, string][] = [
     ['mutatorinteractions.json', 'MutatorInteractionList'],
     ['mutators.json', 'MutatorList'],
     ['weeklymutations.json', 'WeeklyMutationList'],
+    ['mutationcycle.json', 'MutationCycleList'],
+    ['missions.json', 'Maps'],
 ];
 
 const ajv = new Ajv();
