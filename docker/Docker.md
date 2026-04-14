@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-- Use the defaults provided in [`docker-compose.yml`](./docker-compose.yml) or update it as needed.
+- Use the defaults provided in [`docker-compose.yml`](../docker-compose.yml) or update it as needed.
 - Make sure that `config.example.php` is copied to `config.php` and updated with the same credentials.
 
 ## Build
@@ -31,12 +31,12 @@ docker compose up --build
 
 ## DB connection with external tools
 
-The DB is accessible via `localhost`, on port 3306. The 'db' name is for containers to connect.
+The DB is accessible via `localhost`, on port 3306. The 'sc2coop-db' name is for containers to connect.
 
 ## Generating static pages
 
 ```shell
-docker exec -w /var/www sc2coop-web php generate.php
+docker exec -w /var/www sc2coop-php php generate.php
 ```
 
 ## Running PHP Code Sniffer

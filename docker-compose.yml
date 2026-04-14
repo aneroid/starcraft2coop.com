@@ -1,17 +1,29 @@
 services:
-  web:
-    container_name: sc2coop-web
-    build: .
-    ports:
-      - "8080:80"
+  php:
+    container_name: sc2coop-php
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
     volumes:
       - ./html:/var/www/html
       - ./config.php:/var/www/config.php
       - ./generate.php:/var/www/generate.php
 
+  web:
+    container_name: sc2coop-web
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.apache
+    ports:
+      - "8080:80"
+    volumes:
+      - ./html:/var/www/html
+    depends_on:
+      - php
+
   db:
     # the values here should match config.php
-    container_name: db  # DB_HOST
+    container_name: sc2coop-db  # DB_HOST
     image: mariadb:10.11
     environment:
       MARIADB_USER: sc2coop  # DB_USER
