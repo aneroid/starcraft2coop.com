@@ -372,7 +372,8 @@ require_once "../wrapper-static.php";
 require_once __DIR__ . '/../data/queries.php';
 $mutatorInfo = get_mutators();
 usort($mutatorInfo, fn($a, $b) => $a['mutatorname'] <=> $b['mutatorname']);
-function token($name) {
+function token($name)
+{
     return strtolower(str_replace(' ', '', str_replace('-', '', $name)));
 }
 ?>
