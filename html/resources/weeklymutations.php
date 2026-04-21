@@ -411,7 +411,7 @@ require_once "../wrapper.php";
     $difficultyArray = get_brutalpluses();
     function getDiffString(?int $brutalPlus): array
     {
-        if ($brutalPlus === NULL) {
+        if ($brutalPlus === null) {
             $diffString = "?";
         } else if ($brutalPlus > 6) {
             $diffString = "&#9760;&#65039;"; // skull and crossbones emoji

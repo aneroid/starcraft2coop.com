@@ -66,6 +66,7 @@ for (const mutation of mutationCycle) {
     if (mutation.mut03) brutalPoints += mutatorData[mutation.mut03]?.abomination || NaN;
 
     mutation.brutalpoints = isNaN(brutalPoints) ? null : brutalPoints;
+    mutation.brutalplus = null;
     if (brutalPoints) {
         for (const brutalPlus of brutalPluses) {
             if (brutalPoints < brutalPlus.minpoints) {
@@ -77,8 +78,6 @@ for (const mutation of mutationCycle) {
             }
         }
         mutation.brutalplus ??= 7;
-    } else {
-        mutation.brutalplus = null;
     }
 }
 

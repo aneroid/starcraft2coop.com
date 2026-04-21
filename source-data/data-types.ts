@@ -127,8 +127,8 @@ export interface MutationCycle {
 }
 
 export interface MutationCycleWithScore extends MutationCycle {
-    brutalpoints: number | null;
-    brutalplus: number | null;
+    brutalpoints: PositiveInteger | null;
+    brutalplus: NonNegativeInteger | null;
 }
 
 export type MutationCycleList = MutationCycle[];
