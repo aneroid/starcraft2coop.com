@@ -6,13 +6,55 @@
             "fileMatch": [
                 "/source-data/brutalplus.json"
             ],
-            "url": "./source-data/schemas/brutalplus.schema.json"
+            "url": "./html/data/schemas/brutalplus.schema.json"
         },
         {
             "fileMatch": [
                 "/source-data/commandersummaries.json"
             ],
-            "url": "./source-data/schemas/commandersummaries.schema.json"
+            "url": "./html/data/schemas/commandersummaries.schema.json"
+        },
+        {
+            "fileMatch": [
+                "/source-data/mutatorinteractions.json"
+            ],
+            "url": "./html/data/schemas/mutatorinteractions.schema.json"
+        },
+        {
+            "fileMatch": [
+                "/source-data/mutators.json"
+            ],
+            "url": "./html/data/schemas/mutators.schema.json"
+        },
+        {
+            "fileMatch": [
+                "/source-data/weeklymutations.json"
+            ],
+            "url": "./html/data/schemas/weeklymutations.schema.json"
+        },
+        {
+            "fileMatch": [
+                "/source-data/mutationcycle.json"
+            ],
+            "url": "./html/data/schemas/mutationcycle.schema.json"
+        },
+        {
+            "fileMatch": [
+                "/source-data/missionnames.json"
+            ],
+            "url": "./html/data/schemas/missionnames.schema.json"
+        },
+        {
+            "fileMatch": [
+                "/source-data/amonunits.json"
+            ],
+            "url": "./html/data/schemas/amonunits.schema.json"
+        },
+        {
+            "fileMatch": [
+                "/source-data/playerunits.json"
+            ],
+            "url": "./html/data/schemas/playerunits.schema.json"
         }
     ]
 }

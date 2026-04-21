@@ -25,7 +25,7 @@ const generator = tsj.createGenerator({
 
 for (const [file, type] of files) {
     console.log(`Generating schema for ${file}`);
-    Bun.write(`source-data/schemas/${file.slice(0, -5)}.schema.json`, JSON.stringify(generator.createSchema(type), null, 4) + '\n');
+    Bun.write(`html/data/schemas/${file.slice(0, -5)}.schema.json`, JSON.stringify(generator.createSchema(type), null, 4) + '\n');
 }
 
 console.log(`Done`)

@@ -18,7 +18,7 @@ const ajv = new Ajv();
 for (const [file, type] of files) {
     const fileContent = await Bun.file(`source-data/${file}`).json();
 
-    const fileSchema = await Bun.file(`source-data/schemas/${file.slice(0, -5)}.schema.json`).json();
+    const fileSchema = await Bun.file(`html/data/schemas/${file.slice(0, -5)}.schema.json`).json();
 
     const validateFile = ajv.compile(fileSchema);
     if (!validateFile(fileContent)) {
