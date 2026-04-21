@@ -5,7 +5,9 @@
         "map": "Oblivion Express",
         "mut01": 10,
         "mut02": 39,
-        "mut03": 61
+        "mut03": 61,
+        "brutalpoints": 7,
+        "brutalplus": 2
     },
     {
         "mutationid": 2,
@@ -13,7 +15,9 @@
         "map": "Chain of Ascension",
         "mut01": 25,
         "mut02": 28,
-        "mut03": 49
+        "mut03": 49,
+        "brutalpoints": 5,
+        "brutalplus": 1
     },
     {
         "mutationid": 3,
@@ -21,7 +25,9 @@
         "map": "Lock and Load",
         "mut01": 30,
         "mut02": 51,
-        "mut03": 53
+        "mut03": 53,
+        "brutalpoints": 7,
+        "brutalplus": 2
     },
     {
         "mutationid": 4,
@@ -29,7 +35,9 @@
         "map": "Rifts to Korhal",
         "mut01": 57,
         "mut02": 60,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 12,
+        "brutalplus": 4
     },
     {
         "mutationid": 5,
@@ -37,7 +45,9 @@
         "map": "Void Launch",
         "mut01": 7,
         "mut02": 50,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 9,
+        "brutalplus": 3
     },
     {
         "mutationid": 6,
@@ -45,7 +55,9 @@
         "map": "Void Thrashing",
         "mut01": 14,
         "mut02": 26,
-        "mut03": 46
+        "mut03": 46,
+        "brutalpoints": 6,
+        "brutalplus": 1
     },
     {
         "mutationid": 7,
@@ -53,7 +65,9 @@
         "map": "Temple of the Past",
         "mut01": 4,
         "mut02": 5,
-        "mut03": 32
+        "mut03": 32,
+        "brutalpoints": 9,
+        "brutalplus": 3
     },
     {
         "mutationid": 8,
@@ -61,7 +75,9 @@
         "map": "Lock and Load",
         "mut01": 38,
         "mut02": 44,
-        "mut03": 52
+        "mut03": 52,
+        "brutalpoints": 4,
+        "brutalplus": 1
     },
     {
         "mutationid": 9,
@@ -69,7 +85,9 @@
         "map": "Void Launch",
         "mut01": 2,
         "mut02": 3,
-        "mut03": 47
+        "mut03": 47,
+        "brutalpoints": 8,
+        "brutalplus": 2
     },
     {
         "mutationid": 10,
@@ -77,7 +95,9 @@
         "map": "Rifts to Korhal",
         "mut01": 33,
         "mut02": 40,
-        "mut03": 62
+        "mut03": 62,
+        "brutalpoints": 10,
+        "brutalplus": 3
     },
     {
         "mutationid": 11,
@@ -85,7 +105,9 @@
         "map": "Void Thrashing",
         "mut01": 8,
         "mut02": null,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": null,
+        "brutalplus": null
     },
     {
         "mutationid": 12,
@@ -93,7 +115,9 @@
         "map": "Chain of Ascension",
         "mut01": 7,
         "mut02": 49,
-        "mut03": 57
+        "mut03": 57,
+        "brutalpoints": 7,
+        "brutalplus": 2
     },
     {
         "mutationid": 13,
@@ -101,7 +125,9 @@
         "map": "Oblivion Express",
         "mut01": 16,
         "mut02": 19,
-        "mut03": 47
+        "mut03": 47,
+        "brutalpoints": 9,
+        "brutalplus": 3
     },
     {
         "mutationid": 14,
@@ -109,7 +135,9 @@
         "map": "Temple of the Past",
         "mut01": 42,
         "mut02": 51,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 7,
+        "brutalplus": 2
     },
     {
         "mutationid": 15,
@@ -117,7 +145,9 @@
         "map": "The Vermillion Problem",
         "mut01": 10,
         "mut02": 31,
-        "mut03": 53
+        "mut03": 53,
+        "brutalpoints": 8,
+        "brutalplus": 2
     },
     {
         "mutationid": 16,
@@ -125,7 +155,9 @@
         "map": "Lock and Load",
         "mut01": 4,
         "mut02": 46,
-        "mut03": 60
+        "mut03": 60,
+        "brutalpoints": 17,
+        "brutalplus": 5
     },
     {
         "mutationid": 17,
@@ -133,7 +165,9 @@
         "map": "Void Launch",
         "mut01": 25,
         "mut02": 38,
-        "mut03": 39
+        "mut03": 39,
+        "brutalpoints": 6,
+        "brutalplus": 1
     },
     {
         "mutationid": 18,
@@ -141,7 +175,9 @@
         "map": "The Vermillion Problem",
         "mut01": 19,
         "mut02": 34,
-        "mut03": 44
+        "mut03": 44,
+        "brutalpoints": 8,
+        "brutalplus": 2
     },
     {
         "mutationid": 19,
@@ -149,7 +185,9 @@
         "map": "Chain of Ascension",
         "mut01": 14,
         "mut02": 16,
-        "mut03": 58
+        "mut03": 58,
+        "brutalpoints": null,
+        "brutalplus": null
     },
     {
         "mutationid": 20,
@@ -157,7 +195,9 @@
         "map": "Mist Opportunities",
         "mut01": 3,
         "mut02": 36,
-        "mut03": 54
+        "mut03": 54,
+        "brutalpoints": 14,
+        "brutalplus": 4
     },
     {
         "mutationid": 21,
@@ -165,7 +205,9 @@
         "map": "Rifts to Korhal",
         "mut01": 16,
         "mut02": 30,
-        "mut03": 50
+        "mut03": 50,
+        "brutalpoints": 12,
+        "brutalplus": 4
     },
     {
         "mutationid": 22,
@@ -173,7 +215,9 @@
         "map": "Oblivion Express",
         "mut01": 5,
         "mut02": 14,
-        "mut03": 41
+        "mut03": 41,
+        "brutalpoints": 10,
+        "brutalplus": 3
     },
     {
         "mutationid": 23,
@@ -181,7 +225,9 @@
         "map": "Lock and Load",
         "mut01": 8,
         "mut02": null,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": null,
+        "brutalplus": null
     },
     {
         "mutationid": 24,
@@ -189,7 +235,9 @@
         "map": "Mist Opportunities",
         "mut01": 2,
         "mut02": 4,
-        "mut03": 51
+        "mut03": 51,
+        "brutalpoints": 10,
+        "brutalplus": 3
     },
     {
         "mutationid": 25,
@@ -197,7 +245,9 @@
         "map": "Rifts to Korhal",
         "mut01": 1,
         "mut02": 55,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": null,
+        "brutalplus": null
     },
     {
         "mutationid": 26,
@@ -205,7 +255,9 @@
         "map": "Temple of the Past",
         "mut01": 3,
         "mut02": 46,
-        "mut03": 61
+        "mut03": 61,
+        "brutalpoints": 6,
+        "brutalplus": 1
     },
     {
         "mutationid": 27,
@@ -213,7 +265,9 @@
         "map": "Void Thrashing",
         "mut01": 19,
         "mut02": 36,
-        "mut03": 47
+        "mut03": 47,
+        "brutalpoints": 11,
+        "brutalplus": 4
     },
     {
         "mutationid": 28,
@@ -221,7 +275,9 @@
         "map": "Oblivion Express",
         "mut01": 48,
         "mut02": 56,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": null,
+        "brutalplus": null
     },
     {
         "mutationid": 29,
@@ -229,7 +285,9 @@
         "map": "The Vermillion Problem",
         "mut01": 28,
         "mut02": 40,
-        "mut03": 42
+        "mut03": 42,
+        "brutalpoints": 8,
+        "brutalplus": 2
     },
     {
         "mutationid": 30,
@@ -237,7 +295,9 @@
         "map": "Chain of Ascension",
         "mut01": 23,
         "mut02": 39,
-        "mut03": 51
+        "mut03": 51,
+        "brutalpoints": 12,
+        "brutalplus": 4
     },
     {
         "mutationid": 31,
@@ -245,7 +305,9 @@
         "map": "Void Thrashing",
         "mut01": 5,
         "mut02": 54,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 9,
+        "brutalplus": 3
     },
     {
         "mutationid": 32,
@@ -253,7 +315,9 @@
         "map": "Void Launch",
         "mut01": 18,
         "mut02": 37,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": null,
+        "brutalplus": null
     },
     {
         "mutationid": 33,
@@ -261,7 +325,9 @@
         "map": "Mist Opportunities",
         "mut01": 2,
         "mut02": 52,
-        "mut03": 62
+        "mut03": 62,
+        "brutalpoints": 7,
+        "brutalplus": 2
     },
     {
         "mutationid": 34,
@@ -269,7 +335,9 @@
         "map": "Lock and Load",
         "mut01": 31,
         "mut02": 32,
-        "mut03": 34
+        "mut03": 34,
+        "brutalpoints": 10,
+        "brutalplus": 3
     },
     {
         "mutationid": 35,
@@ -277,7 +345,9 @@
         "map": "Miner Evacuation",
         "mut01": 46,
         "mut02": 59,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 7,
+        "brutalplus": 2
     },
     {
         "mutationid": 36,
@@ -285,7 +355,9 @@
         "map": "Void Launch",
         "mut01": 11,
         "mut02": 32,
-        "mut03": 49
+        "mut03": 49,
+        "brutalpoints": 6,
+        "brutalplus": 1
     },
     {
         "mutationid": 37,
@@ -293,7 +365,9 @@
         "map": "Lock and Load",
         "mut01": 17,
         "mut02": 29,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": null,
+        "brutalplus": null
     },
     {
         "mutationid": 38,
@@ -301,7 +375,9 @@
         "map": "Mist Opportunities",
         "mut01": 6,
         "mut02": 31,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 12,
+        "brutalplus": 4
     },
     {
         "mutationid": 39,
@@ -309,7 +385,9 @@
         "map": "Temple of the Past",
         "mut01": 13,
         "mut02": 36,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 6,
+        "brutalplus": 1
     },
     {
         "mutationid": 40,
@@ -317,7 +395,9 @@
         "map": "Void Thrashing",
         "mut01": 42,
         "mut02": 60,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 15,
+        "brutalplus": 5
     },
     {
         "mutationid": 41,
@@ -325,7 +405,9 @@
         "map": "The Vermillion Problem",
         "mut01": 8,
         "mut02": null,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": null,
+        "brutalplus": null
     },
     {
         "mutationid": 42,
@@ -333,7 +415,9 @@
         "map": "Rifts to Korhal",
         "mut01": 13,
         "mut02": 25,
-        "mut03": 34
+        "mut03": 34,
+        "brutalpoints": 6,
+        "brutalplus": 1
     },
     {
         "mutationid": 43,
@@ -341,7 +425,9 @@
         "map": "Temple of the Past",
         "mut01": 54,
         "mut02": 59,
-        "mut03": 61
+        "mut03": 61,
+        "brutalpoints": 14,
+        "brutalplus": 4
     },
     {
         "mutationid": 44,
@@ -349,7 +435,9 @@
         "map": "Rifts to Korhal",
         "mut01": 20,
         "mut02": 21,
-        "mut03": 22
+        "mut03": 22,
+        "brutalpoints": 14,
+        "brutalplus": 4
     },
     {
         "mutationid": 45,
@@ -357,7 +445,9 @@
         "map": "The Vermillion Problem",
         "mut01": 47,
         "mut02": 50,
-        "mut03": 57
+        "mut03": 57,
+        "brutalpoints": 10,
+        "brutalplus": 3
     },
     {
         "mutationid": 46,
@@ -365,7 +455,9 @@
         "map": "Mist Opportunities",
         "mut01": 33,
         "mut02": 41,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 13,
+        "brutalplus": 4
     },
     {
         "mutationid": 47,
@@ -373,7 +465,9 @@
         "map": "Dead of Night",
         "mut01": 6,
         "mut02": 51,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 9,
+        "brutalplus": 3
     },
     {
         "mutationid": 48,
@@ -381,7 +475,9 @@
         "map": "Miner Evacuation",
         "mut01": 44,
         "mut02": 62,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 5,
+        "brutalplus": 1
     },
     {
         "mutationid": 49,
@@ -389,7 +485,9 @@
         "map": "Oblivion Express",
         "mut01": 8,
         "mut02": null,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": null,
+        "brutalplus": null
     },
     {
         "mutationid": 50,
@@ -397,7 +495,9 @@
         "map": "Dead of Night",
         "mut01": 7,
         "mut02": 30,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 8,
+        "brutalplus": 2
     },
     {
         "mutationid": 51,
@@ -405,7 +505,9 @@
         "map": "Chain of Ascension",
         "mut01": 4,
         "mut02": 59,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 10,
+        "brutalplus": 3
     },
     {
         "mutationid": 52,
@@ -413,7 +515,9 @@
         "map": "Void Launch",
         "mut01": 5,
         "mut02": 19,
-        "mut03": 23
+        "mut03": 23,
+        "brutalpoints": 12,
+        "brutalplus": 4
     },
     {
         "mutationid": 53,
@@ -421,7 +525,9 @@
         "map": "The Vermillion Problem",
         "mut01": 15,
         "mut02": 47,
-        "mut03": 61
+        "mut03": 61,
+        "brutalpoints": 8,
+        "brutalplus": 2
     },
     {
         "mutationid": 54,
@@ -429,7 +535,9 @@
         "map": "Oblivion Express",
         "mut01": 7,
         "mut02": 59,
-        "mut03": 60
+        "mut03": 60,
+        "brutalpoints": 19,
+        "brutalplus": 6
     },
     {
         "mutationid": 55,
@@ -437,7 +545,9 @@
         "map": "Lock and Load",
         "mut01": 9,
         "mut02": 43,
-        "mut03": 52
+        "mut03": 52,
+        "brutalpoints": 10,
+        "brutalplus": 3
     },
     {
         "mutationid": 56,
@@ -445,7 +555,9 @@
         "map": "Void Thrashing",
         "mut01": 5,
         "mut02": 20,
-        "mut03": 41
+        "mut03": 41,
+        "brutalpoints": 11,
+        "brutalplus": 4
     },
     {
         "mutationid": 57,
@@ -453,7 +565,9 @@
         "map": "Miner Evacuation",
         "mut01": 6,
         "mut02": 10,
-        "mut03": 40
+        "mut03": 40,
+        "brutalpoints": 10,
+        "brutalplus": 3
     },
     {
         "mutationid": 58,
@@ -461,7 +575,9 @@
         "map": "Mist Opportunities",
         "mut01": 9,
         "mut02": 51,
-        "mut03": 53
+        "mut03": 53,
+        "brutalpoints": 4,
+        "brutalplus": 1
     },
     {
         "mutationid": 59,
@@ -469,7 +585,9 @@
         "map": "Chain of Ascension",
         "mut01": 12,
         "mut02": 36,
-        "mut03": 47
+        "mut03": 47,
+        "brutalpoints": 11,
+        "brutalplus": 4
     },
     {
         "mutationid": 60,
@@ -477,7 +595,9 @@
         "map": "Temple of the Past",
         "mut01": 22,
         "mut02": 23,
-        "mut03": 28
+        "mut03": 28,
+        "brutalpoints": 11,
+        "brutalplus": 4
     },
     {
         "mutationid": 61,
@@ -485,7 +605,9 @@
         "map": "Rifts to Korhal",
         "mut01": 3,
         "mut02": 15,
-        "mut03": 44
+        "mut03": 44,
+        "brutalpoints": 7,
+        "brutalplus": 2
     },
     {
         "mutationid": 62,
@@ -493,7 +615,9 @@
         "map": "The Vermillion Problem",
         "mut01": 16,
         "mut02": 60,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 13,
+        "brutalplus": 4
     },
     {
         "mutationid": 63,
@@ -501,7 +625,9 @@
         "map": "Void Launch",
         "mut01": 8,
         "mut02": null,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": null,
+        "brutalplus": null
     },
     {
         "mutationid": 64,
@@ -509,7 +635,9 @@
         "map": "Mist Opportunities",
         "mut01": 24,
         "mut02": 35,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 8,
+        "brutalplus": 2
     },
     {
         "mutationid": 65,
@@ -517,7 +645,9 @@
         "map": "Void Thrashing",
         "mut01": 15,
         "mut02": 30,
-        "mut03": 62
+        "mut03": 62,
+        "brutalpoints": 10,
+        "brutalplus": 3
     },
     {
         "mutationid": 66,
@@ -525,7 +655,9 @@
         "map": "Miner Evacuation",
         "mut01": 26,
         "mut02": 33,
-        "mut03": 46
+        "mut03": 46,
+        "brutalpoints": 11,
+        "brutalplus": 4
     },
     {
         "mutationid": 67,
@@ -533,7 +665,9 @@
         "map": "Void Launch",
         "mut01": 2,
         "mut02": 34,
-        "mut03": 38
+        "mut03": 38,
+        "brutalpoints": 7,
+        "brutalplus": 2
     },
     {
         "mutationid": 68,
@@ -541,7 +675,9 @@
         "map": "Rifts to Korhal",
         "mut01": 43,
         "mut02": 51,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 10,
+        "brutalplus": 3
     },
     {
         "mutationid": 69,
@@ -549,7 +685,9 @@
         "map": "Scythe of Amon",
         "mut01": 12,
         "mut02": 36,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 8,
+        "brutalplus": 2
     },
     {
         "mutationid": 70,
@@ -557,7 +695,9 @@
         "map": "Malwarfare",
         "mut01": 14,
         "mut02": 42,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 6,
+        "brutalplus": 1
     },
     {
         "mutationid": 71,
@@ -565,7 +705,9 @@
         "map": "Part and Parcel",
         "mut01": 16,
         "mut02": 27,
-        "mut03": 49
+        "mut03": 49,
+        "brutalpoints": 5,
+        "brutalplus": 1
     },
     {
         "mutationid": 72,
@@ -573,7 +715,9 @@
         "map": "Cradle of Death",
         "mut01": 1,
         "mut02": 30,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": null,
+        "brutalplus": null
     },
     {
         "mutationid": 73,
@@ -581,7 +725,9 @@
         "map": "Dead of Night",
         "mut01": 13,
         "mut02": 32,
-        "mut03": 47
+        "mut03": 47,
+        "brutalpoints": 6,
+        "brutalplus": 1
     },
     {
         "mutationid": 74,
@@ -589,7 +735,9 @@
         "map": "Temple of the Past",
         "mut01": 22,
         "mut02": 24,
-        "mut03": 51
+        "mut03": 51,
+        "brutalpoints": 10,
+        "brutalplus": 3
     },
     {
         "mutationid": 75,
@@ -597,7 +745,9 @@
         "map": "Scythe of Amon",
         "mut01": 26,
         "mut02": 53,
-        "mut03": 57
+        "mut03": 57,
+        "brutalpoints": 6,
+        "brutalplus": 1
     },
     {
         "mutationid": 76,
@@ -605,7 +755,9 @@
         "map": "Void Thrashing",
         "mut01": 35,
         "mut02": 43,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 10,
+        "brutalplus": 3
     },
     {
         "mutationid": 77,
@@ -613,7 +765,9 @@
         "map": "Void Launch",
         "mut01": 3,
         "mut02": 6,
-        "mut03": 61
+        "mut03": 61,
+        "brutalpoints": 11,
+        "brutalplus": 4
     },
     {
         "mutationid": 78,
@@ -621,7 +775,9 @@
         "map": "Chain of Ascension",
         "mut01": 20,
         "mut02": 22,
-        "mut03": 34
+        "mut03": 34,
+        "brutalpoints": 7,
+        "brutalplus": 2
     },
     {
         "mutationid": 79,
@@ -629,7 +785,9 @@
         "map": "Cradle of Death",
         "mut01": 8,
         "mut02": null,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": null,
+        "brutalplus": null
     },
     {
         "mutationid": 80,
@@ -637,7 +795,9 @@
         "map": "Miner Evacuation",
         "mut01": 7,
         "mut02": 54,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 11,
+        "brutalplus": 4
     },
     {
         "mutationid": 81,
@@ -645,7 +805,9 @@
         "map": "Rifts to Korhal",
         "mut01": 1,
         "mut02": 55,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": null,
+        "brutalplus": null
     },
     {
         "mutationid": 82,
@@ -653,7 +815,9 @@
         "map": "Malwarfare",
         "mut01": 24,
         "mut02": 31,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 11,
+        "brutalplus": 4
     },
     {
         "mutationid": 83,
@@ -661,7 +825,9 @@
         "map": "Part and Parcel",
         "mut01": 4,
         "mut02": 15,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 8,
+        "brutalplus": 2
     },
     {
         "mutationid": 84,
@@ -669,7 +835,9 @@
         "map": "Oblivion Express",
         "mut01": 48,
         "mut02": 56,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": null,
+        "brutalplus": null
     },
     {
         "mutationid": 85,
@@ -677,7 +845,9 @@
         "map": "Mist Opportunities",
         "mut01": 12,
         "mut02": 60,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 13,
+        "brutalplus": 4
     },
     {
         "mutationid": 86,
@@ -685,7 +855,9 @@
         "map": "Scythe of Amon",
         "mut01": 26,
         "mut02": 47,
-        "mut03": 59
+        "mut03": 59,
+        "brutalpoints": 11,
+        "brutalplus": 4
     },
     {
         "mutationid": 87,
@@ -693,7 +865,9 @@
         "map": "Lock and Load",
         "mut01": 52,
         "mut02": 53,
-        "mut03": 57
+        "mut03": 57,
+        "brutalpoints": 4,
+        "brutalplus": 1
     },
     {
         "mutationid": 88,
@@ -701,7 +875,9 @@
         "map": "Oblivion Express",
         "mut01": 2,
         "mut02": 4,
-        "mut03": 22
+        "mut03": 22,
+        "brutalpoints": 10,
+        "brutalplus": 3
     },
     {
         "mutationid": 89,
@@ -709,7 +885,9 @@
         "map": "Void Launch",
         "mut01": 18,
         "mut02": 37,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": null,
+        "brutalplus": null
     },
     {
         "mutationid": 90,
@@ -717,7 +895,9 @@
         "map": "The Vermillion Problem",
         "mut01": 19,
         "mut02": 38,
-        "mut03": 43
+        "mut03": 43,
+        "brutalpoints": 12,
+        "brutalplus": 4
     },
     {
         "mutationid": 91,
@@ -725,7 +905,9 @@
         "map": "Miner Evacuation",
         "mut01": 30,
         "mut02": 25,
-        "mut03": 47
+        "mut03": 47,
+        "brutalpoints": 9,
+        "brutalplus": 3
     },
     {
         "mutationid": 92,
@@ -733,7 +915,9 @@
         "map": "Temple of the Past",
         "mut01": 5,
         "mut02": 23,
-        "mut03": 27
+        "mut03": 27,
+        "brutalpoints": 10,
+        "brutalplus": 3
     },
     {
         "mutationid": 93,
@@ -741,7 +925,9 @@
         "map": "Malwarfare",
         "mut01": 4,
         "mut02": 40,
-        "mut03": 51
+        "mut03": 51,
+        "brutalpoints": 8,
+        "brutalplus": 2
     },
     {
         "mutationid": 94,
@@ -749,7 +935,9 @@
         "map": "Void Thrashing",
         "mut01": 11,
         "mut02": 33,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 9,
+        "brutalplus": 3
     },
     {
         "mutationid": 95,
@@ -757,7 +945,9 @@
         "map": "Lock and Load",
         "mut01": 17,
         "mut02": 29,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": null,
+        "brutalplus": null
     },
     {
         "mutationid": 96,
@@ -765,7 +955,9 @@
         "map": "Chain of Ascension",
         "mut01": 23,
         "mut02": 41,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 14,
+        "brutalplus": 4
     },
     {
         "mutationid": 97,
@@ -773,7 +965,9 @@
         "map": "Part and Parcel",
         "mut01": 59,
         "mut02": 62,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 8,
+        "brutalplus": 2
     },
     {
         "mutationid": 98,
@@ -781,7 +975,9 @@
         "map": "Dead of Night",
         "mut01": 28,
         "mut02": 44,
-        "mut03": 53
+        "mut03": 53,
+        "brutalpoints": 5,
+        "brutalplus": 1
     },
     {
         "mutationid": 99,
@@ -789,7 +985,9 @@
         "map": "Rifts to Korhal",
         "mut01": 6,
         "mut02": 19,
-        "mut03": 39
+        "mut03": 39,
+        "brutalpoints": 13,
+        "brutalplus": 4
     },
     {
         "mutationid": 100,
@@ -797,7 +995,9 @@
         "map": "Temple of the Past",
         "mut01": 3,
         "mut02": 42,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 7,
+        "brutalplus": 2
     },
     {
         "mutationid": 101,
@@ -805,7 +1005,9 @@
         "map": "Cradle of Death",
         "mut01": 31,
         "mut02": 46,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 7,
+        "brutalplus": 2
     },
     {
         "mutationid": 102,
@@ -813,7 +1015,9 @@
         "map": "Void Launch",
         "mut01": 21,
         "mut02": 35,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 12,
+        "brutalplus": 4
     },
     {
         "mutationid": 103,
@@ -821,7 +1025,9 @@
         "map": "Mist Opportunities",
         "mut01": 13,
         "mut02": 34,
-        "mut03": 44
+        "mut03": 44,
+        "brutalpoints": 6,
+        "brutalplus": 1
     },
     {
         "mutationid": 104,
@@ -829,7 +1035,9 @@
         "map": "Malwarfare",
         "mut01": 5,
         "mut02": 26,
-        "mut03": 33
+        "mut03": 33,
+        "brutalpoints": 11,
+        "brutalplus": 4
     },
     {
         "mutationid": 105,
@@ -837,7 +1045,9 @@
         "map": "Dead of Night",
         "mut01": 6,
         "mut02": 31,
-        "mut03": 50
+        "mut03": 50,
+        "brutalpoints": 17,
+        "brutalplus": 5
     },
     {
         "mutationid": 106,
@@ -845,7 +1055,9 @@
         "map": "Miner Evacuation",
         "mut01": 8,
         "mut02": null,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": null,
+        "brutalplus": null
     },
     {
         "mutationid": 107,
@@ -853,7 +1065,9 @@
         "map": "Void Launch",
         "mut01": 11,
         "mut02": 12,
-        "mut03": 52
+        "mut03": 52,
+        "brutalpoints": 7,
+        "brutalplus": 2
     },
     {
         "mutationid": 108,
@@ -861,7 +1075,9 @@
         "map": "Oblivion Express",
         "mut01": 23,
         "mut02": 46,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 9,
+        "brutalplus": 3
     },
     {
         "mutationid": 109,
@@ -869,7 +1085,9 @@
         "map": "Malwarfare",
         "mut01": 3,
         "mut02": 39,
-        "mut03": 47
+        "mut03": 47,
+        "brutalpoints": 8,
+        "brutalplus": 2
     },
     {
         "mutationid": 110,
@@ -877,7 +1095,9 @@
         "map": "Mist Opportunities",
         "mut01": 5,
         "mut02": 42,
-        "mut03": 51
+        "mut03": 51,
+        "brutalpoints": 9,
+        "brutalplus": 3
     },
     {
         "mutationid": 111,
@@ -885,7 +1105,9 @@
         "map": "Temple of the Past",
         "mut01": 20,
         "mut02": 22,
-        "mut03": 54
+        "mut03": 54,
+        "brutalpoints": 11,
+        "brutalplus": 4
     },
     {
         "mutationid": 112,
@@ -893,7 +1115,9 @@
         "map": "Part and Parcel",
         "mut01": 25,
         "mut02": 28,
-        "mut03": 40
+        "mut03": 40,
+        "brutalpoints": 5,
+        "brutalplus": 1
     },
     {
         "mutationid": 113,
@@ -901,7 +1125,9 @@
         "map": "Chain of Ascension",
         "mut01": 20,
         "mut02": 36,
-        "mut03": 39
+        "mut03": 39,
+        "brutalpoints": 10,
+        "brutalplus": 3
     },
     {
         "mutationid": 114,
@@ -909,7 +1135,9 @@
         "map": "Scythe of Amon",
         "mut01": 23,
         "mut02": 41,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 14,
+        "brutalplus": 4
     },
     {
         "mutationid": 115,
@@ -917,7 +1145,9 @@
         "map": "Miner Evacuation",
         "mut01": 4,
         "mut02": 13,
-        "mut03": 46
+        "mut03": 46,
+        "brutalpoints": 8,
+        "brutalplus": 2
     },
     {
         "mutationid": 116,
@@ -925,7 +1155,9 @@
         "map": "Temple of the Past",
         "mut01": 4,
         "mut02": 21,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 15,
+        "brutalplus": 5
     },
     {
         "mutationid": 117,
@@ -933,7 +1165,9 @@
         "map": "Oblivion Express",
         "mut01": 23,
         "mut02": 41,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 14,
+        "brutalplus": 4
     },
     {
         "mutationid": 118,
@@ -941,7 +1175,9 @@
         "map": "Dead of Night",
         "mut01": 5,
         "mut02": 40,
-        "mut03": 42
+        "mut03": 42,
+        "brutalpoints": 8,
+        "brutalplus": 2
     },
     {
         "mutationid": 119,
@@ -949,7 +1185,9 @@
         "map": "The Vermillion Problem",
         "mut01": 10,
         "mut02": 34,
-        "mut03": 62
+        "mut03": 62,
+        "brutalpoints": 8,
+        "brutalplus": 2
     },
     {
         "mutationid": 120,
@@ -957,7 +1195,9 @@
         "map": "Lock and Load",
         "mut01": 21,
         "mut02": 30,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 14,
+        "brutalplus": 4
     },
     {
         "mutationid": 121,
@@ -965,7 +1205,9 @@
         "map": "Scythe of Amon",
         "mut01": 10,
         "mut02": 19,
-        "mut03": 38
+        "mut03": 38,
+        "brutalpoints": 6,
+        "brutalplus": 1
     },
     {
         "mutationid": 122,
@@ -973,7 +1215,9 @@
         "map": "Malwarfare",
         "mut01": 41,
         "mut02": 59,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 12,
+        "brutalplus": 4
     },
     {
         "mutationid": 123,
@@ -981,7 +1225,9 @@
         "map": "Chain of Ascension",
         "mut01": 22,
         "mut02": 54,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 9,
+        "brutalplus": 3
     },
     {
         "mutationid": 124,
@@ -989,7 +1235,9 @@
         "map": "Cradle of Death",
         "mut01": 5,
         "mut02": 19,
-        "mut03": 40
+        "mut03": 40,
+        "brutalpoints": 6,
+        "brutalplus": 1
     },
     {
         "mutationid": 125,
@@ -997,7 +1245,9 @@
         "map": "Void Launch",
         "mut01": 24,
         "mut02": 43,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 14,
+        "brutalplus": 4
     },
     {
         "mutationid": 126,
@@ -1005,7 +1255,9 @@
         "map": "Part and Parcel",
         "mut01": 2,
         "mut02": 60,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 13,
+        "brutalplus": 4
     },
     {
         "mutationid": 127,
@@ -1013,7 +1265,9 @@
         "map": "Oblivion Express",
         "mut01": 1,
         "mut02": 49,
-        "mut03": 51
+        "mut03": 51,
+        "brutalpoints": null,
+        "brutalplus": null
     },
     {
         "mutationid": 128,
@@ -1021,7 +1275,9 @@
         "map": "Temple of the Past",
         "mut01": 1,
         "mut02": 3,
-        "mut03": 16
+        "mut03": 16,
+        "brutalpoints": null,
+        "brutalplus": null
     },
     {
         "mutationid": 129,
@@ -1029,7 +1285,9 @@
         "map": "Mist Opportunities",
         "mut01": 9,
         "mut02": 25,
-        "mut03": 44
+        "mut03": 44,
+        "brutalpoints": 5,
+        "brutalplus": 1
     },
     {
         "mutationid": 130,
@@ -1037,7 +1295,9 @@
         "map": "Miner Evacuation",
         "mut01": 3,
         "mut02": 47,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 5,
+        "brutalplus": 1
     },
     {
         "mutationid": 131,
@@ -1045,7 +1305,9 @@
         "map": "Dead of Night",
         "mut01": 1,
         "mut02": 44,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": null,
+        "brutalplus": null
     },
     {
         "mutationid": 132,
@@ -1053,7 +1315,9 @@
         "map": "Part and Parcel",
         "mut01": 16,
         "mut02": 23,
-        "mut03": 25
+        "mut03": 25,
+        "brutalpoints": 12,
+        "brutalplus": 4
     },
     {
         "mutationid": 133,
@@ -1061,7 +1325,9 @@
         "map": "Lock and Load",
         "mut01": 2,
         "mut02": 57,
-        "mut03": 62
+        "mut03": 62,
+        "brutalpoints": 8,
+        "brutalplus": 2
     },
     {
         "mutationid": 134,
@@ -1069,7 +1335,9 @@
         "map": "Rifts to Korhal",
         "mut01": 33,
         "mut02": 60,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 16,
+        "brutalplus": 5
     },
     {
         "mutationid": 135,
@@ -1077,7 +1345,9 @@
         "map": "Malwarfare",
         "mut01": 28,
         "mut02": 49,
-        "mut03": 62
+        "mut03": 62,
+        "brutalpoints": 6,
+        "brutalplus": 1
     },
     {
         "mutationid": 136,
@@ -1085,7 +1355,9 @@
         "map": "Mist Opportunities",
         "mut01": 5,
         "mut02": 23,
-        "mut03": 27
+        "mut03": 27,
+        "brutalpoints": 10,
+        "brutalplus": 3
     },
     {
         "mutationid": 137,
@@ -1093,7 +1365,9 @@
         "map": "Scythe of Amon",
         "mut01": 6,
         "mut02": 54,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 14,
+        "brutalplus": 4
     },
     {
         "mutationid": 138,
@@ -1101,7 +1375,9 @@
         "map": "Dead of Night",
         "mut01": 2,
         "mut02": 39,
-        "mut03": 59
+        "mut03": 59,
+        "brutalpoints": 11,
+        "brutalplus": 4
     },
     {
         "mutationid": 139,
@@ -1109,7 +1385,9 @@
         "map": "Void Thrashing",
         "mut01": 11,
         "mut02": 23,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 10,
+        "brutalplus": 3
     },
     {
         "mutationid": 140,
@@ -1117,7 +1395,9 @@
         "map": "Mist Opportunities",
         "mut01": 13,
         "mut02": 44,
-        "mut03": 60
+        "mut03": 60,
+        "brutalpoints": 13,
+        "brutalplus": 4
     },
     {
         "mutationid": 141,
@@ -1125,7 +1405,9 @@
         "map": "Cradle of Death",
         "mut01": 7,
         "mut02": 18,
-        "mut03": 37
+        "mut03": 37,
+        "brutalpoints": null,
+        "brutalplus": null
     },
     {
         "mutationid": 142,
@@ -1133,7 +1415,9 @@
         "map": "Temple of the Past",
         "mut01": 20,
         "mut02": 22,
-        "mut03": 36
+        "mut03": 36,
+        "brutalpoints": 9,
+        "brutalplus": 3
     },
     {
         "mutationid": 143,
@@ -1141,7 +1425,9 @@
         "map": "Scythe of Amon",
         "mut01": 4,
         "mut02": 42,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 10,
+        "brutalplus": 3
     },
     {
         "mutationid": 144,
@@ -1149,7 +1435,9 @@
         "map": "Oblivion Express",
         "mut01": 19,
         "mut02": 26,
-        "mut03": 46
+        "mut03": 46,
+        "brutalpoints": 8,
+        "brutalplus": 2
     },
     {
         "mutationid": 145,
@@ -1157,7 +1445,9 @@
         "map": "Miner Evacuation",
         "mut01": 52,
         "mut02": 60,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 11,
+        "brutalplus": 4
     },
     {
         "mutationid": 146,
@@ -1165,7 +1455,9 @@
         "map": "Chain of Ascension",
         "mut01": 24,
         "mut02": 49,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 7,
+        "brutalplus": 2
     },
     {
         "mutationid": 147,
@@ -1173,7 +1465,9 @@
         "map": "Lock and Load",
         "mut01": 5,
         "mut02": 23,
-        "mut03": 32
+        "mut03": 32,
+        "brutalpoints": 11,
+        "brutalplus": 4
     },
     {
         "mutationid": 148,
@@ -1181,7 +1475,9 @@
         "map": "Cradle of Death",
         "mut01": 3,
         "mut02": 34,
-        "mut03": 39
+        "mut03": 39,
+        "brutalpoints": 8,
+        "brutalplus": 2
     },
     {
         "mutationid": 149,
@@ -1189,7 +1485,9 @@
         "map": "The Vermillion Problem",
         "mut01": 41,
         "mut02": 48,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": null,
+        "brutalplus": null
     },
     {
         "mutationid": 150,
@@ -1197,7 +1495,9 @@
         "map": "Dead of Night",
         "mut01": 4,
         "mut02": 43,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 13,
+        "brutalplus": 4
     },
     {
         "mutationid": 151,
@@ -1205,7 +1505,9 @@
         "map": "Mist Opportunities",
         "mut01": 35,
         "mut02": 51,
-        "mut03": 54
+        "mut03": 54,
+        "brutalpoints": 11,
+        "brutalplus": 4
     },
     {
         "mutationid": 152,
@@ -1213,7 +1515,9 @@
         "map": "Oblivion Express",
         "mut01": 12,
         "mut02": 19,
-        "mut03": 36
+        "mut03": 36,
+        "brutalpoints": 11,
+        "brutalplus": 4
     },
     {
         "mutationid": 153,
@@ -1221,7 +1525,9 @@
         "map": "Rifts to Korhal",
         "mut01": 23,
         "mut02": 60,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 17,
+        "brutalplus": 5
     },
     {
         "mutationid": 154,
@@ -1229,7 +1535,9 @@
         "map": "Chain of Ascension",
         "mut01": 26,
         "mut02": 61,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 5,
+        "brutalplus": 1
     },
     {
         "mutationid": 155,
@@ -1237,7 +1545,9 @@
         "map": "Temple of the Past",
         "mut01": 4,
         "mut02": 13,
-        "mut03": 23
+        "mut03": 23,
+        "brutalpoints": 13,
+        "brutalplus": 4
     },
     {
         "mutationid": 156,
@@ -1245,7 +1555,9 @@
         "map": "Part and Parcel",
         "mut01": 33,
         "mut02": 50,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 11,
+        "brutalplus": 4
     },
     {
         "mutationid": 157,
@@ -1253,7 +1565,9 @@
         "map": "Void Launch",
         "mut01": 16,
         "mut02": 31,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 8,
+        "brutalplus": 2
     },
     {
         "mutationid": 158,
@@ -1261,7 +1575,9 @@
         "map": "Malwarfare",
         "mut01": 43,
         "mut02": 51,
-        "mut03": 62
+        "mut03": 62,
+        "brutalpoints": 13,
+        "brutalplus": 4
     },
     {
         "mutationid": 159,
@@ -1269,7 +1585,9 @@
         "map": "Dead of Night",
         "mut01": 39,
         "mut02": 50,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 8,
+        "brutalplus": 2
     },
     {
         "mutationid": 160,
@@ -1277,7 +1595,9 @@
         "map": "Void Thrashing",
         "mut01": 59,
         "mut02": 60,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 15,
+        "brutalplus": 5
     },
     {
         "mutationid": 161,
@@ -1285,7 +1605,9 @@
         "map": "Cradle of Death",
         "mut01": 9,
         "mut02": 44,
-        "mut03": 53
+        "mut03": 53,
+        "brutalpoints": 4,
+        "brutalplus": 1
     },
     {
         "mutationid": 162,
@@ -1293,7 +1615,9 @@
         "map": "Lock and Load",
         "mut01": 24,
         "mut02": 32,
-        "mut03": 52
+        "mut03": 52,
+        "brutalpoints": 9,
+        "brutalplus": 3
     },
     {
         "mutationid": 163,
@@ -1301,7 +1625,9 @@
         "map": "Miner Evacuation",
         "mut01": 30,
         "mut02": 33,
-        "mut03": 34
+        "mut03": 34,
+        "brutalpoints": 13,
+        "brutalplus": 4
     },
     {
         "mutationid": 164,
@@ -1309,7 +1635,9 @@
         "map": "The Vermillion Problem",
         "mut01": 14,
         "mut02": 21,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 11,
+        "brutalplus": 4
     },
     {
         "mutationid": 165,
@@ -1317,7 +1645,9 @@
         "map": "Lock and Load",
         "mut01": 41,
         "mut02": 43,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 15,
+        "brutalplus": 5
     },
     {
         "mutationid": 166,
@@ -1325,7 +1655,9 @@
         "map": "Void Launch",
         "mut01": 7,
         "mut02": 26,
-        "mut03": 46
+        "mut03": 46,
+        "brutalpoints": 9,
+        "brutalplus": 3
     },
     {
         "mutationid": 167,
@@ -1333,7 +1665,9 @@
         "map": "Void Thrashing",
         "mut01": 10,
         "mut02": 49,
-        "mut03": 62
+        "mut03": 62,
+        "brutalpoints": 6,
+        "brutalplus": 1
     },
     {
         "mutationid": 168,
@@ -1341,7 +1675,9 @@
         "map": "Malwarfare",
         "mut01": 24,
         "mut02": 25,
-        "mut03": 33
+        "mut03": 33,
+        "brutalpoints": 14,
+        "brutalplus": 4
     },
     {
         "mutationid": 169,
@@ -1349,7 +1685,9 @@
         "map": "Part and Parcel",
         "mut01": 11,
         "mut02": 15,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 6,
+        "brutalplus": 1
     },
     {
         "mutationid": 170,
@@ -1357,7 +1695,9 @@
         "map": "Dead of Night",
         "mut01": 23,
         "mut02": 28,
-        "mut03": 40
+        "mut03": 40,
+        "brutalpoints": 10,
+        "brutalplus": 3
     },
     {
         "mutationid": 171,
@@ -1365,7 +1705,9 @@
         "map": "Scythe of Amon",
         "mut01": 51,
         "mut02": 59,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 7,
+        "brutalplus": 2
     },
     {
         "mutationid": 172,
@@ -1373,7 +1715,9 @@
         "map": "Rifts to Korhal",
         "mut01": 17,
         "mut02": 18,
-        "mut03": 29
+        "mut03": 29,
+        "brutalpoints": null,
+        "brutalplus": null
     },
     {
         "mutationid": 173,
@@ -1381,7 +1725,9 @@
         "map": "Cradle of Death",
         "mut01": 5,
         "mut02": 32,
-        "mut03": 53
+        "mut03": 53,
+        "brutalpoints": 5,
+        "brutalplus": 1
     },
     {
         "mutationid": 174,
@@ -1389,7 +1735,9 @@
         "map": "The Vermillion Problem",
         "mut01": 34,
         "mut02": 41,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 10,
+        "brutalplus": 3
     },
     {
         "mutationid": 175,
@@ -1397,7 +1745,9 @@
         "map": "Lock and Load",
         "mut01": 30,
         "mut02": 33,
-        "mut03": 50
+        "mut03": 50,
+        "brutalpoints": 15,
+        "brutalplus": 5
     },
     {
         "mutationid": 176,
@@ -1405,7 +1755,9 @@
         "map": "Mist Opportunities",
         "mut01": 63,
         "mut02": 24,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 16,
+        "brutalplus": 5
     },
     {
         "mutationid": 177,
@@ -1413,7 +1765,9 @@
         "map": "Malwarfare",
         "mut01": 31,
         "mut02": 60,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 15,
+        "brutalplus": 5
     },
     {
         "mutationid": 178,
@@ -1421,7 +1775,9 @@
         "map": "Scythe of Amon",
         "mut01": 6,
         "mut02": 10,
-        "mut03": 35
+        "mut03": 35,
+        "brutalpoints": 11,
+        "brutalplus": 4
     },
     {
         "mutationid": 179,
@@ -1429,7 +1785,9 @@
         "map": "Rifts to Korhal",
         "mut01": 63,
         "mut02": 41,
-        "mut03": 48
+        "mut03": 48,
+        "brutalpoints": null,
+        "brutalplus": null
     },
     {
         "mutationid": 180,
@@ -1437,7 +1795,9 @@
         "map": "Void Launch",
         "mut01": 19,
         "mut02": 26,
-        "mut03": 42
+        "mut03": 42,
+        "brutalpoints": 11,
+        "brutalplus": 4
     },
     {
         "mutationid": 181,
@@ -1445,7 +1805,9 @@
         "map": "Cradle of Death",
         "mut01": 7,
         "mut02": 21,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 14,
+        "brutalplus": 4
     },
     {
         "mutationid": 182,
@@ -1453,7 +1815,9 @@
         "map": "Dead of Night",
         "mut01": 23,
         "mut02": 59,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 12,
+        "brutalplus": 4
     },
     {
         "mutationid": 183,
@@ -1461,7 +1825,9 @@
         "map": "Part and Parcel",
         "mut01": 43,
         "mut02": 60,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 18,
+        "brutalplus": 5
     },
     {
         "mutationid": 184,
@@ -1469,6 +1835,8 @@
         "map": "Miner Evacuation",
         "mut01": 63,
         "mut02": 34,
-        "mut03": null
+        "mut03": null,
+        "brutalpoints": 13,
+        "brutalplus": 4
     }
 ]

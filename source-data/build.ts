@@ -1,6 +1,6 @@
 #!/usr/bin/env bun
 import tsj from "ts-json-schema-generator";
-import type { BrutalPlusList, CommanderList, Mission, MutationCycleList, MutatorWithStats } from "./data-types";
+import type { BrutalPlusList, CommanderList, Mission, MutationCycleList, MutationCycleWithScore, MutatorWithStats } from "./data-types";
 
 const files: [`${string}.json`, string][] = [
     ['brutalplus.json', 'BrutalPlusList'],
@@ -34,8 +34,10 @@ console.log(`Done`)
 
 console.log(`Generating stats`);
 
-const mutationCycle: MutationCycleList = await Bun.file('source-data/mutationcycle.json').json();
+const mutationCycle: MutationCycleWithScore[] = await Bun.file('source-data/mutationcycle.json').json();
 
+const brutalPluses: BrutalPlusList = await Bun.file('source-data/brutalplus.json').json();
+const reverseBrutalPluses = [...brutalPluses].reverse();
 const missionNames: string[] = await Bun.file('source-data/missionnames.json').json();
 const mutators: MutatorWithStats[] = await Bun.file('source-data/mutators.json').json();
 const missions: Mission[] = [];
@@ -57,22 +59,43 @@ for (const mutation of mutationCycle) {
     mutatorData[mutation.mut01]!.mutationcount++;
     if (mutation.mut02) mutatorData[mutation.mut02]!.mutationcount++;
     if (mutation.mut03) mutatorData[mutation.mut03]!.mutationcount++;
+
+    let brutalPoints: number = 0;
+    brutalPoints += mutatorData[mutation.mut01]?.abomination || NaN;
+    if (mutation.mut02) brutalPoints += mutatorData[mutation.mut02]?.abomination || NaN;
+    if (mutation.mut03) brutalPoints += mutatorData[mutation.mut03]?.abomination || NaN;
+
+    mutation.brutalpoints = isNaN(brutalPoints) ? null : brutalPoints;
+    if (brutalPoints) {
+        for (const brutalPlus of brutalPluses) {
+            if (brutalPoints < brutalPlus.minpoints) {
+                mutation.brutalplus = brutalPlus.difficulty - 1;
+                break;
+            } else if (brutalPoints <= brutalPlus.maxpoints) {
+                mutation.brutalplus = brutalPlus.difficulty;
+                break;
+            }
+        }
+        mutation.brutalplus ??= 7;
+    } else {
+        mutation.brutalplus = null;
+    }
 }
 
 Bun.write(`html/data/missions.json`, JSON.stringify(missions, null, 4) + '\n');
 Bun.write(`html/data/mutators.json`, JSON.stringify(mutators, null, 4) + '\n');
+Bun.write(`html/data/mutationcycle.json`, JSON.stringify(mutationCycle, null, 4) + '\n');
 
 /////////////////////////////////////////////////
 
 console.log(`Writing to html/data/`);
 for (const [file, type] of files) {
-    if (file === 'mutators.json') continue;
+    if (file === 'mutators.json' || file === 'missions.json' || file === 'mutationcycle.json') continue;
     const data = await Bun.file(`source-data/${file}`).json();
     Bun.write(`html/data/${file}`, JSON.stringify(data, null, 4) + '\n');
 }
 
 console.log(`Writing to html/data/brutalplus/`);
-const brutalPluses: BrutalPlusList = await Bun.file('source-data/brutalplus.json').json();
 for (const brutalPlus of brutalPluses) {
     Bun.write(`html/data/brutalplus/${brutalPlus.difficulty}.json`, JSON.stringify(brutalPlus, null, 4) + '\n');
 }

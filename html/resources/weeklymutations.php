@@ -409,29 +409,20 @@ require_once "../wrapper.php";
     require_once '../scripts/queries.php';
 
     $difficultyArray = get_brutalpluses();
-    function getDiffString($score)
+    function getDiffString(?int $brutalPlus): array
     {
-        global $difficultyArray;
-        if ($score == 0) {
-            $diff = 0;
+        if ($brutalPlus === NULL) {
             $diffString = "?";
-        } elseif ($score > 20) {
-            $diff = 7;
+        } else if ($brutalPlus > 6) {
             $diffString = "&#9760;&#65039;"; // skull and crossbones emoji
-        } else {
+        } else if ($brutalPlus === 0) {
+            // shouldn't ever actually happen
             $diffString = "&#128522;"; // smiling face with smiling eyes emoji
-            $diff = 1;
-            for ($i = 0; $i < count($difficultyArray); $i++) {
-                if ($score >= intval($difficultyArray[$i]['minpoints'])) {
-                    $diff = intval($difficultyArray[$i]['difficulty']);
-                    $diffString = $diff;
-                } else {
-                    break;
-                }
-            }
+        } else {
+            $diffString = "$brutalPlus";
         }
 
-        return [$diff,$diffString];
+        return [$brutalPlus ?? 0, $diffString];
     }
 
     $cycleList = get_mutationcycle();
@@ -445,32 +436,14 @@ require_once "../wrapper.php";
         $unknown = false;
         if ($row["mut01"]) {
             $classVals .= " " . str_replace(' ', '', strtolower($mutators[intval($row["mut01"]) - 1]['mutatorname']));
-            if ($mutators[intval($row["mut01"]) - 1]['abomination'] > 0) {
-                $score += $mutators[intval($row["mut01"]) - 1]['abomination'];
-            } else {
-                $unknown = true;
-            }
         }
         if ($row["mut02"]) {
             $classVals .= " " . str_replace(' ', '', strtolower($mutators[intval($row["mut02"]) - 1]['mutatorname']));
-            if ($mutators[intval($row["mut02"]) - 1]['abomination'] > 0) {
-                $score += $mutators[intval($row["mut02"]) - 1]['abomination'];
-            } else {
-                $unknown = true;
-            }
         }
         if ($row["mut03"]) {
             $classVals .= " " . str_replace(' ', '', strtolower($mutators[intval($row["mut03"]) - 1]['mutatorname']));
-            if ($mutators[intval($row["mut03"]) - 1]['abomination'] > 0) {
-                $score += $mutators[intval($row["mut03"]) - 1]['abomination'];
-            } else {
-                $unknown = true;
-            }
         }
-        if ($unknown) {
-            $score = 0;
-        }
-        [$diff, $diffString] = getDiffString($score);
+        [$diff, $diffString] = getDiffString($row["brutalplus"]);
         $classVals .= " brutal" . $diff;
         if ($rowIndex == $currentWeekIndex) {
             $classVals .= " current' id='thisweek";
@@ -670,36 +643,16 @@ require_once "../wrapper.php";
                 $weeklyList = get_weeklymutations();
                 foreach ($weeklyList as $row) {
                     $classVals = str_replace("and", "", str_replace(' ', '', strtolower($row["map"])));
-                    $score = 0;
-                    $unknown = false;
                     if ($row["mut01"]) {
                         $classVals .= " " . str_replace(' ', '', strtolower($mutators[intval($row["mut01"]) - 1]['mutatorname']));
-                        if ($mutators[intval($row["mut01"]) - 1]['abomination'] > 0) {
-                            $score += $mutators[intval($row["mut01"]) - 1]['abomination'];
-                        } else {
-                            $unknown = true;
-                        }
                     }
                     if ($row["mut02"]) {
                         $classVals .= " " . str_replace(' ', '', strtolower($mutators[intval($row["mut02"]) - 1]['mutatorname']));
-                        if ($mutators[intval($row["mut02"]) - 1]['abomination'] > 0) {
-                            $score += $mutators[intval($row["mut02"]) - 1]['abomination'];
-                        } else {
-                            $unknown = true;
-                        }
                     }
                     if ($row["mut03"]) {
                         $classVals .= " " . str_replace(' ', '', strtolower($mutators[intval($row["mut03"]) - 1]['mutatorname']));
-                        if ($mutators[intval($row["mut03"]) - 1]['abomination'] > 0) {
-                            $score += $mutators[intval($row["mut03"]) - 1]['abomination'];
-                        } else {
-                            $unknown = true;
-                        }
                     }
-                    if ($unknown) {
-                        $score = 0;
-                    }
-                    [$diff, $diffString] = getDiffString($score);
+                    [$diff, $diffString] = getDiffString($row["brutalplus"]);
                     $classVals .= " brutal" . $diff;
                     echo "<tr class='" . $classVals . "'>\n";
                     echo "<td class='ribbon'>" . $row["releasedate"] . "<div class='ribbon" . $diff . "'>" . $diffString . "</div></td>\n";
