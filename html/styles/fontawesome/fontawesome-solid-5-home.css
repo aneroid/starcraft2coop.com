@@ -28,8 +28,7 @@
   font-style: normal;
   font-weight: 900;
   font-display: block;
-  src: url("./fa-solid-900-home.eot");
-  src: url("./fa-solid-900-home.eot?#iefix") format("embedded-opentype"), url("./fa-solid-900-home.woff2") format("woff2"), url("./fa-solid-900-home.woff") format("woff"), url("./fa-solid-900-home.ttf") format("truetype"), url("./fa-solid-900-home.svg#fontawesome") format("svg"); }
+  src: url("./fa-solid-900-home.woff2") format("woff2"), url("./fa-solid-900-home.ttf") format("truetype"); }
 
 .fa,
 .fas {
