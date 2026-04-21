@@ -10,7 +10,7 @@
   <title>Starcraft 2 Co-op - CtG's Mutation Commander List</title>
     <style>
         body{
-            background:url("assets/bg.jpg");
+            background:url("../images/ctg/bg.jpg");
             background-size:cover;
             background-attachment: fixed;
             font-family:arial;
@@ -19,7 +19,7 @@
         }
         .box{
             display:inline-block;
-            background:url("assets/border.png");
+            background:url("../images/ctg/border.png");
             padding:1rem;
             width:905px;
             background-size: 100% 100%;
@@ -164,7 +164,7 @@
             var mutationIndex = $(this).prop('selectedIndex') - 1;
             var selectedMutation = mutationsList[mutationIndex];
 
-            var mapFile = "assets/" + selectedMutation.map.replace(/ /g,'').toLowerCase() +".png";
+            var mapFile = "../images/ctg/" + selectedMutation.map.replace(/ /g,'').toLowerCase() +".png";
             elem.find(".map").attr('src', mapFile);
 
             var totalabom = 0;
@@ -198,7 +198,7 @@
                 elem.find(".mut3icon").attr('src', "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=");
                 elem.find(".mut3desc").text("");
             }
-            var brutalfile = "assets/brutal";
+            var brutalfile = "../images/ctg/brutal";
             if(totalabom==0){
                 brutalfile+="0.png";
             }
