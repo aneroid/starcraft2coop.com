@@ -23,7 +23,7 @@ const safeZoneText = await Bun.file('./source-data/mutator-details/safetyzones.h
 for (const mutator of mutators) {
     const url = token(mutator.mutatorname);
     const details = await Bun.file(`./source-data/mutator-details/${mutator.mutatorname}.html`).text();
-    let indentedDetails = details.replace(/^/gm, '    ').replace(/<p class="subheading">(.*?)<\/p>/g, (match, p1) => `<h2 id="${p1.toLowerCase().replace(/[^a-z0-9]+/g, '')}">${p1}</h2>`);
+    let indentedDetails = details.replace(/^/gm, '    ').replace(/^    $/gm, '').replace(/<p class="subheading">(.*?)<\/p>/g, (match, p1) => `<h2 id="${p1.toLowerCase().replace(/[^a-z0-9]+/g, '')}">${p1}</h2>`);
     if (mutator.hassafezone) {
         if (indentedDetails.includes('    <h2 id="commanderspecifictips">')) {
             indentedDetails = indentedDetails.replace('    <h2 id="commanderspecifictips">', safeZoneText + '    <h2 id="commanderspecifictips">');
