@@ -1,5 +1,8 @@
 <?php
 
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
+
 if (!isset($_GET['mode'])) {
     echo("Error!");
     return;
@@ -18,12 +21,13 @@ $shieldCommanders = ['Alarak', 'Artanis', 'Fenix', 'Karax', 'Vorazun', 'Zeratul'
 //Mode:2    [commander, unit]                             : Unit was clicked              -> Get basic stats for that unit
 //Mode:3    [commander, selectedUnit, upgrades, level]    : Recalculate was clicked        -> Get basic stats for that unit, apply the upgrades, find stats that changed
 
+require_once '../../includes/sqlconnection.php';
+
 switch ($mode) {
     case 1:
         //Mode:1    [commander] : Commander was clicked -> Generate a list of units for that commander
         $commander = $_GET['commander'];
         checkVariable($commander, "text");
-        require_once '../../includes/sqlconnection.php';
 
         $sql = "SELECT DISTINCT basename
                 FROM playerunits
@@ -37,7 +41,6 @@ switch ($mode) {
         }
         $unitsList .= "</ul>";
         echo($unitsList);
-        $con->close();
         return;
     case 2:
         //Mode:2    [commander, unit] : Unit was clicked -> Get basic stats for that unit
@@ -676,7 +679,7 @@ function applyUpgrade($entry, $upgrade, $fullUnitData)
 
 function generateMasteryUpgradeUpgradesArray($commander, $unit, $masteries)
 {
-    require_once '../../includes/sqlconnection.php';
+    global $con;
     $upgradesList = [];
 
     foreach ($masteries as $value) {
@@ -703,16 +706,15 @@ function generateMasteryUpgradeUpgradesArray($commander, $unit, $masteries)
             }
         }
     }
-    $con->close();
     return $upgradesList;
 }
 
 function generatePrestigeUpgradeUpgradesArray($commander, $unit, $prestige)
 {
+    global $con;
     if ($prestige == "") {
         return [];
     }
-    require_once '../../includes/sqlconnection.php';
     $upgradesList = [];
     checkVariable($prestige, 'text');
     $sql = "SELECT modifier, modifier2, value, operation
@@ -726,16 +728,15 @@ function generatePrestigeUpgradeUpgradesArray($commander, $unit, $prestige)
     while ($row = mysqli_fetch_array($result)) {
         $upgradesList[] = $row;
     }
-    $con->close();
     return $upgradesList;
 }
 
 function generatePrestigesArray($commander, $unit, $prestige, $phase)
 {
+    global $con;
     if ($prestige == "") {
         return [];
     }
-    require_once '../../includes/sqlconnection.php';
     $upgradesList = [];
 
     checkVariable($prestige, 'text');
@@ -750,13 +751,12 @@ function generatePrestigesArray($commander, $unit, $prestige, $phase)
     while ($row = mysqli_fetch_array($result)) {
         $upgradesList[] = $row;
     }
-    $con->close();
     return $upgradesList;
 }
 
 function generateMasteriesArray($commander, $unit, $masteries)
 {
-    require_once '../../includes/sqlconnection.php';
+    global $con;
     $upgradesList = [];
 
     foreach ($masteries as $value) {
@@ -791,13 +791,12 @@ function generateMasteriesArray($commander, $unit, $masteries)
             }
         }
     }
-    $con->close();
     return $upgradesList;
 }
 
 function generateUpgradesArray($commander, $unit, $upgrades, $level)
 {
-    require_once '../../includes/sqlconnection.php';
+    global $con;
     $upgradesList = [];
 
     foreach ($upgrades as $value) {
@@ -825,13 +824,12 @@ function generateUpgradesArray($commander, $unit, $upgrades, $level)
             $upgradesList[] = $row;
         }
     }
-    $con->close();
     return $upgradesList;
 }
 
 function getUnitStats($commander, $unit)
 {
-    require_once '../../includes/sqlconnection.php';
+    global $con;
     $sql = "SELECT name, race, combatunit, mcost, vcost, supply, buildtime, hp, shields, armor, shieldarmor, energy, movementspeed, sightrange, tags,
             atkrange, attackspeed, attacks, GROUP_CONCAT(IFNULL(attribute, 'None')) as attribute, GROUP_CONCAT(damage) as damage,
             GROUP_CONCAT(attackbonus) as attackbonus, hpbonus, armorbonus, shieldbonus, notes
@@ -853,7 +851,6 @@ function getUnitStats($commander, $unit)
         }
         $unitStats[] = $row;
     }
-    $con->close();
     return $unitStats;
 }
 
@@ -861,7 +858,8 @@ function getUnitUpgradesOutput($commander, $unit)
 {
     global $royalGuard;
     global $shieldCommanders;
-    require_once '../../includes/sqlconnection.php';
+    global $con;
+
     $sql = "SELECT DISTINCT name, unit, icon, effect
             FROM playerupgrades
             WHERE commander='$commander' AND unit= '$unit'
@@ -888,7 +886,6 @@ function getUnitUpgradesOutput($commander, $unit)
             $prestigeList[str_replace(" ", "", $row['name'])] = $row;
         }
     }
-    $con->close();
 
     require_once __DIR__ . '/../../includes/queries.php';
 
