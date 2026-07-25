@@ -400,17 +400,26 @@ require_once __DIR__ . "/../../includes/wrapper.php";
         <thead>
             <tr>
                 <th>Calldown</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Recommended Usage</th>
-                <th>Numbers</th>
+                <th>Costs</th>
+                <th>Advice</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td><img src="/images/commanderdata/abilities/artanis/projectpowerfield.png" alt = "Project Power Field"></td>
-                <td>Project Power Field</td>
-                <td>Project a power field onto the target location. Using this ability again will move the power field to a new location. Your ally may also use this field.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/artanis/projectpowerfield.png" alt="" class="icon" />
+                            Project Power Field
+                        </dt>
+                        <dd>
+                            Project a power field onto the target location. Using this ability again will move the power field to a new location. Your ally may also use this field.
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 30 seconds</p>
+                </td>
                 <td>
                     <ul>
                         <li>Use this to build a gateway before the pylon at the start of the game to speed up going up the tech tree.</li>
@@ -419,59 +428,72 @@ require_once __DIR__ . "/../../includes/wrapper.php";
                         <li>Costs 25 Energy if using the Nexus Legate prestige.</li>
                     </ul>
                 </td>
-                <td>
-                    <ul>
-                        <li>Cooldown: 30 seconds</li>
-                    </ul>
-                </td>
             </tr>
             <tr>
-                <td><img src="/images/commanderdata/abilities/artanis/orbitalstrike.png" alt = "Orbital Strike"></td>
-                <td>Orbital Strike</td>
-                <td>Fires five lasers onto the battlefield from orbit, each of them dealing 50 (100 vs armored units) area damage.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/artanis/orbitalstrike.png" alt="" class="icon" />
+                            Orbital Strike
+                        </dt>
+                        <dd>
+                            Fires five lasers onto the battlefield from orbit, each of them dealing 50 (100 vs armored units) area damage.
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 30 seconds</p>
+                    <p><strong class="unbold">Energy Required:</strong><br /> 25</p>
+                </td>
                 <td>
                     <ul>
                         <li>Very effective at taking clumps of enemy units.</li>
                         <li>There is a short delay between each shot, reducing the effectiveness of <a href="/guides/generaltips">Rapidfire</a>.</li>
                     </ul>
                 </td>
-                <td>
-                    <ul>
-                        <li>Cooldown: 30 seconds</li>
-                        <li>Energy Required: 25</li>
-                    </ul>
-                </td>
             </tr>
             <tr>
-                <td><img src="/images/commanderdata/abilities/artanis/shieldovercharge.png" alt = "Shield Overcharge"></td>
-                <td>Shield Overcharge</td>
-                <td>Allows friendly units and structures to absorb up to 200 damage. Lasts for 20 seconds.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/artanis/shieldovercharge.png" alt="" class="icon" />
+                            Shield Overcharge
+                        </dt>
+                        <dd>
+                            Allows friendly units and structures to absorb up to 200 damage. Lasts for 20 seconds.
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 180 seconds</p>
+                    <p><strong class="unbold">Energy Required:</strong><br /> 50</p>
+                </td>
                 <td>
                     <ul>
                         <li>Always use this while pushing into enemy bases.</li>
                         <li>Can sometimes be useful when dealing with dangerously large attack waves.</li>
                     </ul>
                 </td>
-                <td>
-                    <ul>
-                        <li>Cooldown: 180 seconds</li>
-                        <li>Energy Required: 50</li>
-                    </ul>
-                </td>
             </tr>
             <tr>
-                <td><img src="/images/commanderdata/abilities/artanis/solarbombardment.png" alt = "Solar Bombardment"></td>
-                <td>Solar Bombardment</td>
-                <td>Bombards the target area from orbit, firing 400 random shots over 10 seconds. Each shot deals 15 (30 vs armored units) splash damage.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/artanis/solarbombardment.png" alt="" class="icon" />
+                            Solar Bombardment
+                        </dt>
+                        <dd>
+                            Bombards the target area from orbit, firing 400 random shots over 10 seconds. Each shot deals 15 (30 vs armored units) splash damage.
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 300 seconds</p>
+                </td>
                 <td>
                     <ul>
                         <li>Can be used to soften enemy defenses before pushing in.</li>
                         <li>Run through the middle of a base with a zealot, which will be protected by Guardian Shell, to cast this in the middle of tough-to-push locations.</li>
-                    </ul>
-                </td>
-                <td>
-                    <ul>
-                        <li>Cooldown: 300 seconds</li>
                     </ul>
                 </td>
             </tr>

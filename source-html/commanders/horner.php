@@ -372,37 +372,64 @@ require_once __DIR__ . "/../../includes/wrapper.php";
         <thead>
             <tr>
                 <th>Calldown</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Recommended Usage</th>
-                <th>Numbers</th>
+                <th>Costs</th>
+                <th>Advice</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td><img src="/images/commanderdata/abilities/horner/deploymagmines.png" alt = "Deploy Mag Mines"></td>
-                <td>Deploy Mag Mines</td>
-                <td>Deploy 5 Mag Mines to the target location. Mag Mines are triggered by enemy motion and deal 50 damage area damage.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/horner/deploymagmines.png" alt="" class="icon" />
+                            Deploy Mag Mines
+                        </dt>
+                        <dd>
+                            Deploy 5 Mag Mines to the target location. Mag Mines are triggered by enemy motion and deal 50 damage area damage.
+                            <ul>
+                                <li>Arming Time: 10 seconds</li>
+                                <li>Firing Time: 1.5 seconds</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Charges:</strong><br /> 0 to start / 5</p>
+                    <p><strong class="unbold">Coolup:</strong><br /> 50 seconds</p>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 50 seconds</p>
+                </td>
                 <td>
                     <ul>
                         <li>Useful for spawn-camping attack waves.</li>
                         <li>Can sometimes be used aggressively by luring enemies into them.</li>
                     </ul>
                 </td>
-                <td>
-                    <ul>
-                        <li>Coolup: 50 seconds</li>
-                        <li>Cooldown: 50</li>
-                        <li>Max Charges: 5</li>
-                        <li>Arming Time: 10 seconds</li>
-                        <li>Firing Time: 1.5 seconds</li>
-                    </ul>
-                </td>
             </tr>
             <tr>
-                <td><img src="/images/commanderdata/abilities/horner/precisionstrike.png" alt = "Precision Strike"></td>
-                <td>Precision Strike</td>
-                <td>Requirements: Must have a Strike Fighter Platform<br><br>Sends a Strike Fighter to the target location where it deals 175 (+225 to non-Heroic structures) damage to enemy ground units in the target area.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/horner/precisionstrike.png" alt="" class="icon" />
+                            Precision Strike
+                        </dt>
+                        <dd>
+                            <ul><li>Requirements: Must have a Strike Fighter Platform</li></ul>
+                            Sends a Strike Fighter to the target location where it deals 175 (+225 to non-Heroic structures) damage to enemy ground units in the target area.
+                            <ul>
+                                <li>HP: 50</li>
+                                <li>Armor: 2</li>
+                                <li>Takeoff Time: 0.5 seconds</li>
+                                <li>Movement Speed: 30</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Max Platforms:</strong><br /> 10</p>
+                    <p><strong class="unbold">Coolup:</strong><br /> 0 seconds</p>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 60 seconds</p>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 120 seconds (if shot down)</p>
+                </td>
                 <td>
                     <ul>
                         <li>Incredibly effective on <a href="/missions/deadofnight">Dead of Night</a> with the Napalm upgrade, allowing you to destroy multiple buildings with one strike.</li>
@@ -411,52 +438,51 @@ require_once __DIR__ . "/../../includes/wrapper.php";
                         <li>For regular missions, roughly 3 is sufficient for taking out high value targets.</li>
                     </ul>
                 </td>
-                <td>
-                    <ul>
-                        <li>Coolup: 0 seconds</li>
-                        <li>Cooldown: 60 seconds</li>
-                        <li>Cooldown: 120 seconds (if shot down)</li>
-                        <li>Max Platforms: 10</li>
-                        <li>HP: 50</li>
-                        <li>Armor: 2</li>
-                        <li>Takeoff Time: 0.5 seconds</li>
-                        <li>Movement Speed: 30</li>
-                    </ul>
-                </td>
             </tr>
             <tr>
-                <td><img src="/images/commanderdata/abilities/horner/callinthefleet.png" alt = "Call in the Fleet"></td>
-                <td>Call in the Fleet</td>
-                <td>Calls in close planetary support from Horner's Armada. The Armada does massive damage to random enemy units in the target area.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/horner/callinthefleet.png" alt="" class="icon" />
+                            Call in the Fleet
+                        </dt>
+                        <dd>
+                            Calls in close planetary support from Horner's Armada. The Armada does massive damage to random enemy units in the target area.
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Coolup:</strong><br /> 420 seconds</p>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 360 seconds</p>
+                </td>
                 <td>
                     <ul>
                         <li>Deals very high single-target damage to multiple units.</li>
                         <li>Effective for weakening enemy bases.</li>
                     </ul>
                 </td>
-                <td>
-                    <ul>
-                        <li>Coolup: 420 seconds</li>
-                        <li>Cooldown: 360 seconds</li>
-                    </ul>
-                </td>
             </tr>
-        </tbody>
-        <tr>
-                <td><img src="/images/commanderdata/abilities/horner/spacestationreallocation.png" alt = "Space Station Reallocation"></td>
-                <td>Space Station Reallocation</td>
-                <td>Space Station deals 500 damage to Heroic targets it contacts, everything else is instantly destroyed. Assault drones will attack nearby targets. Lasts for 10 seconds. On death, the station explodes with a nuclear blast, dealing 300 damage (+200 vs structures).</td>
+            <tr>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/horner/spacestationreallocation.png" alt="" class="icon" />
+                            Space Station Reallocation
+                        </dt>
+                        <dd>
+                            Space Station deals 500 damage to Heroic targets it contacts, everything else is instantly destroyed. Assault drones will attack nearby targets. Lasts for 10 seconds. On death, the station explodes with a nuclear blast, dealing 300 damage (+200 vs structures).
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Coolup:</strong><br /> 300 seconds</p>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 360 seconds</p>
+                </td>
                 <td>
                     <ul>
                         <li>Useful for dealing with clumps of enemies.</li>
                         <li>Draws enemy aggro when landed, which can kill further enemy units after it explodes.</li>
                         <li>Great for dealing with extremely strong attack waves.</li>
-                    </ul>
-                </td>
-                <td>
-                    <ul>
-                        <li>Coolup: 300 seconds</li>
-                        <li>Cooldown: 360 seconds</li>
                     </ul>
                 </td>
             </tr>

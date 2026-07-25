@@ -385,28 +385,32 @@ require_once __DIR__ . "/../../includes/wrapper.php";
         <thead>
             <tr>
                 <th>Ability</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Recommended Usage</th>
-                <th>Numbers</th>
+                <th>Costs</th>
+                <th>Advice</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td><img src="/images/commanderdata/abilities/stetmann/deploystetellite.png" alt = "Deploy Stetellite"></td>
-                <td>Deploy Stetellite</td>
-                <td>Deploys a Stetellite at the target location. Stetellites must be placed within a Stetzone.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/stetmann/deploystetellite.png" alt="" class="icon" />
+                            Deploy Stetellite
+                        </dt>
+                        <dd>
+                            Deploys a Stetellite at the target location. Stetellites must be placed within a Stetzone.
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Charges:</strong><br /> 1 to start / 3/5/7</p>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 25/20/15 seconds</p>
+                </td>
                 <td>
                     <ul>
                         <li>Use Stetellites to cover the battlefield and provide you and your ally with vision and buffs.</li>
                         <li>Stetellites can be placed in Super Gary's Stetzone.</li>
                         <li>Teching up to a Lair and Hive will provide you with more max charges and a reduced charge cooldown.</li>
-                    </ul>
-                </td>
-                <td>
-                    <ul>
-                        <li>Cooldown: 25/20/15 seconds</li>
-                        <li>Max Charges: 3/5/7</li>
                     </ul>
                 </td>
             </tr>
@@ -417,17 +421,26 @@ require_once __DIR__ . "/../../includes/wrapper.php";
         <thead>
             <tr>
                 <th>Ability</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Recommended Usage</th>
-                <th>Numbers</th>
+                <th>Costs</th>
+                <th>Advice</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td><img src="/images/commanderdata/abilities/stetmann/fastconfig.png" alt = "Fun Accelerator for Speedy Transportation Configuration"></td>
-                <td>Fun Accelerator for Speedy Transportation Configuration (FAST)</td>
-                <td>Stetzones grant Stetmann's units 100% increased movement speed. Allied units gain 50% increased movement speed.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/stetmann/fastconfig.png" alt="" class="icon" />
+                            Fun Accelerator for Speedy Transportation Configuration (FAST)
+                        </dt>
+                        <dd>
+                            Stetzones grant Stetmann's units 100% increased movement speed. Allied units gain 50% increased movement speed.
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 1 second</p>
+                </td>
                 <td>
                     <ul>
                         <li>Useful to reach <a href="/guides/buildordertheory#theory">maximum mining rate</a> in the early game, despite not having worker saturation on resources (2 per resource patch).</li>
@@ -435,40 +448,47 @@ require_once __DIR__ . "/../../includes/wrapper.php";
                         <li>Great to use for moving high-value army units out of harm's way.</li>
                     </ul>
                 </td>
-                <td>
-                    <ul>
-                        <li>Cooldown: 1 second</li>
-                    </ul>
-                </td>
             </tr>
             <tr>
-                <td><img src="/images/commanderdata/abilities/stetmann/healthconfig.png" alt = "Health Uptick Generating System Configuration"></td>
-                <td>Health Uptick Generating System Configuration (HUGS)</td>
-                <td>Stetzones grant Stetmann's units 10 life regeneration per second. Allied units gain 5 life regeneration per second.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/stetmann/healthconfig.png" alt="" class="icon" />
+                            Health Uptick Generating System Configuration (HUGS)
+                        </dt>
+                        <dd>
+                            Stetzones grant Stetmann's units 10 life regeneration per second. Allied units gain 5 life regeneration per second.
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 1 second</p>
+                </td>
                 <td>
                     <ul>
                         <li>Use this to heal units after engaging attack waves and pushing into bases.</li>
                     </ul>
                 </td>
-                <td>
-                    <ul>
-                        <li>Cooldown: 1 second</li>
-                    </ul>
-                </td>
             </tr>
             <tr>
-                <td><img src="/images/commanderdata/abilities/stetmann/energyconfig.png" alt = "Just-in-time Uninterruptable Input for Charging Egonergy Configuration"></td>
-                <td>Just-in-time Uninterruptable Input for Charging Egonergy Configuration (JUICE)</td>
-                <td>Stetzones grant Stetmann's units 5 Egonergy regeneration per second. Allied units gain 2.5 energy regeneration per second.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/stetmann/energyconfig.png" alt="" class="icon" />
+                            Just-in-time Uninterruptable Input for Charging Egonergy Configuration (JUICE)
+                        </dt>
+                        <dd>
+                            Stetzones grant Stetmann's units 5 Egonergy regeneration per second. Allied units gain 2.5 energy regeneration per second.
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 1 second</p>
+                </td>
                 <td>
                     <ul>
                         <li>Use this to regenerate energy before taking large engagements.</li>
                         <li>Toggle between this and HUGS to keep your units alive and fully energized.</li>
-                    </ul>
-                </td>
-                <td>
-                    <ul>
-                        <li>Cooldown: 1 second</li>
                     </ul>
                 </td>
             </tr>

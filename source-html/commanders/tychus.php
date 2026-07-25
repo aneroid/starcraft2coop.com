@@ -410,17 +410,26 @@ require_once __DIR__ . "/../../includes/wrapper.php";
         <thead>
             <tr>
                 <th>Calldown</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Recommended Usage</th>
-                <th>Numbers</th>
+                <th>Costs</th>
+                <th>Advice</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td><img src="/images/commanderdata/abilities/tychus/medivacpickup.png" alt = "Medivac Pickup"></td>
-                <td>Medivac Pickup</td>
-                <td>Instantly transports all Outlaws in the target area to a targeted location, healing and cloaking them (10 seconds) on drop-off. If these units are attacked, they will stop healing and decloak.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/tychus/medivacpickup.png" alt="" class="icon" />
+                            Medivac Pickup
+                        </dt>
+                        <dd>
+                            Instantly transports all Outlaws in the target area to a targeted location, healing and cloaking them (10 seconds) on drop-off. If these units are attacked, they will stop healing and decloak.
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 120 seconds</p>
+                </td>
                 <td>
                     <ul>
                         <li>Useful for dealing with attack waves and then returning back.</li>
@@ -428,28 +437,29 @@ require_once __DIR__ . "/../../includes/wrapper.php";
                         <li>Works well as a heal before your healer is recruited.</li>
                     </ul>
                 </td>
-                <td>
-                    <ul>
-                        <li>Cooldown: 120 seconds</li>
-                    </ul>
-                </td>
             </tr>
             <tr>
-                <td><img src="/images/commanderdata/abilities/tychus/calldownodin.png" alt = "Calldown Odin"></td>
-                <td>Calldown Odin</td>
-                <td>Calls down the Odin at the target location, dealing 150 damage on impact. The Odin takes Tychus as the pilot and revives him if he is inactive. It is controllable and will fight for 60 seconds.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/tychus/calldownodin.png" alt="" class="icon" />
+                            Calldown Odin
+                        </dt>
+                        <dd>
+                            Calls down the Odin at the target location, dealing 150 damage on impact. The Odin takes Tychus as the pilot and revives him if he is inactive. It is controllable and will fight for 60 seconds.
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Coolup:</strong><br /> 600 seconds</p>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 360 seconds</p>
+                </td>
                 <td>
                     <ul>
                         <li>Extremely tanky unit.</li>
                         <li>Great for pushing into enemy bases.</li>
                         <li>Can be used to revive Tychus for free just before pushing into an enemy base.</li>
                         <li>Big Red Button is a must-get upgrade that does lots of damage.</li>
-                    </ul>
-                </td>
-                <td>
-                    <ul>
-                        <li>Coolup: 600 seconds</li>
-                        <li>Cooldown: 360 seconds</li>
                     </ul>
                 </td>
             </tr>

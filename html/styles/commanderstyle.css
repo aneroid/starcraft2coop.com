@@ -1,12 +1,13 @@
+.calldownTable td {
+    vertical-align: top;
+    padding: 0 5px;
+}
+table ul, table p, table dl {
+    margin: 8px 0;
+}
 @media (min-width: 701px){
-    .calldownTable td:nth-child(3){
-        width:20%;
-    }
-    .calldownTable td:nth-child(4){
-        width:40%;
-    }
-    .calldownTable td:first-child{
-        text-align:center;
+    .calldownTable td:nth-child(2):not(:last-child){
+        width:12%;
     }
     .masteryTable td:nth-child(1){
         width:200px;
@@ -46,20 +47,10 @@
 @media (max-width: 700px){
     .calldownTable td{
         display:block;
-        width:95%;
+        margin:-1px 0 0;
     }
     .calldownTable th{
         display:none;
-    }
-    .calldownTable td:nth-child(1){
-        display:none;
-    }
-    .calldownTable td:nth-child(2){
-        text-decoration:underline;
-        font-weight:bold;
-    }
-    .calldownTable th, .calldownTable td{
-        border:none;
     }
     .descContainer{
         clear:both;

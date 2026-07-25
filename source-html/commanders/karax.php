@@ -416,17 +416,27 @@ require_once __DIR__ . "/../../includes/wrapper.php";
         <thead>
             <tr>
                 <th>Calldown</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Recommended Usage</th>
-                <th>Numbers</th>
+                <th>Costs</th>
+                <th>Advice</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td><img src="/images/commanderdata/abilities/karax/orbitalstrike.png" alt = "Orbital Strike"></td>
-                <td>Orbital Strike</td>
-                <td>Fires lasers onto the battlefield from orbit, each of them dealing 50 (100 vs armored units) area damage.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/karax/orbitalstrike.png" alt="" class="icon" />
+                            Orbital Strike
+                        </dt>
+                        <dd>
+                            Fires lasers onto the battlefield from orbit, each of them dealing 50 (100 vs armored units) area damage.
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 0 seconds</p>
+                    <p><strong class="unbold">Energy Required:</strong><br /> 5</p>
+                </td>
                 <td>
                     <ul>
                         <li>Should be used to clear expansions and expand early.</li>
@@ -435,60 +445,72 @@ require_once __DIR__ . "/../../includes/wrapper.php";
                         <li>Good for dealing with air units when you do not have anti-air.</li>
                     </ul>
                 </td>
-                <td>
-                    <ul>
-                        <li>Cooldown: 0 seconds</li>
-                        <li>Energy Required: 5</li>
-                    </ul>
-                </td>
             </tr>
             <tr>
-                <td><img src="/images/commanderdata/abilities/karax/solarlance.png" alt = "Solar Lance"></td>
-                <td>Solar Lance</td>
-                <td>Strafes the target area with 3 laser beams dealing 200 damage with each beam.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/karax/solarlance.png" alt="" class="icon" />
+                            Solar Lance
+                        </dt>
+                        <dd>
+                            Strafes the target area with 3 laser beams dealing 200 damage with each beam.
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 120 seconds</p>
+                    <p><strong class="unbold">Energy Required:</strong><br /> 50</p>
+                </td>
                 <td>
                     <ul>
                         <li>Good for dealing with difficult attack waves.</li>
                         <li>Great for pushing into enemy bases and taking out key targets.</li>
                     </ul>
                 </td>
-                <td>
-                    <ul>
-                        <li>Cooldown: 120 seconds</li>
-                        <li>Energy Required: 50</li>
-                    </ul>
-                </td>
             </tr>
             <tr>
-                <td><img src="/images/commanderdata/abilities/karax/chronowave.png" alt = "Chrono Wave"></td>
-                <td>Chrono Wave</td>
-                <td>Increases the production speeds of all friendly structures to 500% for 20 seconds</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/karax/chronowave.png" alt="" class="icon" />
+                            Chrono Wave
+                        </dt>
+                        <dd>
+                            Increases the production speeds of all friendly structures to 500% for 20 seconds
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Coolup:</strong><br /> 300 seconds</p>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 240 seconds</p>
+                </td>
                 <td>
                     <ul>
                         <li>Should be used as soon as it is off cooldown.</li>
                         <li>The first Chrono Wave should be used to help you saturate both your main and your expansion.</li>
                     </ul>
                 </td>
-                <td>
-                    <ul>
-                        <li>Coolup: 300 seconds</li>
-                        <li>Cooldown: 240 seconds</li>
-                    </ul>
-                </td>
             </tr>
             <tr>
-                <td><img src="/images/commanderdata/abilities/karax/purifierbeam.png" alt = "Purifier Beam"></td>
-                <td>Purifier Beam</td>
-                <td>Fires a beam that deals 1000 (2000 vs Armored) damage over 20 seconds. The beam will auto-acquire targets if not manually controlled.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/karax/purifierbeam.png" alt="" class="icon" />
+                            Purifier Beam
+                        </dt>
+                        <dd>
+                            Fires a beam that deals 1000 (2000 vs Armored) damage over 20 seconds. The beam will auto-acquire targets if not manually controlled.
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Coolup:</strong><br /> 450 seconds</p>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 360 seconds</p>
+                </td>
                 <td>
                     <ul>
                         <li>Good to use in heavily fortified bases.</li>
-                    </ul>
-                </td>
-                <td>
-                    <ul>
-                        <li>Coolup: 450 seconds</li>
-                        <li>Cooldown: 360 seconds</li>
                     </ul>
                 </td>
             </tr>

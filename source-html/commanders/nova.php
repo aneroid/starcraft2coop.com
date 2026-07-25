@@ -373,17 +373,29 @@ require_once __DIR__ . "/../../includes/wrapper.php";
         <thead>
             <tr>
                 <th>Calldown</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Recommended Usage</th>
-                <th>Numbers</th>
+                <th>Costs</th>
+                <th>Advice</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td><img src="/images/commanderdata/abilities/nova/defensivedrone.png" alt = "Defensive Drone"></td>
-                <td>Defensive Drone</td>
-                <td>Provides friendly units with shields that absorb up to 200 damage. Lasts for 60 seconds.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/nova/defensivedrone.png" alt="" class="icon" />
+                            Defensive Drone
+                        </dt>
+                        <dd>
+                            Provides friendly units with shields that absorb up to 200 damage. Lasts for 60 seconds.
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Charges:</strong><br /> 0 to start / 5</p>
+                    <p><strong class="unbold">Coolup:</strong><br /> 60 seconds</p>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 60 seconds</p>
+                    <p><strong class="unbold">Mineral Cost:</strong><br /> 100</p>
+                </td>
                 <td>
                     <ul>
                         <li>Should be used when defending and attacking to protect your army.</li>
@@ -391,37 +403,48 @@ require_once __DIR__ . "/../../includes/wrapper.php";
                         <li>Can also be used to keep vision in an area temporarily.</li>
                     </ul>
                 </td>
-                <td>
-                    <ul>
-                        <li>Coolup: 60 seconds</li>
-                        <li>Cooldown: 60 seconds</li>
-                        <li>Max Charges: 5</li>
-                        <li>Mineral Cost: 100</li>
-                    </ul>
-                </td>
             </tr>
             <tr>
-                <td><img src="/images/commanderdata/abilities/nova/griffinairstrike.png" alt = "Griffin Airstrike"></td>
-                <td>Griffin Airstrike</td>
-                <td>Calls down the Griffin to deal 500 damage to all targets in its flight path after a short delay.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/nova/griffinairstrike.png" alt="" class="icon" />
+                            Griffin Airstrike
+                        </dt>
+                        <dd>
+                            Calls down the Griffin to deal 500 damage to all targets in its flight path after a short delay.
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Coolup:</strong><br /> 120 seconds</p>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 30 seconds</p>
+                    <p><strong class="unbold">Mineral Cost:</strong><br /> 1000</p>
+                </td>
                 <td>
                     <ul>
                         <li>Great way of dealing with tough attack waves.</li>
                         <li>Useful for weakening enemy bases before pushing in.</li>
                     </ul>
                 </td>
-                <td>
-                    <ul>
-                        <li>Coolup: 120 seconds</li>
-                        <li>Cooldown: 30 seconds</li>
-                        <li>Mineral Cost: 1000</li>
-                    </ul>
-                </td>
             </tr>
             <tr>
-                <td><img src="/images/commanderdata/abilities/nova/tacticalairlift.png" alt = "Tactical Airlift"></td>
-                <td>Tactical Airlift</td>
-                <td>Instantly transports friendly units in the target area to a targeted location.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/nova/tacticalairlift.png" alt="" class="icon" />
+                            Tactical Airlift
+                        </dt>
+                        <dd>
+                            Instantly transports friendly units in the target area to a targeted location.
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Coolup:</strong><br /> 120 seconds</p>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 120 seconds</p>
+                    <p><strong class="unbold">Mineral Cost:</strong><br /> 200</p>
+                </td>
                 <td>
                     <ul>
                         <li>Can be used to move troops to an area with vision.</li>
@@ -429,27 +452,26 @@ require_once __DIR__ . "/../../includes/wrapper.php";
                         <li>Can be used to dodge skill shots.</li>
                     </ul>
                 </td>
-                <td>
-                    <ul>
-                        <li>Coolup: 120 seconds</li>
-                        <li>Cooldown: 120 seconds</li>
-                        <li>Mineral Cost: 200</li>
-                    </ul>
-                </td>
             </tr>
             <tr>
-                <td><img src="/images/commanderdata/abilities/nova/instantregeneration.png" alt = "Instant Regeneration"></td>
-                <td>Instant Regeneration</td>
-                <td>Requirements:Nova recovering in stasis<br><br>Instantly revives Nova at the target location. Resource cost is determined by the amount of time remaining.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/nova/instantregeneration.png" alt="" class="icon" />
+                            Instant Regeneration
+                        </dt>
+                        <dd>
+                            Requirements:Nova recovering in stasis<br><br>Instantly revives Nova at the target location. Resource cost is determined by the amount of time remaining.
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Mineral Cost:</strong><br /> 450</p>
+                </td>
                 <td>
                     <ul>
                         <li>Cost gets reduced by 5 minerals per second.</li>
                         <li>Only use it if having Nova on the battlefield is vital.</li>
-                    </ul>
-                </td>
-                <td>
-                    <ul>
-                        <li>Mineral Cost: 450</li>
                     </ul>
                 </td>
             </tr>

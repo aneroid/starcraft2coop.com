@@ -377,46 +377,56 @@ require_once __DIR__ . "/../../includes/wrapper.php";
         <thead>
             <tr>
                 <th>Calldown</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Recommended Usage</th>
-                <th>Numbers</th>
+                <th>Costs</th>
+                <th>Advice</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td><img src="/images/commanderdata/abilities/raynor/bansheeairstrike.png" alt = "Banshee Airstrike"></td>
-                <td>Banshee Airstrike</td>
-                <td>Calls down 5 cloaked Dusk Wings, dealing 50 damage to enemies in the drop zone. Dusk Wings are controllable and will fight for 60 seconds.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/raynor/bansheeairstrike.png" alt="" class="icon" />
+                            Banshee Airstrike
+                        </dt>
+                        <dd>
+                            Calls down 5 cloaked Dusk Wings, dealing 50 damage to enemies in the drop zone. Dusk Wings are controllable and will fight for 60 seconds.
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Coolup:</strong><br /> 240 seconds</p>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 240 seconds</p>
+                </td>
                 <td>
                     <ul>
                         <li>Should be used as soon as it is off cooldown. With mastery points, Dusk Wings can be present on the map about 50% of the time.</li>
                         <li>Useful for dealing with ground-based attack waves, and before pushing into enemy bases.</li>
                     </ul>
                 </td>
-                <td>
-                    <ul>
-                        <li>Coolup: 240 seconds</li>
-                        <li>Cooldown: 240 seconds</li>
-                    </ul>
-                </td>
             </tr>
             <tr>
-                <td><img src="/images/commanderdata/abilities/raynor/hyperion.png" alt = "Hyperion"></td>
-                <td>Hyperion</td>
-                <td>Calls down the Hyperion Battlecruiser. The Hyperion is controllable and will fight for 60 seconds.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/raynor/hyperion.png" alt="" class="icon" />
+                            Hyperion
+                        </dt>
+                        <dd>
+                            Calls down the Hyperion Battlecruiser. The Hyperion is controllable and will fight for 60 seconds.
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Coolup:</strong><br /> 300 seconds</p>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 360 seconds</p>
+                </td>
                 <td>
                     <ul>
                         <li>Useful for pushing into heavily guarded enemy bases.</li>
                         <li>Use Yamato Cannon to take out key units. Leave the rest of the units for your army to clean up.</li>
                         <li>Once key units are taken out, Hyperjump to another location and repeat the process.</li>
                         <li>Deploy Point Defense Drones in strategic locations to not only protect the Hyperion, but also your army when it comes in to clear.</li>
-                    </ul>
-                </td>
-                <td>
-                    <ul>
-                        <li>Coolup: 300 seconds</li>
-                        <li>Cooldown: 360 seconds</li>
                     </ul>
                 </td>
             </tr>

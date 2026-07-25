@@ -367,78 +367,100 @@ require_once __DIR__ . "/../../includes/wrapper.php";
         <thead>
             <tr>
                 <th>Calldown</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Recommended Usage</th>
-                <th>Numbers</th>
+                <th>Costs</th>
+                <th>Advice</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td><img src="/images/commanderdata/abilities/stukov/deploypsiemitter.png" alt = "Deploy Psi Emitter"></td>
-                <td>Deploy Psi Emitter</td>
-                <td>Sends all currently existing and newly constructed infested infantry units to the designated point.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/stukov/deploypsiemitter.png" alt="" class="icon" />
+                            Deploy Psi Emitter
+                        </dt>
+                        <dd>
+                            Sends all currently existing and newly constructed infested infantry units to the designated point.
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 0 seconds</p>
+                </td>
                 <td>
                     <ul>
                         <li>Reposition your Psi Emitter often to ensure your Infested units are moving in the direction you want to.</li>
                     </ul>
                 </td>
-                <td>
-                    <ul>
-                        <li>Cooldown: 0 seconds</li>
-                    </ul>
-                </td>
             </tr>
             <tr>
-                <td><img src="/images/commanderdata/abilities/stukov/infeststructure.png" alt = "Infest Structure"></td>
-                <td>Infest Structure</td>
-                <td>Infests target friendly or enemy structure, causing it to spawn 60 Broodlings over 20 seconds.<br><br>Friendly structures are healed for 25 life per second and enemy structures are disabled for the duration of the effect.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/stukov/infeststructure.png" alt="" class="icon" />
+                            Infest Structure
+                        </dt>
+                        <dd>
+                            Infests target friendly or enemy structure, causing it to spawn 60 Broodlings over 20 seconds.<br><br>Friendly structures are healed for 25 life per second and enemy structures are disabled for the duration of the effect.
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Charges:</strong><br /> 0 to start / 3</p>
+                    <p><strong class="unbold">Coolup:</strong><br /> 180 seconds</p>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 90 seconds</p>
+                </td>
                 <td>
                     <ul>
                         <li>Infest Structure cannot target uprooted Bunkers. Root them, then infest, then uproot them.</li>
                         <li>Useful for distracting enemy units while your army attacks.</li>
                     </ul>
                 </td>
-                <td>
-                    <ul>
-                        <li>Coolup: 180 seconds</li>
-                        <li>Cooldown: 90 seconds</li>
-                        <li>Max charges: 3</li>
-                    </ul>
-                </td>
             </tr>
             <tr>
-                <td><img src="/images/commanderdata/abilities/stukov/apocalisk.png" alt = "Apocalisk"></td>
-                <td>Apocalisk</td>
-                <td>Spawns an Apocalisk at the target location. The Apocalisk is controllable and will fight for 60 seconds.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/stukov/apocalisk.png" alt="" class="icon" />
+                            Apocalisk
+                        </dt>
+                        <dd>
+                            Spawns an Apocalisk at the target location. The Apocalisk is controllable and will fight for 60 seconds.
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Coolup:</strong><br /> 240 seconds</p>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 300 seconds</p>
+                </td>
                 <td>
                     <ul>
                         <li>Useful for dealing with ground forces.</li>
                         <li>Can deal with minimal air units.</li>
                     </ul>
                 </td>
-                <td>
-                    <ul>
-                        <li>Coolup: 240 seconds</li>
-                        <li>Cooldown: 300 seconds</li>
-                    </ul>
-                </td>
             </tr>
             <tr>
-                <td><img src="/images/commanderdata/abilities/stukov/aleksander.png" alt = "Aleksander"></td>
-                <td>Aleksander</td>
-                <td>Calls down the Aleksander Infested Battlecruiser at the target location. The Aleksander is controllable and will fight for 60 seconds.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/stukov/aleksander.png" alt="" class="icon" />
+                            Aleksander
+                        </dt>
+                        <dd>
+                            Calls down the Aleksander Infested Battlecruiser at the target location. The Aleksander is controllable and will fight for 60 seconds.
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Coolup:</strong><br /> 360 seconds</p>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 360 seconds</p>
+                </td>
                 <td>
                     <ul>
                         <li>Useful for pushing into enemy bases.</li>
                         <li>After the Aleksander dies, it crashes to the ground, dealing 300 damage and spawning an infested unit every second for another 30 seconds.</li>
                         <li>Has an aura that reduces incoming damage.</li>
-                    </ul>
-                </td>
-                <td>
-                    <ul>
-                        <li>Coolup: 360 seconds</li>
-                        <li>Cooldown: 360 seconds</li>
                     </ul>
                 </td>
             </tr>

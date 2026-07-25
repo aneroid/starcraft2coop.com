@@ -404,17 +404,26 @@ require_once __DIR__ . "/../../includes/wrapper.php";
         <thead>
             <tr>
                 <th>Calldown</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Recommended Usage</th>
-                <th>Numbers</th>
+                <th>Costs</th>
+                <th>Advice</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td><img src="/images/commanderdata/abilities/swann/drakkenlaserdrillattack.png" alt = "Drakken Laser Drill Attack"></td>
-                <td>Drakken Laser Drill Attack</td>
-                <td>Attack with the Drakken Laser Drill. Deals 20 damage per second and has unlimited range.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/swann/drakkenlaserdrillattack.png" alt="" class="icon" />
+                            Drakken Laser Drill Attack
+                        </dt>
+                        <dd>
+                            Attack with the Drakken Laser Drill. Deals 20 damage per second and has unlimited range.
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 0 seconds</p>
+                </td>
                 <td>
                     <ul>
                         <li>Auto-targets enemy units in vision.</li>
@@ -422,32 +431,44 @@ require_once __DIR__ . "/../../includes/wrapper.php";
                         <li>Can be used to take down objectives in vision.</li>
                     </ul>
                 </td>
-                <td>
-                    <ul>
-                        <li>Cooldown: 0 seconds</li>
-                    </ul>
-                </td>
             </tr>
             <tr>
-                <td><img src="/images/commanderdata/abilities/swann/concentratedbeam.png" alt = "Concentrated Beam"></td>
-                <td>Concentrated Beam</td>
-                <td>Requirements: Drakken Laser Drill Level 1<br><br>Deals 400 damage to enemy units and structures in a line across the entire map.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/swann/concentratedbeam.png" alt="" class="icon" />
+                            Concentrated Beam
+                        </dt>
+                        <dd>
+                            Requirements: Drakken Laser Drill Level 1<br><br>Deals 400 damage to enemy units and structures in a line across the entire map.
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 180 seconds</p>
+                </td>
                 <td>
                     <ul>
                         <li>Very useful for dealing with attack waves.</li>
                         <li>Can be used to help with base pushes if bases are aligned correctly.</li>
                     </ul>
                 </td>
-                <td>
-                    <ul>
-                        <li>Cooldown: 180 seconds</li>
-                    </ul>
-                </td>
             </tr>
             <tr>
-                <td><img src="/images/commanderdata/abilities/swann/pulsecannon.png" alt = "Pulse Cannon"></td>
-                <td>Pulse Cannon</td>
-                <td>Requirements: Drakken Laser Drill Level 2<br><br>Deals 600 damage to enemy units and structures in the target area.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/swann/pulsecannon.png" alt="" class="icon" />
+                            Pulse Cannon
+                        </dt>
+                        <dd>
+                            Requirements: Drakken Laser Drill Level 2<br><br>Deals 600 damage to enemy units and structures in the target area.
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 300 seconds</p>
+                </td>
                 <td>
                     <ul>
                         <li>Useful for dealing with clumped up enemies.</li>
@@ -455,27 +476,28 @@ require_once __DIR__ . "/../../includes/wrapper.php";
                         <li>Can be used for difficult attack waves.</li>
                     </ul>
                 </td>
-                <td>
-                    <ul>
-                        <li>Cooldown: 300 seconds</li>
-                    </ul>
-                </td>
             </tr>
             <tr>
-                <td><img src="/images/commanderdata/abilities/swann/combatdrop.png" alt = "Combat Drop"></td>
-                <td>Combat Drop</td>
-                <td>Calls down 6 A.R.E.S. War Bots, stunning enemy ground units in the drop zone. The War Bots are controllable and fight for 60 seconds.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/swann/combatdrop.png" alt="" class="icon" />
+                            Combat Drop
+                        </dt>
+                        <dd>
+                            Calls down 6 A.R.E.S. War Bots, stunning enemy ground units in the drop zone. The War Bots are controllable and fight for 60 seconds.
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Coolup:</strong><br /> 240 seconds</p>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 240 seconds</p>
+                </td>
                 <td>
                     <ul>
                         <li>Should be used as often as possible, preferably as soon as they are off cooldown.</li>
                         <li>Useful for defending in the early game.</li>
                         <li>Can be used to tank for your units in the late game.</li>
-                    </ul>
-                </td>
-                <td>
-                    <ul>
-                        <li>Coolup: 240 seconds</li>
-                        <li>Cooldown:240 seconds</li>
                     </ul>
                 </td>
             </tr>

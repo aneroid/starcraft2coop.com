@@ -392,17 +392,36 @@ require_once __DIR__ . "/../../includes/wrapper.php";
         <thead>
             <tr>
                 <th>Calldown</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Recommended Usage</th>
-                <th>Numbers</th>
+                <th>Costs</th>
+                <th>Advice</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td><img src="/images/commanderdata/abilities/abathur/spawntoxicnest.png" alt = "Spawn Toxic Nest"></td>
-                <td>Spawn Toxic Nest</td>
-                <td>Spawns a Toxic Nest that generates creep at the select location. Deals damage and slows when enemies walk over them. Enemies damaged with Toxic Nests drop additional biomass. Toxic Nests have a chance to respawn.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/abathur/spawntoxicnest.png" alt="" class="icon" />
+                            Spawn Toxic Nest
+                        </dt>
+                        <dd>
+                            Spawns a Toxic Nest that generates creep at the select location. Deals damage and slows when enemies walk over them. Enemies damaged with Toxic Nests drop additional biomass. Toxic Nests have a chance to respawn.
+                            <ul>
+                                <li>Spawn Time: 15 seconds</li>
+                                <li>Damage: 125</li>
+                                <li>Mov. Spd. Slow: 75%</li>
+                                <li>Atk Spd. Slow: 75%</li>
+                                <li>Slow Duration: 5 seconds</li>
+                                <li>Respawn Chance: 60%</li>
+                                <li>Additional Biomass: 50%</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Charges:</strong><br /> 5 to start / 5</p>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 20 seconds</p>
+                </td>
                 <td>
                     <ul>
                         <li>Spawn Toxic Nests at the start of the game and lure enemies with a Roach or Spore Crawler into them to get your first Ultimate Evolution up.</li>
@@ -411,37 +430,31 @@ require_once __DIR__ . "/../../includes/wrapper.php";
                         <li>Place one Toxic Nest between your expansion's rocks and mineral patch so that two spine crawlers can be placed to clear the rocks.</li>
                     </ul>
                 </td>
-                <td>
-                    <ul>
-                        <li>Coolup: 5 charges to start</li>
-                        <li>Cooldown: 20 seconds</li>
-                        <li>Max Charges: 5</li>
-                        <li>Spawn Time: 15 seconds</li>
-                        <li>Damage: 125</li>
-                        <li>Mov. Spd. Slow: 75%</li>
-                        <li>Atk Spd. Slow: 75%</li>
-                        <li>Slow Duration: 5 seconds</li>
-                        <li>Respawn Chance: 60%</li>
-                        <li>Additional Biomass: 50%</li>
-                    </ul>
-                </td>
             </tr>
             <tr>
-                <td><img src="/images/commanderdata/abilities/abathur/mend.png" alt = "Mend"></td>
-                <td>Mend</td>
-                <td>Heal all allied units and structures instantly and provides a heal over time for a small period of time.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/abathur/mend.png" alt="" class="icon" />
+                            Mend
+                        </dt>
+                        <dd>
+                            Heal all allied units and structures instantly and provides a heal over time for a small period of time.
+                            <ul>
+                                <li>Initial heal: 100HP</li>
+                                <li>Heal over time: 50HP</li>
+                                <li>Heal duration: 10 seconds</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Charges:</strong><br /> 3 to start / 3</p>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 120 seconds</p>
+                </td>
                 <td>
                     <ul>
                         <li>Useful when taking long engages or when trying to push consistently on maps.</li>
-                    </ul>
-                </td>
-                <td>
-                    <ul>
-                        <li>Coolup: 3 charges to start</li>
-                        <li>Cooldown: 120 seconds</li>
-                        <li>Initial heal: 100HP</li>
-                        <li>Gradual heal: 50HP</li>
-                        <li>Heal duration: 10 seconds</li>
                     </ul>
                 </td>
             </tr>

@@ -380,17 +380,27 @@ require_once __DIR__ . "/../../includes/wrapper.php";
         <thead>
             <tr>
                 <th>Calldown</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Recommended Usage</th>
-                <th>Numbers</th>
+                <th>Costs</th>
+                <th>Advice</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td><img src="/images/commanderdata/abilities/vorazun/deploydarkpylon.png" alt = "Deploy Dark Pylon"></td>
-                <td>Deploy Dark Pylon</td>
-                <td>Warps in a Dark Pylon granting supply and power. Dark Pylons also cloak nearby friendly units and structures. Friendly cloaked units deal 15% more attack damage and 50% increased energy regeneration.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/vorazun/deploydarkpylon.png" alt="" class="icon" />
+                            Deploy Dark Pylon
+                        </dt>
+                        <dd>
+                            Warps in a Dark Pylon granting supply and power. Dark Pylons also cloak nearby friendly units and structures. Friendly cloaked units deal 15% more attack damage and 50% increased energy regeneration.
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 60 seconds</p>
+                    <p><strong class="unbold">Energy Required:</strong><br /> 25</p>
+                </td>
                 <td>
                     <ul>
                         <li>At the start of the game, warp in your first Dark Pylon to save you from building one for power and supply.</li>
@@ -398,62 +408,74 @@ require_once __DIR__ . "/../../includes/wrapper.php";
                         <li>Use your Dark Pylon's Recall ability to move efficiently around the map.</li>
                     </ul>
                 </td>
-                <td>
-                    <ul>
-                        <li>Cooldown: 60 seconds</li>
-                        <li>Energy Required: 25</li>
-                    </ul>
-                </td>
             </tr>
             <tr>
-                <td><img src="/images/commanderdata/abilities/vorazun/blackhole.png" alt = "Black Hole"></td>
-                <td>Black Hole</td>
-                <td>Creates a Black Hole that pulls in and stuns enemy units. Lasts 8 seconds.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/vorazun/blackhole.png" alt="" class="icon" />
+                            Black Hole
+                        </dt>
+                        <dd>
+                            Creates a Black Hole that pulls in and stuns enemy units. Lasts 8 seconds.
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 0 seconds</p>
+                    <p><strong class="unbold">Energy Required:</strong><br /> 25</p>
+                </td>
                 <td>
                     <ul>
                         <li>Use this with Corsairs to deal with armored air units.</li>
                         <li>A good placement of a Black Hole will allow you to deal with attack waves without losing any units.</li>
                     </ul>
                 </td>
-                <td>
-                    <ul>
-                        <li>Cooldown: 0 seconds</li>
-                        <li>Energy Required: 25</li>
-                    </ul>
-                </td>
             </tr>
             <tr>
-                <td><img src="/images/commanderdata/abilities/vorazun/deployshadowguard.png" alt = "Deploy Shadow Guard"></td>
-                <td>Deploy Shadow Guard</td>
-                <td>Deploys 4 elite Dark Templar at the target location that last for 60 seconds.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/vorazun/deployshadowguard.png" alt="" class="icon" />
+                            Deploy Shadow Guard
+                        </dt>
+                        <dd>
+                            Deploys 4 elite Dark Templar at the target location that last for 60 seconds.
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 180 seconds</p>
+                    <p><strong class="unbold">Energy Required:</strong><br /> 50</p>
+                </td>
                 <td>
                     <ul>
                         <li>The first Shadow Guard should be used to clear out your expansion.</li>
                         <li>Make use of their Blink ability to move them quickly from one location to another, in addition to any Dark Pylons you have out.</li>
                     </ul>
                 </td>
-                <td>
-                    <ul>
-                        <li>Cooldown: 180 seconds</li>
-                        <li>Energy Required: 50</li>
-                    </ul>
-                </td>
             </tr>
             <tr>
-                <td><img src="/images/commanderdata/abilities/vorazun/timestop.png" alt = "Time Stop"></td>
-                <td>Time Stop</td>
-                <td>Alters space-time, freezing all enemies in place for 20 seconds. Unlimited range.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/vorazun/timestop.png" alt="" class="icon" />
+                            Time Stop
+                        </dt>
+                        <dd>
+                            Alters space-time, freezing all enemies in place for 20 seconds. Unlimited range.
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Coolup:</strong><br /> 240 seconds</p>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 240 seconds</p>
+                </td>
                 <td>
                     <ul>
                         <li>One of the most powerful calldowns in the game.</li>
                         <li>This should be used as soon as it is off cooldown, so make sure you are ready to push.</li>
                         <li>Push into heavily fortified bases and use this as soon as enemy units start attacking you.</li>
-                    </ul>
-                </td>
-                <td>
-                    <ul>
-                        <li>Coolup: 240 seconds</li>
-                        <li>Cooldown: 240 seconds</li>
                     </ul>
                 </td>
             </tr>

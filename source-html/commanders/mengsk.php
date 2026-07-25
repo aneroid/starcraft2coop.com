@@ -444,17 +444,30 @@ require_once __DIR__ . "/../../includes/wrapper.php";
         <thead>
             <tr>
                 <th>Calldown</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Recommended Usage</th>
-                <th>Numbers</th>
+                <th>Costs</th>
+                <th>Advice</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td><img src="/images/commanderdata/abilities/mengsk/forcedconscription.png" alt = "Forced Conscription"></td>
-                <td>Forced Conscription</td>
-                <td>Drops a Supply Bunker from orbit along with 6 unfortunate Trooper souls to man it.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/mengsk/forcedconscription.png" alt="" class="icon" />
+                            Forced Conscription
+                        </dt>
+                        <dd>
+                            Drops a Supply Bunker from orbit along with 6 unfortunate Trooper souls to man it.
+                            <ul>
+                                <li>Construction Time: 3 seconds</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Charge Cooldown:</strong><br /> 60 seconds</p>
+                    <p><strong class="unbold">Mandate Required:</strong><br /> 25</p>
+                </td>
                 <td>
                     <ul>
                         <li>If the Mandate mastery has been selected, a fast expand is possible very early in the game.</li>
@@ -463,18 +476,23 @@ require_once __DIR__ . "/../../includes/wrapper.php";
                         <li>Salvage Bunkers that won't be used for extra resources.</li>
                     </ul>
                 </td>
-                <td>
-                    <ul>
-                        <li>Charge Cooldown: 60 seconds</li>
-                        <li>Mandate Required: 25</li>
-                        <li>Construction Time: 3 seconds</li>
-                    </ul>
-                </td>
             </tr>
             <tr>
-                <td><img src="/images/commanderdata/abilities/mengsk/contaminatedstrike.png" alt = "Contaminated Strike"></td>
-                <td>Contaminated Strike</td>
-                <td>Loads all your Earthsplitter Ordnance with an experimental payload to target any area on the map. Payloads randomly land near the target area, causing enemies to run in fear and saturating the area in irradiated biomaterial, causing all enemies who enter to take 5 damage per second. Affected units cannot cloak.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/mengsk/contaminatedstrike.png" alt="" class="icon" />
+                            Contaminated Strike
+                        </dt>
+                        <dd>
+                            Loads all your Earthsplitter Ordnance with an experimental payload to target any area on the map. Payloads randomly land near the target area, causing enemies to run in fear and saturating the area in irradiated biomaterial, causing all enemies who enter to take 5 damage per second. Affected units cannot cloak.
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 30 seconds</p>
+                    <p><strong class="unbold">Mandate Required:</strong><br /> 25</p>
+                </td>
                 <td>
                     <ul>
                         <li>Useful for dropping on an attack wave or enemy base before pushing in.</li>
@@ -482,44 +500,50 @@ require_once __DIR__ . "/../../includes/wrapper.php";
                         <li>Fear will cancel any current orders a unit has, which means attack waves hit by Contaminated Strike will stop moving towards player bases.</li>
                     </ul>
                 </td>
-                <td>
-                    <ul>
-                        <li>Cooldown: 30 seconds</li>
-                        <li>Mandate Required: 25</li>
-                    </ul>
-                </td>
             </tr>
             <tr>
-                <td><img src="/images/commanderdata/abilities/mengsk/dogsofwar1.png" alt = "Dogs of War (Level 1)"><img src="/images/commanderdata/abilities/mengsk/dogsofwar2.png" alt = "Dogs of War (Level 2)"><img src="/images/commanderdata/abilities/mengsk/dogsofwar3.png" alt = "Dogs of War (Level 3)"><img src="/images/commanderdata/abilities/mengsk/dogsofwar4.png" alt = "Dogs of War (Level 4"></td>
-                <td>Dogs of War</td>
-                <td>Deploys 30 enthralled Zerglings at the target location that last for 60 seconds. Enthralled zerg will seek out and attack the nearest enemy.<br><br>Deploys additional enthralled zerg based on Imperial Mandate.<br><br>50%: Deploys 10 additional Hydralisks.<br>75%: Deploys 10 additional Mutalisks.<br>100%: Deploys 5 additional Ultralisks.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <span class="icons"><img src="/images/commanderdata/abilities/mengsk/dogsofwar1.png" alt="" /><img src="/images/commanderdata/abilities/mengsk/dogsofwar2.png" alt="" /><img src="/images/commanderdata/abilities/mengsk/dogsofwar3.png" alt="" /><img src="/images/commanderdata/abilities/mengsk/dogsofwar4.png" alt="" /></span>
+                            Dogs of War
+                        </dt>
+                        <dd>
+                            Deploys 30 enthralled Zerglings at the target location that last for 60 seconds. Enthralled zerg will seek out and attack the nearest enemy.<br><br>Deploys additional enthralled zerg based on Imperial Mandate.<br><br>50%: Deploys 10 additional Hydralisks.<br>75%: Deploys 10 additional Mutalisks.<br>100%: Deploys 5 additional Ultralisks.
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 180 seconds</p>
+                    <p><strong class="unbold">Mandate Required:</strong><br /> 25</p>
+                </td>
                 <td>
                     <ul>
                         <li>Can be used in place of one Bunker on some fast expands (see Gameplay Guide), although not recommended as it is less efficient.</li>
                         <li>Great for drawing aggro of enemy units while your army attacks from behind the line of Zerg.</li>
                     </ul>
                 </td>
-                <td>
-                    <ul>
-                        <li>Cooldown: 180 seconds</li>
-                        <li>Mandate Required: 25</li>
-                    </ul>
-                </td>
             </tr>
             <tr>
-                <td><img src="/images/commanderdata/abilities/mengsk/nuclearannihilation.png" alt = "Nuclear Annihilation"></td>
-                <td>Nuclear Annihilation</td>
-                <td>Blankets a target area with a seemingly endless barrage of 40 Tactical Missiles, each dealing 150(+100 vs. structures) damage in a small area, followed by a Nuclear Missile, which deals 500(+300 vs. structures) damage in a large area.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/mengsk/nuclearannihilation.png" alt="" class="icon" />
+                            Nuclear Annihilation
+                        </dt>
+                        <dd>
+                            Blankets a target area with a seemingly endless barrage of 40 Tactical Missiles, each dealing 150(+100 vs. structures) damage in a small area, followed by a Nuclear Missile, which deals 500(+300 vs. structures) damage in a large area.
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 300 seconds</p>
+                    <p><strong class="unbold">Mandate Required:</strong><br /> 100</p>
+                </td>
                 <td>
                     <ul>
                         <li>Very powerful splash damage that can be used to clear out enemy bases.</li>
                         <li>Get vision of the center of enemy bases with Earthsplitter Ordnances before using this calldown.</li>
-                    </ul>
-                </td>
-                <td>
-                    <ul>
-                        <li>Cooldown: 300 seconds</li>
-                        <li>Mandate Required: 100</li>
                     </ul>
                 </td>
             </tr>

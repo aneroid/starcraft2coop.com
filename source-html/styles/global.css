@@ -142,9 +142,6 @@ summary {
     .tableContainer{
         overflow:scroll;
     }
-    p {
-     font-size: 1.25rem;
-   }
 }
 .grecaptcha-badge {
     visibility: hidden;
@@ -459,6 +456,35 @@ kbd {
     border-collapse:collapse;
 }
 
+.ability {
+    padding: 0 0 0 80px;
+    text-align: left;
+}
+.ability .icon {
+    float: left;
+    margin-left: -80px;
+    height: 76px;
+    width: 76px;
+}
+.ability .icons {
+    float: left;
+    margin-left: -80px;
+    width: 76px;
+}
+.ability .icons img {
+    float: left;
+    height: 38px;
+    width: 38px;
+}
+.ability dt, .ability dd {
+    margin: 0;
+    padding: 0;
+}
+.ability dt {
+    font-weight: bold;
+    margin-bottom: 3px;
+    color: rgb(198 202 232);
+}
 
 th,td{
     border:1px solid #888;

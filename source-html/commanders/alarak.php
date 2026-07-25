@@ -424,17 +424,33 @@ require_once __DIR__ . "/../../includes/wrapper.php";
         <thead>
             <tr>
                 <th>Calldown</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Recommended Usage</th>
-                <th>Numbers</th>
+                <th>Costs</th>
+                <th>Advice</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td><img src="/images/commanderdata/abilities/alarak/structureovercharge.png" alt = "Structure Overcharge"></td>
-                <td>Structure Overcharge</td>
-                <td>Energizes target friendly structure or War Prism in Phasing Mode, allowing it to attack nearby enemy ground and air units.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/alarak/structureovercharge.png" alt="" class="icon" />
+                            Structure Overcharge
+                        </dt>
+                        <dd>
+                            Energizes target friendly structure or War Prism in Phasing Mode, allowing it to attack nearby enemy ground and air units.
+                            <ul>
+                                <li>Damage: 40</li>
+                                <li>Range: 10</li>
+                                <li>Atk Spd: 0.641</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Charges:</strong><br /> 0 to start / 3</p>
+                    <p><strong class="unbold">Coolup:</strong><br /> 90 seconds</p>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 90 seconds</p>
+                </td>
                 <td>
                     <ul>
                         <li>Use the first overcharge to clear out rocks and contested expansions.</li>
@@ -443,32 +459,28 @@ require_once __DIR__ . "/../../includes/wrapper.php";
                         <li>Lasts 45 seconds.</li>
                     </ul>
                 </td>
-                <td>
-                    <ul>
-                        <li>Coolup: 90 seconds</li>
-                        <li>Cooldown: 90 seconds</li>
-                        <li>Max Charges: 3</li>
-                        <li>Damage: 40</li>
-                        <li>Range: 10</li>
-                        <li>Atk Spd: 0.641</li>
-                    </ul>
-                </td>
             </tr>
             <tr>
-                <td><img src="/images/commanderdata/abilities/alarak/summondeathfleet.png" alt = "Summon Death Fleet"></td>
-                <td>Summon Death Fleet</td>
-                <td>Warps in a Tal'Darim Mothership and 8 Destroyers that are controllable and will fight for 60 seconds.</td>
+                <td>
+                    <dl class="ability">
+                        <dt>
+                            <img src="/images/commanderdata/abilities/alarak/summondeathfleet.png" alt="" class="icon" />
+                            Summon Death Fleet
+                        </dt>
+                        <dd>
+                            Warps in a Tal'Darim Mothership and 8 Destroyers that are controllable and will fight for 60 seconds.
+                        </dd>
+                    </dl>
+                </td>
+                <td>
+                    <p><strong class="unbold">Coolup:</strong><br /> 600 seconds</p>
+                    <p><strong class="unbold">Cooldown:</strong><br /> 360 seconds</p>
+                </td>
                 <td>
                     <ul>
                         <li>Useful for adding extra DPS to pushes and defending attack strong attack waves.</li>
                         <li>Use the Mothership's Mass Teleport ability to give your army extra mobility.</li>
                         <li>If using the Shadow of Death prestige, the calldown costs 400/400, with each Destroyer costing 125/75.</li>
-                    </ul>
-                </td>
-                <td>
-                    <ul>
-                        <li>Coolup: 600 seconds</li>
-                        <li>Cooldown: 360 seconds</li>
                     </ul>
                 </td>
             </tr>
