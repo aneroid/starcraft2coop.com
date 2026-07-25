@@ -616,12 +616,13 @@ require_once __DIR__ . "/../../includes/wrapper.php";
                     <tr>
                         <td><img src="/images/commanderdata/unitupgrades/stetmann/syntheticadrenalpumps.png" alt="Synthetic Adrenal Pumps"></td>
                         <td>Synthetic Adrenal Pumps</td>
-                        <td>Increases attack speed of Mecha Zerglings by 100%. Drains 1 Egonergy per attack.</td>
+                        <td>Increases attack speed of Mecha Zerglings by 100%.</td>
                         <td>100/100</td>
                         <td>60 seconds</td>
                     </tr>
                 </tbody>
             </table>
+            <p><small>(Synthetic Adrenal Pumps's in-game description still says it drains 1 Egonergy per attack, and it did on release. But it was changed shortly after, and currently doesn't use any Egonergy.)</small></p>
         </div>
     </div>
     <div class="leftImage">
