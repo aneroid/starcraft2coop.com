@@ -45,9 +45,13 @@ table ul, table p, table dl {
 }
 
 @media (max-width: 700px){
+    #content table.prestigeTable td {
+        font-size:1rem;
+    }
     .calldownTable td{
         display:block;
         margin:-1px 0 0;
+        font-size:1rem;
     }
     .calldownTable th{
         display:none;

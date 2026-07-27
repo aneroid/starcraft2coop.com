@@ -463,6 +463,7 @@ kbd {
 .ability .icon {
     float: left;
     margin-left: -80px;
+    margin-top: -1px;
     height: 76px;
     width: 76px;
 }
@@ -484,6 +485,11 @@ kbd {
     font-weight: bold;
     margin-bottom: 3px;
     color: rgb(198 202 232);
+}
+.ability:after {
+    display: block;
+    clear: left;
+    content: '';
 }
 
 th,td{
