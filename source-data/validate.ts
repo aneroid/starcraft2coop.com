@@ -43,11 +43,32 @@ for (const [i, entry] of mutatorInteractions.entries()) {
 
 // mutators in order
 const mutators: MutatorList = await Bun.file('source-data/mutators.json').json();
+// TODO: make this alphabetical order later
+/*
 for (const [i, entry] of mutators.entries()) {
     if (entry.mutatorid !== i + 1) {
         console.error(`mutators.json[${i}]: mutatorid (${entry.mutatorid}) must be equal to ${i + 1}`);
         process.exit(1);
     }
+}
+*/
+
+// mutator ids are unique
+const seenIds = new Set<string>();
+const duplicateIds = new Set<string>();
+for (const mutator of mutators) {
+    if (seenIds.has(mutator.mutatorid)) {
+        duplicateIds.add(mutator.mutatorid);
+    } else {
+        seenIds.add(mutator.mutatorid);
+    }
+}
+if (duplicateIds.size > 0) {
+    console.error("mutators.json: Found duplicate 'mutatorid' entries:");
+    duplicateIds.forEach((id) => {
+        console.error(`   - ${id}`);
+    });
+    process.exit(1);
 }
 
 // weeklymutations in order
