@@ -32,11 +32,11 @@
             "additionalProperties": false
         },
         "MutatorId": {
-            "$ref": "#/definitions/LowercaseNoSpaces"
+            "$ref": "#/definitions/LowercaseHyphens"
         },
-        "LowercaseNoSpaces": {
+        "LowercaseHyphens": {
             "type": "string",
-            "pattern": "^[^ A-Z]+$"
+            "pattern": "^[a-z0-9-]+$"
         }
     }
 }

@@ -21,12 +21,12 @@
                     "type": "string"
                 },
                 "mut01": {
-                    "$ref": "#/definitions/PositiveInteger"
+                    "$ref": "#/definitions/LowercaseHyphens"
                 },
                 "mut02": {
                     "anyOf": [
                         {
-                            "$ref": "#/definitions/PositiveInteger"
+                            "$ref": "#/definitions/LowercaseHyphens"
                         },
                         {
                             "type": "null"
@@ -36,7 +36,7 @@
                 "mut03": {
                     "anyOf": [
                         {
-                            "$ref": "#/definitions/PositiveInteger"
+                            "$ref": "#/definitions/LowercaseHyphens"
                         },
                         {
                             "type": "null"
@@ -57,6 +57,10 @@
         "PositiveInteger": {
             "type": "integer",
             "minimum": 1
+        },
+        "LowercaseHyphens": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
         }
     }
 }
