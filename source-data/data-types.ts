@@ -11,10 +11,10 @@ export type NonNegativeInteger = number;
 export type CommanderPowerRating = 1 | 2 | 3 | 4 | 5;
 export type NumericBoolean = 0 | 1;
 /**
- * @pattern ^[^ A-Z]+$
+ * @pattern ^[a-z0-9-]+$
  */
-export type LowercaseNoSpaces = string;
-export type MutatorId = LowercaseNoSpaces;
+export type LowercaseHyphens = string;
+export type MutatorId = LowercaseHyphens;
 
 export interface BrutalPlus {
     /** as in, the X in Brutal+X */
@@ -81,7 +81,7 @@ export interface MutatorInteraction {
 export type MutatorInteractionList = MutatorInteraction[];
 
 export interface Mutator {
-    mutatorid: PositiveInteger;
+    mutatorid: LowercaseHyphens;
     mutatorname: string;
     /** Mutator difficulty points (see Brutal+ page) */
     abomination: NonNegativeInteger;
@@ -106,16 +106,16 @@ export interface WeeklyMutation {
     link: string | null;
     map: string;
     /** only null for Sudden but Inevitable */
-    mut01: PositiveInteger | null;
-    mut02: PositiveInteger | null;
-    mut03: PositiveInteger | null;
-    mut04: PositiveInteger | null;
-    mut05: PositiveInteger | null;
-    mut06: PositiveInteger | null;
-    mut07: PositiveInteger | null;
-    mut08: PositiveInteger | null;
-    mut09: PositiveInteger | null;
-    mut10: PositiveInteger | null;
+    mut01: LowercaseHyphens | null;
+    mut02: LowercaseHyphens | null;
+    mut03: LowercaseHyphens | null;
+    mut04: LowercaseHyphens | null;
+    mut05: LowercaseHyphens | null;
+    mut06: LowercaseHyphens | null;
+    mut07: LowercaseHyphens | null;
+    mut08: LowercaseHyphens | null;
+    mut09: LowercaseHyphens | null;
+    mut10: LowercaseHyphens | null;
     /** no clue what this is; always 0 */
     final: 0;
 }
@@ -126,9 +126,9 @@ export interface MutationCycle {
     mutationid: PositiveInteger;
     mutation: string;
     map: string;
-    mut01: PositiveInteger;
-    mut02: PositiveInteger | null;
-    mut03: PositiveInteger | null;
+    mut01: LowercaseHyphens;
+    mut02: LowercaseHyphens | null;
+    mut03: LowercaseHyphens | null;
 }
 
 export interface MutationCycleWithScore extends MutationCycle {
@@ -250,7 +250,7 @@ export type PatchList = Patch[];
 
 export interface MutatorCommanderTip {
     tipid: PositiveInteger;
-    mutator: PositiveInteger;
+    mutator: LowercaseHyphens;
     commander: string;
     tip: string;
     video: string | null;
