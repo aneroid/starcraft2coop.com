@@ -13,8 +13,8 @@ export type NumericBoolean = 0 | 1;
 /**
  * @pattern ^[a-z0-9-]+$
  */
-export type LowercaseHyphens = string;
-export type MutatorId = LowercaseHyphens;
+export type LowercaseHyphen = string;
+export type MutatorId = LowercaseHyphen;
 
 export interface BrutalPlus {
     /** as in, the X in Brutal+X */
@@ -81,7 +81,7 @@ export interface MutatorInteraction {
 export type MutatorInteractionList = MutatorInteraction[];
 
 export interface Mutator {
-    mutatorid: LowercaseHyphens;
+    mutatorid: LowercaseHyphen;
     mutatorname: string;
     /** Mutator difficulty points (see Brutal+ page) */
     abomination: NonNegativeInteger;
@@ -106,16 +106,16 @@ export interface WeeklyMutation {
     link: string | null;
     map: string;
     /** only null for Sudden but Inevitable */
-    mut01: LowercaseHyphens | null;
-    mut02: LowercaseHyphens | null;
-    mut03: LowercaseHyphens | null;
-    mut04: LowercaseHyphens | null;
-    mut05: LowercaseHyphens | null;
-    mut06: LowercaseHyphens | null;
-    mut07: LowercaseHyphens | null;
-    mut08: LowercaseHyphens | null;
-    mut09: LowercaseHyphens | null;
-    mut10: LowercaseHyphens | null;
+    mut01: LowercaseHyphen | null;
+    mut02: LowercaseHyphen | null;
+    mut03: LowercaseHyphen | null;
+    mut04: LowercaseHyphen | null;
+    mut05: LowercaseHyphen | null;
+    mut06: LowercaseHyphen | null;
+    mut07: LowercaseHyphen | null;
+    mut08: LowercaseHyphen | null;
+    mut09: LowercaseHyphen | null;
+    mut10: LowercaseHyphen | null;
     /** no clue what this is; always 0 */
     final: 0;
 }
@@ -126,9 +126,9 @@ export interface MutationCycle {
     mutationid: PositiveInteger;
     mutation: string;
     map: string;
-    mut01: LowercaseHyphens;
-    mut02: LowercaseHyphens | null;
-    mut03: LowercaseHyphens | null;
+    mut01: LowercaseHyphen;
+    mut02: LowercaseHyphen | null;
+    mut03: LowercaseHyphen | null;
 }
 
 export interface MutationCycleWithScore extends MutationCycle {
@@ -250,7 +250,7 @@ export type PatchList = Patch[];
 
 export interface MutatorCommanderTip {
     tipid: PositiveInteger;
-    mutator: LowercaseHyphens;
+    mutator: LowercaseHyphen;
     commander: string;
     tip: string;
     video: string | null;

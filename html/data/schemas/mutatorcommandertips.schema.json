@@ -15,7 +15,7 @@
                     "$ref": "#/definitions/PositiveInteger"
                 },
                 "mutator": {
-                    "$ref": "#/definitions/LowercaseHyphens"
+                    "$ref": "#/definitions/LowercaseHyphen"
                 },
                 "commander": {
                     "type": "string"
@@ -43,7 +43,7 @@
             "type": "integer",
             "minimum": 1
         },
-        "LowercaseHyphens": {
+        "LowercaseHyphen": {
             "type": "string",
             "pattern": "^[a-z0-9-]+$"
         }

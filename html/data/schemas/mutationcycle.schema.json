@@ -21,12 +21,12 @@
                     "type": "string"
                 },
                 "mut01": {
-                    "$ref": "#/definitions/LowercaseHyphens"
+                    "$ref": "#/definitions/LowercaseHyphen"
                 },
                 "mut02": {
                     "anyOf": [
                         {
-                            "$ref": "#/definitions/LowercaseHyphens"
+                            "$ref": "#/definitions/LowercaseHyphen"
                         },
                         {
                             "type": "null"
@@ -36,7 +36,7 @@
                 "mut03": {
                     "anyOf": [
                         {
-                            "$ref": "#/definitions/LowercaseHyphens"
+                            "$ref": "#/definitions/LowercaseHyphen"
                         },
                         {
                             "type": "null"
@@ -58,7 +58,7 @@
             "type": "integer",
             "minimum": 1
         },
-        "LowercaseHyphens": {
+        "LowercaseHyphen": {
             "type": "string",
             "pattern": "^[a-z0-9-]+$"
         }

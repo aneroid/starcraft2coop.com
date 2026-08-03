@@ -12,7 +12,7 @@
             "type": "object",
             "properties": {
                 "mutatorid": {
-                    "$ref": "#/definitions/LowercaseHyphens"
+                    "$ref": "#/definitions/LowercaseHyphen"
                 },
                 "mutatorname": {
                     "type": "string"
@@ -46,7 +46,7 @@
             ],
             "additionalProperties": false
         },
-        "LowercaseHyphens": {
+        "LowercaseHyphen": {
             "type": "string",
             "pattern": "^[a-z0-9-]+$"
         },
