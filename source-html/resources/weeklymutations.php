@@ -409,7 +409,7 @@ require_once __DIR__ . "/../../includes/wrapper.php";
 
     function weeklyMutationMutatorLink(array $mutator): string
     {
-        $filename = token($mutator['mutatorname']);
+        $filename = $mutator['mutatorid'];
         return "<a href=\"/mutators/" . $filename . "\"><img class=\"miniIcon\" src=\"/images/mutators/" .
             $filename . ".png\" alt=\"\">" . $mutator['mutatorname'] . "</a>";
     }
@@ -424,13 +424,13 @@ require_once __DIR__ . "/../../includes/wrapper.php";
         $score = 0;
         $unknown = false;
         if ($row["mut01"]) {
-            $classVals .= " " . str_replace(' ', '', strtolower($mutators[intval($row["mut01"]) - 1]['mutatorname']));
+            $classVals .= " " . $row["mut01"];
         }
         if ($row["mut02"]) {
-            $classVals .= " " . str_replace(' ', '', strtolower($mutators[intval($row["mut02"]) - 1]['mutatorname']));
+            $classVals .= " " . $row["mut02"];
         }
         if ($row["mut03"]) {
-            $classVals .= " " . str_replace(' ', '', strtolower($mutators[intval($row["mut03"]) - 1]['mutatorname']));
+            $classVals .= " " . $row["mut03"];
         }
         [$diff, $diffString] = getDiffString($row["brutalplus"]);
         $classVals .= " brutal" . $diff;
@@ -447,17 +447,17 @@ require_once __DIR__ . "/../../includes/wrapper.php";
         }
 
         if ($row["mut01"]) {
-            echo "<td>" . weeklyMutationMutatorLink($mutators[intval($row["mut01"]) - 1]) . "</td>\n";
+            echo "<td>" . weeklyMutationMutatorLink(get_mutator($row["mut01"], $mutators)) . "</td>\n";
         } else {
             echo "<td></td>\n";
         }
         if ($row["mut02"]) {
-            echo "<td>" . weeklyMutationMutatorLink($mutators[intval($row["mut02"]) - 1]) . "</td>\n";
+            echo "<td>" . weeklyMutationMutatorLink(get_mutator($row["mut02"], $mutators)) . "</td>\n";
         } else {
             echo "<td></td>\n";
         }
         if ($row["mut03"]) {
-            echo "<td>" . weeklyMutationMutatorLink($mutators[intval($row["mut03"]) - 1]) . "</td>\n";
+            echo "<td>" . weeklyMutationMutatorLink(get_mutator($row["mut03"], $mutators)) . "</td>\n";
         } else {
             echo "<td></td>\n";
         }

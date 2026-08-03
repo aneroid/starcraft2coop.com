@@ -172,8 +172,7 @@ require_once __DIR__ . "/../../includes/wrapper.php";
     usort($mutatorInfo, fn($a, $b) => $a['mutatorname'] <=> $b['mutatorname']);
     $mutators = [];
     foreach ($mutatorInfo as $mutator) {
-        // TODO: when de-database-ifying mutators, use the human-ish id and remove the conversion here
-        $mutators[] = [str_replace(' ', '', strtolower($mutator['mutatorname'])), $mutator['mutatorname']];
+        $mutators[] = [$mutator['mutatorid'], $mutator['mutatorname']];
     }
     ?>
     <form action="mutators.php" method="post">
