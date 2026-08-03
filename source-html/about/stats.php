@@ -43,7 +43,7 @@ require_once __DIR__ . "/../../includes/wrapper.php";
     $weeklyMutations = get_weeklymutations();
     $weeklyMutationCount = count($weeklyMutations);
 
-    $woms = array_filter($weeklyMutations, fn($weeklyMutation) => $weeklyMutation['mut01'] == 8);
+    $woms = array_filter($weeklyMutations, fn($weeklyMutation) => $weeklyMutation['mut01'] == 'chaos-studios');
     $WOMCount = count($woms);
 
     $mutators = get_mutators();
