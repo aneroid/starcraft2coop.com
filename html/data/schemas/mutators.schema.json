@@ -12,7 +12,7 @@
             "type": "object",
             "properties": {
                 "mutatorid": {
-                    "$ref": "#/definitions/LowercaseHyphen"
+                    "$ref": "#/definitions/MutatorId"
                 },
                 "mutatorname": {
                     "type": "string"
@@ -45,6 +45,9 @@
                 "hassafezone"
             ],
             "additionalProperties": false
+        },
+        "MutatorId": {
+            "$ref": "#/definitions/LowercaseHyphen"
         },
         "LowercaseHyphen": {
             "type": "string",

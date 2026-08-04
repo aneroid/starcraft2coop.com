@@ -81,7 +81,7 @@ export interface MutatorInteraction {
 export type MutatorInteractionList = MutatorInteraction[];
 
 export interface Mutator {
-    mutatorid: LowercaseHyphen;
+    mutatorid: MutatorId;
     mutatorname: string;
     /** Mutator difficulty points (see Brutal+ page) */
     abomination: NonNegativeInteger;
@@ -106,16 +106,16 @@ export interface WeeklyMutation {
     link: string | null;
     map: string;
     /** only null for Sudden but Inevitable */
-    mut01: LowercaseHyphen | null;
-    mut02: LowercaseHyphen | null;
-    mut03: LowercaseHyphen | null;
-    mut04: LowercaseHyphen | null;
-    mut05: LowercaseHyphen | null;
-    mut06: LowercaseHyphen | null;
-    mut07: LowercaseHyphen | null;
-    mut08: LowercaseHyphen | null;
-    mut09: LowercaseHyphen | null;
-    mut10: LowercaseHyphen | null;
+    mut01: MutatorId | null;
+    mut02: MutatorId | null;
+    mut03: MutatorId | null;
+    mut04: MutatorId | null;
+    mut05: MutatorId | null;
+    mut06: MutatorId | null;
+    mut07: MutatorId | null;
+    mut08: MutatorId | null;
+    mut09: MutatorId | null;
+    mut10: MutatorId | null;
     /** no clue what this is; always 0 */
     final: 0;
 }
@@ -126,9 +126,9 @@ export interface MutationCycle {
     mutationid: PositiveInteger;
     mutation: string;
     map: string;
-    mut01: LowercaseHyphen;
-    mut02: LowercaseHyphen | null;
-    mut03: LowercaseHyphen | null;
+    mut01: MutatorId;
+    mut02: MutatorId | null;
+    mut03: MutatorId | null;
 }
 
 export interface MutationCycleWithScore extends MutationCycle {
@@ -250,7 +250,7 @@ export type PatchList = Patch[];
 
 export interface MutatorCommanderTip {
     tipid: PositiveInteger;
-    mutator: LowercaseHyphen;
+    mutator: MutatorId;
     commander: string;
     tip: string;
     video: string | null;

@@ -1,22 +1,22 @@
 #!/usr/bin/env bun
-import type { LowercaseHyphen, Mutator, MutatorInteraction } from "./data-types";
+import type { Mutator, MutatorId, MutatorInteraction } from "./data-types";
 
 const mutators: Mutator[] = await Bun.file('./source-data/mutators.json').json();
 
 const allInteractions: MutatorInteraction[] = await Bun.file('./source-data/mutatorinteractions.json').json();
 
-function getInteractions(id: LowercaseHyphen): { otherMutator: Mutator, interaction: string }[] {
+function getInteractions(id: MutatorId): { otherMutator: Mutator, interaction: string }[] {
     return allInteractions.filter((interaction) => interaction.id1 === id || interaction.id2 === id).map((interaction) => ({
         otherMutator: getMutator(interaction.id1 === id ? interaction.id2 : interaction.id1),
         interaction: interaction.interaction,
     }));
 }
 
-function getMutator(id: LowercaseHyphen): Mutator {
+function getMutator(id: MutatorId): Mutator {
     return mutators.find((mutator) => mutator.mutatorid === id)!;
 }
 
-function token(name: string): LowercaseHyphen {
+function token(name: string): MutatorId {
     return name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 }
 
